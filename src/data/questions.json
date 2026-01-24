@@ -1,0 +1,1144 @@
+{
+  "questions": [
+    {
+      "question": "Comment est désigné le Premier ministre ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Nommé par le président de la République",
+        "Via un décret de nomination qui est un acte de gouvernement"
+      ],
+      "wrongAnswers": [
+        "Par les autres membres du gouvernement",
+        "Par le président du conseil des ministres",
+        "Par un vote à la majorité simple à l'Assemblée nationale"
+      ]
+    },
+    {
+      "question": "Quelles sont des conditions d'éligibilité pour se présenter à la présidence en France ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Avoir la nationalité française",
+        "Avoir au minimum 18 ans",
+        "Avoir satisfait aux obligations imposées par le code du service national"
+      ],
+      "wrongAnswers": [
+        "Recueillir 250 « parrainages » de parlementaires ou d'élus locaux",
+        "Avoir déjà exercé un mandat d'élu (maire, député, etc.)",
+        "Être né.e sur le territoire français (droit du sol)",
+        "Être citoyen.ne de l'Union européenne résidant en France"
+      ]
+    },
+    {
+      "question": "À qui appartient la souveraineté nationale ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Au peuple"
+      ],
+      "wrongAnswers": [
+        "Au président de la République",
+        "À l'État",
+        "Au Parlement (Députés et Sénateurs)",
+        "À la Constitution"
+      ]
+    },
+    {
+      "question": "Qui est élu lors des élections municipales ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Les conseillers d'arrondissement dans certaines grandes villes",
+        "Les conseillers municipaux de la commune",
+        "Les conseillers communautaires"
+      ],
+      "wrongAnswers": [
+        "Le maire, au suffrage universel direct",
+        "Les conseillers départementaux",
+        "Les conseillers régionaux"
+      ]
+    },
+    {
+      "question": "L'inscription sur les listes électorales est :",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "obligatoire pour voter aux élections",
+        "ouverte aux citoyens Européens résidant en France, pour les élections municipales et européenes",
+        "ouverte aux français majeurs (ayant au moins 18 ans) au moment de l'élection"
+      ],
+      "wrongAnswers": [
+        "automatique pour chaque citoyen français",
+        "obligatoire sous peine de sanction administrative",
+        "possible uniquement à son domicile principal"
+      ]
+    },
+    {
+      "question": "Quelle condition est nécessaire pour voter aux élections présidentielles ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Fournir un papier d'identité dans les communes de plus de 1000 habitants",
+        "Être inscrit sur la liste électorale",
+        "Avoir la nationalité française"
+      ],
+      "wrongAnswers": [
+        "Payer ses impôts en France",
+        "Résider dans sa commune depuis plus de 5 ans",
+        "Être âgé d'au moins 21 ans"
+      ]
+    },
+    {
+      "question": "Quelle condition faut-il remplir pour être candidat aux élections municipales ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Avoir au minimum 18 ans",
+        "Avoir la nationalité française, ou être citoyen de l'Union Européen résidant en France depuis six mois au moins"
+      ],
+      "wrongAnswers": [
+        "Avoir résidé dans la commune pendant au moins 5 ans sans interruption.",
+        "Avoir au minimum 25 ans",
+        "Avoir la nationalité française",
+        "Être citoyen de n'importe quel pays du monde résidant en France"
+      ]
+    },
+    {
+      "question": "Parmi ces autorités, laquelle est élue ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Le président de la République",
+        "Les députés (Assemblé nationale)"
+      ],
+      "wrongAnswers": [
+        "Président du conseil constitutionnel",
+        "Le premier ministre",
+        "Le préfet"
+      ]
+    },
+    {
+      "question": "Quelles sont les fonctions du maire ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Préparer et d’exécuter le budget ",
+        "Agir en tant que agent de l'État",
+        "Chargé de l'organisation des élections dans la commune"
+      ],
+      "wrongAnswers": [
+        "Voter les lois au Parlement",
+        "Décider des peines de prison pour les délinquants.",
+        "Délivre un mandat de perquisition",
+        "Responsable de la gendarmerie"
+      ]
+    },
+    {
+      "question": "Qui peut se présenter aux élections présidentielles ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Avoir la nationalité française",
+        "Avoir au minimum 18 ans",
+        "Recueillir 500 « parrainages » de parlementaires ou d'élus locaux"
+      ],
+      "wrongAnswers": [
+        "Avoir déjà exercé un mandat d'élu (maire, député, etc.)",
+        "Être né.e sur le territoire français (droit du sol)",
+        "Être citoyen.ne de l'Union européenne résidant en France"
+      ]
+    },
+    {
+      "question": "Une personne, n'ayant pas d'accès à internet, veut s'inscrire sur les listes électorales pour pouvoir voter aux prochaines élections politiques. Où peut-elle s'inscrire ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "À la mairie",
+        "Par courrier"
+      ],
+      "wrongAnswers": [
+        "Par SMS",
+        "À la préfecture",
+        "Au bureau de vote"
+      ]
+    },
+    {
+      "question": "À quel âge peut-on devenir électeur ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "18 ans"
+      ],
+      "wrongAnswers": [
+        "16 ans",
+        "21 ans",
+        "19 ans"
+      ]
+    },
+    {
+      "question": "En France, est-ce obligatoire de voter ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Non"
+      ],
+      "wrongAnswers": [
+        "Oui, sous peine d'une amende de 150 €",
+        "Oui, l'inscription sur les listes électorales oblige à voter à chaque scrutin",
+        "Oui, mais seulement pour les élections municipales"
+      ]
+    },
+    {
+      "question": "A-t-on le droit de ne pas respecter une loi ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Non"
+      ],
+      "wrongAnswers": [
+        "Oui, si l'on ignore que cette loi existe.",
+        "Oui, à condition de payer une taxe de non-respect.",
+        "Seulement si l'on n'a pas la nationalité française."
+      ]
+    },
+    {
+      "question": "Comment sont désignés les députés ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Les députés sont élus au suffrage universel direct"
+      ],
+      "wrongAnswers": [
+        "Les députés sont nommés par le premier ministre",
+        "Les députés sont élus par les conseillers municipaux ",
+        "Les députés sont élus au scrutin universel indirect par un collège électoral"
+      ]
+    },
+    {
+      "question": "Qui vote les lois ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Les parlémentaires (l'Assemblée nationale et le sénat) votent la loi",
+        "En cas de désaccord entre le sénat et l'Assemblée nationale, c'est l'assemblée nationale qui a le dernier mot"
+      ],
+      "wrongAnswers": [
+        "Les lois sont votées au suffrage universel direct",
+        "Le Premier ministre et son Gouvernement",
+        "Les maires et les préfets réunis en conseil."
+      ]
+    },
+    {
+      "question": "La séparation des pouvoirs est un principe fondamental. Quels sont les trois pouvoirs concernés ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Législatif, exécutif, judiciaire"
+      ],
+      "wrongAnswers": [
+        "National, régional, départemental",
+        "L'Assemblée nationale, le sénat, le conseil constitutionnel",
+        "Liberté, fraternité, égalité"
+      ]
+    },
+    {
+      "question": "Qu'est-ce que l'État de droit ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "La loi est la même pour tous, y compris pour l’État",
+        "Le droit est supérieur aux pouvoirs et aux autorités politiques",
+        "L'état de droit garantit le respect des droits fondamentaux et de la démocratie."
+      ],
+      "wrongAnswers": [
+        "L'État respecte toujours la loi",
+        "Le président de la Republique n'a pas d'immunité durant son mandat",
+        "C'est un État où le Gouvernement a tous les droits pour maintenir l'ordre."
+      ]
+    },
+    {
+      "question": "Quelles sont les durées du mandat du conseil municipal et du maire ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "6 ans"
+      ],
+      "wrongAnswers": [
+        "5 ans ",
+        "7 ans",
+        "4 ans"
+      ]
+    },
+    {
+      "question": "Qui est élu lors des élections législatives ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Les députés"
+      ],
+      "wrongAnswers": [
+        "Les sénateurs",
+        "Les maires",
+        "Les conseillers régionaux"
+      ]
+    },
+    {
+      "question": "Quelle est la durée du mandat du Président de la République française ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "5 ans"
+      ],
+      "wrongAnswers": [
+        "7 ans",
+        "4 ans",
+        "6 ans"
+      ]
+    },
+    {
+      "question": "Quelle est la durée du mandat des députés ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "5 ans"
+      ],
+      "wrongAnswers": [
+        "6 ans",
+        "3 ans",
+        "4 ans"
+      ]
+    },
+    {
+      "question": "Quelle est la durée du mandat des sénateurs ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "6 ans"
+      ],
+      "wrongAnswers": [
+        "5 ans",
+        "9 ans",
+        "4 ans"
+      ]
+    },
+    {
+      "question": "Qui dirige l'action du gouvernement ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Le Premier ministre"
+      ],
+      "wrongAnswers": [
+        "Le Président de la République",
+        "Le Président de l'Assemblée nationale",
+        "Le Ministre de l'Intérieur"
+      ]
+    },
+    {
+      "question": "En France, est-ce possible d'adhérer à un parti politique ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Oui"
+      ],
+      "wrongAnswers": [
+        "Non, c'est interdit",
+        "Seulement pour les fonctionnaires",
+        "Uniquement après 10 ans de nationalité"
+      ]
+    },
+    {
+      "question": "Qui sanctionne l'auteur d'un vol ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "La justice"
+      ],
+      "wrongAnswers": [
+        "Le maire",
+        "Le préfet",
+        "La victime elle-même"
+      ]
+    },
+    {
+      "question": "Qui gère les collèges publics ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Le département"
+      ],
+      "wrongAnswers": [
+        "La commune",
+        "La région",
+        "L'État"
+      ]
+    },
+    {
+      "question": "Qui gère les écoles primaires et maternelles publiques ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "La commune"
+      ],
+      "wrongAnswers": [
+        "Le département",
+        "La région",
+        "L'État"
+      ]
+    },
+    {
+      "question": "Comment sont désignés les maires ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Via l'élection du conseil municipal"
+      ],
+      "wrongAnswers": [
+        "Suffrage universel direct",
+        "Nommés par le préfet",
+        "Nommés par le Président"
+      ]
+    },
+    {
+      "question": "Quelle collectivité territoriale est responsable des transports régionaux ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "La région"
+      ],
+      "wrongAnswers": [
+        "La préfecture",
+        "Le département",
+        "La commune"
+      ]
+    },
+    {
+      "question": "Qui assure l'intérim du président de la République en cas de décès ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Le président du Sénat"
+      ],
+      "wrongAnswers": [
+        "Le Premier ministre",
+        "Le Président de l'Assemblée nationale",
+        "Le Ministre de l'Intérieur"
+      ]
+    },
+    {
+      "question": "Quel est le rôle du Conseil constitutionnel ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Veiller au respect de la Constitution",
+        "Se prononcer sur la conformité des lois"
+      ],
+      "wrongAnswers": [
+        "Voter le budget de l'État",
+        "Diriger la police",
+        "Rédiger les lois"
+      ]
+    },
+    {
+      "question": "Combien y a-t-il de départements en France ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "101"
+      ],
+      "wrongAnswers": [
+        "95",
+        "100",
+        "13"
+      ]
+    },
+    {
+      "question": "Comment est organisé le découpage administratif de la France ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "En communes, départements et régions"
+      ],
+      "wrongAnswers": [
+        "En États fédérés",
+        "En districts coloniaux",
+        "En provinces autonomes"
+      ]
+    },
+    {
+      "question": "Qui représente l'État dans un département ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Le préfet"
+      ],
+      "wrongAnswers": [
+        "Le maire",
+        "Le député",
+        "Le commissaire"
+      ]
+    },
+    {
+      "question": "Quel est le rôle du Premier ministre ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Il dirige l'action du Gouvernement",
+        "Il détermine et conduit la politique de la Nation"
+      ],
+      "wrongAnswers": [
+        "Chef des armées",
+        "Élire les députés",
+        "Modifier la Constitution seul"
+      ]
+    },
+    {
+      "question": "En quelle année la citoyenneté européenne a-t-elle été créée ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "1992"
+      ],
+      "wrongAnswers": [
+        "1789",
+        "1945",
+        "2010"
+      ]
+    },
+    {
+      "question": "Combien d'États font partie de l'Union européenne au 1er janvier 2025 ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "27"
+      ],
+      "wrongAnswers": [
+        "28",
+        "15",
+        "19"
+      ]
+    },
+    {
+      "question": "En quelle année le traité de Maastricht, qui marque la fondation de l'Union européenne, a-t-il été signé ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "1992"
+      ],
+      "wrongAnswers": [
+        "1789",
+        "1918",
+        "2020"
+      ]
+    },
+    {
+      "question": "Quel État a quitté l'Union Européenne en 2020 ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Le Royaume-Uni"
+      ],
+      "wrongAnswers": [
+        "La France",
+        "L'Italie",
+        "L'Espagne"
+      ]
+    },
+    {
+      "question": "De quoi est composé le drapeau européen ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "12 étoiles"
+      ],
+      "wrongAnswers": [
+        "15 étoiles",
+        "Un cercle bleu et blanc",
+        "27 étoiles"
+      ]
+    },
+    {
+      "question": "Qui élit les députés européens ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Les citoyens au suffrage universel direct",
+        "Scrutin proportionnel de liste à un tour"
+      ],
+      "wrongAnswers": [
+        "Les députés nationaux",
+        "Les gouvernements",
+        "Le président de la République"
+      ]
+    },
+    {
+      "question": "Où est le siège du Parlement européen ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Strasbourg"
+      ],
+      "wrongAnswers": [
+        "Bruxelles",
+        "Paris",
+        "Berlin"
+      ]
+    },
+    {
+      "question": "Que signifie le mot \"fraternité\" dans la devise française ?",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "La solidarité entre les citoyens",
+        "La volonté de vivre ensemble"
+      ],
+      "wrongAnswers": [
+        "L'amitié entre les peuples",
+        "L'obéissance aux lois",
+        "L'appartenance à une religion"
+      ]
+    },
+    {
+      "question": "Quelle est la devise de la République française ?",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "Liberté, Égalité, Fraternité"
+      ],
+      "wrongAnswers": [
+        "Liberté, Unité, Solidarité",
+        "Travail, Famille, Patrie",
+        "Paix et Justice"
+      ]
+    },
+    {
+      "question": "En quelle année la loi de séparation des Églises et de l'État a-t-elle été votée ?",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "1905"
+      ],
+      "wrongAnswers": [
+        "1789",
+        "1881",
+        "1958"
+      ]
+    },
+    {
+      "question": "Quelle institution française doit rester neutre en matière de religion ?",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "L'école publique",
+        "L'État et ses services publics"
+      ],
+      "wrongAnswers": [
+        "Les églises",
+        "Les partis politiques",
+        "Les entreprises privées"
+      ]
+    },
+    {
+      "question": "Quelle est la durée du mandat du Président de la République française ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "5 ans"
+      ],
+      "wrongAnswers": [
+        "7 ans",
+        "4 ans",
+        "6 ans"
+      ]
+    },
+    {
+      "question": "Quelle est la durée du mandat des députés ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "5 ans"
+      ],
+      "wrongAnswers": [
+        "6 ans",
+        "3 ans",
+        "4 ans"
+      ]
+    },
+    {
+      "question": "Quelle est la durée du mandat des sénateurs ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "6 ans"
+      ],
+      "wrongAnswers": [
+        "5 ans",
+        "9 ans",
+        "4 ans"
+      ]
+    },
+    {
+      "question": "Qui dirige l'action du gouvernement ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Le Premier ministre"
+      ],
+      "wrongAnswers": [
+        "Le Président de la République",
+        "Le Président de l'Assemblée nationale",
+        "Le Ministre de l'Intérieur"
+      ]
+    },
+    {
+      "question": "En France, est-ce possible d'adhérer à un parti politique ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Oui"
+      ],
+      "wrongAnswers": [
+        "Non, c'est interdit",
+        "Seulement pour les fonctionnaires",
+        "Uniquement après 10 ans de nationalité"
+      ]
+    },
+    {
+      "question": "Qui sanctionne l'auteur d'un vol ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "La justice"
+      ],
+      "wrongAnswers": [
+        "Le maire",
+        "Le préfet",
+        "La victime elle-même"
+      ]
+    },
+    {
+      "question": "Qui gère les collèges publics ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Le département"
+      ],
+      "wrongAnswers": [
+        "La commune",
+        "La région",
+        "L'État"
+      ]
+    },
+    {
+      "question": "Qui gère les écoles primaires et maternelles publiques ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "La commune"
+      ],
+      "wrongAnswers": [
+        "Le département",
+        "La région",
+        "Le préfet"
+      ]
+    },
+    {
+      "question": "Comment sont désignés les maires ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Via l'élection du conseil municipal"
+      ],
+      "wrongAnswers": [
+        "Suffrage universel direct",
+        "Nommés par le préfet",
+        "Nommés par le Président"
+      ]
+    },
+    {
+      "question": "Quelle collectivité territoriale est responsable des transports régionaux ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "La région"
+      ],
+      "wrongAnswers": [
+        "La préfecture",
+        "Le département",
+        "La commune"
+      ]
+    },
+    {
+      "question": "Qui assure l'intérim du président de la République en cas de décès ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Le président du Sénat"
+      ],
+      "wrongAnswers": [
+        "Le Premier ministre",
+        "Le Président de l'Assemblée nationale",
+        "Le Ministre de l'Intérieur"
+      ]
+    },
+    {
+      "question": "Quel est le rôle du Conseil constitutionnel ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Veiller au respect de la Constitution",
+        "Se prononcer sur la conformité des lois"
+      ],
+      "wrongAnswers": [
+        "Voter le budget de l'État",
+        "Diriger la police",
+        "Rédiger les lois"
+      ]
+    },
+    {
+      "question": "Combien y a-t-il de départements en France ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "101"
+      ],
+      "wrongAnswers": [
+        "95",
+        "100",
+        "13"
+      ]
+    },
+    {
+      "question": "Comment est organisé le découpage administratif de la France ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "En communes, départements et régions"
+      ],
+      "wrongAnswers": [
+        "En États fédérés",
+        "En districts coloniaux",
+        "En provinces autonomes"
+      ]
+    },
+    {
+      "question": "Qui représente l'État dans un département ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Le préfet"
+      ],
+      "wrongAnswers": [
+        "Le maire",
+        "Le député",
+        "Le commissaire"
+      ]
+    },
+    {
+      "question": "Quel est le rôle du Premier ministre ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Il dirige l'action du Gouvernement",
+        "Il détermine et conduit la politique de la Nation"
+      ],
+      "wrongAnswers": [
+        "Chef des armées",
+        "Élire les députés",
+        "Modifier la Constitution seul"
+      ]
+    },
+    {
+      "question": "En quelle année la citoyenneté européenne a-t-elle été créée ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "1992"
+      ],
+      "wrongAnswers": [
+        "1789",
+        "1945",
+        "2010"
+      ]
+    },
+    {
+      "question": "Combien d'États font partie de l'Union européenne au 1er janvier 2025 ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "27"
+      ],
+      "wrongAnswers": [
+        "28",
+        "15",
+        "19"
+      ]
+    },
+    {
+      "question": "En quelle année le traité de Maastricht, qui marque la fondation de l'Union européenne, a-t-il été signé ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "1992"
+      ],
+      "wrongAnswers": [
+        "1789",
+        "1918",
+        "2020"
+      ]
+    },
+    {
+      "question": "Quel État a quitté l'Union Européenne en 2020 ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Le Royaume-Uni"
+      ],
+      "wrongAnswers": [
+        "La France",
+        "L'Italie",
+        "L'Espagne"
+      ]
+    },
+    {
+      "question": "De quoi est composé le drapeau européen ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "12 étoiles"
+      ],
+      "wrongAnswers": [
+        "15 étoiles",
+        "Un cercle bleu et blanc",
+        "27 étoiles"
+      ]
+    },
+    {
+      "question": "Qui élit les députés européens ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Les citoyens au suffrage universel direct",
+        "Scrutin proportionnel de liste à un tour"
+      ],
+      "wrongAnswers": [
+        "Les députés nationaux",
+        "Les gouvernements",
+        "Le président de la République"
+      ]
+    },
+    {
+      "question": "Où est le siège du Parlement européen ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Strasbourg"
+      ],
+      "wrongAnswers": [
+        "Bruxelles",
+        "Paris",
+        "Berlin"
+      ]
+    },
+    {
+      "question": "Au nom de quoi l'État justifie-t-il la restriction des droits ?",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "Pour préserver l'ordre public et respecter les droits d'autrui."
+      ],
+      "wrongAnswers": [
+        "Le plaisir du gouvernement",
+        "La religion majoritaire",
+        "La tradition royale"
+      ]
+    },
+    {
+      "question": "Que garantit la liberté de la presse ?",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "Le droit de diffuser des informations librement"
+      ],
+      "wrongAnswers": [
+        "La censure par l'État",
+        "L'obligation de vérité absolue",
+        "La diffusion des injures ou des propos diffamatoires sans limites"
+      ]
+    },
+    {
+      "question": "Quel droit protège une personne contre une arrestation arbitraire ?",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "Le droit à la sûreté"
+      ],
+      "wrongAnswers": [
+        "Le droit de propriété",
+        "Le droit de grève",
+        "Le droit au logement"
+      ]
+    },
+    {
+      "question": "Quel texte affirme que tous les hommes naissent libres et égaux en droits ?",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "La Déclaration des Droits de l’Homme et du Citoyen de 1789"
+      ],
+      "wrongAnswers": [
+        "La Constitution de 1958",
+        "Le Code Civil",
+        "Le traité de Maastricht"
+      ]
+    },
+    {
+      "question": "En quoi consiste le devoir de solidarité ?",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "La volonté de vivre ensemble",
+        "Le paiement des impôts et des cotisations sociales"
+      ],
+      "wrongAnswers": [
+        "À voter à toutes les élections",
+        "À travailler gratuitement pour l'État",
+        "À dénoncer ses voisins"
+      ]
+    },
+    {
+      "question": "Que doit faire un citoyen s'il est appelé à être juré dans un procès d'assises ?",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "C'est un devoir, il doit y participer"
+      ],
+      "wrongAnswers": [
+        "Il peut refuser sans motif",
+        "C'est réservé aux avocats",
+        "Il peut proposer à un membre de sa famille de le remplacer lors des audiences."
+      ]
+    },
+    {
+      "question": "Quel est l'un des devoirs principaux d'un citoyen français ?",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "Respecter la loi",
+        "Contribuer au financement des services publics (impôts)"
+      ],
+      "wrongAnswers": [
+        "Voter",
+        "Faire des enfants",
+        "Se présenter aux élections"
+      ]
+    },
+    {
+      "question": "Qui était Simone Veil ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Figure ayant préparé la loi sur l'IVG"
+      ],
+      "wrongAnswers": [
+        "Une célèbre chanteuse",
+        "Une reine de France",
+        "Une scientifique célèbre pour sa découverte de la radioactivité"
+      ]
+    },
+    {
+      "question": "En quelle année a débuté la Révolution française ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "1789"
+      ],
+      "wrongAnswers": [
+        "1848",
+        "1914",
+        "1492"
+      ]
+    },
+    {
+      "question": "Qui a rendu l'école gratuite, laïque et obligatoire ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Jules Ferry"
+      ],
+      "wrongAnswers": [
+        "Napoléon",
+        "Charles de Gaulle",
+        "François Mitterand"
+      ]
+    },
+    {
+      "question": "Sous quel président a été abolie la peine de mort en France ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "François Mitterrand"
+      ],
+      "wrongAnswers": [
+        "Charles de Gaulle",
+        "Valéry Giscard d'Estaing",
+        "Jacques Chirac"
+      ]
+    },
+    {
+      "question": "Depuis quand l'esclavage a-t-il été aboli en France ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "1848"
+      ],
+      "wrongAnswers": [
+        "1789",
+        "1944",
+        "1905"
+      ]
+    },
+    {
+      "question": "Quel œuvre a été écrite par Victor Hugo ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Les Misérables",
+        "Notre-Dame de Paris"
+      ],
+      "wrongAnswers": [
+        "L'Avare",
+        "Alcools",
+        "La Vie devant soi"
+      ]
+    },
+    {
+      "question": "Qui était Marie Curie ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Une physicienne",
+        "Scientifique ayant découvert la radioactivité"
+      ],
+      "wrongAnswers": [
+        "Une écrivaine",
+        "Une femme politique",
+        "Une chanteuse"
+      ]
+    },
+    {
+      "question": "Quel château célèbre se trouve près de Paris et symbolise le pouvoir royal de Louis XIV ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Le château de Versailles"
+      ],
+      "wrongAnswers": [
+        "Le Louvre",
+        "Amboise",
+        "Le Mont-Saint-Michel"
+      ]
+    },
+    {
+      "question": "Qui était Molière ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Auteur de théâtre célèbre",
+        "Auteur de L'Avare"
+      ],
+      "wrongAnswers": [
+        "Un peintre impressionniste",
+        "Un explorateur",
+        "Un scientifique"
+      ]
+    },
+    {
+      "question": "Quelle est la plus haute montagne de France ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Le Mont-Blanc"
+      ],
+      "wrongAnswers": [
+        "Le Jura",
+        "Les Pyrénées",
+        "Le Massif Central"
+      ]
+    },
+    {
+      "question": "Quel département français a une frontière avec le Brésil ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "La Guyane"
+      ],
+      "wrongAnswers": [
+        "La Guadeloupe",
+        "Mayotte",
+        "La Martinique"
+      ]
+    },
+    {
+      "question": "Quel est le 101ème département français depuis 2011 ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Mayotte"
+      ],
+      "wrongAnswers": [
+        "La Guadeloupe",
+        "La Réunion",
+        "La Guyane"
+      ]
+    },
+    {
+      "question": "Quel fleuve traverse Paris ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "La Seine"
+      ],
+      "wrongAnswers": [
+        "La Loire",
+        "Le Rhône",
+        "La Garonne"
+      ]
+    },
+    {
+      "question": "L'avortement est-il possible en France ?",
+      "theme": "Vivre dans la société française",
+      "correctAnswers": [
+        "Oui, c'est un droit garanti par la loi"
+      ],
+      "wrongAnswers": [
+        "Non, sauf cas médical",
+        "Uniquement avec accord du maire",
+        "Oui, sans aucune limite de temps pendant toute la grossesse."
+      ]
+    },
+    {
+      "question": "Jusqu'à quel âge l'école est-elle obligatoire ?",
+      "theme": "Vivre dans la société française",
+      "correctAnswers": [
+        "16 ans"
+      ],
+      "wrongAnswers": [
+        "18 ans",
+        "14 ans",
+        "21 ans"
+      ]
+    }
+  ]
+}
