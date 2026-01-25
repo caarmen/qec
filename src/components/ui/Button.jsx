@@ -1,3 +1,5 @@
+import { memo } from 'react'
+
 function Button({ 
   children, 
   onClick, 
@@ -27,4 +29,4 @@ function Button({
   )
 }
 
-export default Button
+export default memo(Button)

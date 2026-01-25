@@ -1,3 +1,5 @@
+import { memo } from 'react'
+
 function AnswerOption({ 
   id,
   text, 
@@ -45,4 +47,4 @@ function AnswerOption({
   )
 }
 
-export default AnswerOption
+export default memo(AnswerOption)
