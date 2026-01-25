@@ -27,10 +27,18 @@ describe('QuizScreen', () => {
   }
 
   describe('rendering', () => {
-    it('should render the progress indicator', () => {
-      render(<QuizScreen {...defaultProps} />)
+    it('should render the progress indicator, plural score', () => {
+      render(<QuizScreen {...defaultProps} currentQuestionIndex={3} score={2}/>)
+
+      expect(screen.getByText('Question 4 sur 10')).toBeInTheDocument()
+      expect(screen.getByText('2 bonnes réponses')).toBeInTheDocument()
+    })
+
+    it('should render the progress indicator, singular score', () => {
+      render(<QuizScreen {...defaultProps} currentQuestionIndex={3} score={1}/>)
       
-      expect(screen.getByText('Question 1 sur 10')).toBeInTheDocument()
+      expect(screen.getByText('Question 4 sur 10')).toBeInTheDocument()
+      expect(screen.getByText('1 bonne réponse')).toBeInTheDocument()
     })
 
     it('should render the question text', () => {
