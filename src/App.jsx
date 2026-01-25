@@ -36,6 +36,7 @@ function App() {
           currentQuestion={currentQuestion}
           currentQuestionIndex={currentQuestionIndex}
           totalQuestions={totalQuestions}
+          score={score}
           selectedAnswer={selectedAnswer}
           onSelectAnswer={selectAnswer}
           onSubmitAnswer={submitAnswer}
