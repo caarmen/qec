@@ -1,5 +1,13 @@
 import Button from './ui/Button'
 
+/**
+ * ResultsScreen component - Displays quiz results and allows restart
+ * @param {Object} props - Component props
+ * @param {number} props.score - Number of correct answers
+ * @param {number} props.totalQuestions - Total number of questions in quiz
+ * @param {Function} props.onRestart - Callback when user clicks restart button
+ * @returns {JSX.Element} ResultsScreen component
+ */
 function ResultsScreen({ 
   score, 
   totalQuestions, 

@@ -1,5 +1,11 @@
 import Button from './ui/Button'
 
+/**
+ * StartScreen component - Initial screen to begin the quiz
+ * @param {Object} props - Component props
+ * @param {Function} props.onStart - Callback function when user clicks start button
+ * @returns {JSX.Element} StartScreen component
+ */
 function StartScreen({ onStart }) {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">

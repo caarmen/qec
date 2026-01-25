@@ -2,6 +2,18 @@ import QuestionCard from './ui/QuestionCard'
 import AnswerOption from './ui/AnswerOption'
 import Button from './ui/Button'
 
+/**
+ * QuizScreen component - Main quiz interface for answering questions
+ * @param {Object} props - Component props
+ * @param {Object} props.currentQuestion - Current question object with id, question, answers
+ * @param {number} props.currentQuestionIndex - Index of current question (0-based)
+ * @param {number} props.totalQuestions - Total number of questions in quiz
+ * @param {string|null} props.selectedAnswer - ID of currently selected answer
+ * @param {Function} props.onSelectAnswer - Callback when user selects an answer
+ * @param {Function} props.onSubmitAnswer - Callback when user submits answer
+ * @param {boolean} props.hasAnswerSelected - Whether an answer has been selected
+ * @returns {JSX.Element|null} QuizScreen component or null if no question
+ */
 function QuizScreen({
   currentQuestion,
   currentQuestionIndex,

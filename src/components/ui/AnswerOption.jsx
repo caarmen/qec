@@ -1,5 +1,15 @@
 import { memo } from 'react'
 
+/**
+ * AnswerOption component - Individual answer choice in quiz
+ * @param {Object} props - Component props
+ * @param {string} props.id - Unique identifier for this answer
+ * @param {string} props.text - Answer text to display
+ * @param {boolean} [props.isSelected=false] - Whether this answer is currently selected
+ * @param {Function} [props.onSelect] - Callback when answer is selected, receives id
+ * @param {boolean} [props.disabled=false] - Whether answer option is disabled
+ * @returns {JSX.Element} AnswerOption component
+ */
 function AnswerOption({ 
   id,
   text, 
