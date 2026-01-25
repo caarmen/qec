@@ -251,5 +251,17 @@ describe('AnswerOption', () => {
       expect(option).toHaveClass('bg-blue-50')
       expect(option).toHaveClass('opacity-50')
     })
+
+    it('should indicate correctness after submission', () => {
+      const {rerender} = render(<AnswerOption {...defaultProps} isSelected={false} feedback={'correct'}/>)
+      let option = screen.getByRole('radio')
+      expect(option).toHaveClass('bg-green-50')
+      expect(screen.getByText(/✔/)).toBeInTheDocument()
+
+      rerender(<AnswerOption {...defaultProps} isSelected={false} feedback={'incorrect'}/>)
+      option = screen.getByRole('radio')
+      expect(option).toHaveClass('bg-red-50')
+      expect(screen.getByText(/✖/)).toBeInTheDocument()
+    })
   })
 })
