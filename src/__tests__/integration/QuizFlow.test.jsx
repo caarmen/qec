@@ -20,9 +20,9 @@ describe('Quiz Flow Integration', () => {
     expect(screen.getByText(/question 1 sur 10/i)).toBeInTheDocument()
     expect(screen.getByRole('heading', { level: 2 })).toBeInTheDocument()
     
-    // Next button should be disabled initially
-    const nextButton = screen.getByRole('button', { name: /suivant/i })
-    expect(nextButton).toBeDisabled()
+    // Submit button should be disabled initially
+    const submitButton = screen.getByRole('button', { name: /soumettre/i })
+    expect(submitButton).toBeDisabled()
 
     // Select an answer
     const answerOptions = screen.getAllByRole('radio')
@@ -30,10 +30,14 @@ describe('Quiz Flow Integration', () => {
     
     await user.click(answerOptions[0])
 
-    // Next button should now be enabled
-    expect(nextButton).not.toBeDisabled()
+    // Submit button should now be enabled
+    expect(submitButton).not.toBeDisabled()
 
-    // Submit answer and move to next question
+    // Submit answer
+    await user.click(submitButton)
+
+    // Go to next question
+    const nextButton = screen.getByRole('button', { name: /suivant/i})
     await user.click(nextButton)
 
     // 3. QUIZ SCREEN - Second Question
@@ -44,7 +48,10 @@ describe('Quiz Flow Integration', () => {
       const answers = screen.getAllByRole('radio')
       await user.click(answers[0])
       
-      const next = screen.getByRole('button', { name: /suivant/i })
+      const submit = screen.getByRole('button', { name: /soumettre/i })
+      await user.click(submit)
+
+      const next = screen.getByRole('button', { name: /suivant/i})
       await user.click(next)
     }
 
@@ -71,6 +78,7 @@ describe('Quiz Flow Integration', () => {
     for (let i = 1; i <= 10; i++) {
       const answers = screen.getAllByRole('radio')
       await user.click(answers[0])
+      await user.click(screen.getByRole('button', { name: /soumettre/i }))
       await user.click(screen.getByRole('button', { name: /suivant/i }))
     }
 
@@ -101,6 +109,7 @@ describe('Quiz Flow Integration', () => {
       // select second answer for questions 6-10 (may be correct or wrong)
       const answerIndex = i <= 5 ? 0 : 1
       await user.click(answers[answerIndex])
+      await user.click(screen.getByRole('button', { name: /soumettre/i }))
       await user.click(screen.getByRole('button', { name: /suivant/i }))
     }
 
@@ -126,12 +135,12 @@ describe('Quiz Flow Integration', () => {
     // Start quiz
     await user.click(screen.getByRole('button', { name: /commencer le quiz/i }))
 
-    // Next button should be disabled
-    const nextButton = screen.getByRole('button', { name: /suivant/i })
-    expect(nextButton).toBeDisabled()
+    // Submit button should be disabled
+    const submitButton = screen.getByRole('button', { name: /soumettre/i })
+    expect(submitButton).toBeDisabled()
 
     // Try to click disabled button (should not progress)
-    await user.click(nextButton)
+    await user.click(submitButton)
 
     // Should still be on question 1
     expect(screen.getByText(/question 1 sur 10/i)).toBeInTheDocument()
@@ -157,11 +166,14 @@ describe('Quiz Flow Integration', () => {
     expect(answers[0]).toHaveAttribute('aria-checked', 'false')
 
     // Submit should work with changed answer
+    const submitButton = screen.getByRole('button', { name: /soumettre/i })
+    expect(submitButton).not.toBeDisabled()
+    await user.click(submitButton)
+
+    // Should progress to next question
     const nextButton = screen.getByRole('button', { name: /suivant/i })
     expect(nextButton).not.toBeDisabled()
     await user.click(nextButton)
-
-    // Should progress to next question
     expect(screen.getByText(/question 2 sur 10/i)).toBeInTheDocument()
   })
 
@@ -177,6 +189,7 @@ describe('Quiz Flow Integration', () => {
     for (let i = 1; i <= 3; i++) {
       const answers = screen.getAllByRole('radio')
       await user.click(answers[0])
+      await user.click(screen.getByRole('button', { name: /soumettre/i }))
       await user.click(screen.getByRole('button', { name: /suivant/i }))
     }
 
@@ -187,6 +200,7 @@ describe('Quiz Flow Integration', () => {
     for (let i = 4; i <= 10; i++) {
       const answers = screen.getAllByRole('radio')
       await user.click(answers[0])
+      await user.click(screen.getByRole('button', { name: /soumettre/i }))
       await user.click(screen.getByRole('button', { name: /suivant/i }))
     }
 
@@ -202,8 +216,8 @@ describe('Quiz Flow Integration', () => {
     // Should start fresh at question 1
     expect(screen.getByText(/question 1 sur 10/i)).toBeInTheDocument()
     
-    // Next button should be disabled (no answer selected from previous attempt)
-    expect(screen.getByRole('button', { name: /suivant/i })).toBeDisabled()
+    // Submit button should be disabled (no answer selected from previous attempt)
+    expect(screen.getByRole('button', { name: /soumettre/i })).toBeDisabled()
   })
-  
+
 })

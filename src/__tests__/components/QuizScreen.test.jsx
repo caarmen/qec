@@ -51,8 +51,14 @@ describe('QuizScreen', () => {
       expect(screen.getByRole('radio', { name: /paix et justice/i })).toBeInTheDocument()
     })
 
+    it('should render the Submit button', () => {
+      render(<QuizScreen {...defaultProps} hasAnswerSubmitted={false} />)
+
+      expect(screen.getByRole('button', { name: /soumettre/i })).toBeInTheDocument()
+    })
+
     it('should render the Next button', () => {
-      render(<QuizScreen {...defaultProps} />)
+      render(<QuizScreen {...defaultProps} hasAnswerSubmitted={true} />)
       
       expect(screen.getByRole('button', { name: /suivant/i })).toBeInTheDocument()
     })
@@ -137,16 +143,16 @@ describe('QuizScreen', () => {
 
   describe('submit button', () => {
     it('should be disabled when no answer is selected', () => {
-      render(<QuizScreen {...defaultProps} hasAnswerSelected={false} />)
+      render(<QuizScreen {...defaultProps} hasAnswerSelected={false} hasAnswerSubmitted={false}/>)
       
-      const button = screen.getByRole('button', { name: /suivant/i })
+      const button = screen.getByRole('button', { name: /soumettre/i })
       expect(button).toBeDisabled()
     })
 
     it('should be enabled when answer is selected', () => {
-      render(<QuizScreen {...defaultProps} hasAnswerSelected={true} selectedAnswer="q1-a0" />)
+      render(<QuizScreen {...defaultProps} hasAnswerSelected={true} hasAnswerSubmitted={false} selectedAnswer="q1-a0" />)
       
-      const button = screen.getByRole('button', { name: /suivant/i })
+      const button = screen.getByRole('button', { name: /soumettre/i })
       expect(button).not.toBeDisabled()
     })
 
@@ -154,9 +160,9 @@ describe('QuizScreen', () => {
       const handleSubmitAnswer = vi.fn()
       const user = userEvent.setup()
       
-      render(<QuizScreen {...defaultProps} hasAnswerSelected={true} onSubmitAnswer={handleSubmitAnswer} />)
+      render(<QuizScreen {...defaultProps} hasAnswerSelected={true} hasAnswerSubmitted={false} onSubmitAnswer={handleSubmitAnswer} />)
       
-      const button = screen.getByRole('button', { name: /suivant/i })
+      const button = screen.getByRole('button', { name: /soumettre/i })
       await user.click(button)
       
       expect(handleSubmitAnswer).toHaveBeenCalledTimes(1)
@@ -166,12 +172,43 @@ describe('QuizScreen', () => {
       const handleSubmitAnswer = vi.fn()
       const user = userEvent.setup()
       
-      render(<QuizScreen {...defaultProps} hasAnswerSelected={false} onSubmitAnswer={handleSubmitAnswer} />)
+      render(<QuizScreen {...defaultProps} hasAnswerSelected={false} hasAnswerSubmitted={false} onSubmitAnswer={handleSubmitAnswer} />)
       
-      const button = screen.getByRole('button', { name: /suivant/i })
+      const button = screen.getByRole('button', { name: /soumettre/i })
       await user.click(button)
       
       expect(handleSubmitAnswer).not.toHaveBeenCalled()
+    })
+
+    it('should be absent when answer has been submitted', async () => {
+      render(<QuizScreen {...defaultProps} hasAnswerSelected={false} hasAnswerSubmitted={true} />)
+      expect(screen.queryByRole('button', {name: /soumettre/})).not.toBeInTheDocument()
+    })
+  })
+
+  describe('go to next question button', () => {
+    it('should be absent when no answer has been submitted', () => {
+      render(<QuizScreen {...defaultProps} hasAnswerSelected={false} hasAnswerSubmitted={false}/>)
+      expect(screen.queryByRole('button', {name: /suivant/})).not.toBeInTheDocument()
+    })
+
+    it('should be enabled when answer has been submitted', () => {
+      render(<QuizScreen {...defaultProps} hasAnswerSelected={true} hasAnswerSubmitted={true} selectedAnswer="q1-a0" />)
+
+      const button = screen.getByRole('button', { name: /suivant/i })
+      expect(button).not.toBeDisabled()
+    })
+
+    it('should call onGoToNextQuestion when clicked', async () => {
+      const handleGoToNextQuestion = vi.fn()
+      const user = userEvent.setup()
+
+      render(<QuizScreen {...defaultProps} hasAnswerSelected={true} hasAnswerSubmitted={true} onGoToNextQuestion={handleGoToNextQuestion} />)
+
+      const button = screen.getByRole('button', { name: /suivant/i })
+      await user.click(button)
+
+      expect(handleGoToNextQuestion).toHaveBeenCalledTimes(1)
     })
   })
 
@@ -200,15 +237,28 @@ describe('QuizScreen', () => {
     it('should have keyboard accessible submit button', async () => {
       const handleSubmitAnswer = vi.fn()
       const user = userEvent.setup()
-      
+
       render(<QuizScreen {...defaultProps} hasAnswerSelected={true} onSubmitAnswer={handleSubmitAnswer} />)
+
+      const button = screen.getByRole('button', { name: /soumettre/i })
+      button.focus()
+
+      await user.keyboard('{Enter}')
+
+      expect(handleSubmitAnswer).toHaveBeenCalledTimes(1)
+    })
+    it('should have keyboard accessible go to next question button', async () => {
+      const handleGoToNextQuestion = vi.fn()
+      const user = userEvent.setup()
+
+      render(<QuizScreen {...defaultProps} hasAnswerSelected={true} hasAnswerSubmitted={true} onGoToNextQuestion={handleGoToNextQuestion} />)
       
       const button = screen.getByRole('button', { name: /suivant/i })
       button.focus()
       
       await user.keyboard('{Enter}')
       
-      expect(handleSubmitAnswer).toHaveBeenCalledTimes(1)
+      expect(handleGoToNextQuestion).toHaveBeenCalledTimes(1)
     })
   })
 
@@ -275,6 +325,7 @@ describe('QuizScreen', () => {
     it('should handle complete user flow: select and submit', async () => {
       const handleSelectAnswer = vi.fn()
       const handleSubmitAnswer = vi.fn()
+      const handleGoToNextQuestion = vi.fn()
       const user = userEvent.setup()
       
       const { rerender } = render(
@@ -282,12 +333,14 @@ describe('QuizScreen', () => {
           {...defaultProps} 
           onSelectAnswer={handleSelectAnswer}
           onSubmitAnswer={handleSubmitAnswer}
+          onGoToNextQuestion={handleGoToNextQuestion}
         />
       )
       
       // Initially, button is disabled
-      const button = screen.getByRole('button', { name: /suivant/i })
-      expect(button).toBeDisabled()
+      const submitButton = screen.getByRole('button', { name: /soumettre/i })
+      expect(submitButton).toBeDisabled()
+      expect(screen.queryByRole('button', {name: /suivant/})).not.toBeInTheDocument()
       
       // Select an answer
       const option = screen.getByRole('radio', { name: /liberté, égalité, fraternité/i })
@@ -303,16 +356,37 @@ describe('QuizScreen', () => {
           hasAnswerSelected={true}
           onSelectAnswer={handleSelectAnswer}
           onSubmitAnswer={handleSubmitAnswer}
+          onGoToNextQuestion={handleGoToNextQuestion}
         />
       )
       
-      // Now button should be enabled
-      expect(button).not.toBeDisabled()
+      // Now submit button should be enabled
+      expect(submitButton).not.toBeDisabled()
       
       // Submit answer
-      await user.click(button)
+      await user.click(submitButton)
       
       expect(handleSubmitAnswer).toHaveBeenCalledTimes(1)
+
+      // Rerender in revewing mode
+      rerender(
+        <QuizScreen
+          {...defaultProps}
+          selectedAnswer="q1-a0"
+          hasAnswerSelected={true}
+          hasAnswerSubmitted={true}
+          onSelectAnswer={handleSelectAnswer}
+          onSubmitAnswer={handleSubmitAnswer}
+          onGoToNextQuestion={handleGoToNextQuestion}
+        />
+      )
+
+      expect(submitButton).not.toBeInTheDocument()
+      const goToNextQuestionButton = screen.getByRole('button', { name: /suivant/i })
+      expect(goToNextQuestionButton).toBeInTheDocument()
+      await user.click(goToNextQuestionButton)
+
+      expect(handleGoToNextQuestion).toHaveBeenCalledTimes(1)
     })
   })
 })

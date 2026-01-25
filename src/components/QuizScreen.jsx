@@ -11,7 +11,9 @@ import Button from './ui/Button'
  * @param {string|null} props.selectedAnswer - ID of currently selected answer
  * @param {Function} props.onSelectAnswer - Callback when user selects an answer
  * @param {Function} props.onSubmitAnswer - Callback when user submits answer
+ * @param {Function} props.onGoToNextQuestion - Callback when user wants to go to the next question
  * @param {boolean} props.hasAnswerSelected - Whether an answer has been selected
+ * @param {boolean} props.hasAnswerSubmitted - Whether an answer has been submitted
  * @returns {JSX.Element|null} QuizScreen component or null if no question
  */
 function QuizScreen({
@@ -21,7 +23,9 @@ function QuizScreen({
   selectedAnswer,
   onSelectAnswer,
   onSubmitAnswer,
-  hasAnswerSelected
+  onGoToNextQuestion,
+  hasAnswerSelected,
+  hasAnswerSubmitted,
 }) {
   if (!currentQuestion) {
     return null
@@ -42,24 +46,47 @@ function QuizScreen({
 
         {/* Answer options */}
         <div className="space-y-3">
-          {currentQuestion.answers.map((answer) => (
-            <AnswerOption
-              key={answer.id}
-              id={answer.id}
-              text={answer.text}
-              isSelected={selectedAnswer === answer.id}
-              onSelect={onSelectAnswer}
-            />
-          ))}
+          {currentQuestion.answers.map((answer) => {
+
+            let feedback = '';
+            if (hasAnswerSubmitted) {
+              if (answer.isCorrect) {
+                feedback = "correct"
+              } else if (selectedAnswer === answer.id) {
+                feedback = "incorrect"
+              }
+            }
+            return (
+              <AnswerOption
+                key={answer.id}
+                id={answer.id}
+                text={answer.text}
+                isSelected={selectedAnswer === answer.id}
+                onSelect={onSelectAnswer}
+                disabled={hasAnswerSubmitted}
+                feedback={feedback}
+              />
+            )
+          })}
         </div>
 
         {/* Submit button */}
-        <Button
-          onClick={onSubmitAnswer}
-          disabled={!hasAnswerSelected}
-        >
-          Suivant
-        </Button>
+        { !hasAnswerSubmitted && (
+          <Button
+            onClick={onSubmitAnswer}
+            disabled={!hasAnswerSelected}
+          >
+            Soumettre
+          </Button>
+        )}
+        {/* Go to next question button */}
+        { hasAnswerSubmitted && (
+          <Button
+            onClick={onGoToNextQuestion}
+          >
+            Suivant
+          </Button>
+        )}
       </QuestionCard>
     </div>
   )
