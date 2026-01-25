@@ -37,6 +37,7 @@ function QuizScreen({
   currentQuestion,
   currentQuestionIndex,
   totalQuestions,
+  score,
   selectedAnswer,
   onSelectAnswer,
   onSubmitAnswer,
@@ -54,9 +55,10 @@ function QuizScreen({
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <QuestionCard className="w-full max-w-md">
         {/* Progress indicator */}
-        <p className="text-sm text-gray-600">
-          Question {currentQuestionIndex + 1} sur {totalQuestions}
-        </p>
+        <div className="flex justify-between items-center text-sm text-gray-600">
+          <p>Question {currentQuestionIndex + 1} sur {totalQuestions}</p>
+          <p>{score} {score === 1 ? 'bonne réponse' : 'bonnes réponses'}</p>
+        </div>
 
         {/* Question text */}
         <h2 className="text-xl font-medium text-gray-900">
