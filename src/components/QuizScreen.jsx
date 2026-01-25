@@ -57,7 +57,7 @@ function QuizScreen({
         {/* Progress indicator */}
         <div className="flex justify-between items-center text-sm text-gray-600">
           <p>Question {currentQuestionIndex + 1} sur {totalQuestions}</p>
-          <p>{score} {score === 1 ? 'bonne réponse' : 'bonnes réponses'}</p>
+          <p>{`${score} ${score === 1 ? 'bonne réponse' : 'bonnes réponses'}`}</p>
         </div>
 
         {/* Question text */}
