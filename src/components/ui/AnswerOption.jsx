@@ -59,7 +59,27 @@ function AnswerOption({
       role="radio"
       aria-checked={isSelected}
     >
-      {text}
+      <span className="flex items-center justify-between w-full">
+        <span>{text}</span>
+
+        {feedback === "correct" && (
+          <span
+            className="ml-2 text-green-600"
+            aria-label="Bonne réponse"
+          >
+            ✔
+          </span>
+        )}
+
+        {feedback === "incorrect" && (
+          <span
+            className="ml-2 text-red-600"
+            aria-label="Mauvaise réponse"
+          >
+            ✖
+          </span>
+        )}
+      </span>
     </button>
   )
 }
