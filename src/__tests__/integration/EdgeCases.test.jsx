@@ -17,6 +17,7 @@ describe('Edge Cases', () => {
       for (let i = 1; i <= 9; i++) {
         const answers = screen.getAllByRole('radio')
         await user.click(answers[0])
+        await user.click(screen.getByRole('button', { name: /soumettre/i }))
         await user.click(screen.getByRole('button', { name: /suivant/i }))
       }
 
@@ -27,7 +28,10 @@ describe('Edge Cases', () => {
       const answers = screen.getAllByRole('radio')
       await user.click(answers[0])
       
-      // Click Next on last question
+      // Click submit on last question
+      await user.click(screen.getByRole('button', { name: /soumettre/i }))
+
+      // Go to the end
       await user.click(screen.getByRole('button', { name: /suivant/i }))
 
       // Should now be on results screen, not question 11
@@ -47,6 +51,7 @@ describe('Edge Cases', () => {
       for (let i = 1; i <= 10; i++) {
         const answers = screen.getAllByRole('radio')
         await user.click(answers[0])
+        await user.click(screen.getByRole('button', { name: /soumettre/i }))
         await user.click(screen.getByRole('button', { name: /suivant/i }))
       }
 
@@ -70,6 +75,7 @@ describe('Edge Cases', () => {
       for (let i = 1; i <= 10; i++) {
         const answers = screen.getAllByRole('radio')
         await user.click(answers[0])
+        await user.click(screen.getByRole('button', { name: /soumettre/i }))
         await user.click(screen.getByRole('button', { name: /suivant/i }))
       }
 
@@ -107,7 +113,7 @@ describe('Edge Cases', () => {
       expect(answers[2]).toHaveAttribute('aria-checked', 'false')
 
       // Should be able to submit with last selection
-      const nextButton = screen.getByRole('button', { name: /suivant/i })
+      const nextButton = screen.getByRole('button', { name: /soumettre/i })
       expect(nextButton).not.toBeDisabled()
     })
 
@@ -122,6 +128,9 @@ describe('Edge Cases', () => {
       // Select and submit answer on question 1
       let answers = screen.getAllByRole('radio')
       await user.click(answers[0])
+      await user.click(screen.getByRole('button', { name: /soumettre/i }))
+
+      // Move to question 2
       await user.click(screen.getByRole('button', { name: /suivant/i }))
 
       // On question 2, no answer should be pre-selected
@@ -131,7 +140,7 @@ describe('Edge Cases', () => {
       })
 
       // Next button should be disabled
-      expect(screen.getByRole('button', { name: /suivant/i })).toBeDisabled()
+      expect(screen.getByRole('button', { name: /soumettre/i })).toBeDisabled()
     })
   })
 
@@ -152,6 +161,7 @@ describe('Edge Cases', () => {
         // Find and click the correct answer (marked with isCorrect: true)
         // Since we can't see that in the UI, we'll just click first answer
         await user.click(answers[0])
+        await user.click(screen.getByRole('button', { name: /soumettre/i }))
         await user.click(screen.getByRole('button', { name: /suivant/i }))
       }
 
@@ -176,6 +186,7 @@ describe('Edge Cases', () => {
       for (let i = 1; i <= 10; i++) {
         const answers = screen.getAllByRole('radio')
         await user.click(answers[0])
+        await user.click(screen.getByRole('button', { name: /soumettre/i }))
         await user.click(screen.getByRole('button', { name: /suivant/i }))
       }
 
@@ -233,6 +244,7 @@ describe('Edge Cases', () => {
       for (let i = 1; i <= 10; i++) {
         const answers = screen.getAllByRole('radio')
         await user.click(answers[0])
+        await user.click(screen.getByRole('button', { name: /soumettre/i }))
         await user.click(screen.getByRole('button', { name: /suivant/i }))
       }
 

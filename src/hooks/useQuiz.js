@@ -6,7 +6,8 @@ import { DEFAULT_QUESTION_COUNT } from '../utils/constants'
 // Quiz status constants
 export const QUIZ_STATUS = {
   NOT_STARTED: 'NOT_STARTED',
-  IN_PROGRESS: 'IN_PROGRESS',
+  ANSWERING: 'ANSWERING',
+  REVIEWING_ANSWER: 'REVIEWING_ANSWER',
   COMPLETED: 'COMPLETED'
 }
 
@@ -15,6 +16,7 @@ export const ACTIONS = {
   START_QUIZ: 'START_QUIZ',
   SELECT_ANSWER: 'SELECT_ANSWER',
   SUBMIT_ANSWER: 'SUBMIT_ANSWER',
+  GO_TO_NEXT_QUESTION: 'GO_TO_NEXT_QUESTION',
   RESTART_QUIZ: 'RESTART_QUIZ'
 }
 
@@ -35,7 +37,7 @@ function quizReducer(state, action) {
       const questions = processQuestions(action.payload.rawQuestions, action.payload.count)
       return {
         ...initialState,
-        quizStatus: QUIZ_STATUS.IN_PROGRESS,
+        quizStatus: QUIZ_STATUS.ANSWERING,
         questions
       }
     }
@@ -60,26 +62,34 @@ function quizReducer(state, action) {
 
       const newUserAnswers = [...state.userAnswers, userAnswer]
       const newScore = isCorrect ? state.score + 1 : state.score
+
+      return {
+        ...state,
+        userAnswers: newUserAnswers,
+        score: newScore,
+        quizStatus: QUIZ_STATUS.REVIEWING_ANSWER,
+      }
+
+    }
+
+    case ACTIONS.GO_TO_NEXT_QUESTION: {
       const isLastQuestion = state.currentQuestionIndex === state.questions.length - 1
 
       // If last question, mark as completed
       if (isLastQuestion) {
         return {
           ...state,
-          userAnswers: newUserAnswers,
-          score: newScore,
           selectedAnswer: null,
-          quizStatus: QUIZ_STATUS.COMPLETED
+          quizStatus: QUIZ_STATUS.COMPLETED,
         }
       }
 
       // Otherwise, move to next question
       return {
         ...state,
-        currentQuestionIndex: state.currentQuestionIndex + 1,
         selectedAnswer: null,
-        userAnswers: newUserAnswers,
-        score: newScore
+        currentQuestionIndex: state.currentQuestionIndex + 1,
+        quizStatus: QUIZ_STATUS.ANSWERING,
       }
     }
 
@@ -116,6 +126,12 @@ export function useQuiz() {
     })
   }
 
+  const goToNextQuestion = () => {
+    dispatch({
+      type: ACTIONS.GO_TO_NEXT_QUESTION
+    })
+  }
+
   const restartQuiz = () => {
     dispatch({
       type: ACTIONS.RESTART_QUIZ
@@ -148,6 +164,7 @@ export function useQuiz() {
     startQuiz,
     selectAnswer,
     submitAnswer,
+    goToNextQuestion,
     restartQuiz,
     
     // Computed values
