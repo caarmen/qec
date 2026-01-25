@@ -38,9 +38,16 @@ export function shuffleArray(array) {
  */
 export function formatQuestion(rawQuestion, index) {
   // Combine correct and wrong answers
+  // Take only one of the possible correct answers.
+  // In the future, we may choose multiple correct answers.
+  const correctAnswers = shuffleArray(rawQuestion.correctAnswers).slice(0, 1);
+
+  // Take only up to 3 of the possible wrong answers.
+  const wrongAnswers = shuffleArray(rawQuestion.wrongAnswers).slice(0, 3);
+
   const allAnswers = [
-    ...rawQuestion.correctAnswers.map(text => ({ text, isCorrect: true })),
-    ...rawQuestion.wrongAnswers.map(text => ({ text, isCorrect: false }))
+    ...correctAnswers.map(text => ({ text, isCorrect: true })),
+    ...wrongAnswers.map(text => ({ text, isCorrect: false }))
   ]
 
   // Shuffle answers and add IDs
