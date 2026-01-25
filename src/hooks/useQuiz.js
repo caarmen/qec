@@ -1,6 +1,7 @@
 import { useReducer, useMemo } from 'react'
 import { processQuestions } from '../utils/questionProcessor'
 import { isAnswerCorrect } from '../utils/quizHelpers'
+import { DEFAULT_QUESTION_COUNT } from '../utils/constants'
 
 // Quiz status constants
 export const QUIZ_STATUS = {
@@ -95,7 +96,7 @@ function quizReducer(state, action) {
 export function useQuiz() {
   const [state, dispatch] = useReducer(quizReducer, initialState)
 
-  const startQuiz = (rawQuestions, count = 10) => {
+  const startQuiz = (rawQuestions, count = DEFAULT_QUESTION_COUNT) => {
     dispatch({
       type: ACTIONS.START_QUIZ,
       payload: { rawQuestions, count }
