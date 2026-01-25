@@ -1,16 +1,96 @@
-# React + Vite
+# Quiz de Naturalisation Française
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Une application React interactive pour tester vos connaissances civiques et évaluer votre préparation pour la naturalisation française.
 
-Currently, two official plugins are available:
+## ✨ Caractéristiques
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Quiz interactif** : 10 questions sélectionnées aléatoirement parmi un pool de questions
+- **Questions variées** : Questions sur le système institutionnel, les principes et valeurs, l'histoire, la géographie et la vie en France
+- **Progression claire** : Indicateur de progression (Question X sur 10)
+- **Validation intelligente** : Impossible de passer à la question suivante sans sélectionner une réponse
+- **Résultats détaillés** : Score final avec pourcentage de réussite
+- **Responsive** : Interface adaptée aux mobiles et ordinateurs
+- **Accessible** : Navigation clavier, ARIA labels, contraste WCAG AA
 
-## React Compiler
+## 🚀 Installation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Clonez le repository :
+```bash
+git clone <repository-url>
+cd qec
+```
 
-## Expanding the ESLint configuration
+2. Installez les dépendances :
+```bash
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 💻 Utilisation
+
+### Mode développement
+
+Lancez le serveur de développement :
+```bash
+npm run dev
+```
+
+L'application sera accessible sur `http://localhost:5173`
+
+### Build de production
+
+Créez une version optimisée pour la production :
+```bash
+npm run build
+```
+
+Les fichiers de production seront dans le dossier `dist/`
+
+### Prévisualisation du build
+
+Prévisualisez le build de production localement :
+```bash
+npm run preview
+```
+
+## 🧪 Tests
+
+### Lancer tous les tests
+```bash
+npm test
+```
+
+## 👨‍💻 Développement
+
+### Ajouter des questions
+
+Modifiez le fichier `src/data/questions.json` :
+```json
+{
+  "questions": [
+    {
+      "question": "Votre question ici ?",
+      "theme": "Thème",
+      "correctAnswers": ["Réponse correcte"],
+      "wrongAnswers": ["Mauvaise 1", "Mauvaise 2", "Mauvaise 3"]
+    }
+  ]
+}
+```
+
+### Linter
+
+Vérifiez le code avec ESLint :
+```bash
+npm run lint
+```
+
+### Style de code
+
+- Components : PascalCase (`QuizScreen.jsx`)
+- Fonctions/variables : camelCase (`calculateScore`)
+- Constantes : UPPER_SNAKE_CASE (`QUIZ_STATUS`)
+- Fichiers utilitaires : camelCase (`quizHelpers.js`)
+
+## 📝 License
+
+Ce projet est sous licence MIT.
