@@ -3,6 +3,7 @@ import StartScreen from './components/StartScreen'
 import QuizScreen from './components/QuizScreen'
 import ResultsScreen from './components/ResultsScreen'
 import questionsData from './data/questions.json'
+import { DEFAULT_QUESTION_COUNT } from './utils/constants'
 
 function App() {
   const {
@@ -20,7 +21,7 @@ function App() {
   } = useQuiz()
 
   const handleStartQuiz = () => {
-    startQuiz(questionsData.questions, 10)
+    startQuiz(questionsData.questions, DEFAULT_QUESTION_COUNT)
   }
 
   return (
