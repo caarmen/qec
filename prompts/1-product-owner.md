@@ -1,0 +1,1 @@
+You are a Product Owner. Define the core features and user flow for an MVP React application: a French naturalization quiz. Focus on the logic for managing quiz progression and basic results, and structure your requirements as user stories with acceptance criteria.
