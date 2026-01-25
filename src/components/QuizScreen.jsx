@@ -3,6 +3,23 @@ import AnswerOption from './ui/AnswerOption'
 import Button from './ui/Button'
 
 /**
+ * Return a feedback message to display for the submitted answer (right/wrong answer).
+ * @param {boolean} hasAnswerSubmitted  - Whether an answer has been submitted
+ * @param {Object} currentQuestion - Current question object with answers
+ * @param {number} selectedAnswer - ID of currently selected answer
+ * @returns {string} A feedback message to display.
+ */
+function getFeedbackMessage(hasAnswerSubmitted, currentQuestion, selectedAnswer) {
+  if (!hasAnswerSubmitted) return null
+
+  const isCorrect = currentQuestion.answers.some(
+    a => a.id === selectedAnswer && a.isCorrect
+  )
+
+  return isCorrect ? "Bonne réponse." : "Mauvaise réponse."
+}
+
+/**
  * QuizScreen component - Main quiz interface for answering questions
  * @param {Object} props - Component props
  * @param {Object} props.currentQuestion - Current question object with id, question, answers
@@ -30,6 +47,8 @@ function QuizScreen({
   if (!currentQuestion) {
     return null
   }
+
+  const feedbackMessage = getFeedbackMessage(hasAnswerSubmitted, currentQuestion, selectedAnswer)
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
@@ -70,6 +89,11 @@ function QuizScreen({
           })}
         </div>
 
+        <div className="flex items-start gap-2 text-sm min-h-[2rem]">
+          <p className="text-gray-800">
+            {feedbackMessage}
+          </p>
+        </div>
         {/* Submit button */}
         { !hasAnswerSubmitted && (
           <Button
