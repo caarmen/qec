@@ -1,4 +1,4 @@
-import { useReducer } from 'react'
+import { useReducer, useMemo } from 'react'
 import { processQuestions } from '../utils/questionProcessor'
 import { isAnswerCorrect } from '../utils/quizHelpers'
 
@@ -121,12 +121,23 @@ export function useQuiz() {
     })
   }
 
+  // Memoize computed values to prevent unnecessary recalculations
+  const currentQuestion = useMemo(
+    () => state.questions[state.currentQuestionIndex] || null,
+    [state.questions, state.currentQuestionIndex]
+  )
+
+  const hasAnswerSelected = useMemo(
+    () => state.selectedAnswer !== null,
+    [state.selectedAnswer]
+  )
+
   return {
     // State
     quizStatus: state.quizStatus,
     questions: state.questions,
     currentQuestionIndex: state.currentQuestionIndex,
-    currentQuestion: state.questions[state.currentQuestionIndex] || null,
+    currentQuestion,
     selectedAnswer: state.selectedAnswer,
     userAnswers: state.userAnswers,
     score: state.score,
@@ -139,6 +150,6 @@ export function useQuiz() {
     restartQuiz,
     
     // Computed values
-    hasAnswerSelected: state.selectedAnswer !== null
+    hasAnswerSelected
   }
 }
