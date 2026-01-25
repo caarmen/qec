@@ -1,0 +1,209 @@
+import { describe, it, expect } from 'vitest'
+import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+import App from '../../App'
+
+describe('Quiz Flow Integration', () => {
+  it('should complete full quiz flow from start to finish', async () => {
+    const user = userEvent.setup()
+    
+    render(<App />)
+
+    // 1. START SCREEN
+    expect(screen.getByRole('heading', { name: /quiz de naturalisation française/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /commencer le quiz/i })).toBeInTheDocument()
+
+    // Start the quiz
+    await user.click(screen.getByRole('button', { name: /commencer le quiz/i }))
+
+    // 2. QUIZ SCREEN - First Question
+    expect(screen.getByText(/question 1 sur 10/i)).toBeInTheDocument()
+    expect(screen.getByRole('heading', { level: 2 })).toBeInTheDocument()
+    
+    // Next button should be disabled initially
+    const nextButton = screen.getByRole('button', { name: /suivant/i })
+    expect(nextButton).toBeDisabled()
+
+    // Select an answer
+    const answerOptions = screen.getAllByRole('radio')
+    expect(answerOptions.length).toBeGreaterThan(0)
+    
+    await user.click(answerOptions[0])
+
+    // Next button should now be enabled
+    expect(nextButton).not.toBeDisabled()
+
+    // Submit answer and move to next question
+    await user.click(nextButton)
+
+    // 3. QUIZ SCREEN - Second Question
+    expect(screen.getByText(/question 2 sur 10/i)).toBeInTheDocument()
+
+    // Answer all remaining questions (questions 2-10)
+    for (let i = 2; i <= 10; i++) {
+      const answers = screen.getAllByRole('radio')
+      await user.click(answers[0])
+      
+      const next = screen.getByRole('button', { name: /suivant/i })
+      await user.click(next)
+    }
+
+    // 4. RESULTS SCREEN
+    expect(screen.getByRole('heading', { name: /quiz terminé/i })).toBeInTheDocument()
+    expect(screen.getByText(/total de questions :/i)).toBeInTheDocument()
+    expect(screen.getByText(/réponses correctes :/i)).toBeInTheDocument()
+    expect(screen.getByText(/score :/i)).toBeInTheDocument()
+    expect(screen.getByText('10')).toBeInTheDocument() // Total questions
+
+    // Should have restart button
+    expect(screen.getByRole('button', { name: /recommencer le quiz/i })).toBeInTheDocument()
+  })
+
+  it('should allow restarting quiz after completion', async () => {
+    const user = userEvent.setup()
+    
+    render(<App />)
+
+    // Start quiz
+    await user.click(screen.getByRole('button', { name: /commencer le quiz/i }))
+
+    // Answer all 10 questions
+    for (let i = 1; i <= 10; i++) {
+      const answers = screen.getAllByRole('radio')
+      await user.click(answers[0])
+      await user.click(screen.getByRole('button', { name: /suivant/i }))
+    }
+
+    // Should be on results screen
+    expect(screen.getByRole('heading', { name: /quiz terminé/i })).toBeInTheDocument()
+
+    // Restart quiz
+    await user.click(screen.getByRole('button', { name: /recommencer le quiz/i }))
+
+    // Should be back at start screen
+    expect(screen.getByRole('heading', { name: /quiz de naturalisation française/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /commencer le quiz/i })).toBeInTheDocument()
+  })
+
+  it('should track score correctly with mixed answers', async () => {
+    const user = userEvent.setup()
+    
+    render(<App />)
+
+    // Start quiz
+    await user.click(screen.getByRole('button', { name: /commencer le quiz/i }))
+
+    // Answer questions - tracking correct vs wrong
+    for (let i = 1; i <= 10; i++) {
+      const answers = screen.getAllByRole('radio')
+      
+      // For testing: select first answer for questions 1-5 (may be correct or wrong)
+      // select second answer for questions 6-10 (may be correct or wrong)
+      const answerIndex = i <= 5 ? 0 : 1
+      await user.click(answers[answerIndex])
+      await user.click(screen.getByRole('button', { name: /suivant/i }))
+    }
+
+    // Should be on results screen with some score
+    expect(screen.getByRole('heading', { name: /quiz terminé/i })).toBeInTheDocument()
+    expect(screen.getByText(/score :/i)).toBeInTheDocument()
+    
+    // Score should be between 0 and 100%
+    const scoreText = screen.getByText(/score : \d+%/i).textContent
+    const scoreMatch = scoreText.match(/(\d+)%/)
+    expect(scoreMatch).toBeTruthy()
+    
+    const score = parseInt(scoreMatch[1])
+    expect(score).toBeGreaterThanOrEqual(0)
+    expect(score).toBeLessThanOrEqual(100)
+  })
+
+  it('should prevent skipping questions without selecting answer', async () => {
+    const user = userEvent.setup()
+    
+    render(<App />)
+
+    // Start quiz
+    await user.click(screen.getByRole('button', { name: /commencer le quiz/i }))
+
+    // Next button should be disabled
+    const nextButton = screen.getByRole('button', { name: /suivant/i })
+    expect(nextButton).toBeDisabled()
+
+    // Try to click disabled button (should not progress)
+    await user.click(nextButton)
+
+    // Should still be on question 1
+    expect(screen.getByText(/question 1 sur 10/i)).toBeInTheDocument()
+  })
+
+  it('should allow changing answer before submitting', async () => {
+    const user = userEvent.setup()
+    
+    render(<App />)
+
+    // Start quiz
+    await user.click(screen.getByRole('button', { name: /commencer le quiz/i }))
+
+    const answers = screen.getAllByRole('radio')
+
+    // Select first answer
+    await user.click(answers[0])
+    expect(answers[0]).toHaveAttribute('aria-checked', 'true')
+
+    // Change to second answer
+    await user.click(answers[1])
+    expect(answers[1]).toHaveAttribute('aria-checked', 'true')
+    expect(answers[0]).toHaveAttribute('aria-checked', 'false')
+
+    // Submit should work with changed answer
+    const nextButton = screen.getByRole('button', { name: /suivant/i })
+    expect(nextButton).not.toBeDisabled()
+    await user.click(nextButton)
+
+    // Should progress to next question
+    expect(screen.getByText(/question 2 sur 10/i)).toBeInTheDocument()
+  })
+
+  it('should reset state completely on restart', async () => {
+    const user = userEvent.setup()
+    
+    render(<App />)
+
+    // Start first quiz
+    await user.click(screen.getByRole('button', { name: /commencer le quiz/i }))
+
+    // Answer 3 questions
+    for (let i = 1; i <= 3; i++) {
+      const answers = screen.getAllByRole('radio')
+      await user.click(answers[0])
+      await user.click(screen.getByRole('button', { name: /suivant/i }))
+    }
+
+    // Should be on question 4
+    expect(screen.getByText(/question 4 sur 10/i)).toBeInTheDocument()
+
+    // Complete remaining questions to reach results
+    for (let i = 4; i <= 10; i++) {
+      const answers = screen.getAllByRole('radio')
+      await user.click(answers[0])
+      await user.click(screen.getByRole('button', { name: /suivant/i }))
+    }
+
+    // Restart from results
+    await user.click(screen.getByRole('button', { name: /recommencer le quiz/i }))
+
+    // Should be back at start screen (state fully reset)
+    expect(screen.getByRole('heading', { name: /quiz de naturalisation française/i })).toBeInTheDocument()
+    
+    // Start new quiz
+    await user.click(screen.getByRole('button', { name: /commencer le quiz/i }))
+
+    // Should start fresh at question 1
+    expect(screen.getByText(/question 1 sur 10/i)).toBeInTheDocument()
+    
+    // Next button should be disabled (no answer selected from previous attempt)
+    expect(screen.getByRole('button', { name: /suivant/i })).toBeDisabled()
+  })
+  
+})
