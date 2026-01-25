@@ -57,7 +57,7 @@ describe('useQuiz', () => {
         result.current.startQuiz(mockRawQuestions, 2)
       })
 
-      expect(result.current.quizStatus).toBe(QUIZ_STATUS.IN_PROGRESS)
+      expect(result.current.quizStatus).toBe(QUIZ_STATUS.ANSWERING)
       expect(result.current.questions).toHaveLength(2)
       expect(result.current.currentQuestionIndex).toBe(0)
       expect(result.current.score).toBe(0)
@@ -219,12 +219,13 @@ describe('useQuiz', () => {
       act(() => {
         result.current.selectAnswer(answerId)
         result.current.submitAnswer()
+        result.current.goToNextQuestion()
       })
 
       expect(result.current.currentQuestionIndex).toBe(1)
     })
 
-    it('should reset selectedAnswer after submit', () => {
+    it('should reset selectedAnswer when moving to next question', () => {
       const { result } = renderHook(() => useQuiz())
 
       act(() => {
@@ -238,6 +239,12 @@ describe('useQuiz', () => {
         result.current.submitAnswer()
       })
 
+      expect(result.current.selectedAnswer).not.toBe(null)
+      expect(result.current.hasAnswerSelected).toBe(true)
+
+      act(() => {
+        result.current.goToNextQuestion()
+      })
       expect(result.current.selectedAnswer).toBe(null)
       expect(result.current.hasAnswerSelected).toBe(false)
     })
@@ -278,13 +285,23 @@ describe('useQuiz', () => {
         result.current.submitAnswer()
       })
 
-      expect(result.current.quizStatus).toBe(QUIZ_STATUS.IN_PROGRESS)
+      expect(result.current.quizStatus).toBe(QUIZ_STATUS.REVIEWING_ANSWER)
+      act(() =>{
+        result.current.goToNextQuestion()
+      })
+
+      expect(result.current.quizStatus).toBe(QUIZ_STATUS.ANSWERING)
 
       // Answer second (last) question
       act(() => {
         const answerId = result.current.currentQuestion.answers[0].id
         result.current.selectAnswer(answerId)
         result.current.submitAnswer()
+      })
+      expect(result.current.quizStatus).toBe(QUIZ_STATUS.REVIEWING_ANSWER)
+
+      act(() =>{
+        result.current.goToNextQuestion()
       })
 
       expect(result.current.quizStatus).toBe(QUIZ_STATUS.COMPLETED)
@@ -303,6 +320,7 @@ describe('useQuiz', () => {
         const answerId = result.current.currentQuestion.answers[0].id
         result.current.selectAnswer(answerId)
         result.current.submitAnswer()
+        result.current.goToNextQuestion()
       })
 
       expect(result.current.currentQuestionIndex).toBe(1)
@@ -312,6 +330,7 @@ describe('useQuiz', () => {
         const answerId = result.current.currentQuestion.answers[0].id
         result.current.selectAnswer(answerId)
         result.current.submitAnswer()
+        result.current.goToNextQuestion()
       })
 
       // Should stay on last question index
@@ -363,7 +382,7 @@ describe('useQuiz', () => {
         result.current.startQuiz(mockRawQuestions, 3)
       })
 
-      expect(result.current.quizStatus).toBe(QUIZ_STATUS.IN_PROGRESS)
+      expect(result.current.quizStatus).toBe(QUIZ_STATUS.ANSWERING)
       expect(result.current.questions).toHaveLength(3)
     })
   })
@@ -377,7 +396,7 @@ describe('useQuiz', () => {
         result.current.startQuiz(mockRawQuestions, 3)
       })
 
-      expect(result.current.quizStatus).toBe(QUIZ_STATUS.IN_PROGRESS)
+      expect(result.current.quizStatus).toBe(QUIZ_STATUS.ANSWERING)
 
       // Answer all 3 questions
       for (let i = 0; i < 3; i++) {
@@ -388,6 +407,7 @@ describe('useQuiz', () => {
         act(() => {
           result.current.selectAnswer(correctAnswer.id)
           result.current.submitAnswer()
+          result.current.goToNextQuestion()
         })
       }
 

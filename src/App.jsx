@@ -17,6 +17,7 @@ function App() {
     startQuiz,
     selectAnswer,
     submitAnswer,
+    goToNextQuestion,
     restartQuiz
   } = useQuiz()
 
@@ -30,15 +31,18 @@ function App() {
         <StartScreen onStart={handleStartQuiz} />
       )}
 
-      {quizStatus === QUIZ_STATUS.IN_PROGRESS && (
+      {(quizStatus === QUIZ_STATUS.ANSWERING || quizStatus === QUIZ_STATUS.REVIEWING_ANSWER ) && (
         <QuizScreen
           currentQuestion={currentQuestion}
           currentQuestionIndex={currentQuestionIndex}
           totalQuestions={totalQuestions}
+          score={score}
           selectedAnswer={selectedAnswer}
           onSelectAnswer={selectAnswer}
           onSubmitAnswer={submitAnswer}
+          onGoToNextQuestion={goToNextQuestion}
           hasAnswerSelected={hasAnswerSelected}
+          hasAnswerSubmitted={quizStatus === QUIZ_STATUS.REVIEWING_ANSWER}
         />
       )}
 

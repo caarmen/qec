@@ -8,6 +8,7 @@ import { memo } from 'react'
  * @param {boolean} [props.isSelected=false] - Whether this answer is currently selected
  * @param {Function} [props.onSelect] - Callback when answer is selected, receives id
  * @param {boolean} [props.disabled=false] - Whether answer option is disabled
+ * @param {"correct"|"incorrect"} [props.feedback=undefined] - Whether the answer is correct or incorrect
  * @returns {JSX.Element} AnswerOption component
  */
 function AnswerOption({ 
@@ -15,11 +16,15 @@ function AnswerOption({
   text, 
   isSelected = false, 
   onSelect,
-  disabled = false 
+  disabled = false,
+  feedback = undefined
+
 }) {
   const baseStyles = 'w-full text-left border rounded-lg p-4 transition-colors cursor-pointer'
   const defaultStyles = 'border-gray-200 hover:bg-gray-50'
   const selectedStyles = 'border-blue-600 bg-blue-50'
+  const correctStyles = 'border-green-600 bg-green-50'
+  const incorrectStyles = 'border-red-600 bg-red-50'
   const disabledStyles = 'opacity-50 cursor-not-allowed'
 
   const handleClick = () => {
@@ -47,12 +52,34 @@ function AnswerOption({
         ${baseStyles}
         ${isSelected ? selectedStyles : defaultStyles}
         ${disabled ? disabledStyles : ''}
+        ${feedback === 'correct' ? correctStyles : ''}
+        ${feedback === 'incorrect' ? incorrectStyles : ''}
       `.trim()}
       aria-pressed={isSelected}
       role="radio"
       aria-checked={isSelected}
     >
-      {text}
+      <span className="flex items-center justify-between w-full">
+        <span>{text}</span>
+
+        {feedback === "correct" && (
+          <span
+            className="ml-2 text-green-600"
+            aria-label="Bonne réponse"
+          >
+            ✔
+          </span>
+        )}
+
+        {feedback === "incorrect" && (
+          <span
+            className="ml-2 text-red-600"
+            aria-label="Mauvaise réponse"
+          >
+            ✖
+          </span>
+        )}
+      </span>
     </button>
   )
 }
