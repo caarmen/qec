@@ -91,6 +91,16 @@ describe('QuizScreen', () => {
       
       expect(screen.getByText('Question 10 sur 10')).toBeInTheDocument()
     })
+
+    it('should render feedback of correct response', () => {
+      render(<QuizScreen {...defaultProps} hasAnswerSubmitted={true} selectedAnswer={'q1-a0'}/>)
+      expect(screen.getByText(/bonne réponse/i)).toBeInTheDocument()
+    })
+
+    it('should render feedback of incorrect response', () => {
+      render(<QuizScreen {...defaultProps} hasAnswerSubmitted={true} selectedAnswer={'q1-a1'}/>)
+      expect(screen.getByText(/mauvaise réponse/i)).toBeInTheDocument()
+    })
   })
 
   describe('answer selection', () => {
