@@ -101,13 +101,13 @@ describe('questionProcessor', () => {
         question: "Test question",
         theme: "Test",
         correctAnswers: ["Answer 1", "Answer 2"],
-        wrongAnswers: ["Wrong 1", "Wrong 2"]
+        wrongAnswers: ["Wrong 1", "Wrong 2", "Wrong 3"]
       }
       
       const formatted = formatQuestion(multiCorrectQuestion, 0)
       const correctAnswers = formatted.answers.filter(a => a.isCorrect)
       
-      expect(correctAnswers).toHaveLength(2)
+      expect(correctAnswers).toHaveLength(1)
       expect(formatted.answers).toHaveLength(4)
     })
   })
