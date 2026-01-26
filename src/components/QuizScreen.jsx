@@ -91,11 +91,15 @@ function QuizScreen({
           })}
         </div>
 
-        <div className="flex items-start gap-2 text-sm min-h-[2rem]">
-          <p className="text-gray-800">
+        <output
+          className="flex items-start gap-2 text-sm min-h-[2rem] text-gray-800"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+          lang="fr"
+        >
             {feedbackMessage}
-          </p>
-        </div>
+        </output>
         {/* Submit button */}
         { !hasAnswerSubmitted && (
           <Button
