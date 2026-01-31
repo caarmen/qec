@@ -88,7 +88,7 @@ function QuizScreen({
         </h2>
 
         {/* Answer options */}
-        <div className="space-y-3">
+        <ul className="space-y-3">
           {currentQuestion.answers.map((answer) => {
 
             let feedback = '';
@@ -100,18 +100,20 @@ function QuizScreen({
               }
             }
             return (
-              <AnswerOption
-                key={answer.id}
-                id={answer.id}
-                text={answer.text}
-                isSelected={selectedAnswer === answer.id}
-                onSelect={onSelectAnswer}
-                disabled={hasAnswerSubmitted}
-                feedback={feedback}
-              />
+              <li key={answer.id}>
+                <AnswerOption
+                  key={answer.id}
+                  id={answer.id}
+                  text={answer.text}
+                  isSelected={selectedAnswer === answer.id}
+                  onSelect={onSelectAnswer}
+                  disabled={hasAnswerSubmitted}
+                  feedback={feedback}
+                />
+              </li>
             )
           })}
-        </div>
+        </ul>
 
         {/* Don't use aria-live. Even though that would be better semantically,
         VoiceOver doesn't read the text in French, even if lang="fr" is added
