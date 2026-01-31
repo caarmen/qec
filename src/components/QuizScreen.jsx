@@ -112,23 +112,19 @@ function QuizScreen({
         >
             {feedbackMessage}
         </output>
-        {/* Submit button */}
-        { !hasAnswerSubmitted && (
-          <Button
-            onClick={onSubmitAnswer}
-            disabled={!hasAnswerSelected}
-          >
-            Soumettre
-          </Button>
-        )}
-        {/* Go to next question button */}
-        { hasAnswerSubmitted && (
-          <Button
-            onClick={onGoToNextQuestion}
-          >
-            Suivant
-          </Button>
-        )}
+        {/* Submit/Next button. Use a single button for both actions,
+        instead of two separate buttons added/removed to the dom.
+        This isn't a performance tweak, it's an a11y tweak. If we had
+        2 separate buttons, then when we'd hide the submit button to
+        show the next button, the next button wouldn't have the focus,
+        requiring the user to swipe across the whole screen to find the
+        next button.*/}
+        <Button
+          onClick={hasAnswerSubmitted ? onGoToNextQuestion : onSubmitAnswer}
+          disabled={!hasAnswerSelected && !hasAnswerSubmitted}
+        >
+          {hasAnswerSubmitted ? "Suivant" : "Soumettre"}
+        </Button>
       </QuestionCard>
     </div>
   )

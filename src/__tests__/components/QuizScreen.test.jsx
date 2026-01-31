@@ -356,8 +356,8 @@ describe('QuizScreen', () => {
       )
       
       // Initially, button is disabled
-      const submitButton = screen.getByRole('button', { name: /soumettre/i })
-      expect(submitButton).toBeDisabled()
+      const submitOrNextButton = screen.getByRole('button', { name: /soumettre/i })
+      expect(submitOrNextButton).toBeDisabled()
       expect(screen.queryByRole('button', {name: /suivant/})).not.toBeInTheDocument()
       
       // Select an answer
@@ -379,10 +379,10 @@ describe('QuizScreen', () => {
       )
       
       // Now submit button should be enabled
-      expect(submitButton).not.toBeDisabled()
+      expect(submitOrNextButton).not.toBeDisabled()
       
       // Submit answer
-      await user.click(submitButton)
+      await user.click(submitOrNextButton)
       
       expect(handleSubmitAnswer).toHaveBeenCalledTimes(1)
 
@@ -399,10 +399,8 @@ describe('QuizScreen', () => {
         />
       )
 
-      expect(submitButton).not.toBeInTheDocument()
-      const goToNextQuestionButton = screen.getByRole('button', { name: /suivant/i })
-      expect(goToNextQuestionButton).toBeInTheDocument()
-      await user.click(goToNextQuestionButton)
+      expect(submitOrNextButton).toHaveTextContent(/suivant/i)
+      await user.click(submitOrNextButton)
 
       expect(handleGoToNextQuestion).toHaveBeenCalledTimes(1)
     })
