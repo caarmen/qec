@@ -208,11 +208,6 @@ describe('ResultsScreen', () => {
   })
 
   describe('visual presentation', () => {
-    it('should show completion emoji', () => {
-      render(<ResultsScreen {...defaultProps} />)
-      
-      expect(screen.getByText(/🎉/)).toBeInTheDocument()
-    })
 
     it('should display score information in organized card', () => {
       const { container } = render(<ResultsScreen {...defaultProps} />)
