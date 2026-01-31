@@ -1,6 +1,7 @@
 import QuestionCard from './ui/QuestionCard'
 import AnswerOption from './ui/AnswerOption'
 import Button from './ui/Button'
+import { useEffect, useRef } from "react"
 
 /**
  * Return a feedback message to display for the submitted answer (right/wrong answer).
@@ -45,6 +46,14 @@ function QuizScreen({
   hasAnswerSelected,
   hasAnswerSubmitted,
 }) {
+
+  /* Focus on the top of the screen when a new question is displayed */
+  const progressRef = useRef(null);
+
+  useEffect(() =>{
+    progressRef.current?.focus()
+  }, [currentQuestionIndex])
+
   if (!currentQuestion) {
     return null
   }
@@ -56,7 +65,10 @@ function QuizScreen({
       <QuestionCard className="w-full max-w-md">
         {/* Progress indicator */}
         <div className="flex justify-between items-center text-sm text-gray-600">
-          <p>{`Question ${currentQuestionIndex + 1} sur ${totalQuestions}`}</p>
+          <p
+            tabIndex={-1}
+            ref={progressRef}>{`Question ${currentQuestionIndex + 1} sur ${totalQuestions}`}
+          </p>
           <p>{`${score} ${score === 1 ? 'bonne réponse' : 'bonnes réponses'}`}</p>
         </div>
 
