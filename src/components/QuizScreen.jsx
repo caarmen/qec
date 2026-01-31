@@ -1,6 +1,7 @@
 import QuestionCard from './ui/QuestionCard'
 import AnswerOption from './ui/AnswerOption'
 import Button from './ui/Button'
+import { useEffect, useRef } from "react"
 
 /**
  * Return a feedback message to display for the submitted answer (right/wrong answer).
@@ -45,19 +46,40 @@ function QuizScreen({
   hasAnswerSelected,
   hasAnswerSubmitted,
 }) {
+
+  /* Focus on the top of the screen when a new question is displayed */
+  const progressRef = useRef(null);
+
+  useEffect(() =>{
+    progressRef.current?.focus()
+  }, [currentQuestionIndex])
+
+  /* Focus on the feedback message when it appears */
+  const feedbackMessage = getFeedbackMessage(hasAnswerSubmitted, currentQuestion, selectedAnswer)
+
+  const feedbackRef = useRef(null);
+
+  useEffect(() => {
+    if (feedbackMessage) {
+      feedbackRef.current?.focus()
+    }
+  })
+
   if (!currentQuestion) {
     return null
   }
 
-  const feedbackMessage = getFeedbackMessage(hasAnswerSubmitted, currentQuestion, selectedAnswer)
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <QuestionCard className="w-full max-w-md">
         {/* Progress indicator */}
         <div className="flex justify-between items-center text-sm text-gray-600">
-          <p>Question {currentQuestionIndex + 1} sur {totalQuestions}</p>
-          <p>{score} {score === 1 ? 'bonne réponse' : 'bonnes réponses'}</p>
+          <p
+            tabIndex={-1}
+            ref={progressRef}>{`Question ${currentQuestionIndex + 1} sur ${totalQuestions}`}
+          </p>
+          <p>{`${score} ${score === 1 ? 'bonne réponse' : 'bonnes réponses'}`}</p>
         </div>
 
         {/* Question text */}
@@ -66,7 +88,7 @@ function QuizScreen({
         </h2>
 
         {/* Answer options */}
-        <div className="space-y-3">
+        <ul className="space-y-3">
           {currentQuestion.answers.map((answer) => {
 
             let feedback = '';
@@ -78,41 +100,46 @@ function QuizScreen({
               }
             }
             return (
-              <AnswerOption
-                key={answer.id}
-                id={answer.id}
-                text={answer.text}
-                isSelected={selectedAnswer === answer.id}
-                onSelect={onSelectAnswer}
-                disabled={hasAnswerSubmitted}
-                feedback={feedback}
-              />
+              <li key={answer.id}>
+                <AnswerOption
+                  key={answer.id}
+                  id={answer.id}
+                  text={answer.text}
+                  isSelected={selectedAnswer === answer.id}
+                  onSelect={onSelectAnswer}
+                  disabled={hasAnswerSubmitted}
+                  feedback={feedback}
+                />
+              </li>
             )
           })}
+        </ul>
+
+        {/* Don't use aria-live. Even though that would be better semantically,
+        VoiceOver doesn't read the text in French, even if lang="fr" is added
+        to the element.*/}
+        <div
+          className="flex items-start gap-2 text-sm min-h-[2rem] text-gray-800"
+          ref={feedbackRef}
+          aria-hidden={!feedbackMessage}
+          tabIndex={-1}
+        >
+            {feedbackMessage}
         </div>
 
-        <div className="flex items-start gap-2 text-sm min-h-[2rem]">
-          <p className="text-gray-800">
-            {feedbackMessage}
-          </p>
-        </div>
-        {/* Submit button */}
-        { !hasAnswerSubmitted && (
-          <Button
-            onClick={onSubmitAnswer}
-            disabled={!hasAnswerSelected}
-          >
-            Soumettre
-          </Button>
-        )}
-        {/* Go to next question button */}
-        { hasAnswerSubmitted && (
-          <Button
-            onClick={onGoToNextQuestion}
-          >
-            Suivant
-          </Button>
-        )}
+        {/* Submit/Next button. Use a single button for both actions,
+        instead of two separate buttons added/removed to the dom.
+        This isn't a performance tweak, it's an a11y tweak. If we had
+        2 separate buttons, then when we'd hide the submit button to
+        show the next button, the next button wouldn't have the focus,
+        requiring the user to swipe across the whole screen to find the
+        next button.*/}
+        <Button
+          onClick={hasAnswerSubmitted ? onGoToNextQuestion : onSubmitAnswer}
+          disabled={!hasAnswerSelected && !hasAnswerSubmitted}
+        >
+          {hasAnswerSubmitted ? "Suivant" : "Soumettre"}
+        </Button>
       </QuestionCard>
     </div>
   )
