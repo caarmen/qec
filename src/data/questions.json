@@ -25,7 +25,8 @@
         "Recueillir 250 « parrainages » de parlementaires ou d'élus locaux",
         "Avoir déjà exercé un mandat d'élu (maire, député, etc.)",
         "Être né.e sur le territoire français (droit du sol)",
-        "Être citoyen.ne de l'Union européenne résidant en France"
+        "Être citoyen.ne de l'Union européenne résidant en France",
+        "Avoir au minimum 35 ans"
       ]
     },
     {
@@ -38,7 +39,8 @@
         "Au président de la République",
         "À l'État",
         "Au Parlement (Députés et Sénateurs)",
-        "À la Constitution"
+        "À la Constitution",
+        "Au premier ministre"
       ]
     },
     {
@@ -114,14 +116,14 @@
       "question": "Quelles sont les fonctions du maire ?",
       "theme": "Système institutionnel et politique",
       "correctAnswers": [
-        "Préparer et d’exécuter le budget ",
+        "Préparer et exécuter le budget",
         "Agir en tant que agent de l'État",
         "Chargé de l'organisation des élections dans la commune"
       ],
       "wrongAnswers": [
         "Voter les lois au Parlement",
         "Décider des peines de prison pour les délinquants.",
-        "Délivre un mandat de perquisition",
+        "Délivrer un mandat de perquisition",
         "Responsable de la gendarmerie"
       ]
     },
@@ -136,7 +138,8 @@
       "wrongAnswers": [
         "Avoir déjà exercé un mandat d'élu (maire, député, etc.)",
         "Être né.e sur le territoire français (droit du sol)",
-        "Être citoyen.ne de l'Union européenne résidant en France"
+        "Être citoyen.ne de l'Union européenne résidant en France",
+        "Avoir au minimum 35 ans"
       ]
     },
     {
@@ -196,7 +199,7 @@
       ],
       "wrongAnswers": [
         "Les députés sont nommés par le premier ministre",
-        "Les députés sont élus par les conseillers municipaux ",
+        "Les députés sont élus par les conseillers municipaux",
         "Les députés sont élus au scrutin universel indirect par un collège électoral"
       ]
     },
@@ -246,7 +249,7 @@
         "6 ans"
       ],
       "wrongAnswers": [
-        "5 ans ",
+        "5 ans",
         "7 ans",
         "4 ans"
       ]
@@ -384,6 +387,20 @@
       ]
     },
     {
+      "question": "Quelle est l'une des voies possibles pour modifier la Constitution ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Le référendum (consultation directe du peuple).",
+        "Un projet de révision voté par le Parlement réuni en Congrès"
+      ],
+      "wrongAnswers": [
+        "Une simple décision ou un décret du Premier ministre.",
+        "Un vote unique à la majorité simple de l'Assemblée nationale.",
+        "Une décision souveraine du Conseil constitutionnel.",
+        "L'utilisation de l'article 49.3 par le Gouvernement."
+      ]
+    },
+    {
       "question": "Qui assure l'intérim du président de la République en cas de décès ?",
       "theme": "Système institutionnel et politique",
       "correctAnswers": [
@@ -406,6 +423,21 @@
         "Voter le budget de l'État",
         "Diriger la police",
         "Rédiger les lois"
+      ]
+    },
+    {
+      "question": "Quelle condition est obligatoire pour se présenter à l'élection présidentielle ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Avoir la nationalité française",
+        "Avoir au minimum 18 ans",
+        "Avoir satisfait aux obligations imposées par le code du service national"
+      ],
+      "wrongAnswers": [
+        "Recueillir 250 « parrainages » de parlementaires ou d'élus locaux",
+        "Avoir déjà exercé un mandat d'élu (maire, député, etc.)",
+        "Être né.e sur le territoire français (droit du sol)",
+        "Être citoyen.ne de l'Union européenne résidant en France"
       ]
     },
     {
@@ -445,6 +477,22 @@
       ]
     },
     {
+      "question": "Quel est le rôle du Président de la République ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Chef des armées",
+        "Veille au respect de la Constitution.",
+        "Le garant de l'indépendance nationale, de l'intégrité du territoire et du respect des traités",
+        "Assure, par son arbitrage, le fonctionnement régulier des pouvoirs publics ainsi que la continuité de l'État"
+      ],
+      "wrongAnswers": [
+        "Statue, en cas de contestation, sur la régularité de l'élection des députés et des sénateurs.",
+        "Contrôle l'action du Gouvernement",
+        "Assure l'exécution des lois",
+        "Veille à la régularité des opérations de référendum"
+      ]
+    },
+    {
       "question": "Quel est le rôle du Premier ministre ?",
       "theme": "Système institutionnel et politique",
       "correctAnswers": [
@@ -458,6 +506,20 @@
       ]
     },
     {
+      "question": "Quel est le rôle du Défenseur des droits ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Veille au respect des droits et libertés par les établissements publics",
+        "Veille au respect des droits et libertés par les collectivités territoriales"
+      ],
+      "wrongAnswers": [
+        "Veille à la régularité de l'élection du Président de la République",
+        "Veille à la régularité des opérations de référendum",
+        "Garant de l'indépendance de l'autorité judiciaire",
+        "Conduit la politique de la nation"
+      ]
+    },
+    {
       "question": "En quelle année la citoyenneté européenne a-t-elle été créée ?",
       "theme": "Système institutionnel et politique",
       "correctAnswers": [
@@ -467,6 +529,86 @@
         "1789",
         "1945",
         "2010"
+      ]
+    },
+    {
+      "question": "Quel est le dernier État à avoir intégré l'Union européenne ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "La Croatie"
+      ],
+      "wrongAnswers": [
+        "La Bulgarie",
+        "La Roumanie",
+        "Le Royaume-Uni",
+        "L'Ukraine"
+      ]
+    },
+    {
+      "question": "Qui a composé l'hymne de l'Union européenne ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Beethoven"
+      ],
+      "wrongAnswers": [
+        "Rouget de Lisle",
+        "Bach",
+        "Gilles Vigneault"
+      ]
+    },
+    {
+      "question": "Quand est célébrée la journée de l'Europe ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Le 9 mai"
+      ],
+      "wrongAnswers": [
+        "Le 8 mai",
+        "Le 1 mai",
+        "Le 11 novembre",
+        "Le 14 juillet"
+      ]
+    },
+    {
+      "question": "Où est le siège de la Banque centrale européenne ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Francfort"
+      ],
+      "wrongAnswers": [
+        "Strasbourg",
+        "Bruxelles",
+        "Paris",
+        "Luxembourg"
+      ]
+    },
+    {
+      "question": "Où est le siège de la Commission européenne ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Bruxelles"
+      ],
+      "wrongAnswers": [
+        "Strasbourg",
+        "Luxembourg",
+        "Paris",
+        "Francfort"
+      ]
+    },
+    {
+      "question": "Qui siège au Parlement européen ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "720 membres élus dans les 27 États membres",
+        "Des députés élus au suffrage universel direct",
+        "Des députés qui supervisent le travail de la Commission et des autres institutions de l'UE",
+        "Des députés qui décident du budget annuel avec le Conseil et contrôlent l'utilisation des fonds de l'UE"
+      ],
+      "wrongAnswers": [
+        "520 membres élus dans les 27 États membres",
+        "Le même nombre de députés pour chaque État membre",
+        "Les députés qui définissent les orientations et les priorités politiques générales de l'UE",
+        "Les députés dont le role est d'assurer que le droit communautaire est appliqué de la même façon dans tous les États"
       ]
     },
     {
@@ -738,6 +880,21 @@
       ]
     },
     {
+      "question": "Quelle condition est obligatoire pour se présenter à l'élection présidentielle ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Avoir la nationalité française",
+        "Avoir au minimum 18 ans",
+        "Avoir satisfait aux obligations imposées par le code du service national"
+      ],
+      "wrongAnswers": [
+        "Recueillir 250 « parrainages » de parlementaires ou d'élus locaux",
+        "Avoir déjà exercé un mandat d'élu (maire, député, etc.)",
+        "Être né.e sur le territoire français (droit du sol)",
+        "Être citoyen.ne de l'Union européenne résidant en France"
+      ]
+    },
+    {
       "question": "Combien y a-t-il de départements en France ?",
       "theme": "Système institutionnel et politique",
       "correctAnswers": [
@@ -774,6 +931,22 @@
       ]
     },
     {
+      "question": "Quel est le rôle du Président de la République ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Chef des armées",
+        "Veille au respect de la Constitution.",
+        "Le garant de l'indépendance nationale, de l'intégrité du territoire et du respect des traités",
+        "Assure, par son arbitrage, le fonctionnement régulier des pouvoirs publics ainsi que la continuité de l'État"
+      ],
+      "wrongAnswers": [
+        "Statue, en cas de contestation, sur la régularité de l'élection des députés et des sénateurs.",
+        "Contrôle l'action du Gouvernement",
+        "Assure l'exécution des lois",
+        "Veille à la régularité des opérations de référendum"
+      ]
+    },
+    {
       "question": "Quel est le rôle du Premier ministre ?",
       "theme": "Système institutionnel et politique",
       "correctAnswers": [
@@ -787,6 +960,20 @@
       ]
     },
     {
+      "question": "Quel est le rôle du Défenseur des droits ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Veille au respect des droits et libertés par les établissements publics",
+        "Veille au respect des droits et libertés par les collectivités territoriales"
+      ],
+      "wrongAnswers": [
+        "Veille à la régularité de l'élection du Président de la République",
+        "Veille à la régularité des opérations de référendum",
+        "Garant de l'indépendance de l'autorité judiciaire",
+        "Conduit la politique de la nation"
+      ]
+    },
+    {
       "question": "En quelle année la citoyenneté européenne a-t-elle été créée ?",
       "theme": "Système institutionnel et politique",
       "correctAnswers": [
@@ -796,6 +983,86 @@
         "1789",
         "1945",
         "2010"
+      ]
+    },
+    {
+      "question": "Quel est le dernier État à avoir intégré l'Union européenne en 2013 ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "La Croatie"
+      ],
+      "wrongAnswers": [
+        "La Bulgarie",
+        "La Roumanie",
+        "Le Royaume-Uni",
+        "L'Ukraine"
+      ]
+    },
+    {
+      "question": "Qui a composé l'hymne de l'Union européenne ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Beethoven"
+      ],
+      "wrongAnswers": [
+        "Rouget de Lisle",
+        "Bach",
+        "Gilles Vigneault"
+      ]
+    },
+    {
+      "question": "Quand est célébrée la journée de l'Europe ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Le 9 mai"
+      ],
+      "wrongAnswers": [
+        "Le 8 mai",
+        "Le 1 mai",
+        "Le 11 novembre",
+        "Le 14 juillet"
+      ]
+    },
+    {
+      "question": "Où est le siège de la Banque centrale européenne ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Francfort"
+      ],
+      "wrongAnswers": [
+        "Strasbourg",
+        "Bruxelles",
+        "Paris",
+        "Luxembourg"
+      ]
+    },
+    {
+      "question": "Où est le siège de la Commission européenne ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Bruxelles"
+      ],
+      "wrongAnswers": [
+        "Strasbourg",
+        "Luxembourg",
+        "Paris",
+        "Francfort"
+      ]
+    },
+    {
+      "question": "Qui siège au Parlement européen ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "720 membres élus dans les 27 États membres",
+        "Des députés élus au suffrage universel direct",
+        "Des députés qui supervisent le travail de la Commission et des autres institutions de l'UE",
+        "Des députés qui décident du budget annuel avec le Conseil et contrôlent l'utilisation des fonds de l'UE"
+      ],
+      "wrongAnswers": [
+        "520 membres élus dans les 27 États membres",
+        "Le même nombre de députés pour chaque État membre",
+        "Les députés qui définissent les orientations et les priorités politiques générales de l'UE",
+        "Les députés dont le role est d'assurer que le droit communautaire est appliqué de la même façon dans tous les États"
       ]
     },
     {
