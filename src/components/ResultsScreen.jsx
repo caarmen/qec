@@ -1,4 +1,5 @@
 import Button from './ui/Button'
+import {useRef, useEffect} from 'react'
 
 /**
  * ResultsScreen component - Displays quiz results and allows restart
@@ -13,13 +14,24 @@ function ResultsScreen({
   totalQuestions, 
   onRestart 
 }) {
+  /* Focus on the top of the screen when entering it, for a11y */
+  const headingRef = useRef(null);
+
+  useEffect(() =>{
+    headingRef.current?.focus()
+
+  }, [])
   const percentage = Math.round((score / totalQuestions) * 100)
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="w-full max-w-md bg-white rounded-xl shadow-sm p-6 space-y-6">
         {/* Completion header */}
-        <h2 className="text-2xl font-semibold text-gray-900">
+        <h2
+          className="text-2xl font-semibold text-gray-900"
+          ref={headingRef}
+          tabIndex={-1}
+          >
           Quiz Terminé !
         </h2>
 
