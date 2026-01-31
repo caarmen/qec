@@ -54,11 +54,21 @@ function QuizScreen({
     progressRef.current?.focus()
   }, [currentQuestionIndex])
 
+  /* Focus on the feedback message when it appears */
+  const feedbackMessage = getFeedbackMessage(hasAnswerSubmitted, currentQuestion, selectedAnswer)
+
+  const feedbackRef = useRef(null);
+
+  useEffect(() => {
+    if (feedbackMessage) {
+      feedbackRef.current?.focus()
+    }
+  })
+
   if (!currentQuestion) {
     return null
   }
 
-  const feedbackMessage = getFeedbackMessage(hasAnswerSubmitted, currentQuestion, selectedAnswer)
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
@@ -103,15 +113,18 @@ function QuizScreen({
           })}
         </div>
 
-        <output
+        {/* Don't use aria-live. Even though that would be better semantically,
+        VoiceOver doesn't read the text in French, even if lang="fr" is added
+        to the element.*/}
+        <div
           className="flex items-start gap-2 text-sm min-h-[2rem] text-gray-800"
-          role="status"
-          aria-live="polite"
-          aria-atomic="true"
-          lang="fr"
+          ref={feedbackRef}
+          aria-hidden={!feedbackMessage}
+          tabIndex={-1}
         >
             {feedbackMessage}
-        </output>
+        </div>
+
         {/* Submit/Next button. Use a single button for both actions,
         instead of two separate buttons added/removed to the dom.
         This isn't a performance tweak, it's an a11y tweak. If we had
