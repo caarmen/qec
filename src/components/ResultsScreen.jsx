@@ -32,7 +32,7 @@ function ResultsScreen({
             <span className="font-medium">Réponses correctes :</span> {score}
           </p>
           <p className="text-green-600 font-medium text-lg">
-            Score : {percentage}%
+            {`Score : ${percentage}%`}
           </p>
         </div>
 
