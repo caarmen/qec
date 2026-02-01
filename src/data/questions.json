@@ -594,6 +594,19 @@
       ]
     },
     {
+      "question": "En quelle année Napoléon Ier est-il devenu empereur ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "1804"
+      ],
+      "wrongAnswers": [
+        "1769",
+        "1821",
+        "1815",
+        "1814"
+      ]
+    },
+    {
       "question": "En quoi consiste le devoir de solidarité ?",
       "theme": "Droits et devoirs",
       "correctAnswers": [
@@ -607,6 +620,108 @@
       ]
     },
     {
+      "question": "En tant que parent d'élève, il est possible de :",
+      "theme": "Vivre dans la société française",
+      "correctAnswers": [
+        "Accompagner votre enfant dans sa scolarité",
+        "Avoir un suivi de la scolarité des enfants",
+        "Voter pour des représentants des parents d’élèves"
+      ],
+      "wrongAnswers": [
+        "Choisir les manuels scolaires utilisés en class",
+        "Sanctionner les élèves qui ne respectent pas le règlement",
+        "Recruter les enseignants de l'école",
+        "Interdire l'enseignement d'une partie du programme pour des motifs religieux"
+      ]
+    },
+    {
+      "question": "Est-ce légal d'être marié à plusieurs personnes en même temps ?",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "Non"
+      ],
+      "wrongAnswers": [
+        "Oui, si vous êtes marié uniquement selon une loi étrangère",
+        "Oui, si vous êtes séparé de corps",
+        "Oui, si vous êtes en instance de divorce",
+        "Oui, si vous avez l'accord écrit de votre premier conjoint"
+      ]
+    },
+    {
+      "question": "Est-ce obligatoire de déclarer ses impôts chaque année en France ?",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "Oui, si vous êtes domicilié en France et vous y habitez pendant plus de six mois par an",
+        "Oui, si votre activité professionnelle principale est en France",
+        "Oui, si vous avez en France le centre de vos intérêts économiques",
+        "Oui, pour les personnes non domiciliées en France si elles disposent de revenus de source française"
+      ],
+      "wrongAnswers": [
+        "Oui, si vous êtes domicilié en France et vous y habitez pendant plus de trois mois par an",
+        "Non, si vous n'avez pas de revenus",
+        "Non, car avec le prélèvement à la source, l'impôt est déjà payé",
+        "Non, si vous votre seule source de revenu est un stage",
+        "Non, si vous êtes de nationalité étrangère"
+      ]
+    },
+    {
+      "question": "Est-ce possible de punir physiquement ses enfants ?",
+      "theme": "Vivre dans la société française",
+      "correctAnswers": [
+        "Non, le Code pénal réprime les violences quelle que soit leur nature"
+      ],
+      "wrongAnswers": [
+        "Oui, s'il n'y a pas de blessures permanentes.",
+        "Non, mais les insultes, les remarques désobligeantes, les humiliations et les menaces ne sont pas punissables par la loi car elles sont trop difficiles à prouver.",
+        "Oui, si la punition reste proportionnée à la faute de l'enfant",
+        "Oui, dans le cadre du \"droit de correction\" reconnu aux parents"
+      ]
+    },
+    {
+      "question": "Est-il obligatoire de porter secours à une personne en danger ?",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "Oui, sous peine de 5 ans d'emprisonnement et 75 000 € d'amende."
+      ],
+      "wrongAnswers": [
+        "Oui, même si l'assistance expose le témoin à un péril",
+        "Uniquement si le témoin est aussi en danger",
+        "Non, c'est un acte de charité facultatif qui relève de la conscience de chacun",
+        "Non, car vous risquez d'être poursuivi en justice si votre aide est inefficace",
+        "Uniquement si vous possédez un diplôme de secourisme ou une formation médicale"
+      ]
+    },
+    {
+      "question": "Est-il possible de licencier une femme enceinte ou en congé maternité, en raison de sa grossesse ?",
+      "theme": "Vivre dans la société française",
+      "correctAnswers": [
+        "Non pendant le congé maternité, puisque la salariée bénéficie d'une protection absolue",
+        "Non, mais si l'employeur et la salariée sont d'accord, il est possible de rompre le contrat par rupture conventionnelle.",
+        "Non, et le père est également protégé contre le licenciement pendant les 10 semaines qui suivent la naissance de son enfant."
+      ],
+      "wrongAnswers": [
+        "Oui si l'employeur justifie d'une impossibilité de maintenir le contrat de travail pour un motif lié à la maternité",
+        "Oui, si la salarié enceinte n'a pas informé son employeur de son état.",
+        "Oui, si la lettre de licenciement précise le motif du licenciement",
+        "Oui, à condition que l'employeur lui verse une indemnité compensatrice"
+      ]
+    },
+    {
+      "question": "Être juré d'assises est :",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "Un devoir citoyen obligatoire.",
+        "Une mission de justice rendue au nom du peuple français.",
+        "Une fonction indemnisée par l'État"
+      ],
+      "wrongAnswers": [
+        "Un acte volontaire réservé aux personnes inscrites sur une liste de bénévoles.",
+        "Une fonction réservée exclusivement aux personnes ayant un diplôme en droit.",
+        "Un rôle réservé aux fonctionnaires de police et de justice",
+        "Une fonction que l'on peut déléguer à une personne de son choix"
+      ]
+    },
+    {
       "question": "Jusqu'à quel âge l'école est-elle obligatoire ?",
       "theme": "Vivre dans la société française",
       "correctAnswers": [
@@ -616,6 +731,21 @@
         "18 ans",
         "14 ans",
         "21 ans"
+      ]
+    },
+    {
+      "question": "L'article 4 de la Déclaration des droits de l'homme et du citoyen affirme que \"la liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui\". Qu'est-ce que cela signifie ?",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "La liberté de chacun s'arrête là où commence celle des autres.",
+        "La loi peut interdire les actions nuisibles à la société.",
+        "Ma liberté n'est pas totale ; elle doit respecter les droits d'autrui."
+      ],
+      "wrongAnswers": [
+        "Chaque citoyen est libre de faire absolument tout ce qu'il veut sans aucune limite.",
+        "La liberté est un droit qui permet de ne pas respecter les lois si on les juge injustes.",
+        "Seul l'État est libre, les citoyens doivent uniquement obéir.",
+        "La liberté signifie que l'on peut nuire aux autres si cela est nécessaire pour son propre succè"
       ]
     },
     {
@@ -688,6 +818,83 @@
       ]
     },
     {
+      "question": "La vente d'alcool en France est interdite aux personnes de moins de :",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "18 ans"
+      ],
+      "wrongAnswers": [
+        "16 ans",
+        "21 ans",
+        "19 ans",
+        "15 ans"
+      ]
+    },
+    {
+      "question": "Laquelle de ces citations est inscrite dans la Déclaration des Droits de l'Homme et du Citoyen de 1789 ?",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "Les hommes naissent et demeurent libres et égaux en droits",
+        "La Liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui",
+        "La Loi est l'expression de la volonté générale",
+        "Tout homme étant présumé innocent jusqu'à ce qu'il ait été déclaré coupable"
+      ],
+      "wrongAnswers": [
+        "La République est une et indivisible, laïque, démocratique et sociale",
+        "Le but de la société est le bonheur commun et la protection des faibles",
+        "Nul ne peut être inquiété pour sa condition sociale ou sa fortune",
+        "La fraternité est le premier devoir de chaque citoyen envers la Nation"
+      ]
+    },
+    {
+      "question": "Le 11 novembre est un jour férié. À quoi correspond cette date ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "La fin de la Première Guerre mondiale",
+        "L’Armistice signé en 1918"
+      ],
+      "wrongAnswers": [
+        "Le traité de Versailles",
+        "La fin de la Seconde Guerre mondiale en Europe",
+        "La Toussaint",
+        "La fête du Travail",
+        "Débarquement de Normandie"
+      ]
+    },
+    {
+      "question": "Le stationnement sur une place réservée aux personnes handicapées :",
+      "theme": "Vivre dans la société française",
+      "correctAnswers": [
+        "encourt une contravention de 4e catégorie dès lors que votre véhicule ne dispose par d'une des deux cartes prévue à cet effet",
+        "sans CMI S ni Carte européenne de stationnement est punie d'une amende de 135 euros",
+        "est gratuit avec la CMI stationnement en voirie"
+      ],
+      "wrongAnswers": [
+        "Est autorisé pour un arrêt de courte durée (moins de 10 minutes) si vous restez au volant",
+        "Est autorisé si le parking est complet et qu'aucune autre place n'est disponible",
+        "Est toléré le dimanche et les jours fériés pour tout le monde",
+        "Est permis si vous avez une personne âgée à bord, même sans carte",
+        "Donne lieu à une simple amende de 17 € (amende forfaitaire de base)"
+      ]
+    },
+    {
+      "question": "Lequel de ces pays est un pays fondateur de l'Union Européenne ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Allemagne",
+        "France",
+        "Italie",
+        "Pays-Bas"
+      ],
+      "wrongAnswers": [
+        "Espagne",
+        "Portugal",
+        "Royaume-Uni",
+        "Suisse",
+        "Danemark"
+      ]
+    },
+    {
       "question": "Lequel de ces prénoms évoque un symbole de la République ?",
       "theme": "Principes et valeurs de la République",
       "correctAnswers": [
@@ -749,6 +956,19 @@
       ]
     },
     {
+      "question": "Lors de la seconde guerre mondiale, à quelle date la ville de Paris a-t-elle été libérée ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "25 août 1944"
+      ],
+      "wrongAnswers": [
+        "5 juin 1944",
+        "11 novembre 1918",
+        "8 mai 1945",
+        "18 juin 1940"
+      ]
+    },
+    {
       "question": "Où est le siège de la Banque centrale européenne ?",
       "theme": "Système institutionnel et politique",
       "correctAnswers": [
@@ -787,6 +1007,36 @@
       ]
     },
     {
+      "question": "Où faut-il déclarer la naissance d'un enfant ?",
+      "theme": "Vivre dans la société française",
+      "correctAnswers": [
+        "À la mairie du lieu de naissance"
+      ],
+      "wrongAnswers": [
+        "À la mairie du domicile des parents",
+        "À la préfecture du département",
+        "Au commissariat de police ou à la gendarmerie",
+        "Uniquement à la maternité (hôpital ou clinique)",
+        "À l'ambassade de votre pays d'origine"
+      ]
+    },
+    {
+      "question": "Où peut-on voir des peintures préhistoriques en France ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Les grottes de Lascaux",
+        "Les grottes de Chauvet",
+        "Les grottes de Cosquer"
+      ],
+      "wrongAnswers": [
+        "Les catacombes de Paris",
+        "Le musée du Louvre",
+        "La grotte d'Altamira",
+        "Les grottes de l'Himalaya",
+        "Le château de Versailles"
+      ]
+    },
+    {
       "question": "Où peut-on voir la devise de la République ?",
       "theme": "Principes et valeurs de la République",
       "correctAnswers": [
@@ -813,6 +1063,23 @@
         "Président du conseil constitutionnel",
         "Le premier ministre",
         "Le préfet"
+      ]
+    },
+    {
+      "question": "Parmi ces textes, lequel a été adopté sous Napoléon Ier ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Le Code civil des Français",
+        "Le Code de procédure civile",
+        "Le Code de commerce",
+        "Le Code pénal"
+      ],
+      "wrongAnswers": [
+        "La Déclaration des Droits de l'Homme et du Citoyen",
+        "La Constitution de la Ve République",
+        "La Loi de séparation des Églises et de l'État",
+        "La loi instaurant les congés payés",
+        "L'édit de Nantes"
       ]
     },
     {
@@ -887,6 +1154,32 @@
       ]
     },
     {
+      "question": "Quand a eu lieu la Première guerre mondiale ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "1914 - 1918"
+      ],
+      "wrongAnswers": [
+        "1939-1945",
+        "1954 - 1962",
+        "1789 - 1799",
+        "1870 - 1871"
+      ]
+    },
+    {
+      "question": "Quand a eu lieu la Seconde guerre mondiale ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "1939-1945"
+      ],
+      "wrongAnswers": [
+        "1914 - 1918",
+        "1936 - 1939",
+        "1940 - 1944",
+        "1939 - 1941"
+      ]
+    },
+    {
       "question": "Quand est célébrée la journée de l'Europe ?",
       "theme": "Système institutionnel et politique",
       "correctAnswers": [
@@ -910,6 +1203,20 @@
         "1958",
         "1918",
         "1981"
+      ]
+    },
+    {
+      "question": "Que célèbre-t-on le 8 mai ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "La fin de la Seconde Guerre mondiale en Europe"
+      ],
+      "wrongAnswers": [
+        "L'Armistice de la Première Guerre mondiale",
+        "La Fête nationale",
+        "La Fête du Travail",
+        "La signature de la Déclaration des Droits de l'Homme",
+        "L'Appel du 18 juin"
       ]
     },
     {
@@ -1006,6 +1313,21 @@
       ]
     },
     {
+      "question": "Que symbolise le 1er mai ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "La Fête du travail",
+        "La commémoration des luttes pour la journée de 8 heures"
+      ],
+      "wrongAnswers": [
+        "La fête du Printemps",
+        "L'anniversaire de la signature de l'Armistice de 1945",
+        "La célébration de la déclaration des Droits de l'Homme",
+        "Une fête religieuse en l'honneur de Saint-Joseph",
+        "Le jour où l'on célèbre la fondation de la Sécurité sociale"
+      ]
+    },
+    {
       "question": "Quel château célèbre se trouve près de Paris et symbolise le pouvoir royal de Louis XIV ?",
       "theme": "Histoire, géographie et culture",
       "correctAnswers": [
@@ -1078,6 +1400,47 @@
         "La Guadeloupe",
         "La Réunion",
         "La Guyane"
+      ]
+    },
+    {
+      "question": "Quel est le chef-lieu de la région Auvergne-Rhône-Alpes ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Lyon"
+      ],
+      "wrongAnswers": [
+        "Saint-Étienne",
+        "Clermont-Ferrand",
+        "Grenoble",
+        "Annecy",
+        "Valence"
+      ]
+    },
+    {
+      "question": "Quel est le chef-lieu de la région Bretagne ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Rennes"
+      ],
+      "wrongAnswers": [
+        "Brest",
+        "Lannion",
+        "Quimper",
+        "Finistère"
+      ]
+    },
+    {
+      "question": "Quel est le chef-lieu de la région Provence-Alpes-Côte d'Azur ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Marseilles"
+      ],
+      "wrongAnswers": [
+        "Nice",
+        "Aix-en-Provence",
+        "Toulon",
+        "Cannes",
+        "Lyon"
       ]
     },
     {
@@ -1199,6 +1562,51 @@
       ]
     },
     {
+      "question": "Quel musée est situé à Paris ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Le Musée du Louvre",
+        "Le Musée d'Orsay",
+        "Le Centre Pompidou",
+        "Le Musée du Quai Branly - Jacques Chirac"
+      ],
+      "wrongAnswers": [
+        "Le Musée des Confluences",
+        "Le Mucem",
+        "Le Musée Guggenheim",
+        "Le Palais des Papes",
+        "Le Centre Pompidou-Metz"
+      ]
+    },
+    {
+      "question": "Quel numéro d'urgence permet d'appeler la police ?",
+      "theme": "Vivre dans la société française",
+      "correctAnswers": [
+        "17"
+      ],
+      "wrongAnswers": [
+        "18",
+        "15",
+        "115",
+        "911",
+        "119"
+      ]
+    },
+    {
+      "question": "Quel numéro d'urgence permet d'appeler le SAMU ?",
+      "theme": "Vivre dans la société française",
+      "correctAnswers": [
+        "15"
+      ],
+      "wrongAnswers": [
+        "17",
+        "18",
+        "17",
+        "911",
+        "196"
+      ]
+    },
+    {
       "question": "Quel œuvre a été écrite par Victor Hugo ?",
       "theme": "Histoire, géographie et culture",
       "correctAnswers": [
@@ -1209,6 +1617,85 @@
         "L'Avare",
         "Alcools",
         "La Vie devant soi"
+      ]
+    },
+    {
+      "question": "Quel pays a été une colonie française ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Sénégal",
+        "Algérie",
+        "Cambodge",
+        "Tunisie"
+      ],
+      "wrongAnswers": [
+        "L'Inde",
+        "Bresil",
+        "Groenland",
+        "Jamaïque",
+        "Angola"
+      ]
+    },
+    {
+      "question": "Quel peintre célèbre a peint les Nymphéas ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Monet"
+      ],
+      "wrongAnswers": [
+        "Manet",
+        "Auguste Renoir",
+        "Paul Cézanne",
+        "Vincent van Gogh",
+        "Pablo Picass"
+      ]
+    },
+    {
+      "question": "Quel peintre est français ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Claude Monet",
+        "Eugène Delacroix",
+        "Auguste Renoi",
+        "Paul Cézanne"
+      ],
+      "wrongAnswers": [
+        "Vincent van Gogh",
+        "Pablo Picasso",
+        "Leonardo da Vinci",
+        "Salvador Dalí",
+        "Rembrandt"
+      ]
+    },
+    {
+      "question": "Quel plat est une spécialité de la cuisine française ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Le Pot-au-feu",
+        "Le Bœuf Bourguignon",
+        "La Quiche Lorraine",
+        "Le Cassoulet"
+      ],
+      "wrongAnswers": [
+        "Le Couscous",
+        "La Pizza",
+        "La Paëlla",
+        "La Poutine",
+        "Le Hamburger"
+      ]
+    },
+    {
+      "question": "Quel roi de France a été guillotiné pendant la Révolution française ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Louis XVI"
+      ],
+      "wrongAnswers": [
+        "Louis XIV",
+        "Napoléon Bonaparte",
+        "Henri IV",
+        "Louis-Philippe Ier",
+        "Robespierre"
       ]
     },
     {
@@ -1287,6 +1774,32 @@
         "Le traité de Versailles",
         "Le traité de Verdun",
         "Le traité de Paris"
+      ]
+    },
+    {
+      "question": "Quelle chaîne de montagnes est située entre la France et l'Espagne ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Les Pyrénées"
+      ],
+      "wrongAnswers": [
+        "Les Alpes",
+        "Le Jura",
+        "Les Vosges",
+        "Le Massif central"
+      ]
+    },
+    {
+      "question": "Quelle chaîne de montagnes est située entre la France et l'Italie ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Les Alpes"
+      ],
+      "wrongAnswers": [
+        "Les Pyrénées",
+        "Le Jura",
+        "Les Vosges",
+        "Le Massif central"
       ]
     },
     {
@@ -1433,6 +1946,98 @@
       ]
     },
     {
+      "question": "Quelle est la population approximative de la France en 2025 ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "68,6 millions"
+      ],
+      "wrongAnswers": [
+        "63,2 millions",
+        "302 millions",
+        "450 millions",
+        "81,2 millions"
+      ]
+    },
+    {
+      "question": "Quelle île est française ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "La Corse",
+        "La Réunion",
+        "La Guadeloupe",
+        "La Martinique"
+      ],
+      "wrongAnswers": [
+        "Madagascar",
+        "Île Maurice",
+        "Sainte-Lucie",
+        "Guyane"
+      ]
+    },
+    {
+      "question": "Quelle île est un département d'outre-mer français ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "La Réunion",
+        "La Guadeloupe",
+        "La Martinique",
+        "Mayotte"
+      ],
+      "wrongAnswers": [
+        "La Guyane",
+        "Tahiti",
+        "Nouvelle-Calédonie",
+        "Saint-Barthélemy",
+        "La Corse"
+      ]
+    },
+    {
+      "question": "Quelle île fait partie des Antilles françaises ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "La Guadeloupe",
+        "La Martinique",
+        "Saint-Barthélemy"
+      ],
+      "wrongAnswers": [
+        "La Réunion",
+        "Tahiti",
+        "La Corse",
+        "Haïti",
+        "La Dominique"
+      ]
+    },
+    {
+      "question": "Quelle île française est située dans l'océan indien ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "La Réunion",
+        "Mayotte"
+      ],
+      "wrongAnswers": [
+        "La Martinique",
+        "L'Île Maurice",
+        "Madagascar",
+        "Tahiti",
+        "La Guadeloupe"
+      ]
+    },
+    {
+      "question": "Quelle île française se trouve au sud-est du continent africain ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "La Réunion",
+        "Mayotte"
+      ],
+      "wrongAnswers": [
+        "La Martinique",
+        "Madagascar",
+        "L'île Maurice",
+        "Tahiti",
+        "La Corse"
+      ]
+    },
+    {
       "question": "Quelle institution française doit rester neutre en matière de religion ?",
       "theme": "Principes et valeurs de la République",
       "correctAnswers": [
@@ -1443,6 +2048,71 @@
         "Les églises",
         "Les partis politiques",
         "Les entreprises privées"
+      ]
+    },
+    {
+      "question": "Quelle mer ou océan borde la France métropolitaine ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "L'océan Atlantique",
+        "La mer Méditerranée",
+        "La Manche",
+        "La mer du Nord"
+      ],
+      "wrongAnswers": [
+        "La mer Rouge",
+        "L'océan Indien",
+        "La mer Morte",
+        "La mer Baltique",
+        "L'océan Pacifique"
+      ]
+    },
+    {
+      "question": "Quelle mer se situe entre la France et l'Angleterre ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "La Manche"
+      ],
+      "wrongAnswers": [
+        "La mer Noire",
+        "La mer Morte",
+        "L'océan Atlantique",
+        "La mer Méditerranée",
+        "La mer Morte"
+      ]
+    },
+    {
+      "question": "Quelle région française est réputée pour ses stations de ski ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Auvergne-Rhône-Alpes",
+        "Occitanie",
+        "Provence-Alpes-Côte d'Azur",
+        "Grand Est"
+      ],
+      "wrongAnswers": [
+        "L'Île-de-France",
+        "La Bretagne",
+        "Les Pays de la Loire",
+        "La Normandie",
+        "Les Hauts-de-France"
+      ]
+    },
+    {
+      "question": "Quelle ville française fait partie des 10 plus grandes métropoles du pays ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Paris",
+        "Lyon",
+        "Marseilles",
+        "Toulouse"
+      ],
+      "wrongAnswers": [
+        "Brest",
+        "Rouen",
+        "Avignon",
+        "Grenoble",
+        "Nancy"
       ]
     },
     {
@@ -1498,6 +2168,37 @@
         "Rouget de Lisle",
         "Bach",
         "Gilles Vigneault"
+      ]
+    },
+    {
+      "question": "Qui a été président de la Ve République ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Charles de Gaulle",
+        "Georges Pompidou",
+        "Valéry Giscard d’Estaing",
+        "François Mitterrand"
+      ],
+      "wrongAnswers": [
+        "Napoléon Bonaparte",
+        "François Fillon",
+        "Dominique de Villepin",
+        "Lionel Jospin",
+        "Alain Juppé"
+      ]
+    },
+    {
+      "question": "Qui a peint \"La liberté guidant le peuple\" ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Eugène Delacroix"
+      ],
+      "wrongAnswers": [
+        "Claude Monet",
+        "Théodore Géricault",
+        "Jacques-Louis David",
+        "Pablo Picasso",
+        "Leonardo da Vinci"
       ]
     },
     {
@@ -1624,6 +2325,39 @@
         "Une célèbre chanteuse",
         "Une reine de France",
         "Une scientifique célèbre pour sa découverte de la radioactivité"
+      ]
+    },
+    {
+      "question": "Qui était un célèbre compositeur français ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Claude Debussy",
+        "Maurice Ravel",
+        "Camille Saint-Saëns",
+        "Gabriel Fauré"
+      ],
+      "wrongAnswers": [
+        "Frédéric Chopin",
+        "Wolfgang Amadeus Mozart",
+        "Ludwig van Beethoven",
+        "Antonio Vivaldi",
+        "Johann Sebastian Bach"
+      ]
+    },
+    {
+      "question": "Qui était une figure de la Résistance française pendant la Seconde Guerre mondiale ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Jean Moulin",
+        "Charles de Gaulle",
+        "Lucie Aubrac",
+        "Guy Môquet"
+      ],
+      "wrongAnswers": [
+        "Philippe Pétain",
+        "Victor Hugo",
+        "Léon Blum",
+        "Jean Jaurès"
       ]
     },
     {
@@ -1768,6 +2502,19 @@
         "le bulletin de salaire",
         "les ordonnances médicales",
         "le contrat de travail"
+      ]
+    },
+    {
+      "question": "Tous les citoyens français ont-ils une religion ?",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "Non"
+      ],
+      "wrongAnswers": [
+        "Oui, le catholicisme est la religion d'État",
+        "Oui, tous les Français doivent être chrétiens",
+        "Non, les religions sont interdites en France",
+        "Tout citoyen français est considéré comme catholique par défaut, sauf s'il fait une démarche officielle pour s'y opposer"
       ]
     },
     {
