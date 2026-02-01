@@ -468,13 +468,12 @@
       "question": "Des parents ne respectent pas l'obligation d'instruction pour leurs enfants. Quelle sanction maximale risquent-ils ?",
       "theme": "Vivre dans la société française",
       "correctAnswers": [
-        "Une amende pouvant aller jusqu'à 1 500 €.",
-        "6 mois de prison et 7500 € d'amende, après mise en demure"
+        "6 mois de prison et 7500 € d'amende"
       ],
       "wrongAnswers": [
         "La suppression définitive des allocations familiales",
         "Le retrait immédiat de l'autorité parentale.",
-        "1 mois de prison et 2000€ d'amende",
+        "1 mois de prison et 2000 € d'amende",
         "Une amende pouvant aller jusqu'à 2500 €"
       ]
     },
@@ -1092,6 +1091,21 @@
         "Oui, car la liberté d'expression permet de détruire n'importe quel symbole public.",
         "Oui, mais seulement si le drapeau appartient à la personne qui le brûle.",
         "Non, sauf si l'acte a lieu lors d'une manifestation autorisée par la préfecture."
+      ]
+    },
+    {
+      "question": "Pour obtenir une carte d'identité, il faut :",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "Se rendre (souvent avec rendez-vous) dans une mairie équipée d'une station d'enregistrement (et souvent faire une pré-demande en ligne)",
+        "1 justificatif de domicile de moins de 1 an",
+        "1 photo d'identité de moins de 6 mois et conforme aux normes"
+      ],
+      "wrongAnswers": [
+        "Se rendre directement au Commissariat de police",
+        "Demander au Président de la République par courrier",
+        "Aller à la Préfecture sans rendez-vous",
+        "Payer une taxe de 100 €"
       ]
     },
     {
@@ -2290,6 +2304,102 @@
       ]
     },
     {
+      "question": "Qui était Albert Camus ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "L'auteur de L'Etranger",
+        "Le lauréat du prix Nobel de littérature (1957)",
+        "Un philosophe, écrivain et journaliste militant",
+        "Né en Algérie et mort dans un accident de voiture"
+      ],
+      "wrongAnswers": [
+        "Un ancien Président de la République",
+        "L'inventeur du vaccin contre la rage",
+        "Un peintre impressionniste",
+        "Un collaborateur pendant la guerre"
+      ]
+    },
+    {
+      "question": "Qui était Auguste Renoir ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Un célèbre peintre impressionniste.",
+        "L'auteur du tableau Le Bal du moulin de la Galette",
+        "Un artiste connu pour ses scènes de la vie quotidienne parisienne et ses portraits",
+        "L'un des fondateurs du groupe des Impressionnistes"
+      ],
+      "wrongAnswers": [
+        "Un sculpteur qui a fait Le Penseur",
+        "Le chef de la Résistance à Lyon",
+        "Un réalisateur de cinéma de la Nouvelle Vague",
+        "Un écrivain auteur de Germinal"
+      ]
+    },
+    {
+      "question": "Qui était Auguste Rodin ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Un sculpteur français majeur.",
+        "L'auteur de la célèbre statue Le Penseur",
+        "Le créateur des Bourgeois de Calais",
+        "Considéré comme le père de la sculpture moderne"
+      ],
+      "wrongAnswers": [
+        "Un peintre impressionniste",
+        "L'inventeur de la photographie",
+        "L'architecte de la Tour Eiffel",
+        "Un célèbre compositeur de musique"
+      ]
+    },
+    {
+      "question": "Qui était Charles Baudelaire ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Un poète français du XIXe siècle",
+        "L'auteur du recueil de poèmes Les Fleurs du Mal",
+        "Le traducteur en français des œuvres d'Edgar Allan Poe",
+        "A une influence considérable sur la poésie française à partir de la fin du XIXe siècle"
+      ],
+      "wrongAnswers": [
+        "Un homme politique sous la Ve République.",
+        "Le sculpteur du Penseur",
+        "L'auteur de la pièce de théâtre Le Cid",
+        "Un célèbre général de l'armée de Napoléon"
+      ]
+    },
+    {
+      "question": "Qui était George Sand ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Une écrivaine célèbre pour ses \"romans champêtres\" (comme La Mare au Diable)",
+        "Une figure de l'émancipation des femmes",
+        "De son vrai nom Amantine Aurore Lucile Dupin",
+        "Compte parmi les écrivains les plus prolifiques"
+      ],
+      "wrongAnswers": [
+        "La première femme Présidente de la République",
+        "L'épouse de Napoléon Bonaparte",
+        "Une célèbre cantatrice d'opéra",
+        "L'auteur de Harry Potter"
+      ]
+    },
+    {
+      "question": "Qui était Marguerite Yourcenar ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Une écrivaine et académicienne française.",
+        "La première femme élue à l'Académie française (1980)",
+        "L'auteure du célèbre roman historique Mémoires d'Hadrien",
+        "Une grande voyageuse"
+      ],
+      "wrongAnswers": [
+        "La créatrice de la maison de couture Chanel",
+        "Une résistante fusillée pendant la guerre",
+        "L'épouse de Victor Hugo",
+        "Une scientifique ayant découvert le radium"
+      ]
+    },
+    {
       "question": "Qui était Marie Curie ?",
       "theme": "Histoire, géographie et culture",
       "correctAnswers": [
@@ -2313,6 +2423,53 @@
         "Un peintre impressionniste",
         "Un explorateur",
         "Un scientifique"
+      ]
+    },
+    {
+      "question": "Qui était Monsieur Rouget de Lisle ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "L'auteur et le compositeur de La Marseillaise",
+        "Un officier français",
+        "Celui qui a écrit le \"Chant de guerre pour l'armée du Rhin\""
+      ],
+      "wrongAnswers": [
+        "Le premier Président de la République",
+        "Le couturier qui a inventé la robe de mariée",
+        "Le général qui a gagné la bataille de Verdun",
+        "L'architecte qui a construit l'Arc de Triomphe"
+      ]
+    },
+    {
+      "question": "Qui était Paul Cézanne ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Un célèbre peintre français post-impressionniste",
+        "L'auteur de nombreuses peintures de la montagne Sainte-Victoire",
+        "Un artiste originaire d'Aix-en-Provence",
+        "Il est considéré comme le « père de l'art moderne »"
+      ],
+      "wrongAnswers": [
+        "Un sculpteur qui a fait des statues de cire",
+        "L'inventeur de la photographie couleur.",
+        "Un écrivain de la même époque que Baudelaire",
+        "Le premier ministre de Napoléon III"
+      ]
+    },
+    {
+      "question": "Qui était Simone de Beauvoir ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Une grande écrivaine et philosophe existentialiste",
+        "L'auteure de l'essai féministe mondialement connu Le Deuxième Sexe",
+        "La compagne de vie du philosophe Jean-Paul Sartre",
+        "Une militante engagée pour les droits des femmes"
+      ],
+      "wrongAnswers": [
+        "La première femme à avoir été élue à l'Académie française",
+        "Une ministre de la Santé qui a fait voter la loi sur l'IVG",
+        "L'épouse de Charles de Gaulle",
+        "Une scientifique ayant découvert la radioactivité"
       ]
     },
     {
