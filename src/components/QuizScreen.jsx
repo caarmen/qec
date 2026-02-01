@@ -65,6 +65,8 @@ function QuizScreen({
     }
   })
 
+  const progressPercent = ((currentQuestionIndex + 1)*100) / totalQuestions
+
   if (!currentQuestion) {
     return null
   }
@@ -86,6 +88,13 @@ function QuizScreen({
         <h2 className="text-xl font-medium text-gray-900">
           {currentQuestion.question}
         </h2>
+
+        {/* Visual progress bar indicator.
+        Hide it from a11y as it would be redunant with the textual indication
+        of the progress already present on the screen. */}
+        <div className="w-full h-1 bg-gray-200 rounded-full" aria-hidden="true">
+          <div class="h-1 bg-blue-600 rounded-full" style={{width: `${progressPercent}%`}}></div>
+        </div>
 
         {/* Answer options */}
         <ul className="space-y-3">
