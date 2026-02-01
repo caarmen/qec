@@ -612,6 +612,22 @@
       ]
     },
     {
+      "question": "Les citoyens de l'Union européenne peuvent-ils voter aux élections locales dans un autre État de l'Union ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Oui, à condition de résider dans cet État membre et de jouir de ses droits civils et politiques tant dans son pays d'origine que dans le pays d'accueil",
+        "Oui, à condition d'avoir au moins 18 ans la veille du premier tour de l'élection",
+        "Oui, à condition d'habier dans le pays des élections locales"
+      ],
+      "wrongAnswers": [
+        "Non, le droit de vote est strictement réservé aux citoyens possédant la nationalité du pays où se déroule l'élection",
+        "Oui, ils sont inscrits automatiquement sur les listes électorales dès qu'ils déclarent leur domicile en mairie",
+        "Oui, ils peuvent voter à toutes les élections nationales, y compris l'élection présidentielle et les législatives",
+        "Oui, ils peuvent voter dans deux pays différents pour la même élection européenne s'ils y possèdent une résidence",
+        "Oui, à condition de résider dans le pays depuis au moins 10 ans sans interruption"
+      ]
+    },
+    {
       "question": "Combien d'États font partie de l'Union européenne au 1er janvier 2025 ?",
       "theme": "Système institutionnel et politique",
       "correctAnswers": [
@@ -636,6 +652,19 @@
       ]
     },
     {
+      "question": "Quel traité concerne la construction de l'Union européenne ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Le traité de Maastricht"
+      ],
+      "wrongAnswers": [
+        "Le traité de Lisbonne",
+        "Le traité de Versailles",
+        "Le traité de Verdun",
+        "Le traité de Paris"
+      ]
+    },
+    {
       "question": "Quel État a quitté l'Union Européenne en 2020 ?",
       "theme": "Système institutionnel et politique",
       "correctAnswers": [
@@ -645,6 +674,34 @@
         "La France",
         "L'Italie",
         "L'Espagne"
+      ]
+    },
+    {
+      "question": "Quelle est la devise de l'Union Européenne ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Unie dans la diversité"
+      ],
+      "wrongAnswers": [
+        "Liberté, égalité, fraternité",
+        "D'un océan à l'autre",
+        "Profiter largement à l'humanité",
+        "La force est dans l'unité",
+        "La réussite par l'effort commun"
+      ]
+    },
+    {
+      "question": "Quel est l'hymne de l'Union Européenne ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Ode à la joie",
+        "Mélodie de la Neuvième symphonie de Ludwig van Beethove"
+      ],
+      "wrongAnswers": [
+        "L'Hymne de la Victoire",
+        "Chant de la Liberté",
+        "Oui, nous aimons ces pays",
+        "Hymne aux gens de l'Europe"
       ]
     },
     {
@@ -685,6 +742,210 @@
       ]
     },
     {
+      "question": "Complétez les paroles de la Marseillaise \"Allons enfants de la patrie...\"",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "Le jour de gloire est arrivé !"
+      ],
+      "wrongAnswers": [
+        "Ton front est ceint de fleurons glorieux !",
+        "Les vœux que l'on fait, les fleurs que l'on sème",
+        "Nation vaillante et immortelle",
+        "Nous sommes des soldats, au service de la France",
+        "Avec sa troupe de guerriers"
+      ]
+    },
+    {
+      "question": "Dans le cadre d'un entretien d'embauche, que peut-on demander au candidat ?",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "Des informations servant à évaluer sa capacité à occuper l'emploi proposé",
+        "Des informations servant à évaluer ses aptitudes professionnelles"
+      ],
+      "wrongAnswers": [
+        "Son lieu de résidence",
+        "Ses activités syndicales",
+        "Sa situation de famille",
+        "Ses opinions politiques"
+      ]
+    },
+    {
+      "question": "Déclarer ses revenus aux services fiscaux est :",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "obligatoire si vous êtes domicilié en France et vous y habitez pendant plus de six mois par an",
+        "obligatoire si votre activité professionnelle principale est en France",
+        "obligatoire si vous avez en France le centre de vos intérêts économiques",
+        "obligatoire pour les personnes non domiciliées en France si elles disposent de revenus de source française"
+      ],
+      "wrongAnswers": [
+        "obligatoire si vous êtes domicilié en France et vous y habitez pendant plus de trois mois par an",
+        "non obligatoire si vous n'avez pas de revenus",
+        "possible par papier ou par internet pour tout le monde",
+        "à soumettre avant le 1 avril"
+      ]
+    },
+    {
+      "question": "En France, les impôts permettent de financer les dépenses publiques. Quelle proposition est correcte ?",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "Les familles sont moins imposées",
+        "La protection sociale est le premier poste de dépenses publiques en France",
+        "Plus le revenu d’une personne est important, plus le taux d’imposition qui s’applique est élevé",
+        "Aujourd’hui, plus de la moitié des foyers français ne paient pas d’impôt sur le revenu."
+      ],
+      "wrongAnswers": [
+        "L’impôt sur le revenu constitue le principal impôt payé par les Français",
+        "Les Français ne paient pas tous des impôts",
+        "L’État ne lutte pas assez contre la fraude fiscale et sociale",
+        "Les salariés sont les seuls à financer la Sécurité sociale"
+      ]
+    },
+    {
+      "question": "La liberté d'association est :",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "un droit fondamental en France",
+        "permet aux individus de se réunir et de s’organiser pour défendre des intérêts communs.",
+        "inscrit dans la Déclaration des Droits de l’Homme et du Citoyen de 1789",
+        "inscrit dans la Constitution de la Vème république"
+      ],
+      "wrongAnswers": [
+        "Un devoir civique obligatoire pour chaque citoyen majeur.",
+        "Réservée exclusivement aux personnes de nationalité française.",
+        "Soumise à l'autorisation préalable du préfet ou du Gouvernement."
+      ]
+    },
+    {
+      "question": "La liberté d'expression sur les réseaux sociaux en France est :",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "Un droit précieux dont on doit assumer les abus devant la loi",
+        "Limitée par le respect d'autrui (interdiction de la haine et de l'injure)",
+        "Régulée par un cadre européen (DSA) pour protéger les citoyens",
+        "Conditionnée par le maintien de l'ordre public"
+      ],
+      "wrongAnswers": [
+        "Un droit absolu qui permet de tout dire anonymement sans aucune conséquence légale.",
+        "Une liberté qui ne s'applique pas sur internet car les réseaux sociaux sont des espaces privés.",
+        "Un droit qui autorise la critique des religions seulement si elle ne blesse pas les croyants.",
+        "Une liberté totalement contrôlée et censurée par le Gouvernement avant chaque publication"
+      ]
+    },
+    {
+      "question": "Lequel de ces prénoms évoque un symbole de la République ?",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "Marianne"
+      ],
+      "wrongAnswers": [
+        "Napoléon",
+        "Jeanne",
+        "Charles",
+        "Louis"
+      ]
+    },
+    {
+      "question": "Lequel de ces symboles représente la République française ?",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "Le sceau",
+        "Le coq",
+        "Le faisceau du licteur",
+        "Marianne"
+      ],
+      "wrongAnswers": [
+        "La fleur de lis",
+        "La tour Eiffel",
+        "La baguette",
+        "Le croissant",
+        "La vache"
+      ]
+    },
+    {
+      "question": "Où peut-on voir la devise de la République ?",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "sur les bâtiments publics : mairies, écoles, tribunaux",
+        "sur certaines pièces de monnaie et timbres",
+        "sur les documents officiels",
+        "dans la Constitution française"
+      ],
+      "wrongAnswers": [
+        "Dans les églises",
+        "Dans le entreprises",
+        "Dans la signalisation routière",
+        "Dans les centres commerciaux"
+      ]
+    },
+    {
+      "question": "Lesquels sont des symboles officiels de la République française ?",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "Marianne",
+        "La fête nationale",
+        "L'hymne français"
+      ],
+      "wrongAnswers": [
+        "Le coq",
+        "La tour Eiffel",
+        "La baguette",
+        "Le croissant"
+      ]
+    },
+    {
+      "question": "Peut-on brûler publiquement un drapeau français ?",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "Non, car c'est un outrage à un symbole de la République qui représente l'unité de la Nation."
+      ],
+      "wrongAnswers": [
+        "Oui, car la liberté d'expression permet de détruire n'importe quel symbole public.",
+        "Oui, mais seulement si le drapeau appartient à la personne qui le brûle.",
+        "Non, sauf si l'acte a lieu lors d'une manifestation autorisée par la préfecture."
+      ]
+    },
+    {
+      "question": "Quand la sécurité sociale a-t-elle été établie en France ?",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "1945"
+      ],
+      "wrongAnswers": [
+        "1905",
+        "1958",
+        "1918",
+        "1981"
+      ]
+    },
+    {
+      "question": "Que commémore la fête nationale ?",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "La prise de la Bastille (14 juillet 1789)",
+        "La première Fête de la Fédération (le 14 juillet 1790)"
+      ],
+      "wrongAnswers": [
+        "L'exposition universelle de 1889",
+        "La fin de la Première Guerre mondiale",
+        "La fin de la Guerre d’Algérie",
+        "La fin de la Seconde Guerre mondiale"
+      ]
+    },
+    {
+      "question": "Que porte Marianne sur la tête ?",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "Le bonnet phrygien"
+      ],
+      "wrongAnswers": [
+        "Un beret",
+        "Une couronne",
+        "Une tiare",
+        "Rien"
+      ]
+    },
+    {
       "question": "Que signifie le mot \"fraternité\" dans la devise française ?",
       "theme": "Principes et valeurs de la République",
       "correctAnswers": [
@@ -698,6 +959,19 @@
       ]
     },
     {
+      "question": "Quel symbole de la République peut-on voir sur les maillots de l'équipe de France de football ?",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "Le coq"
+      ],
+      "wrongAnswers": [
+        "Marianne",
+        "La tour Eiffel",
+        "La bastille",
+        "La devise \"Liberté, Égalité, Fraternité\""
+      ]
+    },
+    {
       "question": "Quelle est la devise de la République française ?",
       "theme": "Principes et valeurs de la République",
       "correctAnswers": [
@@ -707,6 +981,102 @@
         "Liberté, Unité, Solidarité",
         "Travail, Famille, Patrie",
         "Paix et Justice"
+      ]
+    },
+    {
+      "question": "Qu'est-ce que la liberté d'association ?",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "Le droit de chaque personne - française ou étrangère - de s’engager librement",
+        "Un droit inscrit dans la loi du 1er juillet 1901",
+        "Le droit d'adhérer à un syndicat ou à un parti politique",
+        "Le droit de travailler ou être bénévole dans une association"
+      ],
+      "wrongAnswers": [
+        "Le droit de créer ou participer à des associations uniquement sans but lucratif",
+        "Elle autorise la création des associations non-soumises au code de travail",
+        "Nécessite l'accord écrit du maire de la commune.",
+        "Est suspendue durant les périodes d'élections législatives."
+      ]
+    },
+    {
+      "question": "Qu'est-ce qu'une liberté ?",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "Un droit pour tous, sans faire de différence entre les pays d’origine d’une personne, ses parents ou ses ancêtres, sa religion…",
+        "Une valeur fondamentale qui est garantie par la Déclaration des droits de l’homme et du citoyen de 1789.",
+        "Pouvoir faire tout ce qui ne nuit pas à autrui"
+      ],
+      "wrongAnswers": [
+        "Un privilège réservé exclusivement aux personnes possédant la nationalité française",
+        "Un droit absolu qui ne peut jamais être limité par la loi, même en cas d'abus",
+        "Un pouvoir accordé par le Président de la République selon son choix."
+      ]
+    },
+    {
+      "question": "Selon la Constitution, la France est une République...",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "indivisible, laïque, démocratique et sociale"
+      ],
+      "wrongAnswers": [
+        "populaire",
+        "socialiste",
+        "aristrocratique"
+      ]
+    },
+    {
+      "question": "Sur quel document peut-on voir Marianne ?",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "la carte d’identité",
+        "les documents administratifs",
+        "des timbres",
+        "les pièces de monnaie"
+      ],
+      "wrongAnswers": [
+        "le bulletin de salaire",
+        "les ordonnances médicales",
+        "le contrat de travail"
+      ]
+    },
+    {
+      "question": "Une des valeurs de la devise républicaine est l'Égalité. Qu'est-ce que cela signifie ?",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "Tous les citoyens ont les mêmes droits et les mêmes devoirs quel que soit leur sexe, leur origine, leur religion, leurs opinions ou leur orientation sexuelle."
+      ],
+      "wrongAnswers": [
+        "Les libertés fondamentales sont garanties : liberté de pensée, liberté de croyance, liberté de s’exprimer, liberté de se réunir...",
+        "La volonté de vivre ensemble des citoyens français se traduit par la solidarité entre les citoyens",
+        "Chaque citoyen est soumis au même taux d'imposition"
+      ]
+    },
+    {
+      "question": "Une personne peut-elle changer librement de religion en France ?",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "Oui, chacun est libre de croire, de ne pas croire ou d'adopter la religion qu'il souhaite",
+        "Oui, c'est un droit garanti par la liberté de croyance et la laïcité"
+      ],
+      "wrongAnswers": [
+        "Oui, mais seulement avec l'autorisation écrite du maire de la commune",
+        "Non, il faut conserver la religion de ses parents ou de ses ancêtres",
+        "Non, car la France impose une religion d'État officielle",
+        "Oui, mais il faut payer une taxe de changement de culte à l'administration"
+      ]
+    },
+    {
+      "question": "Selon le principe de laïcité, que signifie la neutralité de l'État ?",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "Les agents publics, stagiaires ou élèves, ne doivent pas manifester leurs convictions religieuses, philosophiques ou politiques ni faire prévaloir leur préférence pour une religion",
+        "La neutralité de la puissance publique protège les agents et les usagers du service public par le traitement égalitaire de toutes les personnes."
+      ],
+      "wrongAnswers": [
+        "Les agents publics doivent obligatoirement être athées",
+        "La neutralité permet à l'État d'interdire la pratique religieuse à l'intérieur des domiciles privés.",
+        "Les usagers (citoyens) doivent obligatoirement cacher leur religion pour avoir le droit d'entrer dans une mairie ou un service public"
       ]
     },
     {
@@ -1066,6 +1436,22 @@
       ]
     },
     {
+      "question": "Les citoyens de l'Union européenne peuvent-ils voter aux élections locales dans un autre État de l'Union ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Oui, à condition de résider dans cet État membre et de jouir de ses droits civils et politiques tant dans son pays d'origine que dans le pays d'accueil",
+        "Oui, à condition d'avoir au moins 18 ans la veille du premier tour de l'élection",
+        "Oui, à condition d'habier dans le pays des élections locales"
+      ],
+      "wrongAnswers": [
+        "Non, le droit de vote est strictement réservé aux citoyens possédant la nationalité du pays où se déroule l'élection",
+        "Oui, ils sont inscrits automatiquement sur les listes électorales dès qu'ils déclarent leur domicile en mairie",
+        "Oui, ils peuvent voter à toutes les élections nationales, y compris l'élection présidentielle et les législatives",
+        "Oui, ils peuvent voter dans deux pays différents pour la même élection européenne s'ils y possèdent une résidence",
+        "Oui, à condition de résider dans le pays depuis au moins 10 ans sans interruption"
+      ]
+    },
+    {
       "question": "Combien d'États font partie de l'Union européenne au 1er janvier 2025 ?",
       "theme": "Système institutionnel et politique",
       "correctAnswers": [
@@ -1090,6 +1476,19 @@
       ]
     },
     {
+      "question": "Quel traité concerne la construction de l'Union européenne ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Le traité de Maastricht"
+      ],
+      "wrongAnswers": [
+        "Le traité de Lisbonne",
+        "Le traité de Versailles",
+        "Le traité de Verdun",
+        "Le traité de Paris"
+      ]
+    },
+    {
       "question": "Quel État a quitté l'Union Européenne en 2020 ?",
       "theme": "Système institutionnel et politique",
       "correctAnswers": [
@@ -1099,6 +1498,20 @@
         "La France",
         "L'Italie",
         "L'Espagne"
+      ]
+    },
+    {
+      "question": "Quelle est la devise de l'Union Européenne ?",
+      "theme": "Système institutionnel et politique",
+      "correctAnswers": [
+        "Unie dans la diversité"
+      ],
+      "wrongAnswers": [
+        "Liberté, égalité, fraternité",
+        "D'un océan à l'autre",
+        "Profiter largement à l'humanité",
+        "La force est dans l'unité",
+        "La réussite par l'effort commun"
       ]
     },
     {
