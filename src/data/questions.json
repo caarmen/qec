@@ -774,6 +774,19 @@
       ]
     },
     {
+      "question": "L'instruction des enfants est obligatoire de :",
+      "theme": "Vivre dans la société française",
+      "correctAnswers": [
+        "3 ans à 16 ans"
+      ],
+      "wrongAnswers": [
+        "6 ans à 16 ans",
+        "3 ans à 14 ans",
+        "6 ans à 18 ans",
+        "Jusqu'à l'obtention du diplôme"
+      ]
+    },
+    {
       "question": "La liberté d'association est :",
       "theme": "Principes et valeurs de la République",
       "correctAnswers": [
@@ -891,6 +904,23 @@
         "Royaume-Uni",
         "Suisse",
         "Danemark"
+      ]
+    },
+    {
+      "question": "Lequel de ces personnages a un lien avec la République française ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "Marianne",
+        "Jean Jaurès",
+        "Charles de Gaulle",
+        "L'Abbé Grégoire"
+      ],
+      "wrongAnswers": [
+        "Louis XIV",
+        "Louis XVI",
+        "Vercingétorix",
+        "Charlemagne",
+        "Clovis"
       ]
     },
     {
@@ -1483,6 +1513,22 @@
         "Une couronne",
         "Une tiare",
         "Rien"
+      ]
+    },
+    {
+      "question": "Que signifie être citoyen d'un État ?",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "Avoir la nationalité du pays et bénéficier de sa protection",
+        "Jouir de droits civiques et politiques",
+        "Être l'auteur indirect des lois en élisant des représentants qui les voten",
+        "Rrespecter la loi"
+      ],
+      "wrongAnswers": [
+        "Être obligé d'appartenir à un parti politique",
+        "Faire le service militaire obligatoire de 12 mois",
+        "Être obligé de voter à chaque élection",
+        "Posséder un titre de séjour permanent"
       ]
     },
     {
@@ -2224,6 +2270,19 @@
       ]
     },
     {
+      "question": "Quelle est l'infraction la plus grave ?",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "Le crime"
+      ],
+      "wrongAnswers": [
+        "Le délit",
+        "La contravention",
+        "L'incivilité",
+        "Le blâme"
+      ]
+    },
+    {
       "question": "Quelle est l'une des voies possibles pour modifier la Constitution ?",
       "theme": "Système institutionnel et politique",
       "correctAnswers": [
@@ -2476,6 +2535,22 @@
       ]
     },
     {
+      "question": "Quelle instruction est prévue pour les enfants qui ne parlent pas français ?",
+      "theme": "Vivre dans la société française",
+      "correctAnswers": [
+        "UPE2A",
+        "Unité pédagogique pour élèves allophones arrivants",
+        "Un enseignement du Français Langue de Scolarisation (FLS)",
+        "L'orientation par le CASNAV"
+      ],
+      "wrongAnswers": [
+        "L'obligation d'attendre de parler couramment français",
+        "Le placement dans une école spécialisée réservée aux étrangers",
+        "L'obligation pour les parents de payer des cours privés de français",
+        "L'envoi automatique en classe de SEGPA"
+      ]
+    },
+    {
       "question": "Quelle mer ou océan borde la France métropolitaine ?",
       "theme": "Histoire, géographie et culture",
       "correctAnswers": [
@@ -2607,6 +2682,22 @@
         "Décider des peines de prison pour les délinquants.",
         "Délivrer un mandat de perquisition",
         "Responsable de la gendarmerie"
+      ]
+    },
+    {
+      "question": "Quels sont les textes qui définissent les règles au travail ?",
+      "theme": "Vivre dans la société française",
+      "correctAnswers": [
+        "Le code du travail",
+        "La convention collective",
+        "Le contrat du travail",
+        "Le règlement intérieur"
+      ],
+      "wrongAnswers": [
+        "Le Code civil",
+        "Le carnet de liaison",
+        "Le journal de bord de l'employeur",
+        "La Constitution européenne"
       ]
     },
     {
@@ -3185,6 +3276,21 @@
       ]
     },
     {
+      "question": "Travailler sans être déclaré est :",
+      "theme": "Vivre dans la société française",
+      "correctAnswers": [
+        "un délit",
+        "passible de lourdes sanctions pénales",
+        "considéré comme du travail dissimulé"
+      ],
+      "wrongAnswers": [
+        "une pratique autorisée si le salarié est d'accord",
+        "une simple contravention",
+        "un avantage pour le salarié qui gagne plus d'argent",
+        "légal si la durée du travail est inférieure à 10 heures par semaine"
+      ]
+    },
+    {
       "question": "Une des valeurs de la devise républicaine est l'Égalité. Qu'est-ce que cela signifie ?",
       "theme": "Principes et valeurs de la République",
       "correctAnswers": [
@@ -3222,6 +3328,36 @@
         "qu'elle est obligée de se convertir",
         "qu'elle n'a pas le droit de voter",
         "qu'elle commet un délit"
+      ]
+    },
+    {
+      "question": "Une personne est privée de ses droits civils et politiques pendant 5 ans suite à une condamnation. Parmi ces propositions laquelle est correcte ? Pendant 5 ans,...",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "Elle ne peut pas voter",
+        "Elle ne peut pas être élue",
+        "Elle ne peut pas exercer une fonction publique",
+        "Elle ne peut pas être désignée comme juré d'assises"
+      ],
+      "wrongAnswers": [
+        "Elle ne peut plus travailler dans le secteur privé",
+        "Elle perd sa nationalité française",
+        "Elle n'a plus le droit d'utiliser sa carte vitale",
+        "Elle est obligée de quitter le territoire français"
+      ]
+    },
+    {
+      "question": "Une personne étrangère, en situation régulière, peut créer son entreprise :",
+      "theme": "Vivre dans la société française",
+      "correctAnswers": [
+        "Oui, à condition de posséder un titre de séjour qui autorise l'exercice d'une activité professionnelle",
+        "Oui, en respectant les formalités de création (immatriculation, déclaration)"
+      ],
+      "wrongAnswers": [
+        "Uniquement si elle crée une association à but non lucratif",
+        "Seulement si elle est mariée avec un Français",
+        "Non, car elle ne possède pas le droit de vote",
+        "Non, car il faut obligatoirement avoir la nationalité français"
       ]
     },
     {
