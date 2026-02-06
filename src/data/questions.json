@@ -163,6 +163,21 @@
       ]
     },
     {
+      "question": "Auprès de quelle institution les parents peuvent inscrire leurs enfants à l'école publique ?",
+      "theme": "Vivre dans la société française",
+      "correctAnswers": [
+        "La mairie pour l'école maternelle",
+        "L'établissement scolaire directement pour le collège",
+        "Le lycée d'affectation, souvent via la plateforme en ligne Éduconnect"
+      ],
+      "wrongAnswers": [
+        "La plateforme Parcoursup",
+        "La Préfecture",
+        "La CAF (Caisse d'Allocations Familiales)",
+        "Le ministère de l'Éducation nationale à Paris"
+      ]
+    },
+    {
       "question": "Combien d'États font partie de l'Union européenne au 1er janvier 2025 ?",
       "theme": "Système institutionnel et politique",
       "correctAnswers": [
@@ -554,6 +569,20 @@
         "1848",
         "1914",
         "1492"
+      ]
+    },
+    {
+      "question": "En quelle année l'euro est-il devenu la monnaie officielle de la France ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "1999 - la monnaie officielle au niveau juridique et pour les transactions bancaires",
+        "2002 - la mise en circulation des pièces et des billets"
+      ],
+      "wrongAnswers": [
+        "1992",
+        "2000",
+        "2005",
+        "1958"
       ]
     },
     {
