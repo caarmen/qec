@@ -67,6 +67,18 @@ describe('useQuiz', () => {
       expect(result.current.totalQuestions).toBe(2)
     })
 
+    it('should use selectedQuestionCount when starting the quiz', () => {
+      const { result } = renderHook(() => useQuiz())
+
+      act(() => {
+        result.current.selectQuestionCount(3)
+        result.current.startQuiz(mockRawQuestions)
+      })
+
+      expect(result.current.questions).toHaveLength(3)
+      expect(result.current.totalQuestions).toBe(3)
+    })
+
     it('should default to 10 questions when count not specified', () => {
       const manyQuestions = Array(15).fill(null).map((_, i) => ({
         question: `Question ${i}`,
@@ -124,6 +136,25 @@ describe('useQuiz', () => {
       expect(result.current.score).toBe(0)
       expect(result.current.userAnswers).toEqual([])
       expect(result.current.selectedAnswer).toBe(null)
+    })
+
+    it('should reflect updated question count after changing selection', () => {
+      const { result } = renderHook(() => useQuiz())
+
+      act(() => {
+        result.current.selectQuestionCount(2)
+        result.current.startQuiz(mockRawQuestions)
+      })
+
+      expect(result.current.totalQuestions).toBe(2)
+
+      act(() => {
+        result.current.restartQuiz()
+        result.current.selectQuestionCount(3)
+        result.current.startQuiz(mockRawQuestions)
+      })
+
+      expect(result.current.totalQuestions).toBe(3)
     })
   })
 
