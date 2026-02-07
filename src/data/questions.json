@@ -544,6 +544,37 @@
       ]
     },
     {
+      "question": "En France, il est possible pour l'État de financer :",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "l'entretien des cathédrales",
+        "les salaires des ministres des cultes en Alsace et en Moselle",
+        "Des services d'aumônerie dans les hôpitaux, les prisons ou les lycées",
+        "La restauration de monuments historiques à caractère religieux"
+      ],
+      "wrongAnswers": [
+        "La construction de nouveaux lieux de culte.",
+        "les salaires de tous les prêtres, imams et rabbins de France",
+        "Les campagnes électorales des candidats se présentant au nom d'une religion",
+        "L’achat de livres de prières ou de matériel pour les cérémonies religieuses."
+      ]
+    },
+    {
+      "question": "En France, la conduite sans permis d'une moto est :",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "puni d'un an d'emprisonnement et de 15 000 euros d'amende",
+        "une infraction pouvant faire l'objet d'une Amende Forfaitaire Délictuelle (AFD)",
+        "une cause de confiscation obligatoire du véhicule"
+      ],
+      "wrongAnswers": [
+        "une simple contravention punie d'une amende de 135 €",
+        "une infraction qui n'entraîne jamais de peine de prison.",
+        "une infraction couverte par l'assurance",
+        "un acte autorisé si la moto fait moins de 125 cm³"
+      ]
+    },
+    {
       "question": "En France, les impôts permettent de financer les dépenses publiques. Quelle proposition est correcte ?",
       "theme": "Principes et valeurs de la République",
       "correctAnswers": [
@@ -583,6 +614,20 @@
         "2000",
         "2005",
         "1958"
+      ]
+    },
+    {
+      "question": "En quelle année l'Union européenne a-t-elle été fondée?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "1992"
+      ],
+      "wrongAnswers": [
+        "1951",
+        "1957",
+        "2007",
+        "1999",
+        "2002"
       ]
     },
     {
@@ -789,6 +834,19 @@
       ]
     },
     {
+      "question": "L'inscription à l'Assurance maladie est :",
+      "theme": "Vivre dans la société française",
+      "correctAnswers": [
+        "Ouverte à toute personne qui travaille ou réside en France de manière stable et régulière",
+        "Obligatoire *"
+      ],
+      "wrongAnswers": [
+        "Réservée uniquement aux citoyens français",
+        "Payante et accessible uniquement aux personnes ayant un emploi",
+        "Obligatoire pour tous, y compris les touristes et les personnes en séjour irrégulier."
+      ]
+    },
+    {
       "question": "L'inscription sur les listes électorales est :",
       "theme": "Système institutionnel et politique",
       "correctAnswers": [
@@ -813,6 +871,23 @@
         "3 ans à 14 ans",
         "6 ans à 18 ans",
         "Jusqu'à l'obtention du diplôme"
+      ]
+    },
+    {
+      "question": "La contraception :",
+      "theme": "Vivre dans la société française",
+      "correctAnswers": [
+        "l'ensemble des moyens visant à éviter une grossesse",
+        "s'adresse aux femmes et aux hommes",
+        "est remboursé selon le dispositif choisi",
+        "autorisée aux jeunes filles mineures, avec ordonnance selon le dispositif choisi, sans le consentement des parents ou du représentant légal"
+      ],
+      "wrongAnswers": [
+        "obligatoirement soumise à l'autorisation des parents pour les mineures",
+        "uniquement prescrite par un médecin généraliste",
+        "interdite avant l'âge de 18 ans",
+        "est remboursée uniquement pour les femmes",
+        "est toujours remboursée par l'Assurance Maladie"
       ]
     },
     {
@@ -903,6 +978,22 @@
       ]
     },
     {
+      "question": "Le non-respect du code de la route est :",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "Un délit ou une infraction puni(e) par des amendes, des retraits de points ou des peines de prison selon la gravité",
+        "Passible de sanctions administratives et pénales, comme le retrait du permis de conduire ou une amende forfaitaire",
+        "Un comportement dangereux qui peut entraîner des accidents, des blessures ou des décès, et qui est sanctionné par la loi",
+        "Un manquement aux règles de sécurité routière, pouvant entraîner des sanctions graduelles (amende, suspension de permis, stage de sensibilisation, etc.)"
+      ],
+      "wrongAnswers": [
+        "Une faute qui ne concerne que les conducteurs professionnels",
+        "Un comportement toléré si aucun accident n’est causé",
+        "Une infraction qui ne peut jamais entraîner de peine de prison",
+        "Un manquement qui ne peut pas entraîner de retrait de points sur le permis de conduire"
+      ]
+    },
+    {
       "question": "Le stationnement sur une place réservée aux personnes handicapées :",
       "theme": "Vivre dans la société française",
       "correctAnswers": [
@@ -916,6 +1007,22 @@
         "Est toléré le dimanche et les jours fériés pour tout le monde",
         "Est permis si vous avez une personne âgée à bord, même sans carte",
         "Donne lieu à une simple amende de 17 € (amende forfaitaire de base)"
+      ]
+    },
+    {
+      "question": "Lequel de ces crimes ou délits peut entrainer la privation des droits civils et politiques par un juge ?",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "Le détournement de fonds publics ou la corruption",
+        "Les actes de terrorisme",
+        "Les violences graves ou homicides volontaires",
+        "La fraude fiscale aggravée"
+      ],
+      "wrongAnswers": [
+        "Un simple excès de vitesse ou une infraction au Code de la route",
+        "Le non-paiement d'une amende de stationnement",
+        "Une rupture abusive de contrat de travail (licenciement illégal)",
+        "Le défaut de présentation de sa carte d'identité lors d'un contrôle"
       ]
     },
     {
@@ -1138,6 +1245,23 @@
         "La Loi de séparation des Églises et de l'État",
         "La loi instaurant les congés payés",
         "L'édit de Nantes"
+      ]
+    },
+    {
+      "question": "Pendant quelles journées peut-on visiter gratuitement des lieux culturels en France ?",
+      "theme": "Histoire, géographie et culture",
+      "correctAnswers": [
+        "L’accès aux collections de la plupart des musées nationaux est gratuit le premier dimanche de chaque mois.",
+        "Les Journées européennes du patrimoine (JEP) sont des manifestations nationales et internationales annuelles qui permettent au public la découverte de nombreux édifices et autres lieux qui ne sont souvent qu'exceptionnellement ouverts au public, ou de musées qui vont alors modifier leur offre voire leur tarification pour l'occasion.",
+        "La nuit européenne des musées",
+        "La fête de la musique"
+      ],
+      "wrongAnswers": [
+        "Le 14 juillet",
+        "Lors de la Fête des voisins",
+        "Chaque samedi de l'année",
+        "Pendant toute la durée des vacances scolaires",
+        "Pendant les \"Journées du Patrimoine mondial de l'UNESCO\""
       ]
     },
     {
@@ -1529,6 +1653,20 @@
         "Le droit d'utiliser ses croyances religieuses pour ne pas respecter les lois de la République",
         "Le financement par l'État de la construction des lieux de culte et du salaire des religieux",
         "L'interdiction totale de parler de religion dans l'espace public"
+      ]
+    },
+    {
+      "question": "Que permet la liberté de circulation ?",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "Elle permet aux citoyens de circuler en France et dans l'ensemble des pays membres de l'espace Schengen",
+        "Voyager sans contrôle systématique aux frontières intérieures de l'espace Schengen (pour les États membres)"
+      ],
+      "wrongAnswers": [
+        "Entrer dans des propriétés privées sans autorisation",
+        "Circuler librement sans jamais avoir à présenter de document d'identité en cas de contrôle légal",
+        "Voter aux élections présidentielles de n'importe quel pays de l'Union européenne où l'on circule",
+        "S'installer dans n'importe quel pays du monde sans avoir besoin de visa ou de passeport"
       ]
     },
     {
@@ -1929,18 +2067,6 @@
       ]
     },
     {
-      "question": "Quel jour célèbre-t-on officiellement la laïcité en France ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "9 décembre",
-        "9 mai"
-      ],
-      "wrongAnswers": [
-        "11 novembre",
-        "14 juillet"
-      ]
-    },
-    {
       "question": "Quel mariage est reconnu légalement ?",
       "theme": "Vivre dans la société française",
       "correctAnswers": [
@@ -2215,6 +2341,20 @@
         "Des travaux de transformations qui mettent en péril le bon fonctionnement des équipements ou la sécurité du local",
         "Sous-louer le logement",
         "Repeindre les murs avec des couleurs \"extravagantes\""
+      ]
+    },
+    {
+      "question": "Quelle aide permet aux personnes qui ont des difficultés financières d'avoir un avocat ?",
+      "theme": "Vivre dans la société française",
+      "correctAnswers": [
+        "L'aide juridictionnelle"
+      ],
+      "wrongAnswers": [
+        "Le Revenu de Solidarité Active (RSA)",
+        "La protection diplomatique",
+        "Le médiateur de la République",
+        "Le crédit d'impôt pour frais de notaire",
+        "Le Défenseur des droits"
       ]
     },
     {
@@ -2637,6 +2777,23 @@
         "Les Pays de la Loire",
         "La Normandie",
         "Les Hauts-de-France"
+      ]
+    },
+    {
+      "question": "Quelle situation est une atteinte à la dignité humaine ?",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "La discrimination",
+        "Le travail forcé ou l'esclavage",
+        "Les violences physiques ou psychologiques",
+        "Les conditions de logement insalubres ou indignes"
+      ],
+      "wrongAnswers": [
+        "Le fait de devoir payer des impôts",
+        "Le fait d'être condamné à une peine de prison par un tribunal",
+        "Le fait de ne pas obtenir un rendez-vous immédiat à la mairie",
+        "Le licenciement pour faute réelle et sérieuse",
+        "Le licenciement pour faute simple"
       ]
     },
     {
@@ -3126,6 +3283,21 @@
       ]
     },
     {
+      "question": "Qui peut demander le divorce de personnes mariées ?",
+      "theme": "Vivre dans la société française",
+      "correctAnswers": [
+        "L'un ou l'autre des époux",
+        "Les deux époux d'un commun accord"
+      ],
+      "wrongAnswers": [
+        "Uniquement le mari",
+        "Le maire",
+        "Les enfants du couple",
+        "Les parents des mariés",
+        "Uniquement l'époux qui n'a pas commis de faute"
+      ]
+    },
+    {
       "question": "Qui peut demander un congé parental d'éducation ?",
       "theme": "Vivre dans la société française",
       "correctAnswers": [
@@ -3225,6 +3397,23 @@
       ]
     },
     {
+      "question": "S'agissant de l'accueil des enfants en situation de handicap à l'école, laquelle des propositions est vraie ?",
+      "theme": "Vivre dans la société française",
+      "correctAnswers": [
+        "Vivre avec et comme les autres, les enfants en situation de handicap peuvent bénéficier d'un emploi du temps aménagé.",
+        "La scolarisation de l'enfant peut se dérouler à temps plein ou à temps partiel, en internat, semi-internat ou externat.",
+        "Le parcours scolaire de l'enfant fait l'objet d'un projet personnalisé de scolarisation (PPS)",
+        "Si les difficultés de l'enfant sont importantes, il peut bénéficier d'une aide individuelle assurée notamment par un accompagnant d’élèves en situation de handicap (AESH)"
+      ],
+      "wrongAnswers": [
+        "Les enfants en situation de handicap ne peuvent être scolarisés qu’en établissement spécialisé.",
+        "L’accueil des enfants en situation de handicap à l’école dépend de la bonne volonté des enseignants",
+        "Les enfants en situation de handicap doivent passer un test pour être admis à l’école",
+        "Seuls les enfants dont le handicap est léger peuvent être scolarisés en milieu ordinaire",
+        "Les écoles privées ne sont pas concernées par l’obligation d’accueil des enfants en situation de handicap"
+      ]
+    },
+    {
       "question": "Selon la Constitution, la France est une République...",
       "theme": "Principes et valeurs de la République",
       "correctAnswers": [
@@ -3274,6 +3463,23 @@
         "Charles de Gaulle",
         "Valéry Giscard d'Estaing",
         "Jacques Chirac"
+      ]
+    },
+    {
+      "question": "Suite à une interpellation par la police, il est possible de :",
+      "theme": "Droits et devoirs",
+      "correctAnswers": [
+        "se taire",
+        "faire l'objet d'une vérification d'identité",
+        "être soumis à une palpation de sécurité par un agent de même sexe pour s'assurer de l'absence d'objets dangereux",
+        "être placé en garde à vue"
+      ],
+      "wrongAnswers": [
+        "refuser de montrer ses papiers d’identité",
+        "s’enfuir ou résister physiquement si on estime que l'interpellation est injuste",
+        "être maintenu en cellule de dégrisement pendant 72 heures sans voir un avocat",
+        "être contraint de signer un procès-verbal",
+        "contacter un avocat immédiatement dans la rue"
       ]
     },
     {
