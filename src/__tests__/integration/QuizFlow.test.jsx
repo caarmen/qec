@@ -9,8 +9,9 @@ describe('Quiz Flow Integration', () => {
     
     render(<App />)
 
-    // 1. START SCREEN
-    expect(screen.getByRole('heading', { name: /quiz de naturalisation française/i })).toBeInTheDocument()
+    // 1. QUIZ SETUP SCREEN
+    expect(screen.getByRole('heading', { name: /préparer le quiz/i })).toBeInTheDocument()
+    expect(screen.getByText(/nombre de questions/i)).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /commencer le quiz/i })).toBeInTheDocument()
 
     // Start the quiz
@@ -88,8 +89,8 @@ describe('Quiz Flow Integration', () => {
     // Restart quiz
     await user.click(screen.getByRole('button', { name: /recommencer le quiz/i }))
 
-    // Should be back at start screen
-    expect(screen.getByRole('heading', { name: /quiz de naturalisation française/i })).toBeInTheDocument()
+    // Should be back at setup screen
+    expect(screen.getByRole('heading', { name: /préparer le quiz/i })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /commencer le quiz/i })).toBeInTheDocument()
   })
 
@@ -207,8 +208,8 @@ describe('Quiz Flow Integration', () => {
     // Restart from results
     await user.click(screen.getByRole('button', { name: /recommencer le quiz/i }))
 
-    // Should be back at start screen (state fully reset)
-    expect(screen.getByRole('heading', { name: /quiz de naturalisation française/i })).toBeInTheDocument()
+    // Should be back at setup screen (state fully reset)
+    expect(screen.getByRole('heading', { name: /préparer le quiz/i })).toBeInTheDocument()
     
     // Start new quiz
     await user.click(screen.getByRole('button', { name: /commencer le quiz/i }))
