@@ -4,7 +4,8 @@ Une application React interactive pour tester vos connaissances civiques et éva
 
 ## ✨ Caractéristiques
 
-- **Quiz interactif** : 10 questions sélectionnées aléatoirement parmi un pool de questions
+- **Quiz interactif** : Choix du nombre de questions avant de démarrer (10, 20, 40, 80)
+- **Valeur par défaut** : 40 questions sélectionnées par défaut
 - **Questions variées** : Questions sur le système institutionnel, les principes et valeurs, l'histoire, la géographie et la vie en France.
   - Les questions proviennent du document [Questions de connaissance pour l'examen civique de la demande de naturalisation](https://www.immigration.interieur.gouv.fr/content/download/138954/1097120/file/examen-civique-naturalisation-questions-de-connaissance-20251212.pdf) disponible sur le site du [Ministère de l'Intérieur](https://www.immigration.interieur.gouv.fr/Integration-et-Acces-a-la-nationalite/La-nationalite-francaise/Les-procedures-d-acces-a-la-nationalite-francaise).
   - À ce jour, ce projet ne contient qu'un sous-ensemble des questions. La source des questions sur le site du Ministère de l'Intérieur contient les questions, mais pas les réponses. Les réponses présentes dans ce projet ont été partiellement renseignées manuellement et partiellement générées à l'aide de [Google NotebookLM](https://notebooklm.google/), en s'appuyant sur des sources issues de sites officiels du gouvernement français, par exemple :
@@ -18,7 +19,7 @@ Une application React interactive pour tester vos connaissances civiques et éva
     - [Élections législatives](https://www.service-public.gouv.fr/particuliers/vosdroits/F1943)
 
 
-- **Progression claire** : Indicateur de progression (Question X sur 10)
+- **Progression claire** : Indicateur de progression (Question X sur N)
 - **Validation intelligente** : Impossible de passer à la question suivante sans sélectionner une réponse
 - **Résultats détaillés** : Score final avec pourcentage de réussite
 - **Responsive** : Interface adaptée aux mobiles et ordinateurs
