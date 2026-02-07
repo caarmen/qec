@@ -120,6 +120,30 @@ describe('Quiz Flow Integration', () => {
     expect(screen.getByRole('button', { name: /commencer le quiz/i })).toBeInTheDocument()
   })
 
+  it('should return to setup screen after restart', async () => {
+    const user = userEvent.setup()
+
+    render(<App />)
+
+    // Start quiz
+    await user.click(screen.getByRole('button', { name: /commencer le quiz/i }))
+
+    // Answer all 40 questions (default)
+    for (let i = 1; i <= 40; i++) {
+      const answers = screen.getAllByRole('radio')
+      await user.click(answers[0])
+      await user.click(screen.getByRole('button', { name: /soumettre/i }))
+      await user.click(screen.getByRole('button', { name: /suivant/i }))
+    }
+
+    // Restart from results
+    await user.click(screen.getByRole('button', { name: /recommencer le quiz/i }))
+
+    // Should be back at setup screen
+    expect(screen.getByRole('heading', { name: /préparer le quiz/i })).toBeInTheDocument()
+    expect(screen.getByText(/nombre de questions/i)).toBeInTheDocument()
+  })
+
   it('should track score correctly with mixed answers', async () => {
     const user = userEvent.setup()
     
