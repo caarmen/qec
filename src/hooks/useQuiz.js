@@ -104,7 +104,10 @@ function quizReducer(state, action) {
     }
 
     case ACTIONS.RESTART_QUIZ: {
-      return initialState
+      return {
+        ...initialState,
+        quizStatus: QUIZ_STATUS.CONFIGURING
+      }
     }
 
     default:

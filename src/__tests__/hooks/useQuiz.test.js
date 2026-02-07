@@ -433,7 +433,7 @@ describe('useQuiz', () => {
         result.current.restartQuiz()
       })
 
-      expect(result.current.quizStatus).toBe(QUIZ_STATUS.NOT_STARTED)
+      expect(result.current.quizStatus).toBe(QUIZ_STATUS.CONFIGURING)
       expect(result.current.questions).toEqual([])
       expect(result.current.currentQuestionIndex).toBe(0)
       expect(result.current.selectedAnswer).toBe(null)
