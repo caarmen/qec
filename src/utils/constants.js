@@ -7,7 +7,7 @@
  * Default number of questions to show in a quiz
  * @constant {number}
  */
-export const DEFAULT_QUESTION_COUNT = 10
+export const DEFAULT_QUESTION_COUNT = 40
 
 /**
  * Quiz status values (re-exported from useQuiz for convenience)

@@ -37,7 +37,7 @@ describe('useQuiz', () => {
       expect(result.current.totalQuestions).toBe(0)
       expect(result.current.currentQuestion).toBe(null)
       expect(result.current.hasAnswerSelected).toBe(false)
-      expect(result.current.selectedQuestionCount).toBe(10)
+      expect(result.current.selectedQuestionCount).toBe(40)
     })
 
     it('should provide all required action functions', () => {
@@ -79,8 +79,8 @@ describe('useQuiz', () => {
       expect(result.current.totalQuestions).toBe(3)
     })
 
-    it('should default to 10 questions when count not specified', () => {
-      const manyQuestions = Array(15).fill(null).map((_, i) => ({
+    it('should default to 40 questions when count not specified', () => {
+      const manyQuestions = Array(45).fill(null).map((_, i) => ({
         question: `Question ${i}`,
         theme: "Theme",
         correctAnswers: ["Correct"],
@@ -93,7 +93,7 @@ describe('useQuiz', () => {
         result.current.startQuiz(manyQuestions)
       })
 
-      expect(result.current.questions).toHaveLength(10)
+      expect(result.current.questions).toHaveLength(40)
     })
 
     it('should set current question correctly', () => {
@@ -440,7 +440,7 @@ describe('useQuiz', () => {
       expect(result.current.userAnswers).toEqual([])
       expect(result.current.score).toBe(0)
       expect(result.current.currentQuestion).toBe(null)
-      expect(result.current.selectedQuestionCount).toBe(10)
+      expect(result.current.selectedQuestionCount).toBe(40)
     })
 
     it('should allow starting new quiz after restart', () => {
