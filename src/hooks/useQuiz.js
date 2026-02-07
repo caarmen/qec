@@ -30,14 +30,14 @@ const initialState = {
   selectedAnswer: null,
   userAnswers: [],
   score: 0,
-  selectedQuestionCount: null
+  selectedQuestionCount: DEFAULT_QUESTION_COUNT
 }
 
 // Reducer function
 function quizReducer(state, action) {
   switch (action.type) {
     case ACTIONS.START_QUIZ: {
-      const questions = processQuestions(action.payload.rawQuestions, action.payload.count)
+      const questions = processQuestions(action.payload.rawQuestions, state.selectedQuestionCount)
       return {
         ...initialState,
         quizStatus: QUIZ_STATUS.ANSWERING,
@@ -116,10 +116,10 @@ function quizReducer(state, action) {
 export function useQuiz() {
   const [state, dispatch] = useReducer(quizReducer, initialState)
 
-  const startQuiz = (rawQuestions, count = DEFAULT_QUESTION_COUNT) => {
+  const startQuiz = (rawQuestions) => {
     dispatch({
       type: ACTIONS.START_QUIZ,
-      payload: { rawQuestions, count }
+      payload: { rawQuestions }
     })
   }
 
