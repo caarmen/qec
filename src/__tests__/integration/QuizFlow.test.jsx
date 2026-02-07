@@ -67,6 +67,32 @@ describe('Quiz Flow Integration', () => {
     expect(screen.getByRole('button', { name: /recommencer le quiz/i })).toBeInTheDocument()
   })
 
+  it('should allow selecting question count before starting the quiz', async () => {
+    const user = userEvent.setup()
+
+    render(<App />)
+
+    expect(screen.getByRole('heading', { name: /préparer le quiz/i })).toBeInTheDocument()
+
+    const option10 = screen.getByRole('radio', { name: '10' })
+    const option20 = screen.getByRole('radio', { name: '20' })
+    const option40 = screen.getByRole('radio', { name: '40' })
+    const option80 = screen.getByRole('radio', { name: '80' })
+
+    expect(option10).toBeInTheDocument()
+    expect(option20).toBeInTheDocument()
+    expect(option40).toBeInTheDocument()
+    expect(option80).toBeInTheDocument()
+    expect(option10).toHaveAttribute('aria-checked', 'true')
+
+    await user.click(option20)
+    expect(option20).toHaveAttribute('aria-checked', 'true')
+
+    await user.click(screen.getByRole('button', { name: /commencer le quiz/i }))
+
+    expect(screen.getByText(/question 1 sur 20/i)).toBeInTheDocument()
+  })
+
   it('should allow restarting quiz after completion', async () => {
     const user = userEvent.setup()
     
