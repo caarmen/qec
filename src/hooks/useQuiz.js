@@ -6,6 +6,7 @@ import { DEFAULT_QUESTION_COUNT } from '../utils/constants'
 // Quiz status constants
 export const QUIZ_STATUS = {
   NOT_STARTED: 'NOT_STARTED',
+  CONFIGURING: 'CONFIGURING',
   ANSWERING: 'ANSWERING',
   REVIEWING_ANSWER: 'REVIEWING_ANSWER',
   COMPLETED: 'COMPLETED'
