@@ -37,12 +37,14 @@ describe('useQuiz', () => {
       expect(result.current.totalQuestions).toBe(0)
       expect(result.current.currentQuestion).toBe(null)
       expect(result.current.hasAnswerSelected).toBe(false)
+      expect(result.current.selectedQuestionCount).toBe(null)
     })
 
     it('should provide all required action functions', () => {
       const { result } = renderHook(() => useQuiz())
 
       expect(typeof result.current.startQuiz).toBe('function')
+      expect(typeof result.current.selectQuestionCount).toBe('function')
       expect(typeof result.current.selectAnswer).toBe('function')
       expect(typeof result.current.submitAnswer).toBe('function')
       expect(typeof result.current.restartQuiz).toBe('function')
@@ -118,6 +120,34 @@ describe('useQuiz', () => {
       expect(result.current.score).toBe(0)
       expect(result.current.userAnswers).toEqual([])
       expect(result.current.selectedAnswer).toBe(null)
+    })
+  })
+
+  describe('SELECT_QUESTION_COUNT action', () => {
+    it('should set selectedQuestionCount', () => {
+      const { result } = renderHook(() => useQuiz())
+
+      act(() => {
+        result.current.selectQuestionCount(40)
+      })
+
+      expect(result.current.selectedQuestionCount).toBe(40)
+    })
+
+    it('should allow changing selectedQuestionCount', () => {
+      const { result } = renderHook(() => useQuiz())
+
+      act(() => {
+        result.current.selectQuestionCount(20)
+      })
+
+      expect(result.current.selectedQuestionCount).toBe(20)
+
+      act(() => {
+        result.current.selectQuestionCount(80)
+      })
+
+      expect(result.current.selectedQuestionCount).toBe(80)
     })
   })
 
@@ -365,6 +395,7 @@ describe('useQuiz', () => {
       expect(result.current.userAnswers).toEqual([])
       expect(result.current.score).toBe(0)
       expect(result.current.currentQuestion).toBe(null)
+      expect(result.current.selectedQuestionCount).toBe(null)
     })
 
     it('should allow starting new quiz after restart', () => {
