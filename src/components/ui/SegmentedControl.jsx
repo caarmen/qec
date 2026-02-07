@@ -1,4 +1,5 @@
 import { memo, useId, useRef } from 'react'
+import SegmentedControlOption from './SegmentedControlOption'
 
 const GRID_COLS_CLASS = {
   1: 'grid-cols-1',
@@ -92,32 +93,20 @@ function SegmentedControl({
         {options.map((option, index) => {
           const isSelected = option.value === value
           const isDisabled = Boolean(option.disabled)
-          const baseClasses = 'py-2 rounded-lg text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500'
-          const selectedClasses = 'bg-blue-600 text-white font-semibold'
-          const unselectedClasses = 'border border-gray-300 text-gray-700 bg-white hover:bg-gray-50'
-          const disabledClasses = 'bg-gray-200 text-gray-400 cursor-not-allowed hover:bg-gray-200'
 
           return (
-            <button
+            <SegmentedControlOption
               key={`${option.value}-${index}`}
-              type="button"
-              role="radio"
-              aria-checked={isSelected}
-              tabIndex={isSelected ? 0 : -1}
-              disabled={isDisabled}
               ref={(node) => {
                 optionRefs.current[index] = node
               }}
-              className={`${baseClasses} ${isDisabled ? disabledClasses : isSelected ? selectedClasses : unselectedClasses}`}
-              onClick={() => {
-                if (!isDisabled) {
-                  onChange(option.value)
-                }
-              }}
+              value={option.value}
+              label={option.label}
+              isSelected={isSelected}
+              disabled={isDisabled}
+              onSelect={onChange}
               onKeyDown={(event) => handleKeyDown(event, index)}
-            >
-              {option.label}
-            </button>
+            />
           )
         })}
       </div>
