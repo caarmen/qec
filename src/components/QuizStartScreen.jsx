@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef } from 'react'
 import Button from './ui/Button'
 import SegmentedControl from './ui/SegmentedControl'
 import { getAvailableQuestionCountOptions } from '../utils/questionCountOptions'
+import { DIFFICULTY } from '../hooks/useQuiz'
 
 /**
  * QuizStartScreen component - Landing screen with quiz configuration
@@ -15,7 +16,9 @@ import { getAvailableQuestionCountOptions } from '../utils/questionCountOptions'
 function QuizStartScreen({
   totalQuestions,
   selectedQuestionCount,
+  selectedDifficulty,
   onSelectQuestionCount,
+  onSelectDifficulty,
   onStart
 }) {
   /* Focus on the top of the screen when entering it, for a11y */
@@ -36,6 +39,11 @@ function QuizStartScreen({
   )
 
   const questionCountEffectiveValue = selectedQuestionCount ?? defaultQuestionCount
+
+  const difficultyOptionItems = [
+    { value: DIFFICULTY.NORMAL, label: 'Normal'},
+    { value: DIFFICULTY.DIFFICULT, label: 'Difficile'},
+  ]
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
@@ -59,6 +67,13 @@ function QuizStartScreen({
           options={questionCountOptionItems}
           value={questionCountEffectiveValue}
           onChange={onSelectQuestionCount}
+        />
+        <SegmentedControl
+          label="Niveau"
+          helperText="Choisissez le niveau de difficulté"
+          options={difficultyOptionItems}
+          value={selectedDifficulty}
+          onChange={onSelectDifficulty}
         />
 
         <Button onClick={onStart} disabled={!questionCountEffectiveValue}>

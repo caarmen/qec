@@ -17,6 +17,7 @@ function App() {
     hasAnswerSelected,
     startQuiz,
     selectQuestionCount,
+    selectDifficulty,
     selectAnswer,
     submitAnswer,
     goToNextQuestion,
@@ -34,6 +35,8 @@ function App() {
           totalQuestions={questionsData.questions.length}
           selectedQuestionCount={selectedQuestionCount}
           onSelectQuestionCount={selectQuestionCount}
+          selectedDifficulty={difficulty}
+          onSelectDifficulty={selectDifficulty}
           onStart={handleStartQuiz}
         />
       )}

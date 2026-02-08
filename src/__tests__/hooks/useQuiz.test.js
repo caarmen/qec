@@ -123,7 +123,7 @@ describe('useQuiz', () => {
       expect(result.current.currentQuestion).toHaveProperty('answers')
     })
 
-    it('should reset state when starting new quiz', () => {
+    it('should reset state when restarting new quiz', () => {
       const { result } = renderHook(() => useQuiz())
 
       // Start first quiz
@@ -143,7 +143,7 @@ describe('useQuiz', () => {
       // Start new quiz
       act(() => {
         result.current.selectQuestionCount(2)
-        result.current.startQuiz(mockRawQuestions)
+        result.current.restartQuiz(mockRawQuestions)
       })
 
       expect(result.current.currentQuestionIndex).toBe(0)

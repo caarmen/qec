@@ -51,6 +51,7 @@ function quizReducer(state, action) {
       })
       return {
         ...initialState,
+        difficulty: state.difficulty,
         quizStatus: QUIZ_STATUS.ANSWERING,
         questions
       }
