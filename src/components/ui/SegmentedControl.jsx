@@ -87,7 +87,6 @@ function SegmentedControl({
       <div
         role="radiogroup"
         aria-labelledby={labelId}
-        aria-describedby={helperText ? helperId : undefined}
         className={`grid ${gridColsClass} gap-2`}
       >
         {options.map((option, index) => {

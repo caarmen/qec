@@ -59,15 +59,6 @@ describe('SegmentedControl', () => {
       expect(screen.getByRole('radio', { name: '40' })).toHaveAttribute('aria-checked', 'true')
     })
 
-    it('should connect helper text via aria-describedby when provided', () => {
-      render(<ControlledSegmentedControl />)
-
-      const radioGroup = screen.getByRole('radiogroup')
-      const helper = screen.getByText('Choisissez la durée de votre session')
-
-      expect(radioGroup).toHaveAttribute('aria-describedby', helper.id)
-    })
-
     it('should render disabled options as disabled', () => {
       render(<ControlledSegmentedControl />)
 
