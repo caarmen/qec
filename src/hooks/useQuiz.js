@@ -12,10 +12,17 @@ export const QUIZ_STATUS = {
   COMPLETED: 'COMPLETED'
 }
 
+// Quiz difficulty
+export const DIFFICULTY = {
+  NORMAL: 'NORMAL',
+  DIFFICULT: 'DIFFICULT'
+}
+
 // Action types
 export const ACTIONS = {
   START_QUIZ: 'START_QUIZ',
   SELECT_QUESTION_COUNT: 'SELECT_QUESTION_COUNT',
+  SELECT_DIFFICULTY: 'SELECT_DIFFICULTY',
   SELECT_ANSWER: 'SELECT_ANSWER',
   SUBMIT_ANSWER: 'SUBMIT_ANSWER',
   GO_TO_NEXT_QUESTION: 'GO_TO_NEXT_QUESTION',
@@ -25,6 +32,7 @@ export const ACTIONS = {
 // Initial state
 const initialState = {
   quizStatus: QUIZ_STATUS.NOT_STARTED,
+  difficulty: DIFFICULTY.NORMAL,
   questions: [],
   currentQuestionIndex: 0,
   selectedAnswers: [],
@@ -49,6 +57,13 @@ function quizReducer(state, action) {
       return {
         ...state,
         selectedQuestionCount: action.payload.count
+      }
+    }
+
+    case ACTIONS.SELECT_DIFFICULTY: {
+      return {
+        ...state,
+        difficulty: action.payload.difficulty
       }
     }
 
@@ -133,6 +148,13 @@ export function useQuiz() {
     })
   }
 
+  const selectDifficulty = (difficulty) => {
+    dispatch({
+      type: ACTIONS.SELECT_DIFFICULTY,
+      payload: {difficulty}
+    })
+  }
+
   const selectAnswer = (answerIds) => {
     dispatch({
       type: ACTIONS.SELECT_ANSWER,
@@ -172,6 +194,7 @@ export function useQuiz() {
   return {
     // State
     quizStatus: state.quizStatus,
+    difficulty: state.difficulty,
     questions: state.questions,
     currentQuestionIndex: state.currentQuestionIndex,
     currentQuestion,
@@ -184,6 +207,7 @@ export function useQuiz() {
     // Actions
     startQuiz,
     selectQuestionCount,
+    selectDifficulty,
     selectAnswer,
     submitAnswer,
     goToNextQuestion,

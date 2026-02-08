@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { renderHook, act } from '@testing-library/react'
-import { useQuiz, QUIZ_STATUS } from '../../hooks/useQuiz'
+import { useQuiz, QUIZ_STATUS, DIFFICULTY } from '../../hooks/useQuiz'
 
 describe('useQuiz', () => {
   const mockRawQuestions = [
@@ -45,6 +45,7 @@ describe('useQuiz', () => {
 
       expect(typeof result.current.startQuiz).toBe('function')
       expect(typeof result.current.selectQuestionCount).toBe('function')
+      expect(typeof result.current.selectDifficulty).toBe('function')
       expect(typeof result.current.selectAnswer).toBe('function')
       expect(typeof result.current.submitAnswer).toBe('function')
       expect(typeof result.current.restartQuiz).toBe('function')
@@ -78,6 +79,18 @@ describe('useQuiz', () => {
       expect(result.current.questions).toHaveLength(3)
       expect(result.current.totalQuestions).toBe(3)
     })
+
+    it('should use selected difficulty when starting the quiz', () => {
+      const { result } = renderHook(() => useQuiz())
+
+      act(() => {
+        result.current.startQuiz(mockRawQuestions)
+        result.current.selectDifficulty(DIFFICULTY.DIFFICULT)
+      })
+
+      expect(result.current.difficulty).toEqual(DIFFICULTY.DIFFICULT)
+    })
+
 
     it('should default to 40 questions when count not specified', () => {
       const manyQuestions = Array(45).fill(null).map((_, i) => ({
@@ -116,6 +129,7 @@ describe('useQuiz', () => {
       // Start first quiz
       act(() => {
         result.current.selectQuestionCount(2)
+        result.current.selectDifficulty(DIFFICULTY.DIFFICULT)
         result.current.startQuiz(mockRawQuestions)
       })
 
@@ -136,6 +150,7 @@ describe('useQuiz', () => {
       expect(result.current.score).toBe(0)
       expect(result.current.userAnswers).toEqual([])
       expect(result.current.selectedAnswers).toEqual([])
+      expect(result.current.difficulty).toEqual(DIFFICULTY.NORMAL)
     })
 
     it('should reflect updated question count after changing selection', () => {
@@ -155,6 +170,26 @@ describe('useQuiz', () => {
       })
 
       expect(result.current.totalQuestions).toBe(3)
+    })
+
+    it('should reflect updated difficulty after changing selection', () => {
+      const { result } = renderHook(() => useQuiz())
+
+      act(() => {
+        result.current.selectQuestionCount(2)
+        result.current.selectDifficulty(DIFFICULTY.NORMAL)
+        result.current.startQuiz(mockRawQuestions)
+      })
+
+      expect(result.current.difficulty).toEqual(DIFFICULTY.NORMAL)
+
+      act(() => {
+        result.current.restartQuiz()
+        result.current.startQuiz(mockRawQuestions)
+        result.current.selectDifficulty(DIFFICULTY.DIFFICULT)
+      })
+
+      expect(result.current.difficulty).toEqual(DIFFICULTY.DIFFICULT)
     })
   })
 
@@ -185,6 +220,25 @@ describe('useQuiz', () => {
       expect(result.current.selectedQuestionCount).toBe(80)
     })
   })
+
+  describe('SELECT_DIFFICULTY action', () => {
+    it('should allow changing selected difficulty', () => {
+      const { result } = renderHook(() => useQuiz())
+
+      act(() => {
+        result.current.selectDifficulty(DIFFICULTY.DIFFICULT)
+      })
+
+      expect(result.current.difficulty).toEqual(DIFFICULTY.DIFFICULT)
+
+      act(() => {
+        result.current.selectDifficulty(DIFFICULTY.NORMAL)
+      })
+
+      expect(result.current.difficulty).toEqual(DIFFICULTY.NORMAL)
+    })
+  })
+
 
   describe('SELECT_ANSWER action', () => {
     it('should select an answer', () => {
