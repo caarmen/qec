@@ -149,18 +149,6 @@ describe('questionProcessor', () => {
       expect(result).toHaveLength(2)
     })
 
-    it('should default to 40 questions when count not specified', () => {
-      const manyQuestions = Array(45).fill(null).map((_, i) => ({
-        question: `Question ${i}`,
-        theme: "Theme",
-        correctAnswers: ["Correct"],
-        wrongAnswers: ["Wrong 1", "Wrong 2"]
-      }))
-      
-      const result = processQuestions(manyQuestions)
-      expect(result).toHaveLength(40)
-    })
-
     it('should return all questions if count exceeds available', () => {
       const result = processQuestions(mockQuestions, 100)
       expect(result).toHaveLength(3)

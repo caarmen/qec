@@ -1,5 +1,3 @@
-import { DEFAULT_QUESTION_COUNT } from './constants'
-
 /**
  * Shuffles an array using the Fisher-Yates algorithm
  * This creates a new array and does not mutate the original
@@ -69,13 +67,13 @@ export function formatQuestion(rawQuestion, index) {
  * Processes raw questions data for quiz use
  * Shuffles the question pool, selects a subset, and formats each question
  * @param {Array<Object>} rawQuestions - Questions from questions.json
- * @param {number} [count=DEFAULT_QUESTION_COUNT] - Number of questions to select
+ * @param {number} count - Number of questions to select
  * @returns {Array<Object>} - Formatted and shuffled questions ready for quiz
  * @example
  * processQuestions(rawQuestions, 10)
  * // Returns 10 randomly selected and formatted questions
  */
-export function processQuestions(rawQuestions, count = DEFAULT_QUESTION_COUNT) {
+export function processQuestions(rawQuestions, count) {
   if (!rawQuestions || !Array.isArray(rawQuestions)) {
     return []
   }
