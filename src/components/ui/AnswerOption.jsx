@@ -14,6 +14,7 @@ import { memo } from 'react'
 function AnswerOption({ 
   id,
   text, 
+  role,
   isSelected = false, 
   onSelect,
   disabled = false,
@@ -56,7 +57,7 @@ function AnswerOption({
         ${feedback === 'incorrect' ? incorrectStyles : ''}
       `.trim()}
       aria-pressed={isSelected}
-      role="radio"
+      role={role}
       aria-checked={isSelected}
     >
       <span className="flex items-center justify-between w-full">

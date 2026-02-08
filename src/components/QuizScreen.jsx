@@ -3,6 +3,7 @@ import AnswerOption from './ui/AnswerOption'
 import Button from './ui/Button'
 import { isAnswerCorrect } from '../utils/quizHelpers'
 import { useEffect, useRef } from "react"
+import { DIFFICULTY } from '../hooks/useQuiz'
 
 /**
  * Return a feedback message to display for the submitted answer (right/wrong answer).
@@ -17,6 +18,32 @@ function getFeedbackMessage(hasAnswerSubmitted, currentQuestion, selectedAnswers
   const isCorrect = isAnswerCorrect(currentQuestion, selectedAnswers)
 
   return isCorrect ? "Bonne réponse." : "Mauvaise réponse."
+}
+
+/**
+ * Return the new list of selected answer ids.
+ *
+ * @param {Array<String>} currentSelectedAnswerIds the ids of the currently selected answers
+ * @param {string} selectedAnswerId the id of the answer the user just selected/toggled
+ * @param {Object} options
+ * @param {boolean} options.multipleCorrectAnswers true if we're un multi-select mode
+ * @returns  {Array<string>} the new list of selected answer ids.
+ */
+function getSelectedAnswers(currentSelectedAnswerIds, selectedAnswerId, {
+  multipleCorrectAnswers
+}) {
+  // Case 1: Multi-select mode: multiple answers are possible
+  if (multipleCorrectAnswers) {
+    // Case 1a: The user unchecked an answer
+    if (currentSelectedAnswerIds.includes(selectedAnswerId)) {
+      return currentSelectedAnswerIds.filter(answerId => answerId !== selectedAnswerId)
+    }
+    // Case 1b: The user checked an answer
+    return [...currentSelectedAnswerIds, selectedAnswerId]
+
+  }
+  // Case 2: only one answer is possible, it's the one the user just selected.
+  return [selectedAnswerId]
 }
 
 /**
@@ -35,6 +62,7 @@ function getFeedbackMessage(hasAnswerSubmitted, currentQuestion, selectedAnswers
  */
 function QuizScreen({
   currentQuestion,
+  difficulty,
   currentQuestionIndex,
   totalQuestions,
   score,
@@ -113,8 +141,14 @@ function QuizScreen({
                   key={answer.id}
                   id={answer.id}
                   text={answer.text}
+                  role={difficulty === DIFFICULTY.DIFFICULT ? "checkbox": "radio"}
                   isSelected={selectedAnswers.includes(answer.id)}
-                  onSelect={() => onSelectAnswer([answer.id])}
+                  onSelect={() => onSelectAnswer(getSelectedAnswers(
+                    selectedAnswers,
+                    answer.id, {
+                      multipleCorrectAnswers: difficulty === DIFFICULTY.DIFFICULT
+                    }
+                  ))}
                   disabled={hasAnswerSubmitted}
                   feedback={feedback}
                 />

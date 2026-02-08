@@ -7,6 +7,7 @@ import questionsData from './data/questions.json'
 function App() {
   const {
     quizStatus,
+    difficulty,
     currentQuestion,
     currentQuestionIndex,
     selectedAnswers,
@@ -40,6 +41,7 @@ function App() {
       {(quizStatus === QUIZ_STATUS.ANSWERING || quizStatus === QUIZ_STATUS.REVIEWING_ANSWER ) && (
         <QuizScreen
           currentQuestion={currentQuestion}
+          difficulty={difficulty}
           currentQuestionIndex={currentQuestionIndex}
           totalQuestions={totalQuestions}
           score={score}

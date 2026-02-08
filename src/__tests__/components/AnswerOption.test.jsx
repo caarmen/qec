@@ -7,6 +7,7 @@ describe('AnswerOption', () => {
   const defaultProps = {
     id: 'answer-1',
     text: 'Test answer',
+    role: 'radio',
     onSelect: vi.fn()
   }
 
@@ -156,7 +157,7 @@ describe('AnswerOption', () => {
     it('should work without onSelect callback', async () => {
       const user = userEvent.setup()
       
-      render(<AnswerOption id="answer-1" text="Test" />)
+      render(<AnswerOption id="answer-1" text="Test" role="radio" />)
       
       const option = screen.getByRole('radio')
       
@@ -164,18 +165,22 @@ describe('AnswerOption', () => {
       await expect(user.click(option)).resolves.not.toThrow()
     })
 
-    it('should be selectable multiple times', async () => {
-      const handleSelect = vi.fn()
-      const user = userEvent.setup()
-      
-      render(<AnswerOption {...defaultProps} onSelect={handleSelect} />)
-      
-      const option = screen.getByRole('radio')
-      await user.click(option)
-      await user.click(option)
-      await user.click(option)
-      
-      expect(handleSelect).toHaveBeenCalledTimes(3)
+    const roles = ["radio", "checkbox"]
+    roles.forEach((role) => {
+
+      it(`should be selectable multiple times - ${role}`, async () => {
+        const handleSelect = vi.fn()
+        const user = userEvent.setup()
+
+        render(<AnswerOption {...defaultProps} role={role} onSelect={handleSelect} />)
+
+        const option = screen.getByRole(role)
+        await user.click(option)
+        await user.click(option)
+        await user.click(option)
+
+        expect(handleSelect).toHaveBeenCalledTimes(3)
+      })
     })
   })
 

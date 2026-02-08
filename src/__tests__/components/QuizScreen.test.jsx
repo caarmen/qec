@@ -2,6 +2,7 @@ import { describe, it, expect, vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import QuizScreen from '../../components/QuizScreen'
+import { DIFFICULTY } from '../../hooks/useQuiz'
 
 describe('QuizScreen', () => {
   const mockQuestion = {
@@ -141,7 +142,7 @@ describe('QuizScreen', () => {
       expect(handleSelectAnswer).toHaveBeenCalledWith(['q1-a0'])
     })
 
-    it('should allow changing selection', async () => {
+    it('should allow changing selection - normal', async () => {
       const handleSelectAnswer = vi.fn()
       const user = userEvent.setup()
       
@@ -156,6 +157,32 @@ describe('QuizScreen', () => {
       expect(handleSelectAnswer).toHaveBeenCalledTimes(2)
       expect(handleSelectAnswer).toHaveBeenNthCalledWith(1, ['q1-a0'])
       expect(handleSelectAnswer).toHaveBeenNthCalledWith(2, ['q1-a1'])
+    })
+
+    it('should allow changing selection - difficult', async () => {
+      const handleSelectAnswer = vi.fn()
+      const user = userEvent.setup()
+
+      const {rerender} = render(<QuizScreen {...defaultProps} onSelectAnswer={handleSelectAnswer} difficulty={DIFFICULTY.DIFFICULT} />)
+
+      const option1 = screen.getByRole('checkbox', { name: /liberté, égalité, fraternité/i })
+      await user.click(option1)
+      // Rerender with answer selected
+      rerender(
+        <QuizScreen
+          {...defaultProps}
+          selectedAnswers={["q1-a0"]}
+          onSelectAnswer={handleSelectAnswer}
+          difficulty={DIFFICULTY.DIFFICULT}
+        />
+      )
+
+      const option2 = screen.getByRole('checkbox', { name: /liberté, unité, solidarité/i })
+      await user.click(option2)
+
+      expect(handleSelectAnswer).toHaveBeenCalledTimes(2)
+      expect(handleSelectAnswer).toHaveBeenNthCalledWith(1, ['q1-a0'])
+      expect(handleSelectAnswer).toHaveBeenNthCalledWith(2, ['q1-a0', 'q1-a1'])
     })
   })
 
