@@ -9,7 +9,7 @@ function App() {
     quizStatus,
     currentQuestion,
     currentQuestionIndex,
-    selectedAnswer,
+    selectedAnswers,
     selectedQuestionCount,
     score,
     totalQuestions,
@@ -43,7 +43,7 @@ function App() {
           currentQuestionIndex={currentQuestionIndex}
           totalQuestions={totalQuestions}
           score={score}
-          selectedAnswer={selectedAnswer}
+          selectedAnswers={selectedAnswers}
           onSelectAnswer={selectAnswer}
           onSubmitAnswer={submitAnswer}
           onGoToNextQuestion={goToNextQuestion}

@@ -31,7 +31,7 @@ describe('useQuiz', () => {
       expect(result.current.quizStatus).toBe(QUIZ_STATUS.NOT_STARTED)
       expect(result.current.questions).toEqual([])
       expect(result.current.currentQuestionIndex).toBe(0)
-      expect(result.current.selectedAnswer).toBe(null)
+      expect(result.current.selectedAnswers).toEqual([])
       expect(result.current.userAnswers).toEqual([])
       expect(result.current.score).toBe(0)
       expect(result.current.totalQuestions).toBe(0)
@@ -122,7 +122,7 @@ describe('useQuiz', () => {
       // Select answer and submit
       const firstAnswerId = result.current.currentQuestion.answers[0].id
       act(() => {
-        result.current.selectAnswer(firstAnswerId)
+        result.current.selectAnswer([firstAnswerId])
         result.current.submitAnswer()
       })
 
@@ -135,7 +135,7 @@ describe('useQuiz', () => {
       expect(result.current.currentQuestionIndex).toBe(0)
       expect(result.current.score).toBe(0)
       expect(result.current.userAnswers).toEqual([])
-      expect(result.current.selectedAnswer).toBe(null)
+      expect(result.current.selectedAnswers).toEqual([])
     })
 
     it('should reflect updated question count after changing selection', () => {
@@ -198,10 +198,10 @@ describe('useQuiz', () => {
       const answerId = 'test-answer-id'
 
       act(() => {
-        result.current.selectAnswer(answerId)
+        result.current.selectAnswer([answerId])
       })
 
-      expect(result.current.selectedAnswer).toBe(answerId)
+      expect(result.current.selectedAnswers).toEqual([answerId])
       expect(result.current.hasAnswerSelected).toBe(true)
     })
 
@@ -214,16 +214,16 @@ describe('useQuiz', () => {
       })
 
       act(() => {
-        result.current.selectAnswer('answer-1')
+        result.current.selectAnswer(['answer-1'])
       })
 
-      expect(result.current.selectedAnswer).toBe('answer-1')
+      expect(result.current.selectedAnswers).toEqual(['answer-1'])
 
       act(() => {
-        result.current.selectAnswer('answer-2')
+        result.current.selectAnswer(['answer-2'])
       })
 
-      expect(result.current.selectedAnswer).toBe('answer-2')
+      expect(result.current.selectedAnswers).toEqual(['answer-2'])
     })
   })
 
@@ -242,7 +242,7 @@ describe('useQuiz', () => {
       )
 
       act(() => {
-        result.current.selectAnswer(correctAnswer.id)
+        result.current.selectAnswer([correctAnswer.id])
         result.current.submitAnswer()
       })
 
@@ -265,7 +265,7 @@ describe('useQuiz', () => {
       )
 
       act(() => {
-        result.current.selectAnswer(wrongAnswer.id)
+        result.current.selectAnswer([wrongAnswer.id])
         result.current.submitAnswer()
       })
 
@@ -287,7 +287,7 @@ describe('useQuiz', () => {
       const answerId = result.current.currentQuestion.answers[0].id
 
       act(() => {
-        result.current.selectAnswer(answerId)
+        result.current.selectAnswer([answerId])
         result.current.submitAnswer()
         result.current.goToNextQuestion()
       })
@@ -295,7 +295,7 @@ describe('useQuiz', () => {
       expect(result.current.currentQuestionIndex).toBe(1)
     })
 
-    it('should reset selectedAnswer when moving to next question', () => {
+    it('should reset selectedAnswers when moving to next question', () => {
       const { result } = renderHook(() => useQuiz())
 
       act(() => {
@@ -306,17 +306,17 @@ describe('useQuiz', () => {
       const answerId = result.current.currentQuestion.answers[0].id
 
       act(() => {
-        result.current.selectAnswer(answerId)
+        result.current.selectAnswer([answerId])
         result.current.submitAnswer()
       })
 
-      expect(result.current.selectedAnswer).not.toBe(null)
+      expect(result.current.selectedAnswers).not.toEqual([])
       expect(result.current.hasAnswerSelected).toBe(true)
 
       act(() => {
         result.current.goToNextQuestion()
       })
-      expect(result.current.selectedAnswer).toBe(null)
+      expect(result.current.selectedAnswers).toEqual([])
       expect(result.current.hasAnswerSelected).toBe(false)
     })
 
@@ -332,13 +332,13 @@ describe('useQuiz', () => {
       const answerId = result.current.currentQuestion.answers[0].id
 
       act(() => {
-        result.current.selectAnswer(answerId)
+        result.current.selectAnswer([answerId])
         result.current.submitAnswer()
       })
 
       expect(result.current.userAnswers[0]).toEqual({
         questionId,
-        answerId,
+        answerIds: [answerId],
         isCorrect: expect.any(Boolean)
       })
     })
@@ -354,7 +354,7 @@ describe('useQuiz', () => {
       // Answer first question
       act(() => {
         const answerId = result.current.currentQuestion.answers[0].id
-        result.current.selectAnswer(answerId)
+        result.current.selectAnswer([answerId])
         result.current.submitAnswer()
       })
 
@@ -368,7 +368,7 @@ describe('useQuiz', () => {
       // Answer second (last) question
       act(() => {
         const answerId = result.current.currentQuestion.answers[0].id
-        result.current.selectAnswer(answerId)
+        result.current.selectAnswer([answerId])
         result.current.submitAnswer()
       })
       expect(result.current.quizStatus).toBe(QUIZ_STATUS.REVIEWING_ANSWER)
@@ -392,7 +392,7 @@ describe('useQuiz', () => {
       // Answer first question
       act(() => {
         const answerId = result.current.currentQuestion.answers[0].id
-        result.current.selectAnswer(answerId)
+        result.current.selectAnswer([answerId])
         result.current.submitAnswer()
         result.current.goToNextQuestion()
       })
@@ -402,7 +402,7 @@ describe('useQuiz', () => {
       // Answer last question
       act(() => {
         const answerId = result.current.currentQuestion.answers[0].id
-        result.current.selectAnswer(answerId)
+        result.current.selectAnswer([answerId])
         result.current.submitAnswer()
         result.current.goToNextQuestion()
       })
@@ -424,7 +424,7 @@ describe('useQuiz', () => {
 
       act(() => {
         const answerId = result.current.currentQuestion.answers[0].id
-        result.current.selectAnswer(answerId)
+        result.current.selectAnswer([answerId])
         result.current.submitAnswer()
       })
 
@@ -436,7 +436,7 @@ describe('useQuiz', () => {
       expect(result.current.quizStatus).toBe(QUIZ_STATUS.CONFIGURING)
       expect(result.current.questions).toEqual([])
       expect(result.current.currentQuestionIndex).toBe(0)
-      expect(result.current.selectedAnswer).toBe(null)
+      expect(result.current.selectedAnswers).toEqual([])
       expect(result.current.userAnswers).toEqual([])
       expect(result.current.score).toBe(0)
       expect(result.current.currentQuestion).toBe(null)
@@ -484,7 +484,7 @@ describe('useQuiz', () => {
         )
 
         act(() => {
-          result.current.selectAnswer(correctAnswer.id)
+          result.current.selectAnswer([correctAnswer.id])
           result.current.submitAnswer()
           result.current.goToNextQuestion()
         })
@@ -508,7 +508,7 @@ describe('useQuiz', () => {
         const correctAnswer = result.current.currentQuestion.answers.find(
           a => a.isCorrect
         )
-        result.current.selectAnswer(correctAnswer.id)
+        result.current.selectAnswer([correctAnswer.id])
         result.current.submitAnswer()
       })
 
@@ -517,7 +517,7 @@ describe('useQuiz', () => {
         const wrongAnswer = result.current.currentQuestion.answers.find(
           a => !a.isCorrect
         )
-        result.current.selectAnswer(wrongAnswer.id)
+        result.current.selectAnswer([wrongAnswer.id])
         result.current.submitAnswer()
       })
 
@@ -526,7 +526,7 @@ describe('useQuiz', () => {
         const correctAnswer = result.current.currentQuestion.answers.find(
           a => a.isCorrect
         )
-        result.current.selectAnswer(correctAnswer.id)
+        result.current.selectAnswer([correctAnswer.id])
         result.current.submitAnswer()
       })
 

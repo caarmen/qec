@@ -1,21 +1,20 @@
 import QuestionCard from './ui/QuestionCard'
 import AnswerOption from './ui/AnswerOption'
 import Button from './ui/Button'
+import { isAnswerCorrect } from '../utils/quizHelpers'
 import { useEffect, useRef } from "react"
 
 /**
  * Return a feedback message to display for the submitted answer (right/wrong answer).
  * @param {boolean} hasAnswerSubmitted  - Whether an answer has been submitted
  * @param {Object} currentQuestion - Current question object with answers
- * @param {number} selectedAnswer - ID of currently selected answer
+ * @param {number} selectedAnswers - IDs of currently selected answer
  * @returns {string} A feedback message to display.
  */
-function getFeedbackMessage(hasAnswerSubmitted, currentQuestion, selectedAnswer) {
+function getFeedbackMessage(hasAnswerSubmitted, currentQuestion, selectedAnswers) {
   if (!hasAnswerSubmitted) return null
 
-  const isCorrect = currentQuestion.answers.some(
-    a => a.id === selectedAnswer && a.isCorrect
-  )
+  const isCorrect = isAnswerCorrect(currentQuestion, selectedAnswers)
 
   return isCorrect ? "Bonne réponse." : "Mauvaise réponse."
 }
@@ -26,7 +25,7 @@ function getFeedbackMessage(hasAnswerSubmitted, currentQuestion, selectedAnswer)
  * @param {Object} props.currentQuestion - Current question object with id, question, answers
  * @param {number} props.currentQuestionIndex - Index of current question (0-based)
  * @param {number} props.totalQuestions - Total number of questions in quiz
- * @param {string|null} props.selectedAnswer - ID of currently selected answer
+ * @param {string|null} props.selectedAnswers - IDs of currently selected answer
  * @param {Function} props.onSelectAnswer - Callback when user selects an answer
  * @param {Function} props.onSubmitAnswer - Callback when user submits answer
  * @param {Function} props.onGoToNextQuestion - Callback when user wants to go to the next question
@@ -39,7 +38,7 @@ function QuizScreen({
   currentQuestionIndex,
   totalQuestions,
   score,
-  selectedAnswer,
+  selectedAnswers,
   onSelectAnswer,
   onSubmitAnswer,
   onGoToNextQuestion,
@@ -55,7 +54,7 @@ function QuizScreen({
   }, [currentQuestionIndex])
 
   /* Focus on the feedback message when it appears */
-  const feedbackMessage = getFeedbackMessage(hasAnswerSubmitted, currentQuestion, selectedAnswer)
+  const feedbackMessage = getFeedbackMessage(hasAnswerSubmitted, currentQuestion, selectedAnswers)
 
   const feedbackRef = useRef(null);
 
@@ -104,7 +103,7 @@ function QuizScreen({
             if (hasAnswerSubmitted) {
               if (answer.isCorrect) {
                 feedback = "correct"
-              } else if (selectedAnswer === answer.id) {
+              } else if (selectedAnswers.includes(answer.id)) {
                 feedback = "incorrect"
               }
             }
@@ -114,8 +113,8 @@ function QuizScreen({
                   key={answer.id}
                   id={answer.id}
                   text={answer.text}
-                  isSelected={selectedAnswer === answer.id}
-                  onSelect={onSelectAnswer}
+                  isSelected={selectedAnswers.includes(answer.id)}
+                  onSelect={() => onSelectAnswer([answer.id])}
                   disabled={hasAnswerSubmitted}
                   feedback={feedback}
                 />

@@ -27,7 +27,7 @@ const initialState = {
   quizStatus: QUIZ_STATUS.NOT_STARTED,
   questions: [],
   currentQuestionIndex: 0,
-  selectedAnswer: null,
+  selectedAnswers: [],
   userAnswers: [],
   score: 0,
   selectedQuestionCount: DEFAULT_QUESTION_COUNT
@@ -55,18 +55,18 @@ function quizReducer(state, action) {
     case ACTIONS.SELECT_ANSWER: {
       return {
         ...state,
-        selectedAnswer: action.payload.answerId
+        selectedAnswers: action.payload.answerIds,
       }
     }
 
     case ACTIONS.SUBMIT_ANSWER: {
       const currentQuestion = state.questions[state.currentQuestionIndex]
-      const isCorrect = isAnswerCorrect(currentQuestion, [state.selectedAnswer])
+      const isCorrect = isAnswerCorrect(currentQuestion, state.selectedAnswers)
       
       // Store user's answer
       const userAnswer = {
         questionId: currentQuestion.id,
-        answerId: state.selectedAnswer,
+        answerIds: state.selectedAnswers,
         isCorrect
       }
 
@@ -89,7 +89,7 @@ function quizReducer(state, action) {
       if (isLastQuestion) {
         return {
           ...state,
-          selectedAnswer: null,
+          selectedAnswers: [],
           quizStatus: QUIZ_STATUS.COMPLETED,
         }
       }
@@ -97,7 +97,7 @@ function quizReducer(state, action) {
       // Otherwise, move to next question
       return {
         ...state,
-        selectedAnswer: null,
+        selectedAnswers: [],
         currentQuestionIndex: state.currentQuestionIndex + 1,
         quizStatus: QUIZ_STATUS.ANSWERING,
       }
@@ -133,10 +133,10 @@ export function useQuiz() {
     })
   }
 
-  const selectAnswer = (answerId) => {
+  const selectAnswer = (answerIds) => {
     dispatch({
       type: ACTIONS.SELECT_ANSWER,
-      payload: { answerId }
+      payload: { answerIds }
     })
   }
 
@@ -165,8 +165,8 @@ export function useQuiz() {
   )
 
   const hasAnswerSelected = useMemo(
-    () => state.selectedAnswer !== null,
-    [state.selectedAnswer]
+    () => state.selectedAnswers.length > 0,
+    [state.selectedAnswers]
   )
 
   return {
@@ -175,7 +175,7 @@ export function useQuiz() {
     questions: state.questions,
     currentQuestionIndex: state.currentQuestionIndex,
     currentQuestion,
-    selectedAnswer: state.selectedAnswer,
+    selectedAnswers: state.selectedAnswers,
     userAnswers: state.userAnswers,
     score: state.score,
     totalQuestions: state.questions.length,
