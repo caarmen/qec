@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useEffect, useMemo, useRef } from 'react'
 import Button from './ui/Button'
 import SegmentedControl from './ui/SegmentedControl'
 import { getAvailableQuestionCountOptions } from '../utils/questionCountOptions'
@@ -18,6 +18,12 @@ function QuizSetupScreen({
   onSelectQuestionCount,
   onStart
 }) {
+  /* Focus on the top of the screen when entering it, for a11y */
+  const headingRef = useRef(null);
+
+  useEffect(() =>{
+    headingRef.current?.focus()
+  }, [])
   const { options, defaultValue } = useMemo(
     () => getAvailableQuestionCountOptions(totalQuestions),
     [totalQuestions]
@@ -33,7 +39,10 @@ function QuizSetupScreen({
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="w-full max-w-md bg-white rounded-xl shadow-sm p-6 space-y-8">
-        <h1 className="text-2xl font-semibold text-gray-900">Préparer le quiz</h1>
+        <h1
+          tabIndex={-1}
+          ref={headingRef}
+          className="text-2xl font-semibold text-gray-900">Préparer le quiz</h1>
 
         <SegmentedControl
           label="Nombre de questions"
