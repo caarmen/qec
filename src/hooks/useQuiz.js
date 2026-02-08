@@ -45,7 +45,10 @@ const initialState = {
 function quizReducer(state, action) {
   switch (action.type) {
     case ACTIONS.START_QUIZ: {
-      const questions = processQuestions(action.payload.rawQuestions, state.selectedQuestionCount)
+      const questions = processQuestions(action.payload.rawQuestions, {
+        count: state.selectedQuestionCount,
+        difficulty: state.difficulty,
+      })
       return {
         ...initialState,
         quizStatus: QUIZ_STATUS.ANSWERING,
