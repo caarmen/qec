@@ -61,7 +61,7 @@ function quizReducer(state, action) {
 
     case ACTIONS.SUBMIT_ANSWER: {
       const currentQuestion = state.questions[state.currentQuestionIndex]
-      const isCorrect = isAnswerCorrect(currentQuestion, state.selectedAnswer)
+      const isCorrect = isAnswerCorrect(currentQuestion, [state.selectedAnswer])
       
       // Store user's answer
       const userAnswer = {
