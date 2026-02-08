@@ -210,7 +210,7 @@ describe('Edge Cases', () => {
       render(<App />)
 
       // Should show setup screen
-      expect(screen.getByRole('heading', { name: /préparer le quiz/i })).toBeInTheDocument()
+      expect(screen.getByRole('heading', { name: /quiz de naturalisation française/i })).toBeInTheDocument()
 
       // Should not show quiz elements
       expect(screen.queryByText(/question 1 sur 10/i)).not.toBeInTheDocument()

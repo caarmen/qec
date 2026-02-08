@@ -10,7 +10,7 @@ describe('Quiz Flow Integration', () => {
     render(<App />)
 
     // 1. QUIZ SETUP SCREEN
-    expect(screen.getByRole('heading', { name: /préparer le quiz/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /quiz de naturalisation française/i })).toBeInTheDocument()
     expect(screen.getByText(/nombre de questions/i)).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /commencer le quiz/i })).toBeInTheDocument()
 
@@ -72,7 +72,7 @@ describe('Quiz Flow Integration', () => {
 
     render(<App />)
 
-    expect(screen.getByRole('heading', { name: /préparer le quiz/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /quiz de naturalisation française/i })).toBeInTheDocument()
 
     const option10 = screen.getByRole('radio', { name: '10' })
     const option20 = screen.getByRole('radio', { name: '20' })
@@ -116,7 +116,7 @@ describe('Quiz Flow Integration', () => {
     await user.click(screen.getByRole('button', { name: /recommencer le quiz/i }))
 
     // Should be back at setup screen
-    expect(screen.getByRole('heading', { name: /préparer le quiz/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /quiz de naturalisation française/i })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /commencer le quiz/i })).toBeInTheDocument()
   })
 
@@ -140,7 +140,7 @@ describe('Quiz Flow Integration', () => {
     await user.click(screen.getByRole('button', { name: /recommencer le quiz/i }))
 
     // Should be back at setup screen
-    expect(screen.getByRole('heading', { name: /préparer le quiz/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /quiz de naturalisation française/i })).toBeInTheDocument()
     expect(screen.getByText(/nombre de questions/i)).toBeInTheDocument()
   })
 
@@ -259,7 +259,7 @@ describe('Quiz Flow Integration', () => {
     await user.click(screen.getByRole('button', { name: /recommencer le quiz/i }))
 
     // Should be back at setup screen (state fully reset)
-    expect(screen.getByRole('heading', { name: /préparer le quiz/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /quiz de naturalisation française/i })).toBeInTheDocument()
     
     // Start new quiz
     await user.click(screen.getByRole('button', { name: /commencer le quiz/i }))

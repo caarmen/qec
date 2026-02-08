@@ -39,10 +39,18 @@ function QuizSetupScreen({
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="w-full max-w-md bg-white rounded-xl shadow-sm p-6 space-y-8">
-        <h1
-          tabIndex={-1}
-          ref={headingRef}
-          className="text-2xl font-semibold text-gray-900">Préparer le quiz</h1>
+        <div className="space-y-3">
+          <h1
+            tabIndex={-1}
+            ref={headingRef}
+            className="text-2xl font-semibold text-gray-900"
+          >
+            Quiz de Naturalisation Française
+          </h1>
+          <p className="text-gray-600">
+            Testez vos connaissances civiques et évaluez votre préparation pour la naturalisation française.
+          </p>
+        </div>
 
         <SegmentedControl
           label="Nombre de questions"

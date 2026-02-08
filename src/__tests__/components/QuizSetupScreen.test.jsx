@@ -14,7 +14,7 @@ describe('QuizSetupScreen', () => {
   it('renders title, segmented control, and start button', () => {
     render(<QuizSetupScreen {...baseProps} />)
 
-    expect(screen.getByRole('heading', { name: /préparer le quiz/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /quiz de naturalisation française/i })).toBeInTheDocument()
     expect(screen.getByText(/nombre de questions/i)).toBeInTheDocument()
     expect(screen.getByText(/choisissez la durée/i)).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /commencer le quiz/i })).toBeInTheDocument()
