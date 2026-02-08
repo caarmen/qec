@@ -6,6 +6,7 @@ import { DEFAULT_QUESTION_COUNT } from '../utils/constants'
 // Quiz status constants
 export const QUIZ_STATUS = {
   NOT_STARTED: 'NOT_STARTED',
+  CONFIGURING: 'CONFIGURING',
   ANSWERING: 'ANSWERING',
   REVIEWING_ANSWER: 'REVIEWING_ANSWER',
   COMPLETED: 'COMPLETED'
@@ -14,6 +15,7 @@ export const QUIZ_STATUS = {
 // Action types
 export const ACTIONS = {
   START_QUIZ: 'START_QUIZ',
+  SELECT_QUESTION_COUNT: 'SELECT_QUESTION_COUNT',
   SELECT_ANSWER: 'SELECT_ANSWER',
   SUBMIT_ANSWER: 'SUBMIT_ANSWER',
   GO_TO_NEXT_QUESTION: 'GO_TO_NEXT_QUESTION',
@@ -27,18 +29,26 @@ const initialState = {
   currentQuestionIndex: 0,
   selectedAnswer: null,
   userAnswers: [],
-  score: 0
+  score: 0,
+  selectedQuestionCount: DEFAULT_QUESTION_COUNT
 }
 
 // Reducer function
 function quizReducer(state, action) {
   switch (action.type) {
     case ACTIONS.START_QUIZ: {
-      const questions = processQuestions(action.payload.rawQuestions, action.payload.count)
+      const questions = processQuestions(action.payload.rawQuestions, state.selectedQuestionCount)
       return {
         ...initialState,
         quizStatus: QUIZ_STATUS.ANSWERING,
         questions
+      }
+    }
+
+    case ACTIONS.SELECT_QUESTION_COUNT: {
+      return {
+        ...state,
+        selectedQuestionCount: action.payload.count
       }
     }
 
@@ -94,7 +104,10 @@ function quizReducer(state, action) {
     }
 
     case ACTIONS.RESTART_QUIZ: {
-      return initialState
+      return {
+        ...initialState,
+        quizStatus: QUIZ_STATUS.CONFIGURING
+      }
     }
 
     default:
@@ -106,10 +119,17 @@ function quizReducer(state, action) {
 export function useQuiz() {
   const [state, dispatch] = useReducer(quizReducer, initialState)
 
-  const startQuiz = (rawQuestions, count = DEFAULT_QUESTION_COUNT) => {
+  const startQuiz = (rawQuestions) => {
     dispatch({
       type: ACTIONS.START_QUIZ,
-      payload: { rawQuestions, count }
+      payload: { rawQuestions }
+    })
+  }
+
+  const selectQuestionCount = (count) => {
+    dispatch({
+      type: ACTIONS.SELECT_QUESTION_COUNT,
+      payload: { count }
     })
   }
 
@@ -159,9 +179,11 @@ export function useQuiz() {
     userAnswers: state.userAnswers,
     score: state.score,
     totalQuestions: state.questions.length,
+    selectedQuestionCount: state.selectedQuestionCount,
     
     // Actions
     startQuiz,
+    selectQuestionCount,
     selectAnswer,
     submitAnswer,
     goToNextQuestion,

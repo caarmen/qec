@@ -1,9 +1,8 @@
 import { useQuiz, QUIZ_STATUS } from './hooks/useQuiz'
-import StartScreen from './components/StartScreen'
+import QuizStartScreen from './components/QuizStartScreen'
 import QuizScreen from './components/QuizScreen'
 import ResultsScreen from './components/ResultsScreen'
 import questionsData from './data/questions.json'
-import { DEFAULT_QUESTION_COUNT } from './utils/constants'
 
 function App() {
   const {
@@ -11,10 +10,12 @@ function App() {
     currentQuestion,
     currentQuestionIndex,
     selectedAnswer,
+    selectedQuestionCount,
     score,
     totalQuestions,
     hasAnswerSelected,
     startQuiz,
+    selectQuestionCount,
     selectAnswer,
     submitAnswer,
     goToNextQuestion,
@@ -22,13 +23,18 @@ function App() {
   } = useQuiz()
 
   const handleStartQuiz = () => {
-    startQuiz(questionsData.questions, DEFAULT_QUESTION_COUNT)
+    startQuiz(questionsData.questions)
   }
 
   return (
     <>
-      {quizStatus === QUIZ_STATUS.NOT_STARTED && (
-        <StartScreen onStart={handleStartQuiz} />
+      {(quizStatus === QUIZ_STATUS.NOT_STARTED || quizStatus === QUIZ_STATUS.CONFIGURING) && (
+        <QuizStartScreen
+          totalQuestions={questionsData.questions.length}
+          selectedQuestionCount={selectedQuestionCount}
+          onSelectQuestionCount={selectQuestionCount}
+          onStart={handleStartQuiz}
+        />
       )}
 
       {(quizStatus === QUIZ_STATUS.ANSWERING || quizStatus === QUIZ_STATUS.REVIEWING_ANSWER ) && (

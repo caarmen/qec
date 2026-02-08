@@ -13,16 +13,16 @@ describe('Edge Cases', () => {
       // Start quiz
       await user.click(screen.getByRole('button', { name: /commencer le quiz/i }))
 
-      // Answer questions 1-9
-      for (let i = 1; i <= 9; i++) {
+      // Answer questions 1-39
+      for (let i = 1; i <= 39; i++) {
         const answers = screen.getAllByRole('radio')
         await user.click(answers[0])
         await user.click(screen.getByRole('button', { name: /soumettre/i }))
         await user.click(screen.getByRole('button', { name: /suivant/i }))
       }
 
-      // Should be on question 10 (last question)
-      expect(screen.getByText(/question 10 sur 10/i)).toBeInTheDocument()
+      // Should be on question 40 (last question)
+      expect(screen.getByText(/question 40 sur 40/i)).toBeInTheDocument()
 
       // Answer last question
       const answers = screen.getAllByRole('radio')
@@ -48,7 +48,7 @@ describe('Edge Cases', () => {
       await user.click(screen.getByRole('button', { name: /commencer le quiz/i }))
 
       // Answer all 10 questions
-      for (let i = 1; i <= 10; i++) {
+      for (let i = 1; i <= 40; i++) {
         const answers = screen.getAllByRole('radio')
         await user.click(answers[0])
         await user.click(screen.getByRole('button', { name: /soumettre/i }))
@@ -56,7 +56,7 @@ describe('Edge Cases', () => {
       }
 
       // Results should show 10 total questions
-      expect(screen.getByText('10')).toBeInTheDocument()
+      expect(screen.getByText('40')).toBeInTheDocument()
       
       // Should have a score for all 10 questions
       const scoreText = screen.getByText(/score :/i).textContent
@@ -72,7 +72,7 @@ describe('Edge Cases', () => {
       await user.click(screen.getByRole('button', { name: /commencer le quiz/i }))
 
       // Answer all 10 questions
-      for (let i = 1; i <= 10; i++) {
+      for (let i = 1; i <= 40; i++) {
         const answers = screen.getAllByRole('radio')
         await user.click(answers[0])
         await user.click(screen.getByRole('button', { name: /soumettre/i }))
@@ -156,7 +156,7 @@ describe('Edge Cases', () => {
       // For this test, we'll answer all questions and check the result
       // We can't guarantee all correct answers without knowing which is correct,
       // but we can verify the score is calculated
-      for (let i = 1; i <= 10; i++) {
+      for (let i = 1; i <= 40; i++) {
         const answers = screen.getAllByRole('radio')
         // Find and click the correct answer (marked with isCorrect: true)
         // Since we can't see that in the UI, we'll just click first answer
@@ -182,8 +182,8 @@ describe('Edge Cases', () => {
       // Start quiz
       await user.click(screen.getByRole('button', { name: /commencer le quiz/i }))
 
-      // Answer all 10 questions
-      for (let i = 1; i <= 10; i++) {
+      // Answer all 40 questions
+      for (let i = 1; i <= 40; i++) {
         const answers = screen.getAllByRole('radio')
         await user.click(answers[0])
         await user.click(screen.getByRole('button', { name: /soumettre/i }))
@@ -192,7 +192,7 @@ describe('Edge Cases', () => {
 
       // Should show "Total de questions: 10"
       expect(screen.getByText(/total de questions :/i)).toBeInTheDocument()
-      expect(screen.getByText('10')).toBeInTheDocument()
+      expect(screen.getByText('40')).toBeInTheDocument()
 
       // Should show a correct answers count (0-10)
       const correctText = screen.getByText(/réponses correctes :/i).parentElement.textContent
@@ -201,7 +201,7 @@ describe('Edge Cases', () => {
       
       const correctCount = parseInt(correctMatch[1])
       expect(correctCount).toBeGreaterThanOrEqual(0)
-      expect(correctCount).toBeLessThanOrEqual(10)
+      expect(correctCount).toBeLessThanOrEqual(40)
     })
   })
 
@@ -209,7 +209,7 @@ describe('Edge Cases', () => {
     it('should not show quiz screen before starting', async () => {
       render(<App />)
 
-      // Should show start screen
+      // Should show setup screen
       expect(screen.getByRole('heading', { name: /quiz de naturalisation française/i })).toBeInTheDocument()
 
       // Should not show quiz elements
@@ -226,7 +226,7 @@ describe('Edge Cases', () => {
       await user.click(screen.getByRole('button', { name: /commencer le quiz/i }))
 
       // Should show quiz screen
-      expect(screen.getByText(/question 1 sur 10/i)).toBeInTheDocument()
+      expect(screen.getByText(/question 1 sur 40/i)).toBeInTheDocument()
 
       // Should not show results elements
       expect(screen.queryByRole('heading', { name: /quiz terminé/i })).not.toBeInTheDocument()
@@ -241,7 +241,7 @@ describe('Edge Cases', () => {
       // Start and complete quiz
       await user.click(screen.getByRole('button', { name: /^commencer le quiz/i }))
 
-      for (let i = 1; i <= 10; i++) {
+      for (let i = 1; i <= 40; i++) {
         const answers = screen.getAllByRole('radio')
         await user.click(answers[0])
         await user.click(screen.getByRole('button', { name: /soumettre/i }))

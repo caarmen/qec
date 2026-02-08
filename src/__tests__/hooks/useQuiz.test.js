@@ -37,12 +37,14 @@ describe('useQuiz', () => {
       expect(result.current.totalQuestions).toBe(0)
       expect(result.current.currentQuestion).toBe(null)
       expect(result.current.hasAnswerSelected).toBe(false)
+      expect(result.current.selectedQuestionCount).toBe(40)
     })
 
     it('should provide all required action functions', () => {
       const { result } = renderHook(() => useQuiz())
 
       expect(typeof result.current.startQuiz).toBe('function')
+      expect(typeof result.current.selectQuestionCount).toBe('function')
       expect(typeof result.current.selectAnswer).toBe('function')
       expect(typeof result.current.submitAnswer).toBe('function')
       expect(typeof result.current.restartQuiz).toBe('function')
@@ -54,7 +56,8 @@ describe('useQuiz', () => {
       const { result } = renderHook(() => useQuiz())
 
       act(() => {
-        result.current.startQuiz(mockRawQuestions, 2)
+        result.current.selectQuestionCount(2)
+        result.current.startQuiz(mockRawQuestions)
       })
 
       expect(result.current.quizStatus).toBe(QUIZ_STATUS.ANSWERING)
@@ -64,8 +67,20 @@ describe('useQuiz', () => {
       expect(result.current.totalQuestions).toBe(2)
     })
 
-    it('should default to 10 questions when count not specified', () => {
-      const manyQuestions = Array(15).fill(null).map((_, i) => ({
+    it('should use selectedQuestionCount when starting the quiz', () => {
+      const { result } = renderHook(() => useQuiz())
+
+      act(() => {
+        result.current.selectQuestionCount(3)
+        result.current.startQuiz(mockRawQuestions)
+      })
+
+      expect(result.current.questions).toHaveLength(3)
+      expect(result.current.totalQuestions).toBe(3)
+    })
+
+    it('should default to 40 questions when count not specified', () => {
+      const manyQuestions = Array(45).fill(null).map((_, i) => ({
         question: `Question ${i}`,
         theme: "Theme",
         correctAnswers: ["Correct"],
@@ -78,14 +93,15 @@ describe('useQuiz', () => {
         result.current.startQuiz(manyQuestions)
       })
 
-      expect(result.current.questions).toHaveLength(10)
+      expect(result.current.questions).toHaveLength(40)
     })
 
     it('should set current question correctly', () => {
       const { result } = renderHook(() => useQuiz())
 
       act(() => {
-        result.current.startQuiz(mockRawQuestions, 3)
+        result.current.selectQuestionCount(3)
+        result.current.startQuiz(mockRawQuestions)
       })
 
       expect(result.current.currentQuestion).toBeTruthy()
@@ -99,7 +115,8 @@ describe('useQuiz', () => {
 
       // Start first quiz
       act(() => {
-        result.current.startQuiz(mockRawQuestions, 2)
+        result.current.selectQuestionCount(2)
+        result.current.startQuiz(mockRawQuestions)
       })
 
       // Select answer and submit
@@ -111,13 +128,61 @@ describe('useQuiz', () => {
 
       // Start new quiz
       act(() => {
-        result.current.startQuiz(mockRawQuestions, 2)
+        result.current.selectQuestionCount(2)
+        result.current.startQuiz(mockRawQuestions)
       })
 
       expect(result.current.currentQuestionIndex).toBe(0)
       expect(result.current.score).toBe(0)
       expect(result.current.userAnswers).toEqual([])
       expect(result.current.selectedAnswer).toBe(null)
+    })
+
+    it('should reflect updated question count after changing selection', () => {
+      const { result } = renderHook(() => useQuiz())
+
+      act(() => {
+        result.current.selectQuestionCount(2)
+        result.current.startQuiz(mockRawQuestions)
+      })
+
+      expect(result.current.totalQuestions).toBe(2)
+
+      act(() => {
+        result.current.restartQuiz()
+        result.current.selectQuestionCount(3)
+        result.current.startQuiz(mockRawQuestions)
+      })
+
+      expect(result.current.totalQuestions).toBe(3)
+    })
+  })
+
+  describe('SELECT_QUESTION_COUNT action', () => {
+    it('should set selectedQuestionCount', () => {
+      const { result } = renderHook(() => useQuiz())
+
+      act(() => {
+        result.current.selectQuestionCount(40)
+      })
+
+      expect(result.current.selectedQuestionCount).toBe(40)
+    })
+
+    it('should allow changing selectedQuestionCount', () => {
+      const { result } = renderHook(() => useQuiz())
+
+      act(() => {
+        result.current.selectQuestionCount(20)
+      })
+
+      expect(result.current.selectedQuestionCount).toBe(20)
+
+      act(() => {
+        result.current.selectQuestionCount(80)
+      })
+
+      expect(result.current.selectedQuestionCount).toBe(80)
     })
   })
 
@@ -126,7 +191,8 @@ describe('useQuiz', () => {
       const { result } = renderHook(() => useQuiz())
 
       act(() => {
-        result.current.startQuiz(mockRawQuestions, 2)
+        result.current.selectQuestionCount(2)
+        result.current.startQuiz(mockRawQuestions)
       })
 
       const answerId = 'test-answer-id'
@@ -143,7 +209,8 @@ describe('useQuiz', () => {
       const { result } = renderHook(() => useQuiz())
 
       act(() => {
-        result.current.startQuiz(mockRawQuestions, 2)
+        result.current.selectQuestionCount(2)
+        result.current.startQuiz(mockRawQuestions)
       })
 
       act(() => {
@@ -165,7 +232,8 @@ describe('useQuiz', () => {
       const { result } = renderHook(() => useQuiz())
 
       act(() => {
-        result.current.startQuiz(mockRawQuestions, 3)
+        result.current.selectQuestionCount(3)
+        result.current.startQuiz(mockRawQuestions)
       })
 
       // Find correct answer
@@ -187,7 +255,8 @@ describe('useQuiz', () => {
       const { result } = renderHook(() => useQuiz())
 
       act(() => {
-        result.current.startQuiz(mockRawQuestions, 3)
+        result.current.selectQuestionCount(3)
+        result.current.startQuiz(mockRawQuestions)
       })
 
       // Find wrong answer
@@ -209,7 +278,8 @@ describe('useQuiz', () => {
       const { result } = renderHook(() => useQuiz())
 
       act(() => {
-        result.current.startQuiz(mockRawQuestions, 3)
+        result.current.selectQuestionCount(3)
+        result.current.startQuiz(mockRawQuestions)
       })
 
       expect(result.current.currentQuestionIndex).toBe(0)
@@ -229,7 +299,8 @@ describe('useQuiz', () => {
       const { result } = renderHook(() => useQuiz())
 
       act(() => {
-        result.current.startQuiz(mockRawQuestions, 3)
+        result.current.selectQuestionCount(3)
+        result.current.startQuiz(mockRawQuestions)
       })
 
       const answerId = result.current.currentQuestion.answers[0].id
@@ -253,7 +324,8 @@ describe('useQuiz', () => {
       const { result } = renderHook(() => useQuiz())
 
       act(() => {
-        result.current.startQuiz(mockRawQuestions, 3)
+        result.current.selectQuestionCount(3)
+        result.current.startQuiz(mockRawQuestions)
       })
 
       const questionId = result.current.currentQuestion.id
@@ -275,7 +347,8 @@ describe('useQuiz', () => {
       const { result } = renderHook(() => useQuiz())
 
       act(() => {
-        result.current.startQuiz(mockRawQuestions, 2)
+        result.current.selectQuestionCount(2)
+        result.current.startQuiz(mockRawQuestions)
       })
 
       // Answer first question
@@ -312,7 +385,8 @@ describe('useQuiz', () => {
       const { result } = renderHook(() => useQuiz())
 
       act(() => {
-        result.current.startQuiz(mockRawQuestions, 2)
+        result.current.selectQuestionCount(2)
+        result.current.startQuiz(mockRawQuestions)
       })
 
       // Answer first question
@@ -344,7 +418,8 @@ describe('useQuiz', () => {
 
       // Start and play quiz
       act(() => {
-        result.current.startQuiz(mockRawQuestions, 2)
+        result.current.selectQuestionCount(2)
+        result.current.startQuiz(mockRawQuestions)
       })
 
       act(() => {
@@ -358,20 +433,22 @@ describe('useQuiz', () => {
         result.current.restartQuiz()
       })
 
-      expect(result.current.quizStatus).toBe(QUIZ_STATUS.NOT_STARTED)
+      expect(result.current.quizStatus).toBe(QUIZ_STATUS.CONFIGURING)
       expect(result.current.questions).toEqual([])
       expect(result.current.currentQuestionIndex).toBe(0)
       expect(result.current.selectedAnswer).toBe(null)
       expect(result.current.userAnswers).toEqual([])
       expect(result.current.score).toBe(0)
       expect(result.current.currentQuestion).toBe(null)
+      expect(result.current.selectedQuestionCount).toBe(40)
     })
 
     it('should allow starting new quiz after restart', () => {
       const { result } = renderHook(() => useQuiz())
 
       act(() => {
-        result.current.startQuiz(mockRawQuestions, 2)
+        result.current.selectQuestionCount(2)
+        result.current.startQuiz(mockRawQuestions)
       })
 
       act(() => {
@@ -379,7 +456,8 @@ describe('useQuiz', () => {
       })
 
       act(() => {
-        result.current.startQuiz(mockRawQuestions, 3)
+        result.current.selectQuestionCount(3)
+        result.current.startQuiz(mockRawQuestions)
       })
 
       expect(result.current.quizStatus).toBe(QUIZ_STATUS.ANSWERING)
@@ -393,7 +471,8 @@ describe('useQuiz', () => {
 
       // Start quiz with 3 questions
       act(() => {
-        result.current.startQuiz(mockRawQuestions, 3)
+        result.current.selectQuestionCount(3)
+        result.current.startQuiz(mockRawQuestions)
       })
 
       expect(result.current.quizStatus).toBe(QUIZ_STATUS.ANSWERING)
@@ -420,7 +499,8 @@ describe('useQuiz', () => {
       const { result } = renderHook(() => useQuiz())
 
       act(() => {
-        result.current.startQuiz(mockRawQuestions, 3)
+        result.current.selectQuestionCount(3)
+        result.current.startQuiz(mockRawQuestions)
       })
 
       // Answer 1: Correct
