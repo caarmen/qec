@@ -23,7 +23,6 @@ describe('AnswerOption', () => {
       
       const option = screen.getByRole('radio')
       expect(option).toHaveAttribute('aria-checked', 'false')
-      expect(option).toHaveAttribute('aria-pressed', 'false')
       expect(option).toHaveClass('border-gray-200')
     })
 
@@ -32,7 +31,6 @@ describe('AnswerOption', () => {
       
       const option = screen.getByRole('radio')
       expect(option).toHaveAttribute('aria-checked', 'true')
-      expect(option).toHaveAttribute('aria-pressed', 'true')
       expect(option).toHaveClass('border-blue-600')
       expect(option).toHaveClass('bg-blue-50')
     })
@@ -202,18 +200,6 @@ describe('AnswerOption', () => {
       
       option = screen.getByRole('radio')
       expect(option).toHaveAttribute('aria-checked', 'true')
-    })
-
-    it('should have proper aria-pressed attribute', () => {
-      const { rerender } = render(<AnswerOption {...defaultProps} isSelected={false} />)
-      
-      let option = screen.getByRole('radio')
-      expect(option).toHaveAttribute('aria-pressed', 'false')
-      
-      rerender(<AnswerOption {...defaultProps} isSelected={true} />)
-      
-      option = screen.getByRole('radio')
-      expect(option).toHaveAttribute('aria-pressed', 'true')
     })
 
     it('should be keyboard focusable', () => {

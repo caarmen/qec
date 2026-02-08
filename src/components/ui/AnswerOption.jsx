@@ -56,7 +56,6 @@ function AnswerOption({
         ${feedback === 'correct' ? correctStyles : ''}
         ${feedback === 'incorrect' ? incorrectStyles : ''}
       `.trim()}
-      aria-pressed={isSelected}
       role={role}
       aria-checked={isSelected}
     >
