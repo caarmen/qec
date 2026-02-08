@@ -1,7 +1,7 @@
 import { describe, it, expect, vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import QuizSetupScreen from '../../components/QuizSetupScreen'
+import QuizStartScreen from '../../components/QuizStartScreen'
 
 const baseProps = {
   totalQuestions: 50,
@@ -10,9 +10,9 @@ const baseProps = {
   onStart: vi.fn()
 }
 
-describe('QuizSetupScreen', () => {
+describe('QuizStartScreen', () => {
   it('renders title, segmented control, and start button', () => {
-    render(<QuizSetupScreen {...baseProps} />)
+    render(<QuizStartScreen {...baseProps} />)
 
     expect(screen.getByRole('heading', { name: /quiz de naturalisation française/i })).toBeInTheDocument()
     expect(screen.getByText(/nombre de questions/i)).toBeInTheDocument()
@@ -21,7 +21,7 @@ describe('QuizSetupScreen', () => {
   })
 
   it('shows available question count options based on total questions', () => {
-    render(<QuizSetupScreen {...baseProps} totalQuestions={50} />)
+    render(<QuizStartScreen {...baseProps} totalQuestions={50} />)
 
     expect(screen.getByRole('radio', { name: '10' })).toBeInTheDocument()
     expect(screen.getByRole('radio', { name: '20' })).toBeInTheDocument()
@@ -30,7 +30,7 @@ describe('QuizSetupScreen', () => {
   })
 
   it('defaults to 40 when available and no selection is provided', () => {
-    render(<QuizSetupScreen {...baseProps} totalQuestions={50} />)
+    render(<QuizStartScreen {...baseProps} totalQuestions={50} />)
 
     const option40 = screen.getByRole('radio', { name: '40' })
     expect(option40).toHaveAttribute('aria-checked', 'true')
@@ -38,7 +38,7 @@ describe('QuizSetupScreen', () => {
 
   it('uses provided selectedQuestionCount when set', () => {
     render(
-      <QuizSetupScreen
+      <QuizStartScreen
         {...baseProps}
         totalQuestions={50}
         selectedQuestionCount={20}
@@ -54,7 +54,7 @@ describe('QuizSetupScreen', () => {
     const onSelectQuestionCount = vi.fn()
 
     render(
-      <QuizSetupScreen
+      <QuizStartScreen
         {...baseProps}
         onSelectQuestionCount={onSelectQuestionCount}
       />
@@ -71,7 +71,7 @@ describe('QuizSetupScreen', () => {
     const user = userEvent.setup()
     const onStart = vi.fn()
 
-    render(<QuizSetupScreen {...baseProps} onStart={onStart} />)
+    render(<QuizStartScreen {...baseProps} onStart={onStart} />)
 
     const startButton = screen.getByRole('button', { name: /commencer le quiz/i })
     await user.click(startButton)
@@ -80,7 +80,7 @@ describe('QuizSetupScreen', () => {
   })
 
   it('disables start button when no effective value exists', () => {
-    render(<QuizSetupScreen {...baseProps} totalQuestions={5} />)
+    render(<QuizStartScreen {...baseProps} totalQuestions={5} />)
 
     const startButton = screen.getByRole('button', { name: /commencer le quiz/i })
     expect(startButton).toBeDisabled()

@@ -4,26 +4,27 @@ import SegmentedControl from './ui/SegmentedControl'
 import { getAvailableQuestionCountOptions } from '../utils/questionCountOptions'
 
 /**
- * QuizSetupScreen component - Configure quiz settings before start
+ * QuizStartScreen component - Landing screen with quiz configuration
  * @param {Object} props - Component props
  * @param {number} props.totalQuestions - Total questions available in the pool
  * @param {number|null} props.selectedQuestionCount - Selected question count
  * @param {Function} props.onSelectQuestionCount - Callback when selecting question count
  * @param {Function} props.onStart - Callback when starting the quiz
- * @returns {JSX.Element} QuizSetupScreen component
+ * @returns {JSX.Element} QuizStartScreen component
  */
-function QuizSetupScreen({
+function QuizStartScreen({
   totalQuestions,
   selectedQuestionCount,
   onSelectQuestionCount,
   onStart
 }) {
   /* Focus on the top of the screen when entering it, for a11y */
-  const headingRef = useRef(null);
+  const headingRef = useRef(null)
 
-  useEffect(() =>{
+  useEffect(() => {
     headingRef.current?.focus()
   }, [])
+
   const { options, defaultValue } = useMemo(
     () => getAvailableQuestionCountOptions(totalQuestions),
     [totalQuestions]
@@ -68,4 +69,4 @@ function QuizSetupScreen({
   )
 }
 
-export default QuizSetupScreen
+export default QuizStartScreen

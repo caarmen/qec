@@ -1,5 +1,5 @@
 import { useQuiz, QUIZ_STATUS } from './hooks/useQuiz'
-import QuizSetupScreen from './components/QuizSetupScreen'
+import QuizStartScreen from './components/QuizStartScreen'
 import QuizScreen from './components/QuizScreen'
 import ResultsScreen from './components/ResultsScreen'
 import questionsData from './data/questions.json'
@@ -29,7 +29,7 @@ function App() {
   return (
     <>
       {(quizStatus === QUIZ_STATUS.NOT_STARTED || quizStatus === QUIZ_STATUS.CONFIGURING) && (
-        <QuizSetupScreen
+        <QuizStartScreen
           totalQuestions={questionsData.questions.length}
           selectedQuestionCount={selectedQuestionCount}
           onSelectQuestionCount={selectQuestionCount}
