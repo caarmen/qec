@@ -25,17 +25,17 @@ function QuizStartScreen({
     headingRef.current?.focus()
   }, [])
 
-  const { options, defaultValue } = useMemo(
+  const { options: questionCountOptions, defaultValue: defaultQuestionCount } = useMemo(
     () => getAvailableQuestionCountOptions(totalQuestions),
     [totalQuestions]
   )
 
-  const optionItems = useMemo(
-    () => options.map((value) => ({ value, label: String(value) })),
-    [options]
+  const questionCountOptionItems = useMemo(
+    () => questionCountOptions.map((value) => ({ value, label: String(value) })),
+    [questionCountOptions]
   )
 
-  const effectiveValue = selectedQuestionCount ?? defaultValue
+  const questionCountEffectiveValue = selectedQuestionCount ?? defaultQuestionCount
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
@@ -56,12 +56,12 @@ function QuizStartScreen({
         <SegmentedControl
           label="Nombre de questions"
           helperText="Choisissez la durée de votre session"
-          options={optionItems}
-          value={effectiveValue}
+          options={questionCountOptionItems}
+          value={questionCountEffectiveValue}
           onChange={onSelectQuestionCount}
         />
 
-        <Button onClick={onStart} disabled={!effectiveValue}>
+        <Button onClick={onStart} disabled={!questionCountEffectiveValue}>
           Commencer le quiz
         </Button>
       </div>
