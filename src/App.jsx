@@ -61,6 +61,7 @@ function App() {
         <ResultsScreen
           score={score}
           totalQuestions={totalQuestions}
+          difficulty={difficulty}
           onRestart={restartQuiz}
         />
       )}

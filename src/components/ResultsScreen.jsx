@@ -1,5 +1,6 @@
 import Button from './ui/Button'
 import {useRef, useEffect} from 'react'
+import { DIFFICULTY } from '../hooks/useQuiz'
 
 /**
  * ResultsScreen component - Displays quiz results and allows restart
@@ -12,6 +13,7 @@ import {useRef, useEffect} from 'react'
 function ResultsScreen({ 
   score, 
   totalQuestions, 
+  difficulty,
   onRestart 
 }) {
   /* Focus on the top of the screen when entering it, for a11y */
@@ -37,6 +39,9 @@ function ResultsScreen({
 
         {/* Score summary */}
         <div className="bg-gray-50 rounded-lg p-4 space-y-2">
+          <p class="text-sm text-gray-600 font-medium">
+            Mode : {difficulty === DIFFICULTY.DIFFICULT ? "Difficile" : "Normal" }
+          </p>
           <p className="text-gray-900">
             <span className="font-medium">Total de questions :</span> {totalQuestions}
           </p>
