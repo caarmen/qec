@@ -35,7 +35,7 @@ function ResultsScreen({ score, totalQuestions, difficulty, onRestart }) {
 
         {/* Score summary */}
         <div className="bg-gray-50 rounded-lg p-4 space-y-2">
-          <p class="text-sm text-gray-600 font-medium">
+          <p className="text-sm text-gray-600 font-medium">
             {t("resultsScreen.difficulty", {
               difficulty: t(
                 difficulty === DIFFICULTY.DIFFICULT

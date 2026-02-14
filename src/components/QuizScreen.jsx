@@ -137,7 +137,7 @@ function QuizScreen({
         </h2>
 
         {difficulty === DIFFICULTY.DIFFICULT && (
-          <p class="mt-3 mb-4 text-sm text-gray-600">
+          <p className="mt-3 mb-4 text-sm text-gray-600">
             {t("quizScreen.multiChoiceInstruction")}
           </p>
         )}
@@ -147,7 +147,7 @@ function QuizScreen({
         of the progress already present on the screen. */}
         <div className="w-full h-1 bg-gray-200 rounded-full" aria-hidden="true">
           <div
-            class="h-1 bg-blue-600 rounded-full"
+            className="h-1 bg-blue-600 rounded-full"
             style={{ width: `${progressPercent}%` }}
           ></div>
         </div>
