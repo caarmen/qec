@@ -3,6 +3,7 @@ import Button from './ui/Button'
 import SegmentedControl from './ui/SegmentedControl'
 import { getAvailableQuestionCountOptions } from '../utils/questionCountOptions'
 import { DIFFICULTY } from '../hooks/useQuiz'
+import { useTranslation } from 'react-i18next';
 
 /**
  * QuizStartScreen component - Landing screen with quiz configuration
@@ -21,6 +22,7 @@ function QuizStartScreen({
   onSelectDifficulty,
   onStart
 }) {
+  const { t } = useTranslation();
   /* Focus on the top of the screen when entering it, for a11y */
   const headingRef = useRef(null)
 
@@ -54,7 +56,7 @@ function QuizStartScreen({
             ref={headingRef}
             className="text-2xl font-semibold text-gray-900"
           >
-            Quiz de Naturalisation Française
+            {t("quizTitle")}
           </h1>
           <p className="text-gray-600">
             Testez vos connaissances civiques et évaluez votre préparation pour la naturalisation française.
