@@ -3,21 +3,24 @@ import AnswerOption from './ui/AnswerOption'
 import Button from './ui/Button'
 import { isAnswerCorrect } from '../utils/quizHelpers'
 import { useEffect, useRef } from "react"
+import { useTranslation } from 'react-i18next';
 import { DIFFICULTY } from '../hooks/useQuiz'
+
 
 /**
  * Return a feedback message to display for the submitted answer (right/wrong answer).
  * @param {boolean} hasAnswerSubmitted  - Whether an answer has been submitted
  * @param {Object} currentQuestion - Current question object with answers
  * @param {number} selectedAnswers - IDs of currently selected answer
+ * @param {(key: string) => string} t - Translation function
  * @returns {string} A feedback message to display.
  */
-function getFeedbackMessage(hasAnswerSubmitted, currentQuestion, selectedAnswers) {
+function getFeedbackMessage(hasAnswerSubmitted, currentQuestion, selectedAnswers, t) {
   if (!hasAnswerSubmitted) return null
 
   const isCorrect = isAnswerCorrect(currentQuestion, selectedAnswers)
 
-  return isCorrect ? "Bonne réponse." : "Mauvaise réponse."
+  return t(isCorrect ? "quizScreen.feedback.correctAnswer": "quizScreen.feedback.incorrectAnswer")
 }
 
 /**
@@ -74,6 +77,7 @@ function QuizScreen({
   hasAnswerSubmitted,
 }) {
 
+  const { t } = useTranslation();
   /* Focus on the top of the screen when a new question is displayed */
   const progressRef = useRef(null);
 
@@ -82,7 +86,7 @@ function QuizScreen({
   }, [currentQuestionIndex])
 
   /* Focus on the feedback message when it appears */
-  const feedbackMessage = getFeedbackMessage(hasAnswerSubmitted, currentQuestion, selectedAnswers)
+  const feedbackMessage = getFeedbackMessage(hasAnswerSubmitted, currentQuestion, selectedAnswers, t)
 
   const feedbackRef = useRef(null);
 
@@ -106,9 +110,12 @@ function QuizScreen({
         <div className="flex justify-between items-center text-sm text-gray-600">
           <p
             tabIndex={-1}
-            ref={progressRef}>{`Question ${currentQuestionIndex + 1} sur ${totalQuestions}`}
+            ref={progressRef}>{t("quizScreen.progress", {
+              current: currentQuestionIndex + 1,
+              total: totalQuestions
+            })}
           </p>
-          <p>{`${score} ${score === 1 ? 'bonne réponse' : 'bonnes réponses'}`}</p>
+          <p>{t("quizScreen.correctCount", {count: score})}</p>
         </div>
 
         {/* Question text */}
@@ -118,7 +125,7 @@ function QuizScreen({
 
         {difficulty === DIFFICULTY.DIFFICULT && (
           <p class="mt-3 mb-4 text-sm text-gray-600">
-            Plusieurs réponses peuvent être correctes. Sélectionnez toutes les bonnes réponses.
+            {t("quizScreen.multiChoiceInstruction")}
           </p>
         )}
 
@@ -186,7 +193,7 @@ function QuizScreen({
           onClick={hasAnswerSubmitted ? onGoToNextQuestion : onSubmitAnswer}
           disabled={!hasAnswerSelected && !hasAnswerSubmitted}
         >
-          {hasAnswerSubmitted ? "Suivant" : "Soumettre"}
+          {t(hasAnswerSubmitted ? "quizScreen.buttonNext" : "quizScreen.buttonSubmit")}
         </Button>
       </QuestionCard>
     </div>

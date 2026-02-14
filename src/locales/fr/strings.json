@@ -13,5 +13,17 @@
                 "helperText": "Choisissez le niveau de difficulté"
             }
         }
+    },
+    "quizScreen": {
+        "feedback": {
+            "correctAnswer": "Bonne réponse.",
+            "incorrectAnswer": "Mauvaise réponse."
+        },
+        "progress": "Question {{current}} sur {{total}}",
+        "correctCount_one": "{{count}} bonne réponse",
+        "correctCount_other": "{{count}} bonnes réponses",
+        "multiChoiceInstruction": "Plusieurs réponses peuvent être correctes. Sélectionnez toutes les bonnes réponses.",
+        "buttonNext": "Suivant",
+        "buttonSubmit": "Soumettre"
     }
 }
