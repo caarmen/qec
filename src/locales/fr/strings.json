@@ -25,5 +25,16 @@
         "multiChoiceInstruction": "Plusieurs réponses peuvent être correctes. Sélectionnez toutes les bonnes réponses.",
         "buttonNext": "Suivant",
         "buttonSubmit": "Soumettre"
+    },
+    "resultsScreen": {
+        "title": "Quiz Terminé !",
+        "difficulty": "Mode : {{difficulty}}",
+        "totalCountLabel": "Total de questions :",
+        "correctCountLabel": "Réponses correctes :",
+        "buttonRestart": "Recommencer le Quiz"
+    },
+    "common": {
+        "difficultyDifficult": "Difficile",
+        "difficultyNormal": "Normal"
     }
 }

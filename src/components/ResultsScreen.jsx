@@ -1,6 +1,7 @@
 import Button from './ui/Button'
 import {useRef, useEffect} from 'react'
 import { DIFFICULTY } from '../hooks/useQuiz'
+import { useTranslation } from 'react-i18next';
 
 /**
  * ResultsScreen component - Displays quiz results and allows restart
@@ -16,6 +17,7 @@ function ResultsScreen({
   difficulty,
   onRestart 
 }) {
+  const { t } = useTranslation();
   /* Focus on the top of the screen when entering it, for a11y */
   const headingRef = useRef(null);
 
@@ -34,19 +36,21 @@ function ResultsScreen({
           ref={headingRef}
           tabIndex={-1}
           >
-          Quiz Terminé !
+          {t("resultsScreen.title")}
         </h2>
 
         {/* Score summary */}
         <div className="bg-gray-50 rounded-lg p-4 space-y-2">
           <p class="text-sm text-gray-600 font-medium">
-            Mode : {difficulty === DIFFICULTY.DIFFICULT ? "Difficile" : "Normal" }
+            {t("resultsScreen.difficulty", {
+              difficulty: t(difficulty === DIFFICULTY.DIFFICULT ? "common.difficultyDifficult" : "common.difficultyNormal")
+            })}
           </p>
           <p className="text-gray-900">
-            <span className="font-medium">Total de questions :</span> {totalQuestions}
+            <span className="font-medium">{t("resultsScreen.totalCountLabel")}</span> {totalQuestions}
           </p>
           <p className="text-gray-900">
-            <span className="font-medium">Réponses correctes :</span> {score}
+            <span className="font-medium">{t("resultsScreen.correctCountLabel")}</span> {score}
           </p>
           <p className="text-green-600 font-medium text-lg">
             {`Score : ${percentage}%`}
@@ -55,7 +59,7 @@ function ResultsScreen({
 
         {/* Restart button */}
         <Button onClick={onRestart}>
-          Recommencer le Quiz
+          {t("resultsScreen.buttonRestart")}
         </Button>
       </div>
     </div>
