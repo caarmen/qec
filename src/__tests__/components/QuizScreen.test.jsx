@@ -1,21 +1,21 @@
-import { describe, it, expect, vi } from 'vitest'
-import { render, screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
-import QuizScreen from '../../components/QuizScreen'
-import { DIFFICULTY } from '../../hooks/useQuiz'
+import { describe, it, expect, vi } from "vitest";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import QuizScreen from "../../components/QuizScreen";
+import { DIFFICULTY } from "../../hooks/useQuiz";
 
-describe('QuizScreen', () => {
+describe("QuizScreen", () => {
   const mockQuestion = {
-    id: 'q1',
-    question: 'Quelle est la devise de la République française ?',
-    theme: 'Principes et valeurs',
+    id: "q1",
+    question: "Quelle est la devise de la République française ?",
+    theme: "Principes et valeurs",
     answers: [
-      { id: 'q1-a0', text: 'Liberté, Égalité, Fraternité', isCorrect: true },
-      { id: 'q1-a1', text: 'Liberté, Unité, Solidarité', isCorrect: false },
-      { id: 'q1-a2', text: 'Travail, Famille, Patrie', isCorrect: false },
-      { id: 'q1-a3', text: 'Paix et Justice', isCorrect: false }
-    ]
-  }
+      { id: "q1-a0", text: "Liberté, Égalité, Fraternité", isCorrect: true },
+      { id: "q1-a1", text: "Liberté, Unité, Solidarité", isCorrect: false },
+      { id: "q1-a2", text: "Travail, Famille, Patrie", isCorrect: false },
+      { id: "q1-a3", text: "Paix et Justice", isCorrect: false },
+    ],
+  };
 
   const defaultProps = {
     currentQuestion: mockQuestion,
@@ -24,149 +24,213 @@ describe('QuizScreen', () => {
     selectedAnswers: [],
     onSelectAnswer: vi.fn(),
     onSubmitAnswer: vi.fn(),
-    hasAnswerSelected: false
-  }
+    hasAnswerSelected: false,
+  };
 
-  describe('rendering', () => {
-    it('should render the progress indicator, plural score', () => {
-      render(<QuizScreen {...defaultProps} currentQuestionIndex={3} score={2}/>)
+  describe("rendering", () => {
+    it("should render the progress indicator, plural score", () => {
+      render(
+        <QuizScreen {...defaultProps} currentQuestionIndex={3} score={2} />,
+      );
 
-      expect(screen.getByText('Question 4 sur 10')).toBeInTheDocument()
-      expect(screen.getByText('2 bonnes réponses')).toBeInTheDocument()
-    })
+      expect(screen.getByText("Question 4 sur 10")).toBeInTheDocument();
+      expect(screen.getByText("2 bonnes réponses")).toBeInTheDocument();
+    });
 
-    it('should render the progress indicator, singular score', () => {
-      render(<QuizScreen {...defaultProps} currentQuestionIndex={3} score={1}/>)
-      
-      expect(screen.getByText('Question 4 sur 10')).toBeInTheDocument()
-      expect(screen.getByText('1 bonne réponse')).toBeInTheDocument()
-    })
+    it("should render the progress indicator, singular score", () => {
+      render(
+        <QuizScreen {...defaultProps} currentQuestionIndex={3} score={1} />,
+      );
 
-    it('should render the question text', () => {
-      render(<QuizScreen {...defaultProps} />)
-      
-      expect(screen.getByRole('heading', { 
-        name: /quelle est la devise de la république française/i,
-        level: 2
-      })).toBeInTheDocument()
-    })
+      expect(screen.getByText("Question 4 sur 10")).toBeInTheDocument();
+      expect(screen.getByText("1 bonne réponse")).toBeInTheDocument();
+    });
 
-    it('should render all answer options', () => {
-      render(<QuizScreen {...defaultProps} />)
-      
-      expect(screen.getByRole('radio', { name: /liberté, égalité, fraternité/i })).toBeInTheDocument()
-      expect(screen.getByRole('radio', { name: /liberté, unité, solidarité/i })).toBeInTheDocument()
-      expect(screen.getByRole('radio', { name: /travail, famille, patrie/i })).toBeInTheDocument()
-      expect(screen.getByRole('radio', { name: /paix et justice/i })).toBeInTheDocument()
-    })
+    it("should render the question text", () => {
+      render(<QuizScreen {...defaultProps} />);
 
-    it('should render the Submit button', () => {
-      render(<QuizScreen {...defaultProps} hasAnswerSubmitted={false} />)
+      expect(
+        screen.getByRole("heading", {
+          name: /quelle est la devise de la république française/i,
+          level: 2,
+        }),
+      ).toBeInTheDocument();
+    });
 
-      expect(screen.getByRole('button', { name: /soumettre/i })).toBeInTheDocument()
-    })
+    it("should render all answer options", () => {
+      render(<QuizScreen {...defaultProps} />);
 
-    it('should render the Next button', () => {
-      render(<QuizScreen {...defaultProps} hasAnswerSubmitted={true} />)
-      
-      expect(screen.getByRole('button', { name: /suivant/i })).toBeInTheDocument()
-    })
+      expect(
+        screen.getByRole("radio", { name: /liberté, égalité, fraternité/i }),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole("radio", { name: /liberté, unité, solidarité/i }),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole("radio", { name: /travail, famille, patrie/i }),
+      ).toBeInTheDocument();
+      expect(
+        screen.getByRole("radio", { name: /paix et justice/i }),
+      ).toBeInTheDocument();
+    });
 
-    it('should render null when no currentQuestion', () => {
-      const { container } = render(<QuizScreen {...defaultProps} currentQuestion={null} />)
-      
-      expect(container.firstChild).toBeNull()
-    })
+    it("should render the Submit button", () => {
+      render(<QuizScreen {...defaultProps} hasAnswerSubmitted={false} />);
 
-    it('should apply correct layout styles', () => {
-      const { container } = render(<QuizScreen {...defaultProps} />)
-      
-      const layout = container.firstChild
-      expect(layout).toHaveClass('min-h-screen')
-      expect(layout).toHaveClass('bg-gray-50')
-      expect(layout).toHaveClass('flex')
-      expect(layout).toHaveClass('items-center')
-      expect(layout).toHaveClass('justify-center')
-    })
+      expect(
+        screen.getByRole("button", { name: /soumettre/i }),
+      ).toBeInTheDocument();
+    });
 
-    it('should render progress with correct question number', () => {
-      render(<QuizScreen {...defaultProps} currentQuestionIndex={4} totalQuestions={10} />)
-      
-      expect(screen.getByText('Question 5 sur 10')).toBeInTheDocument()
-    })
+    it("should render the Next button", () => {
+      render(<QuizScreen {...defaultProps} hasAnswerSubmitted={true} />);
 
-    it('should render last question progress correctly', () => {
-      render(<QuizScreen {...defaultProps} currentQuestionIndex={9} totalQuestions={10} />)
-      
-      expect(screen.getByText('Question 10 sur 10')).toBeInTheDocument()
-    })
+      expect(
+        screen.getByRole("button", { name: /suivant/i }),
+      ).toBeInTheDocument();
+    });
 
-    it('should render feedback of correct response', () => {
-      render(<QuizScreen {...defaultProps} hasAnswerSubmitted={true} selectedAnswers={['q1-a0']}/>)
-      expect(screen.getByText(/bonne réponse/i)).toBeInTheDocument()
-    })
+    it("should render null when no currentQuestion", () => {
+      const { container } = render(
+        <QuizScreen {...defaultProps} currentQuestion={null} />,
+      );
 
-    it('should render feedback of incorrect response', () => {
-      render(<QuizScreen {...defaultProps} hasAnswerSubmitted={true} selectedAnswers={['q1-a1']}/>)
-      expect(screen.getByText(/mauvaise réponse/i)).toBeInTheDocument()
-    })
-  })
+      expect(container.firstChild).toBeNull();
+    });
 
-  describe('answer selection', () => {
-    it('should not have any answer selected initially', () => {
-      render(<QuizScreen {...defaultProps} />)
-      
-      const options = screen.getAllByRole('radio')
-      options.forEach(option => {
-        expect(option).toHaveAttribute('aria-checked', 'false')
-      })
-    })
+    it("should apply correct layout styles", () => {
+      const { container } = render(<QuizScreen {...defaultProps} />);
 
-    it('should highlight selected answer', () => {
-      render(<QuizScreen {...defaultProps} selectedAnswers={["q1-a0"]} />)
-      
-      const selectedOption = screen.getByRole('radio', { name: /liberté, égalité, fraternité/i })
-      expect(selectedOption).toHaveAttribute('aria-checked', 'true')
-    })
+      const layout = container.firstChild;
+      expect(layout).toHaveClass("min-h-screen");
+      expect(layout).toHaveClass("bg-gray-50");
+      expect(layout).toHaveClass("flex");
+      expect(layout).toHaveClass("items-center");
+      expect(layout).toHaveClass("justify-center");
+    });
 
-    it('should call onSelectAnswer when answer is clicked', async () => {
-      const handleSelectAnswer = vi.fn()
-      const user = userEvent.setup()
-      
-      render(<QuizScreen {...defaultProps} onSelectAnswer={handleSelectAnswer} />)
-      
-      const option = screen.getByRole('radio', { name: /liberté, égalité, fraternité/i })
-      await user.click(option)
-      
-      expect(handleSelectAnswer).toHaveBeenCalledTimes(1)
-      expect(handleSelectAnswer).toHaveBeenCalledWith(['q1-a0'])
-    })
+    it("should render progress with correct question number", () => {
+      render(
+        <QuizScreen
+          {...defaultProps}
+          currentQuestionIndex={4}
+          totalQuestions={10}
+        />,
+      );
 
-    it('should allow changing selection - normal', async () => {
-      const handleSelectAnswer = vi.fn()
-      const user = userEvent.setup()
-      
-      render(<QuizScreen {...defaultProps} onSelectAnswer={handleSelectAnswer} />)
-      
-      const option1 = screen.getByRole('radio', { name: /liberté, égalité, fraternité/i })
-      const option2 = screen.getByRole('radio', { name: /liberté, unité, solidarité/i })
-      
-      await user.click(option1)
-      await user.click(option2)
-      
-      expect(handleSelectAnswer).toHaveBeenCalledTimes(2)
-      expect(handleSelectAnswer).toHaveBeenNthCalledWith(1, ['q1-a0'])
-      expect(handleSelectAnswer).toHaveBeenNthCalledWith(2, ['q1-a1'])
-    })
+      expect(screen.getByText("Question 5 sur 10")).toBeInTheDocument();
+    });
 
-    it('should allow changing selection - difficult', async () => {
-      const handleSelectAnswer = vi.fn()
-      const user = userEvent.setup()
+    it("should render last question progress correctly", () => {
+      render(
+        <QuizScreen
+          {...defaultProps}
+          currentQuestionIndex={9}
+          totalQuestions={10}
+        />,
+      );
 
-      const {rerender} = render(<QuizScreen {...defaultProps} onSelectAnswer={handleSelectAnswer} difficulty={DIFFICULTY.DIFFICULT} />)
+      expect(screen.getByText("Question 10 sur 10")).toBeInTheDocument();
+    });
 
-      const option1 = screen.getByRole('checkbox', { name: /liberté, égalité, fraternité/i })
-      await user.click(option1)
+    it("should render feedback of correct response", () => {
+      render(
+        <QuizScreen
+          {...defaultProps}
+          hasAnswerSubmitted={true}
+          selectedAnswers={["q1-a0"]}
+        />,
+      );
+      expect(screen.getByText(/bonne réponse/i)).toBeInTheDocument();
+    });
+
+    it("should render feedback of incorrect response", () => {
+      render(
+        <QuizScreen
+          {...defaultProps}
+          hasAnswerSubmitted={true}
+          selectedAnswers={["q1-a1"]}
+        />,
+      );
+      expect(screen.getByText(/mauvaise réponse/i)).toBeInTheDocument();
+    });
+  });
+
+  describe("answer selection", () => {
+    it("should not have any answer selected initially", () => {
+      render(<QuizScreen {...defaultProps} />);
+
+      const options = screen.getAllByRole("radio");
+      options.forEach((option) => {
+        expect(option).toHaveAttribute("aria-checked", "false");
+      });
+    });
+
+    it("should highlight selected answer", () => {
+      render(<QuizScreen {...defaultProps} selectedAnswers={["q1-a0"]} />);
+
+      const selectedOption = screen.getByRole("radio", {
+        name: /liberté, égalité, fraternité/i,
+      });
+      expect(selectedOption).toHaveAttribute("aria-checked", "true");
+    });
+
+    it("should call onSelectAnswer when answer is clicked", async () => {
+      const handleSelectAnswer = vi.fn();
+      const user = userEvent.setup();
+
+      render(
+        <QuizScreen {...defaultProps} onSelectAnswer={handleSelectAnswer} />,
+      );
+
+      const option = screen.getByRole("radio", {
+        name: /liberté, égalité, fraternité/i,
+      });
+      await user.click(option);
+
+      expect(handleSelectAnswer).toHaveBeenCalledTimes(1);
+      expect(handleSelectAnswer).toHaveBeenCalledWith(["q1-a0"]);
+    });
+
+    it("should allow changing selection - normal", async () => {
+      const handleSelectAnswer = vi.fn();
+      const user = userEvent.setup();
+
+      render(
+        <QuizScreen {...defaultProps} onSelectAnswer={handleSelectAnswer} />,
+      );
+
+      const option1 = screen.getByRole("radio", {
+        name: /liberté, égalité, fraternité/i,
+      });
+      const option2 = screen.getByRole("radio", {
+        name: /liberté, unité, solidarité/i,
+      });
+
+      await user.click(option1);
+      await user.click(option2);
+
+      expect(handleSelectAnswer).toHaveBeenCalledTimes(2);
+      expect(handleSelectAnswer).toHaveBeenNthCalledWith(1, ["q1-a0"]);
+      expect(handleSelectAnswer).toHaveBeenNthCalledWith(2, ["q1-a1"]);
+    });
+
+    it("should allow changing selection - difficult", async () => {
+      const handleSelectAnswer = vi.fn();
+      const user = userEvent.setup();
+
+      const { rerender } = render(
+        <QuizScreen
+          {...defaultProps}
+          onSelectAnswer={handleSelectAnswer}
+          difficulty={DIFFICULTY.DIFFICULT}
+        />,
+      );
+
+      const option1 = screen.getByRole("checkbox", {
+        name: /liberté, égalité, fraternité/i,
+      });
+      await user.click(option1);
       // Rerender with answer selected
       rerender(
         <QuizScreen
@@ -174,244 +238,339 @@ describe('QuizScreen', () => {
           selectedAnswers={["q1-a0"]}
           onSelectAnswer={handleSelectAnswer}
           difficulty={DIFFICULTY.DIFFICULT}
-        />
-      )
+        />,
+      );
 
-      const option2 = screen.getByRole('checkbox', { name: /liberté, unité, solidarité/i })
-      await user.click(option2)
+      const option2 = screen.getByRole("checkbox", {
+        name: /liberté, unité, solidarité/i,
+      });
+      await user.click(option2);
 
-      expect(handleSelectAnswer).toHaveBeenCalledTimes(2)
-      expect(handleSelectAnswer).toHaveBeenNthCalledWith(1, ['q1-a0'])
-      expect(handleSelectAnswer).toHaveBeenNthCalledWith(2, ['q1-a0', 'q1-a1'])
-    })
-  })
+      expect(handleSelectAnswer).toHaveBeenCalledTimes(2);
+      expect(handleSelectAnswer).toHaveBeenNthCalledWith(1, ["q1-a0"]);
+      expect(handleSelectAnswer).toHaveBeenNthCalledWith(2, ["q1-a0", "q1-a1"]);
+    });
+  });
 
-  describe('submit button', () => {
-    it('should be disabled when no answer is selected', () => {
-      render(<QuizScreen {...defaultProps} hasAnswerSelected={false} hasAnswerSubmitted={false}/>)
-      
-      const button = screen.getByRole('button', { name: /soumettre/i })
-      expect(button).toBeDisabled()
-    })
+  describe("submit button", () => {
+    it("should be disabled when no answer is selected", () => {
+      render(
+        <QuizScreen
+          {...defaultProps}
+          hasAnswerSelected={false}
+          hasAnswerSubmitted={false}
+        />,
+      );
 
-    it('should be enabled when answer is selected', () => {
-      render(<QuizScreen {...defaultProps} hasAnswerSelected={true} hasAnswerSubmitted={false} selectedAnswers={["q1-a0"]} />)
-      
-      const button = screen.getByRole('button', { name: /soumettre/i })
-      expect(button).not.toBeDisabled()
-    })
+      const button = screen.getByRole("button", { name: /soumettre/i });
+      expect(button).toBeDisabled();
+    });
 
-    it('should call onSubmitAnswer when clicked', async () => {
-      const handleSubmitAnswer = vi.fn()
-      const user = userEvent.setup()
-      
-      render(<QuizScreen {...defaultProps} hasAnswerSelected={true} hasAnswerSubmitted={false} onSubmitAnswer={handleSubmitAnswer} />)
-      
-      const button = screen.getByRole('button', { name: /soumettre/i })
-      await user.click(button)
-      
-      expect(handleSubmitAnswer).toHaveBeenCalledTimes(1)
-    })
+    it("should be enabled when answer is selected", () => {
+      render(
+        <QuizScreen
+          {...defaultProps}
+          hasAnswerSelected={true}
+          hasAnswerSubmitted={false}
+          selectedAnswers={["q1-a0"]}
+        />,
+      );
 
-    it('should not call onSubmitAnswer when disabled', async () => {
-      const handleSubmitAnswer = vi.fn()
-      const user = userEvent.setup()
-      
-      render(<QuizScreen {...defaultProps} hasAnswerSelected={false} hasAnswerSubmitted={false} onSubmitAnswer={handleSubmitAnswer} />)
-      
-      const button = screen.getByRole('button', { name: /soumettre/i })
-      await user.click(button)
-      
-      expect(handleSubmitAnswer).not.toHaveBeenCalled()
-    })
+      const button = screen.getByRole("button", { name: /soumettre/i });
+      expect(button).not.toBeDisabled();
+    });
 
-    it('should be absent when answer has been submitted', async () => {
-      render(<QuizScreen {...defaultProps} hasAnswerSelected={false} hasAnswerSubmitted={true} />)
-      expect(screen.queryByRole('button', {name: /soumettre/})).not.toBeInTheDocument()
-    })
-  })
+    it("should call onSubmitAnswer when clicked", async () => {
+      const handleSubmitAnswer = vi.fn();
+      const user = userEvent.setup();
 
-  describe('go to next question button', () => {
-    it('should be absent when no answer has been submitted', () => {
-      render(<QuizScreen {...defaultProps} hasAnswerSelected={false} hasAnswerSubmitted={false}/>)
-      expect(screen.queryByRole('button', {name: /suivant/})).not.toBeInTheDocument()
-    })
+      render(
+        <QuizScreen
+          {...defaultProps}
+          hasAnswerSelected={true}
+          hasAnswerSubmitted={false}
+          onSubmitAnswer={handleSubmitAnswer}
+        />,
+      );
 
-    it('should be enabled when answer has been submitted', () => {
-      render(<QuizScreen {...defaultProps} hasAnswerSelected={true} hasAnswerSubmitted={true} selectedAnswers={["q1-a0"]} />)
+      const button = screen.getByRole("button", { name: /soumettre/i });
+      await user.click(button);
 
-      const button = screen.getByRole('button', { name: /suivant/i })
-      expect(button).not.toBeDisabled()
-    })
+      expect(handleSubmitAnswer).toHaveBeenCalledTimes(1);
+    });
 
-    it('should call onGoToNextQuestion when clicked', async () => {
-      const handleGoToNextQuestion = vi.fn()
-      const user = userEvent.setup()
+    it("should not call onSubmitAnswer when disabled", async () => {
+      const handleSubmitAnswer = vi.fn();
+      const user = userEvent.setup();
 
-      render(<QuizScreen {...defaultProps} hasAnswerSelected={true} hasAnswerSubmitted={true} onGoToNextQuestion={handleGoToNextQuestion} />)
+      render(
+        <QuizScreen
+          {...defaultProps}
+          hasAnswerSelected={false}
+          hasAnswerSubmitted={false}
+          onSubmitAnswer={handleSubmitAnswer}
+        />,
+      );
 
-      const button = screen.getByRole('button', { name: /suivant/i })
-      await user.click(button)
+      const button = screen.getByRole("button", { name: /soumettre/i });
+      await user.click(button);
 
-      expect(handleGoToNextQuestion).toHaveBeenCalledTimes(1)
-    })
-  })
+      expect(handleSubmitAnswer).not.toHaveBeenCalled();
+    });
 
-  describe('accessibility', () => {
-    it('should have proper heading hierarchy', () => {
-      render(<QuizScreen {...defaultProps} />)
-      
-      const heading = screen.getByRole('heading', { level: 2 })
-      expect(heading).toBeInTheDocument()
-    })
+    it("should be absent when answer has been submitted", async () => {
+      render(
+        <QuizScreen
+          {...defaultProps}
+          hasAnswerSelected={false}
+          hasAnswerSubmitted={true}
+        />,
+      );
+      expect(
+        screen.queryByRole("button", { name: /soumettre/ }),
+      ).not.toBeInTheDocument();
+    });
+  });
 
-    it('should have keyboard accessible answer options', async () => {
-      const handleSelectAnswer = vi.fn()
-      const user = userEvent.setup()
-      
-      render(<QuizScreen {...defaultProps} onSelectAnswer={handleSelectAnswer} />)
-      
-      const option = screen.getByRole('radio', { name: /liberté, égalité, fraternité/i })
-      option.focus()
-      
-      await user.keyboard('{Enter}')
-      
-      expect(handleSelectAnswer).toHaveBeenCalledWith(['q1-a0'])
-    })
+  describe("go to next question button", () => {
+    it("should be absent when no answer has been submitted", () => {
+      render(
+        <QuizScreen
+          {...defaultProps}
+          hasAnswerSelected={false}
+          hasAnswerSubmitted={false}
+        />,
+      );
+      expect(
+        screen.queryByRole("button", { name: /suivant/ }),
+      ).not.toBeInTheDocument();
+    });
 
-    it('should have keyboard accessible submit button', async () => {
-      const handleSubmitAnswer = vi.fn()
-      const user = userEvent.setup()
+    it("should be enabled when answer has been submitted", () => {
+      render(
+        <QuizScreen
+          {...defaultProps}
+          hasAnswerSelected={true}
+          hasAnswerSubmitted={true}
+          selectedAnswers={["q1-a0"]}
+        />,
+      );
 
-      render(<QuizScreen {...defaultProps} hasAnswerSelected={true} onSubmitAnswer={handleSubmitAnswer} />)
+      const button = screen.getByRole("button", { name: /suivant/i });
+      expect(button).not.toBeDisabled();
+    });
 
-      const button = screen.getByRole('button', { name: /soumettre/i })
-      button.focus()
+    it("should call onGoToNextQuestion when clicked", async () => {
+      const handleGoToNextQuestion = vi.fn();
+      const user = userEvent.setup();
 
-      await user.keyboard('{Enter}')
+      render(
+        <QuizScreen
+          {...defaultProps}
+          hasAnswerSelected={true}
+          hasAnswerSubmitted={true}
+          onGoToNextQuestion={handleGoToNextQuestion}
+        />,
+      );
 
-      expect(handleSubmitAnswer).toHaveBeenCalledTimes(1)
-    })
-    it('should have keyboard accessible go to next question button', async () => {
-      const handleGoToNextQuestion = vi.fn()
-      const user = userEvent.setup()
+      const button = screen.getByRole("button", { name: /suivant/i });
+      await user.click(button);
 
-      render(<QuizScreen {...defaultProps} hasAnswerSelected={true} hasAnswerSubmitted={true} onGoToNextQuestion={handleGoToNextQuestion} />)
-      
-      const button = screen.getByRole('button', { name: /suivant/i })
-      button.focus()
-      
-      await user.keyboard('{Enter}')
-      
-      expect(handleGoToNextQuestion).toHaveBeenCalledTimes(1)
-    })
-  })
+      expect(handleGoToNextQuestion).toHaveBeenCalledTimes(1);
+    });
+  });
 
-  describe('content variations', () => {
-    it('should render different question text', () => {
+  describe("accessibility", () => {
+    it("should have proper heading hierarchy", () => {
+      render(<QuizScreen {...defaultProps} />);
+
+      const heading = screen.getByRole("heading", { level: 2 });
+      expect(heading).toBeInTheDocument();
+    });
+
+    it("should have keyboard accessible answer options", async () => {
+      const handleSelectAnswer = vi.fn();
+      const user = userEvent.setup();
+
+      render(
+        <QuizScreen {...defaultProps} onSelectAnswer={handleSelectAnswer} />,
+      );
+
+      const option = screen.getByRole("radio", {
+        name: /liberté, égalité, fraternité/i,
+      });
+      option.focus();
+
+      await user.keyboard("{Enter}");
+
+      expect(handleSelectAnswer).toHaveBeenCalledWith(["q1-a0"]);
+    });
+
+    it("should have keyboard accessible submit button", async () => {
+      const handleSubmitAnswer = vi.fn();
+      const user = userEvent.setup();
+
+      render(
+        <QuizScreen
+          {...defaultProps}
+          hasAnswerSelected={true}
+          onSubmitAnswer={handleSubmitAnswer}
+        />,
+      );
+
+      const button = screen.getByRole("button", { name: /soumettre/i });
+      button.focus();
+
+      await user.keyboard("{Enter}");
+
+      expect(handleSubmitAnswer).toHaveBeenCalledTimes(1);
+    });
+    it("should have keyboard accessible go to next question button", async () => {
+      const handleGoToNextQuestion = vi.fn();
+      const user = userEvent.setup();
+
+      render(
+        <QuizScreen
+          {...defaultProps}
+          hasAnswerSelected={true}
+          hasAnswerSubmitted={true}
+          onGoToNextQuestion={handleGoToNextQuestion}
+        />,
+      );
+
+      const button = screen.getByRole("button", { name: /suivant/i });
+      button.focus();
+
+      await user.keyboard("{Enter}");
+
+      expect(handleGoToNextQuestion).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe("content variations", () => {
+    it("should render different question text", () => {
       const differentQuestion = {
         ...mockQuestion,
-        question: 'En quelle année la Révolution française a-t-elle débuté ?'
-      }
-      
-      render(<QuizScreen {...defaultProps} currentQuestion={differentQuestion} />)
-      
-      expect(screen.getByRole('heading', { 
-        name: /en quelle année la révolution française/i 
-      })).toBeInTheDocument()
-    })
+        question: "En quelle année la Révolution française a-t-elle débuté ?",
+      };
 
-    it('should render questions with different number of answers', () => {
+      render(
+        <QuizScreen {...defaultProps} currentQuestion={differentQuestion} />,
+      );
+
+      expect(
+        screen.getByRole("heading", {
+          name: /en quelle année la révolution française/i,
+        }),
+      ).toBeInTheDocument();
+    });
+
+    it("should render questions with different number of answers", () => {
       const twoAnswersQuestion = {
-        id: 'q2',
-        question: 'Question with two answers',
+        id: "q2",
+        question: "Question with two answers",
         answers: [
-          { id: 'q2-a0', text: 'Answer 1', isCorrect: true },
-          { id: 'q2-a1', text: 'Answer 2', isCorrect: false }
-        ]
-      }
-      
-      render(<QuizScreen {...defaultProps} currentQuestion={twoAnswersQuestion} />)
-      
-      const options = screen.getAllByRole('radio')
-      expect(options).toHaveLength(2)
-    })
+          { id: "q2-a0", text: "Answer 1", isCorrect: true },
+          { id: "q2-a1", text: "Answer 2", isCorrect: false },
+        ],
+      };
 
-    it('should handle long question text', () => {
+      render(
+        <QuizScreen {...defaultProps} currentQuestion={twoAnswersQuestion} />,
+      );
+
+      const options = screen.getAllByRole("radio");
+      expect(options).toHaveLength(2);
+    });
+
+    it("should handle long question text", () => {
       const longQuestion = {
         ...mockQuestion,
-        question: 'Ceci est une très longue question qui contient beaucoup de texte pour tester le rendu et la mise en page du composant avec un contenu plus substantiel'
-      }
-      
-      render(<QuizScreen {...defaultProps} currentQuestion={longQuestion} />)
-      
-      expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent(/très longue question/)
-    })
+        question:
+          "Ceci est une très longue question qui contient beaucoup de texte pour tester le rendu et la mise en page du composant avec un contenu plus substantiel",
+      };
 
-    it('should handle long answer text', () => {
+      render(<QuizScreen {...defaultProps} currentQuestion={longQuestion} />);
+
+      expect(screen.getByRole("heading", { level: 2 })).toHaveTextContent(
+        /très longue question/,
+      );
+    });
+
+    it("should handle long answer text", () => {
       const longAnswerQuestion = {
         ...mockQuestion,
         answers: [
-          { 
-            id: 'q1-a0', 
-            text: 'Ceci est une très longue réponse qui contient beaucoup de texte', 
-            isCorrect: true 
-          }
-        ]
-      }
-      
-      render(<QuizScreen {...defaultProps} currentQuestion={longAnswerQuestion} />)
-      
-      expect(screen.getByRole('radio', { name: /très longue réponse/ })).toBeInTheDocument()
-    })
-  })
+          {
+            id: "q1-a0",
+            text: "Ceci est une très longue réponse qui contient beaucoup de texte",
+            isCorrect: true,
+          },
+        ],
+      };
 
-  describe('integration', () => {
-    it('should handle complete user flow: select and submit', async () => {
-      const handleSelectAnswer = vi.fn()
-      const handleSubmitAnswer = vi.fn()
-      const handleGoToNextQuestion = vi.fn()
-      const user = userEvent.setup()
-      
+      render(
+        <QuizScreen {...defaultProps} currentQuestion={longAnswerQuestion} />,
+      );
+
+      expect(
+        screen.getByRole("radio", { name: /très longue réponse/ }),
+      ).toBeInTheDocument();
+    });
+  });
+
+  describe("integration", () => {
+    it("should handle complete user flow: select and submit", async () => {
+      const handleSelectAnswer = vi.fn();
+      const handleSubmitAnswer = vi.fn();
+      const handleGoToNextQuestion = vi.fn();
+      const user = userEvent.setup();
+
       const { rerender } = render(
-        <QuizScreen 
-          {...defaultProps} 
+        <QuizScreen
+          {...defaultProps}
           onSelectAnswer={handleSelectAnswer}
           onSubmitAnswer={handleSubmitAnswer}
           onGoToNextQuestion={handleGoToNextQuestion}
-        />
-      )
-      
+        />,
+      );
+
       // Initially, button is disabled
-      const submitOrNextButton = screen.getByRole('button', { name: /soumettre/i })
-      expect(submitOrNextButton).toBeDisabled()
-      expect(screen.queryByRole('button', {name: /suivant/})).not.toBeInTheDocument()
-      
+      const submitOrNextButton = screen.getByRole("button", {
+        name: /soumettre/i,
+      });
+      expect(submitOrNextButton).toBeDisabled();
+      expect(
+        screen.queryByRole("button", { name: /suivant/ }),
+      ).not.toBeInTheDocument();
+
       // Select an answer
-      const option = screen.getByRole('radio', { name: /liberté, égalité, fraternité/i })
-      await user.click(option)
-      
-      expect(handleSelectAnswer).toHaveBeenCalledWith(['q1-a0'])
-      
+      const option = screen.getByRole("radio", {
+        name: /liberté, égalité, fraternité/i,
+      });
+      await user.click(option);
+
+      expect(handleSelectAnswer).toHaveBeenCalledWith(["q1-a0"]);
+
       // Rerender with answer selected
       rerender(
-        <QuizScreen 
+        <QuizScreen
           {...defaultProps}
           selectedAnswers={["q1-a0"]}
           hasAnswerSelected={true}
           onSelectAnswer={handleSelectAnswer}
           onSubmitAnswer={handleSubmitAnswer}
           onGoToNextQuestion={handleGoToNextQuestion}
-        />
-      )
-      
+        />,
+      );
+
       // Now submit button should be enabled
-      expect(submitOrNextButton).not.toBeDisabled()
-      
+      expect(submitOrNextButton).not.toBeDisabled();
+
       // Submit answer
-      await user.click(submitOrNextButton)
-      
-      expect(handleSubmitAnswer).toHaveBeenCalledTimes(1)
+      await user.click(submitOrNextButton);
+
+      expect(handleSubmitAnswer).toHaveBeenCalledTimes(1);
 
       // Rerender in revewing mode
       rerender(
@@ -423,13 +582,13 @@ describe('QuizScreen', () => {
           onSelectAnswer={handleSelectAnswer}
           onSubmitAnswer={handleSubmitAnswer}
           onGoToNextQuestion={handleGoToNextQuestion}
-        />
-      )
+        />,
+      );
 
-      expect(submitOrNextButton).toHaveTextContent(/suivant/i)
-      await user.click(submitOrNextButton)
+      expect(submitOrNextButton).toHaveTextContent(/suivant/i);
+      await user.click(submitOrNextButton);
 
-      expect(handleGoToNextQuestion).toHaveBeenCalledTimes(1)
-    })
-  })
-})
+      expect(handleGoToNextQuestion).toHaveBeenCalledTimes(1);
+    });
+  });
+});

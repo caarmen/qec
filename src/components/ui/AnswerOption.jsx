@@ -1,5 +1,5 @@
-import { memo } from 'react'
-import { useTranslation } from 'react-i18next'
+import { memo } from "react";
+import { useTranslation } from "react-i18next";
 
 /**
  * AnswerOption component - Individual answer choice in quiz
@@ -12,38 +12,38 @@ import { useTranslation } from 'react-i18next'
  * @param {"correct"|"incorrect"} [props.feedback=undefined] - Whether the answer is correct or incorrect
  * @returns {JSX.Element} AnswerOption component
  */
-function AnswerOption({ 
+function AnswerOption({
   id,
-  text, 
+  text,
   role,
-  isSelected = false, 
+  isSelected = false,
   onSelect,
   disabled = false,
-  feedback = undefined
-
+  feedback = undefined,
 }) {
-  const { t } = useTranslation()
-  const baseStyles = 'w-full text-left border rounded-lg p-4 transition-colors cursor-pointer'
-  const defaultStyles = 'border-gray-200 hover:bg-gray-50'
-  const selectedStyles = 'border-blue-600 bg-blue-50'
-  const correctStyles = 'border-green-600 bg-green-50'
-  const incorrectStyles = 'border-red-600 bg-red-50'
-  const disabledStyles = 'opacity-50 cursor-not-allowed'
+  const { t } = useTranslation();
+  const baseStyles =
+    "w-full text-left border rounded-lg p-4 transition-colors cursor-pointer";
+  const defaultStyles = "border-gray-200 hover:bg-gray-50";
+  const selectedStyles = "border-blue-600 bg-blue-50";
+  const correctStyles = "border-green-600 bg-green-50";
+  const incorrectStyles = "border-red-600 bg-red-50";
+  const disabledStyles = "opacity-50 cursor-not-allowed";
 
   const handleClick = () => {
     if (!disabled && onSelect) {
-      onSelect(id)
+      onSelect(id);
     }
-  }
+  };
 
   const handleKeyDown = (e) => {
-    if (!disabled && (e.key === 'Enter' || e.key === ' ')) {
-      e.preventDefault()
+    if (!disabled && (e.key === "Enter" || e.key === " ")) {
+      e.preventDefault();
       if (onSelect) {
-        onSelect(id)
+        onSelect(id);
       }
     }
-  }
+  };
 
   return (
     <button
@@ -54,15 +54,14 @@ function AnswerOption({
       className={`
         ${baseStyles}
         ${isSelected ? selectedStyles : defaultStyles}
-        ${disabled ? disabledStyles : ''}
-        ${feedback === 'correct' ? correctStyles : ''}
-        ${feedback === 'incorrect' ? incorrectStyles : ''}
+        ${disabled ? disabledStyles : ""}
+        ${feedback === "correct" ? correctStyles : ""}
+        ${feedback === "incorrect" ? incorrectStyles : ""}
       `.trim()}
       role={role}
       aria-checked={isSelected}
     >
       <span className="flex items-center gap-3 w-full">
-
         {role === "checkbox" && (
           <span
             aria-hidden
@@ -95,7 +94,7 @@ function AnswerOption({
         )}
       </span>
     </button>
-  )
+  );
 }
 
-export default memo(AnswerOption)
+export default memo(AnswerOption);

@@ -9,10 +9,14 @@
  */
 export function isAnswerCorrect(question, selectedAnswerIds) {
   if (!question || !selectedAnswerIds) {
-    return false
+    return false;
   }
 
-  const expectedCorrectAnswerIds = question.answers.filter(answer => answer.isCorrect).map(answer => answer.id)
-  return expectedCorrectAnswerIds.length == selectedAnswerIds.length &&
+  const expectedCorrectAnswerIds = question.answers
+    .filter((answer) => answer.isCorrect)
+    .map((answer) => answer.id);
+  return (
+    expectedCorrectAnswerIds.length == selectedAnswerIds.length &&
     expectedCorrectAnswerIds.every((v) => selectedAnswerIds.includes(v))
+  );
 }

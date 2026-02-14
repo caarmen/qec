@@ -1,14 +1,14 @@
-import { memo, useId, useRef } from 'react'
-import SegmentedControlOption from './SegmentedControlOption'
+import { memo, useId, useRef } from "react";
+import SegmentedControlOption from "./SegmentedControlOption";
 
 const GRID_COLS_CLASS = {
-  1: 'grid-cols-1',
-  2: 'grid-cols-2',
-  3: 'grid-cols-3',
-  4: 'grid-cols-4',
-  5: 'grid-cols-5',
-  6: 'grid-cols-6'
-}
+  1: "grid-cols-1",
+  2: "grid-cols-2",
+  3: "grid-cols-3",
+  4: "grid-cols-4",
+  5: "grid-cols-5",
+  6: "grid-cols-6",
+};
 
 /**
  * SegmentedControl component - Accessible radio-group styled as segmented buttons
@@ -27,50 +27,50 @@ function SegmentedControl({
   options,
   value,
   onChange,
-  className = ''
+  className = "",
 }) {
-  const groupId = useId()
-  const optionRefs = useRef([])
-  const labelId = `${groupId}-label`
-  const helperId = `${groupId}-helper`
+  const groupId = useId();
+  const optionRefs = useRef([]);
+  const labelId = `${groupId}-label`;
+  const helperId = `${groupId}-helper`;
 
-  const gridColsClass = GRID_COLS_CLASS[options.length] || GRID_COLS_CLASS[4]
+  const gridColsClass = GRID_COLS_CLASS[options.length] || GRID_COLS_CLASS[4];
 
   const handleKeyDown = (event, optionIndex) => {
-    const lastIndex = options.length - 1
-    let nextIndex = optionIndex
+    const lastIndex = options.length - 1;
+    let nextIndex = optionIndex;
 
     switch (event.key) {
-      case 'ArrowRight':
-      case 'ArrowDown':
-        event.preventDefault()
-        nextIndex = optionIndex === lastIndex ? 0 : optionIndex + 1
-        break
-      case 'ArrowLeft':
-      case 'ArrowUp':
-        event.preventDefault()
-        nextIndex = optionIndex === 0 ? lastIndex : optionIndex - 1
-        break
-      case 'Home':
-        event.preventDefault()
-        nextIndex = 0
-        break
-      case 'End':
-        event.preventDefault()
-        nextIndex = lastIndex
-        break
+      case "ArrowRight":
+      case "ArrowDown":
+        event.preventDefault();
+        nextIndex = optionIndex === lastIndex ? 0 : optionIndex + 1;
+        break;
+      case "ArrowLeft":
+      case "ArrowUp":
+        event.preventDefault();
+        nextIndex = optionIndex === 0 ? lastIndex : optionIndex - 1;
+        break;
+      case "Home":
+        event.preventDefault();
+        nextIndex = 0;
+        break;
+      case "End":
+        event.preventDefault();
+        nextIndex = lastIndex;
+        break;
       default:
-        return
+        return;
     }
 
-    const nextOption = options[nextIndex]
+    const nextOption = options[nextIndex];
     if (!nextOption || nextOption.disabled) {
-      return
+      return;
     }
 
-    onChange(nextOption.value)
-    optionRefs.current[nextIndex]?.focus()
-  }
+    onChange(nextOption.value);
+    optionRefs.current[nextIndex]?.focus();
+  };
 
   return (
     <section className={`space-y-2 ${className}`}>
@@ -90,14 +90,14 @@ function SegmentedControl({
         className={`grid ${gridColsClass} gap-2`}
       >
         {options.map((option, index) => {
-          const isSelected = option.value === value
-          const isDisabled = Boolean(option.disabled)
+          const isSelected = option.value === value;
+          const isDisabled = Boolean(option.disabled);
 
           return (
             <SegmentedControlOption
               key={`${option.value}-${index}`}
               ref={(node) => {
-                optionRefs.current[index] = node
+                optionRefs.current[index] = node;
               }}
               value={option.value}
               label={option.label}
@@ -106,11 +106,11 @@ function SegmentedControl({
               onSelect={onChange}
               onKeyDown={(event) => handleKeyDown(event, index)}
             />
-          )
+          );
         })}
       </div>
     </section>
-  )
+  );
 }
 
-export default memo(SegmentedControl)
+export default memo(SegmentedControl);

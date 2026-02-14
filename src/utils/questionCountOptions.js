@@ -7,7 +7,7 @@
  * Default set of question count options
  * @constant {number[]}
  */
-export const QUESTION_COUNT_OPTIONS = [10, 20, 40, 80]
+export const QUESTION_COUNT_OPTIONS = [10, 20, 40, 80];
 
 /**
  * Calculates available question count options based on pool size
@@ -17,25 +17,25 @@ export const QUESTION_COUNT_OPTIONS = [10, 20, 40, 80]
  */
 export function getAvailableQuestionCountOptions(
   totalQuestions,
-  options = QUESTION_COUNT_OPTIONS
+  options = QUESTION_COUNT_OPTIONS,
 ) {
   if (!Number.isFinite(totalQuestions) || totalQuestions <= 0) {
-    throw new Error('totalQuestions must be a positive, finite number')
+    throw new Error("totalQuestions must be a positive, finite number");
   }
 
   const invalidOption = options.find(
-    (value) => !Number.isFinite(value) || value <= 0
-  )
+    (value) => !Number.isFinite(value) || value <= 0,
+  );
 
   if (invalidOption !== undefined) {
-    throw new Error('options must contain only positive, finite numbers')
+    throw new Error("options must contain only positive, finite numbers");
   }
 
-  const availableOptions = options.filter((value) => value <= totalQuestions)
+  const availableOptions = options.filter((value) => value <= totalQuestions);
 
   const defaultValue = availableOptions.includes(40)
     ? 40
-    : availableOptions[0] ?? null
+    : (availableOptions[0] ?? null);
 
-  return { options: availableOptions, defaultValue }
+  return { options: availableOptions, defaultValue };
 }

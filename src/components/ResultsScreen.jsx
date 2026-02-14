@@ -1,7 +1,7 @@
-import Button from './ui/Button'
-import {useRef, useEffect} from 'react'
-import { DIFFICULTY } from '../hooks/useQuiz'
-import { useTranslation } from 'react-i18next';
+import Button from "./ui/Button";
+import { useRef, useEffect } from "react";
+import { DIFFICULTY } from "../hooks/useQuiz";
+import { useTranslation } from "react-i18next";
 
 /**
  * ResultsScreen component - Displays quiz results and allows restart
@@ -11,21 +11,15 @@ import { useTranslation } from 'react-i18next';
  * @param {Function} props.onRestart - Callback when user clicks restart button
  * @returns {JSX.Element} ResultsScreen component
  */
-function ResultsScreen({ 
-  score, 
-  totalQuestions, 
-  difficulty,
-  onRestart 
-}) {
+function ResultsScreen({ score, totalQuestions, difficulty, onRestart }) {
   const { t } = useTranslation();
   /* Focus on the top of the screen when entering it, for a11y */
   const headingRef = useRef(null);
 
-  useEffect(() =>{
-    headingRef.current?.focus()
-
-  }, [])
-  const percentage = Math.round((score / totalQuestions) * 100)
+  useEffect(() => {
+    headingRef.current?.focus();
+  }, []);
+  const percentage = Math.round((score / totalQuestions) * 100);
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
@@ -35,7 +29,7 @@ function ResultsScreen({
           className="text-2xl font-semibold text-gray-900"
           ref={headingRef}
           tabIndex={-1}
-          >
+        >
           {t("resultsScreen.title")}
         </h2>
 
@@ -43,14 +37,24 @@ function ResultsScreen({
         <div className="bg-gray-50 rounded-lg p-4 space-y-2">
           <p class="text-sm text-gray-600 font-medium">
             {t("resultsScreen.difficulty", {
-              difficulty: t(difficulty === DIFFICULTY.DIFFICULT ? "common.difficultyDifficult" : "common.difficultyNormal")
+              difficulty: t(
+                difficulty === DIFFICULTY.DIFFICULT
+                  ? "common.difficultyDifficult"
+                  : "common.difficultyNormal",
+              ),
             })}
           </p>
           <p className="text-gray-900">
-            <span className="font-medium">{t("resultsScreen.totalCountLabel")}</span> {totalQuestions}
+            <span className="font-medium">
+              {t("resultsScreen.totalCountLabel")}
+            </span>{" "}
+            {totalQuestions}
           </p>
           <p className="text-gray-900">
-            <span className="font-medium">{t("resultsScreen.correctCountLabel")}</span> {score}
+            <span className="font-medium">
+              {t("resultsScreen.correctCountLabel")}
+            </span>{" "}
+            {score}
           </p>
           <p className="text-green-600 font-medium text-lg">
             {`Score : ${percentage}%`}
@@ -58,12 +62,10 @@ function ResultsScreen({
         </div>
 
         {/* Restart button */}
-        <Button onClick={onRestart}>
-          {t("resultsScreen.buttonRestart")}
-        </Button>
+        <Button onClick={onRestart}>{t("resultsScreen.buttonRestart")}</Button>
       </div>
     </div>
-  )
+  );
 }
 
-export default ResultsScreen
+export default ResultsScreen;

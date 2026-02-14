@@ -1,44 +1,44 @@
 {
-    "startScreen": {
-        "title": "Quiz de Naturalisation Française",
-        "shortDescription": "Testez vos connaissances civiques et évaluez votre préparation pour la naturalisation française.",
-        "buttonStart": "Commencer le quiz",
-        "config": {
-            "questionCount": {
-                "label": "Nombre de questions",
-                "helperText": "Choisissez la durée de votre session"
-            },
-            "difficulty": {
-                "label": "Niveau",
-                "helperText": "Choisissez le niveau de difficulté"
-            }
-        }
-    },
-    "quizScreen": {
-        "feedback": {
-            "correctAnswer": "Bonne réponse.",
-            "incorrectAnswer": "Mauvaise réponse."
-        },
-        "progress": "Question {{current}} sur {{total}}",
-        "correctCount_one": "{{count}} bonne réponse",
-        "correctCount_other": "{{count}} bonnes réponses",
-        "multiChoiceInstruction": "Plusieurs réponses peuvent être correctes. Sélectionnez toutes les bonnes réponses.",
-        "buttonNext": "Suivant",
-        "buttonSubmit": "Soumettre"
-    },
-    "resultsScreen": {
-        "title": "Quiz Terminé !",
-        "difficulty": "Mode : {{difficulty}}",
-        "totalCountLabel": "Total de questions :",
-        "correctCountLabel": "Réponses correctes :",
-        "buttonRestart": "Recommencer le Quiz"
-    },
-    "answerOption": {
-        "a11yCorrectAnswer": "Bonne réponse",
-        "a11yIncorrectAnswer": "Mauvaise réponse"
-    },
-    "common": {
-        "difficultyDifficult": "Difficile",
-        "difficultyNormal": "Normal"
+  "startScreen": {
+    "title": "Quiz de Naturalisation Française",
+    "shortDescription": "Testez vos connaissances civiques et évaluez votre préparation pour la naturalisation française.",
+    "buttonStart": "Commencer le quiz",
+    "config": {
+      "questionCount": {
+        "label": "Nombre de questions",
+        "helperText": "Choisissez la durée de votre session"
+      },
+      "difficulty": {
+        "label": "Niveau",
+        "helperText": "Choisissez le niveau de difficulté"
+      }
     }
+  },
+  "quizScreen": {
+    "feedback": {
+      "correctAnswer": "Bonne réponse.",
+      "incorrectAnswer": "Mauvaise réponse."
+    },
+    "progress": "Question {{current}} sur {{total}}",
+    "correctCount_one": "{{count}} bonne réponse",
+    "correctCount_other": "{{count}} bonnes réponses",
+    "multiChoiceInstruction": "Plusieurs réponses peuvent être correctes. Sélectionnez toutes les bonnes réponses.",
+    "buttonNext": "Suivant",
+    "buttonSubmit": "Soumettre"
+  },
+  "resultsScreen": {
+    "title": "Quiz Terminé !",
+    "difficulty": "Mode : {{difficulty}}",
+    "totalCountLabel": "Total de questions :",
+    "correctCountLabel": "Réponses correctes :",
+    "buttonRestart": "Recommencer le Quiz"
+  },
+  "answerOption": {
+    "a11yCorrectAnswer": "Bonne réponse",
+    "a11yIncorrectAnswer": "Mauvaise réponse"
+  },
+  "common": {
+    "difficultyDifficult": "Difficile",
+    "difficultyNormal": "Normal"
+  }
 }

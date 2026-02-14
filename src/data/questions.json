@@ -17,47 +17,25 @@
     {
       "question": "À quel âge commence l'instruction obligatoire des enfants ?",
       "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "3 ans"
-      ],
-      "wrongAnswers": [
-        "5 ans",
-        "2 ans",
-        "4 ans",
-        "6 ans"
-      ]
+      "correctAnswers": ["3 ans"],
+      "wrongAnswers": ["5 ans", "2 ans", "4 ans", "6 ans"]
     },
     {
       "question": "À quel âge est la majorité numérique en France ?",
       "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "15 ans"
-      ],
-      "wrongAnswers": [
-        "16 ans",
-        "13 ans",
-        "18 ans",
-        "17 ans"
-      ]
+      "correctAnswers": ["15 ans"],
+      "wrongAnswers": ["16 ans", "13 ans", "18 ans", "17 ans"]
     },
     {
       "question": "À quel âge peut-on devenir électeur ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "18 ans"
-      ],
-      "wrongAnswers": [
-        "16 ans",
-        "21 ans",
-        "19 ans"
-      ]
+      "correctAnswers": ["18 ans"],
+      "wrongAnswers": ["16 ans", "21 ans", "19 ans"]
     },
     {
       "question": "À quelle occasion a été construite la Tour Eiffel ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "L’exposition universelle de 1889"
-      ],
+      "correctAnswers": ["L’exposition universelle de 1889"],
       "wrongAnswers": [
         "L’inauguration du premier métro parisien",
         "Les premiers Jeux Olympiques modernes à Paris",
@@ -68,9 +46,7 @@
     {
       "question": "À qui appartient la souveraineté nationale ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Au peuple"
-      ],
+      "correctAnswers": ["Au peuple"],
       "wrongAnswers": [
         "Au président de la République",
         "À l'État",
@@ -127,9 +103,7 @@
     {
       "question": "A-t-on le droit de ne pas respecter une loi ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Non"
-      ],
+      "correctAnswers": ["Non"],
       "wrongAnswers": [
         "Oui, si l'on ignore que cette loi existe.",
         "Oui, à condition de payer une taxe de non-respect.",
@@ -180,39 +154,20 @@
     {
       "question": "Combien d'États font partie de l'Union européenne au 1er janvier 2025 ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "27"
-      ],
-      "wrongAnswers": [
-        "28",
-        "15",
-        "19"
-      ]
+      "correctAnswers": ["27"],
+      "wrongAnswers": ["28", "15", "19"]
     },
     {
       "question": "Combien y a-t-il de départements en France ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "101"
-      ],
-      "wrongAnswers": [
-        "95",
-        "100",
-        "13"
-      ]
+      "correctAnswers": ["101"],
+      "wrongAnswers": ["95", "100", "13"]
     },
     {
       "question": "Combien y a-t-il de régions en France métropolitaine ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "13"
-      ],
-      "wrongAnswers": [
-        "12",
-        "101",
-        "22",
-        "18"
-      ]
+      "correctAnswers": ["13"],
+      "wrongAnswers": ["12", "101", "22", "18"]
     },
     {
       "question": "Comment est désigné le Premier ministre ?",
@@ -230,9 +185,7 @@
     {
       "question": "Comment est organisé le découpage administratif de la France ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "En communes, départements et régions"
-      ],
+      "correctAnswers": ["En communes, départements et régions"],
       "wrongAnswers": [
         "En États fédérés",
         "En districts coloniaux",
@@ -242,9 +195,7 @@
     {
       "question": "Comment s'appellent les établissements scolaires que les élèves intègrent après l'école élémentaire ?",
       "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "Le Collège"
-      ],
+      "correctAnswers": ["Le Collège"],
       "wrongAnswers": [
         "Le Lycée",
         "L'École maternelle",
@@ -255,9 +206,7 @@
     {
       "question": "Comment sont désignés les députés ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Les députés sont élus au suffrage universel direct"
-      ],
+      "correctAnswers": ["Les députés sont élus au suffrage universel direct"],
       "wrongAnswers": [
         "Les députés sont nommés par le premier ministre",
         "Les députés sont élus par les conseillers municipaux",
@@ -267,9 +216,7 @@
     {
       "question": "Comment sont désignés les maires ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Via l'élection du conseil municipal"
-      ],
+      "correctAnswers": ["Via l'élection du conseil municipal"],
       "wrongAnswers": [
         "Suffrage universel direct",
         "Nommés par le préfet",
@@ -279,9 +226,7 @@
     {
       "question": "Complétez les paroles de la Marseillaise \"Allons enfants de la patrie...\"",
       "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "Le jour de gloire est arrivé !"
-      ],
+      "correctAnswers": ["Le jour de gloire est arrivé !"],
       "wrongAnswers": [
         "Ton front est ceint de fleurons glorieux !",
         "Les vœux que l'on fait, les fleurs que l'on sème",
@@ -323,9 +268,7 @@
     {
       "question": "Dans quel cas faut-il déclarer son enfant au service d'état civil ?",
       "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "La naissance"
-      ],
+      "correctAnswers": ["La naissance"],
       "wrongAnswers": [
         "Lors de l'inscription à l'école maternelle",
         "Au moment du baptême civil ou religieux",
@@ -336,9 +279,7 @@
     {
       "question": "Dans quel grand musée parisien est exposée la Joconde ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Musée du Louvre"
-      ],
+      "correctAnswers": ["Musée du Louvre"],
       "wrongAnswers": [
         "Musée d'Orsay",
         "Musée du quai Branly",
@@ -348,9 +289,7 @@
     {
       "question": "Dans quelle région est située une partie des plages du débarquement ayant permis d'engager la libération de la France ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Normandie"
-      ],
+      "correctAnswers": ["Normandie"],
       "wrongAnswers": [
         "Bretagne",
         "Hauts-de-France",
@@ -361,22 +300,13 @@
     {
       "question": "Dans quelle ville les rois de France étaient-ils couronnés ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Reims"
-      ],
-      "wrongAnswers": [
-        "Versailles",
-        "Paris",
-        "Lutèce",
-        "Royan"
-      ]
+      "correctAnswers": ["Reims"],
+      "wrongAnswers": ["Versailles", "Paris", "Lutèce", "Royan"]
     },
     {
       "question": "De quand date l'appel à la résistance du général de Gaulle ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "18 juin 1940"
-      ],
+      "correctAnswers": ["18 juin 1940"],
       "wrongAnswers": [
         "1 septembre 1939",
         "6 juin 1944",
@@ -387,9 +317,7 @@
     {
       "question": "De quelle ville française décolle la fusée Ariane ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Kourou"
-      ],
+      "correctAnswers": ["Kourou"],
       "wrongAnswers": [
         "Cayenne",
         "Toulouse",
@@ -401,14 +329,8 @@
     {
       "question": "De quoi est composé le drapeau européen ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "12 étoiles"
-      ],
-      "wrongAnswers": [
-        "15 étoiles",
-        "Un cercle bleu et blanc",
-        "27 étoiles"
-      ]
+      "correctAnswers": ["12 étoiles"],
+      "wrongAnswers": ["15 étoiles", "Un cercle bleu et blanc", "27 étoiles"]
     },
     {
       "question": "Déclarer ses revenus aux services fiscaux est :",
@@ -429,9 +351,7 @@
     {
       "question": "Depuis le 1er juillet 2021, quelle est la durée du congé paternité ?",
       "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "28 jours (incluant les 3 jours de naissance)"
-      ],
+      "correctAnswers": ["28 jours (incluant les 3 jours de naissance)"],
       "wrongAnswers": [
         "14 jours (incluant les 3 jours de naissance)",
         "1 mois",
@@ -442,27 +362,14 @@
     {
       "question": "Depuis quand l'esclavage a-t-il été aboli en France ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "1848"
-      ],
-      "wrongAnswers": [
-        "1789",
-        "1944",
-        "1905"
-      ]
+      "correctAnswers": ["1848"],
+      "wrongAnswers": ["1789", "1944", "1905"]
     },
     {
       "question": "Depuis quand les Français élisent-ils le président de la République au suffrage universel direct ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "1962"
-      ],
-      "wrongAnswers": [
-        "1958",
-        "2002",
-        "2000",
-        "1848"
-      ]
+      "correctAnswers": ["1962"],
+      "wrongAnswers": ["1958", "2002", "2000", "1848"]
     },
     {
       "question": "Depuis quelle année l'école publique est-elle gratuite ?",
@@ -471,20 +378,12 @@
         "1881 pour l'enseignement primaire",
         "1933 pour l'enseignement secondaire"
       ],
-      "wrongAnswers": [
-        "1905",
-        "1802",
-        "1968",
-        "1958",
-        "1882"
-      ]
+      "wrongAnswers": ["1905", "1802", "1968", "1958", "1882"]
     },
     {
       "question": "Des parents ne respectent pas l'obligation d'instruction pour leurs enfants. Quelle sanction maximale risquent-ils ?",
       "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "6 mois de prison et 7500 € d'amende"
-      ],
+      "correctAnswers": ["6 mois de prison et 7500 € d'amende"],
       "wrongAnswers": [
         "La suppression définitive des allocations familiales",
         "Le retrait immédiat de l'autorité parentale.",
@@ -495,9 +394,7 @@
     {
       "question": "En 1944, qu'est-ce qui a changé pour les femmes ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Les Françaises obtiennent le droit de vote"
-      ],
+      "correctAnswers": ["Les Françaises obtiennent le droit de vote"],
       "wrongAnswers": [
         "33 femmes sont élues à l’Assemblée constituante",
         "Les citoyennes françaises votaient pour la première fois",
@@ -522,9 +419,7 @@
     {
       "question": "En France, est-ce obligatoire de voter ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Non"
-      ],
+      "correctAnswers": ["Non"],
       "wrongAnswers": [
         "Oui, sous peine d'une amende de 150 €",
         "Oui, l'inscription sur les listes électorales oblige à voter à chaque scrutin",
@@ -534,9 +429,7 @@
     {
       "question": "En France, est-ce possible d'adhérer à un parti politique ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Oui"
-      ],
+      "correctAnswers": ["Oui"],
       "wrongAnswers": [
         "Non, c'est interdit",
         "Seulement pour les fonctionnaires",
@@ -593,14 +486,8 @@
     {
       "question": "En quelle année a débuté la Révolution française ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "1789"
-      ],
-      "wrongAnswers": [
-        "1848",
-        "1914",
-        "1492"
-      ]
+      "correctAnswers": ["1789"],
+      "wrongAnswers": ["1848", "1914", "1492"]
     },
     {
       "question": "En quelle année l'euro est-il devenu la monnaie officielle de la France ?",
@@ -609,75 +496,37 @@
         "1999 - la monnaie officielle au niveau juridique et pour les transactions bancaires",
         "2002 - la mise en circulation des pièces et des billets"
       ],
-      "wrongAnswers": [
-        "1992",
-        "2000",
-        "2005",
-        "1958"
-      ]
+      "wrongAnswers": ["1992", "2000", "2005", "1958"]
     },
     {
       "question": "En quelle année l'Union européenne a-t-elle été fondée?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "1992"
-      ],
-      "wrongAnswers": [
-        "1951",
-        "1957",
-        "2007",
-        "1999",
-        "2002"
-      ]
+      "correctAnswers": ["1992"],
+      "wrongAnswers": ["1951", "1957", "2007", "1999", "2002"]
     },
     {
       "question": "En quelle année la citoyenneté européenne a-t-elle été créée ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "1992"
-      ],
-      "wrongAnswers": [
-        "1789",
-        "1945",
-        "2010"
-      ]
+      "correctAnswers": ["1992"],
+      "wrongAnswers": ["1789", "1945", "2010"]
     },
     {
       "question": "En quelle année la loi de séparation des Églises et de l'État a-t-elle été votée ?",
       "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "1905"
-      ],
-      "wrongAnswers": [
-        "1789",
-        "1881",
-        "1958"
-      ]
+      "correctAnswers": ["1905"],
+      "wrongAnswers": ["1789", "1881", "1958"]
     },
     {
       "question": "En quelle année le traité de Maastricht, qui marque la fondation de l'Union européenne, a-t-il été signé ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "1992"
-      ],
-      "wrongAnswers": [
-        "1789",
-        "1918",
-        "2020"
-      ]
+      "correctAnswers": ["1992"],
+      "wrongAnswers": ["1789", "1918", "2020"]
     },
     {
       "question": "En quelle année Napoléon Ier est-il devenu empereur ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "1804"
-      ],
-      "wrongAnswers": [
-        "1769",
-        "1821",
-        "1815",
-        "1814"
-      ]
+      "correctAnswers": ["1804"],
+      "wrongAnswers": ["1769", "1821", "1815", "1814"]
     },
     {
       "question": "En quoi consiste le devoir de solidarité ?",
@@ -710,9 +559,7 @@
     {
       "question": "Est-ce légal d'être marié à plusieurs personnes en même temps ?",
       "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "Non"
-      ],
+      "correctAnswers": ["Non"],
       "wrongAnswers": [
         "Oui, si vous êtes marié uniquement selon une loi étrangère",
         "Oui, si vous êtes séparé de corps",
@@ -797,14 +644,8 @@
     {
       "question": "Jusqu'à quel âge l'école est-elle obligatoire ?",
       "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "16 ans"
-      ],
-      "wrongAnswers": [
-        "18 ans",
-        "14 ans",
-        "21 ans"
-      ]
+      "correctAnswers": ["16 ans"],
+      "wrongAnswers": ["18 ans", "14 ans", "21 ans"]
     },
     {
       "question": "L'article 4 de la Déclaration des droits de l'homme et du citoyen affirme que \"la liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui\". Qu'est-ce que cela signifie ?",
@@ -824,9 +665,7 @@
     {
       "question": "L'avortement est-il possible en France ?",
       "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "Oui, c'est un droit garanti par la loi"
-      ],
+      "correctAnswers": ["Oui, c'est un droit garanti par la loi"],
       "wrongAnswers": [
         "Non, sauf cas médical",
         "Uniquement avec accord du maire",
@@ -863,9 +702,7 @@
     {
       "question": "L'instruction des enfants est obligatoire de :",
       "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "3 ans à 16 ans"
-      ],
+      "correctAnswers": ["3 ans à 16 ans"],
       "wrongAnswers": [
         "6 ans à 16 ans",
         "3 ans à 14 ans",
@@ -924,9 +761,7 @@
     {
       "question": "La séparation des pouvoirs est un principe fondamental. Quels sont les trois pouvoirs concernés ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Législatif, exécutif, judiciaire"
-      ],
+      "correctAnswers": ["Législatif, exécutif, judiciaire"],
       "wrongAnswers": [
         "National, régional, départemental",
         "L'Assemblée nationale, le sénat, le conseil constitutionnel",
@@ -936,15 +771,8 @@
     {
       "question": "La vente d'alcool en France est interdite aux personnes de moins de :",
       "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "18 ans"
-      ],
-      "wrongAnswers": [
-        "16 ans",
-        "21 ans",
-        "19 ans",
-        "15 ans"
-      ]
+      "correctAnswers": ["18 ans"],
+      "wrongAnswers": ["16 ans", "21 ans", "19 ans", "15 ans"]
     },
     {
       "question": "Laquelle de ces citations est inscrite dans la Déclaration des Droits de l'Homme et du Citoyen de 1789 ?",
@@ -1028,12 +856,7 @@
     {
       "question": "Lequel de ces pays est un pays fondateur de l'Union Européenne ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Allemagne",
-        "France",
-        "Italie",
-        "Pays-Bas"
-      ],
+      "correctAnswers": ["Allemagne", "France", "Italie", "Pays-Bas"],
       "wrongAnswers": [
         "Espagne",
         "Portugal",
@@ -1062,15 +885,8 @@
     {
       "question": "Lequel de ces prénoms évoque un symbole de la République ?",
       "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "Marianne"
-      ],
-      "wrongAnswers": [
-        "Napoléon",
-        "Jeanne",
-        "Charles",
-        "Louis"
-      ]
+      "correctAnswers": ["Marianne"],
+      "wrongAnswers": ["Napoléon", "Jeanne", "Charles", "Louis"]
     },
     {
       "question": "Lequel de ces symboles représente la République française ?",
@@ -1108,11 +924,7 @@
     {
       "question": "Lesquels sont des symboles officiels de la République française ?",
       "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "Marianne",
-        "La fête nationale",
-        "L'hymne français"
-      ],
+      "correctAnswers": ["Marianne", "La fête nationale", "L'hymne français"],
       "wrongAnswers": [
         "Le coq",
         "La tour Eiffel",
@@ -1123,9 +935,7 @@
     {
       "question": "Lors de la seconde guerre mondiale, à quelle date la ville de Paris a-t-elle été libérée ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "25 août 1944"
-      ],
+      "correctAnswers": ["25 août 1944"],
       "wrongAnswers": [
         "5 juin 1944",
         "11 novembre 1918",
@@ -1136,47 +946,25 @@
     {
       "question": "Où est le siège de la Banque centrale européenne ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Francfort"
-      ],
-      "wrongAnswers": [
-        "Strasbourg",
-        "Bruxelles",
-        "Paris",
-        "Luxembourg"
-      ]
+      "correctAnswers": ["Francfort"],
+      "wrongAnswers": ["Strasbourg", "Bruxelles", "Paris", "Luxembourg"]
     },
     {
       "question": "Où est le siège de la Commission européenne ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Bruxelles"
-      ],
-      "wrongAnswers": [
-        "Strasbourg",
-        "Luxembourg",
-        "Paris",
-        "Francfort"
-      ]
+      "correctAnswers": ["Bruxelles"],
+      "wrongAnswers": ["Strasbourg", "Luxembourg", "Paris", "Francfort"]
     },
     {
       "question": "Où est le siège du Parlement européen ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Strasbourg"
-      ],
-      "wrongAnswers": [
-        "Bruxelles",
-        "Paris",
-        "Berlin"
-      ]
+      "correctAnswers": ["Strasbourg"],
+      "wrongAnswers": ["Bruxelles", "Paris", "Berlin"]
     },
     {
       "question": "Où faut-il déclarer la naissance d'un enfant ?",
       "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "À la mairie du lieu de naissance"
-      ],
+      "correctAnswers": ["À la mairie du lieu de naissance"],
       "wrongAnswers": [
         "À la mairie du domicile des parents",
         "À la préfecture du département",
@@ -1495,9 +1283,7 @@
     {
       "question": "Quand a eu lieu la Première guerre mondiale ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "1914 - 1918"
-      ],
+      "correctAnswers": ["1914 - 1918"],
       "wrongAnswers": [
         "1939 - 1945",
         "1954 - 1962",
@@ -1508,9 +1294,7 @@
     {
       "question": "Quand a eu lieu la Seconde guerre mondiale ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "1939 - 1945"
-      ],
+      "correctAnswers": ["1939 - 1945"],
       "wrongAnswers": [
         "1914 - 1918",
         "1936 - 1939",
@@ -1521,9 +1305,7 @@
     {
       "question": "Quand est célébrée la journée de l'Europe ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Le 9 mai"
-      ],
+      "correctAnswers": ["Le 9 mai"],
       "wrongAnswers": [
         "Le 8 mai",
         "Le 1 mai",
@@ -1547,22 +1329,13 @@
     {
       "question": "Quand la sécurité sociale a-t-elle été établie en France ?",
       "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "1945"
-      ],
-      "wrongAnswers": [
-        "1905",
-        "1958",
-        "1918",
-        "1981"
-      ]
+      "correctAnswers": ["1945"],
+      "wrongAnswers": ["1905", "1958", "1918", "1981"]
     },
     {
       "question": "Que célèbre-t-on le 8 mai ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "La fin de la Seconde Guerre mondiale en Europe"
-      ],
+      "correctAnswers": ["La fin de la Seconde Guerre mondiale en Europe"],
       "wrongAnswers": [
         "L'Armistice de la Première Guerre mondiale",
         "La Fête nationale",
@@ -1619,9 +1392,7 @@
     {
       "question": "Que doit faire un citoyen s'il est appelé à être juré dans un procès d'assises ?",
       "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "C'est un devoir, il doit y participer"
-      ],
+      "correctAnswers": ["C'est un devoir, il doit y participer"],
       "wrongAnswers": [
         "Il peut refuser sans motif",
         "C'est réservé aux avocats",
@@ -1631,9 +1402,7 @@
     {
       "question": "Que garantit la liberté de la presse ?",
       "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "Le droit de diffuser des informations librement"
-      ],
+      "correctAnswers": ["Le droit de diffuser des informations librement"],
       "wrongAnswers": [
         "La censure par l'État",
         "L'obligation de vérité absolue",
@@ -1672,15 +1441,8 @@
     {
       "question": "Que porte Marianne sur la tête ?",
       "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "Le bonnet phrygien"
-      ],
-      "wrongAnswers": [
-        "Un beret",
-        "Une couronne",
-        "Une tiare",
-        "Rien"
-      ]
+      "correctAnswers": ["Le bonnet phrygien"],
+      "wrongAnswers": ["Un beret", "Une couronne", "Une tiare", "Rien"]
     },
     {
       "question": "Que signifie être citoyen d'un État ?",
@@ -1760,11 +1522,7 @@
     {
       "question": "Quel célèbre philosophe des Lumières a dénoncé l'esclavage ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Montesquieu",
-        "Voltaire",
-        "Condorcet"
-      ],
+      "correctAnswers": ["Montesquieu", "Voltaire", "Condorcet"],
       "wrongAnswers": [
         "Napoléon Bonaparte",
         "René Descartes",
@@ -1776,33 +1534,19 @@
     {
       "question": "Quel château célèbre se trouve près de Paris et symbolise le pouvoir royal de Louis XIV ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Le château de Versailles"
-      ],
-      "wrongAnswers": [
-        "Le Louvre",
-        "Amboise",
-        "Le Mont-Saint-Michel"
-      ]
+      "correctAnswers": ["Le château de Versailles"],
+      "wrongAnswers": ["Le Louvre", "Amboise", "Le Mont-Saint-Michel"]
     },
     {
       "question": "Quel département français a une frontière avec le Brésil ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "La Guyane"
-      ],
-      "wrongAnswers": [
-        "La Guadeloupe",
-        "Mayotte",
-        "La Martinique"
-      ]
+      "correctAnswers": ["La Guyane"],
+      "wrongAnswers": ["La Guadeloupe", "Mayotte", "La Martinique"]
     },
     {
       "question": "Quel droit protège une personne contre une arrestation arbitraire ?",
       "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "Le droit à la sûreté"
-      ],
+      "correctAnswers": ["Le droit à la sûreté"],
       "wrongAnswers": [
         "Le droit de propriété",
         "Le droit de grève",
@@ -1812,15 +1556,8 @@
     {
       "question": "Quel est l'âge de la majorité civile en France ?",
       "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "18 ans"
-      ],
-      "wrongAnswers": [
-        "16 ans",
-        "15 ans",
-        "21 ans",
-        "23 ans"
-      ]
+      "correctAnswers": ["18 ans"],
+      "wrongAnswers": ["16 ans", "15 ans", "21 ans", "23 ans"]
     },
     {
       "question": "Quel est l'hymne de l'Union Européenne ?",
@@ -1868,21 +1605,13 @@
     {
       "question": "Quel est le 101ème département français depuis 2011 ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Mayotte"
-      ],
-      "wrongAnswers": [
-        "La Guadeloupe",
-        "La Réunion",
-        "La Guyane"
-      ]
+      "correctAnswers": ["Mayotte"],
+      "wrongAnswers": ["La Guadeloupe", "La Réunion", "La Guyane"]
     },
     {
       "question": "Quel est le chef-lieu de la région Auvergne-Rhône-Alpes ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Lyon"
-      ],
+      "correctAnswers": ["Lyon"],
       "wrongAnswers": [
         "Saint-Étienne",
         "Clermont-Ferrand",
@@ -1894,36 +1623,19 @@
     {
       "question": "Quel est le chef-lieu de la région Bretagne ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Rennes"
-      ],
-      "wrongAnswers": [
-        "Brest",
-        "Lannion",
-        "Quimper",
-        "Finistère"
-      ]
+      "correctAnswers": ["Rennes"],
+      "wrongAnswers": ["Brest", "Lannion", "Quimper", "Finistère"]
     },
     {
       "question": "Quel est le chef-lieu de la région Provence-Alpes-Côte d'Azur ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Marseilles"
-      ],
-      "wrongAnswers": [
-        "Nice",
-        "Aix-en-Provence",
-        "Toulon",
-        "Cannes",
-        "Lyon"
-      ]
+      "correctAnswers": ["Marseilles"],
+      "wrongAnswers": ["Nice", "Aix-en-Provence", "Toulon", "Cannes", "Lyon"]
     },
     {
       "question": "Quel est le dernier État à avoir intégré l'Union européenne ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "La Croatie"
-      ],
+      "correctAnswers": ["La Croatie"],
       "wrongAnswers": [
         "La Bulgarie",
         "La Roumanie",
@@ -1934,9 +1646,7 @@
     {
       "question": "Quel est le dernier État à avoir intégré l'Union européenne en 2013 ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "La Croatie"
-      ],
+      "correctAnswers": ["La Croatie"],
       "wrongAnswers": [
         "La Bulgarie",
         "La Roumanie",
@@ -1947,9 +1657,7 @@
     {
       "question": "Quel est le principal port maritime de France ? *",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Marseille FOS"
-      ],
+      "correctAnswers": ["Marseille FOS"],
       "wrongAnswers": [
         "Le port de Brest",
         "Le port de Nice",
@@ -2031,9 +1739,7 @@
     {
       "question": "Quel était le principal port français impliqué dans la traite négrière au XVIIIe siècle ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Nantes"
-      ],
+      "correctAnswers": ["Nantes"],
       "wrongAnswers": [
         "Le Havre",
         "Bordeaux",
@@ -2045,40 +1751,20 @@
     {
       "question": "Quel État a quitté l'Union Européenne en 2020 ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Le Royaume-Uni"
-      ],
-      "wrongAnswers": [
-        "La France",
-        "L'Italie",
-        "L'Espagne"
-      ]
+      "correctAnswers": ["Le Royaume-Uni"],
+      "wrongAnswers": ["La France", "L'Italie", "L'Espagne"]
     },
     {
       "question": "Quel fleuve traverse Paris ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "La Seine"
-      ],
-      "wrongAnswers": [
-        "La Loire",
-        "Le Rhône",
-        "La Garonne"
-      ]
+      "correctAnswers": ["La Seine"],
+      "wrongAnswers": ["La Loire", "Le Rhône", "La Garonne"]
     },
     {
       "question": "Quel jour célèbre-t-on officiellement la laïcité en France ?",
       "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "9 décembre"
-      ],
-      "wrongAnswers": [
-        "11 novembre",
-        "14 juillet",
-        "1 mai",
-        "8 mai",
-        "9 mai"
-      ]
+      "correctAnswers": ["9 décembre"],
+      "wrongAnswers": ["11 novembre", "14 juillet", "1 mai", "8 mai", "9 mai"]
     },
     {
       "question": "Quel mariage est reconnu légalement ?",
@@ -2146,67 +1832,31 @@
     {
       "question": "Quel numéro d'urgence permet d'appeler la police ?",
       "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "17"
-      ],
-      "wrongAnswers": [
-        "18",
-        "15",
-        "115",
-        "911",
-        "119"
-      ]
+      "correctAnswers": ["17"],
+      "wrongAnswers": ["18", "15", "115", "911", "119"]
     },
     {
       "question": "Quel numéro d'urgence permet d'appeler le SAMU ?",
       "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "15"
-      ],
-      "wrongAnswers": [
-        "17",
-        "18",
-        "16",
-        "911",
-        "196"
-      ]
+      "correctAnswers": ["15"],
+      "wrongAnswers": ["17", "18", "16", "911", "196"]
     },
     {
       "question": "Quel œuvre a été écrite par Victor Hugo ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Les Misérables",
-        "Notre-Dame de Paris"
-      ],
-      "wrongAnswers": [
-        "L'Avare",
-        "Alcools",
-        "La Vie devant soi"
-      ]
+      "correctAnswers": ["Les Misérables", "Notre-Dame de Paris"],
+      "wrongAnswers": ["L'Avare", "Alcools", "La Vie devant soi"]
     },
     {
       "question": "Quel pays a été une colonie française ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Sénégal",
-        "Algérie",
-        "Cambodge",
-        "Tunisie"
-      ],
-      "wrongAnswers": [
-        "L'Inde",
-        "Bresil",
-        "Groenland",
-        "Jamaïque",
-        "Angola"
-      ]
+      "correctAnswers": ["Sénégal", "Algérie", "Cambodge", "Tunisie"],
+      "wrongAnswers": ["L'Inde", "Bresil", "Groenland", "Jamaïque", "Angola"]
     },
     {
       "question": "Quel peintre célèbre a peint les Nymphéas ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Monet"
-      ],
+      "correctAnswers": ["Monet"],
       "wrongAnswers": [
         "Manet",
         "Auguste Renoir",
@@ -2252,9 +1902,7 @@
     {
       "question": "Quel roi de France a été guillotiné pendant la Révolution française ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Louis XVI"
-      ],
+      "correctAnswers": ["Louis XVI"],
       "wrongAnswers": [
         "Louis XIV",
         "Napoléon Bonaparte",
@@ -2266,9 +1914,7 @@
     {
       "question": "Quel symbole de la République peut-on voir sur les maillots de l'équipe de France de football ?",
       "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "Le coq"
-      ],
+      "correctAnswers": ["Le coq"],
       "wrongAnswers": [
         "Marianne",
         "La tour Eiffel",
@@ -2279,9 +1925,7 @@
     {
       "question": "Quel symbole religieux peut être porté dans une école publique dans le respect de la laïcité ?",
       "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "Des signes religieux discrets portés par les élèves"
-      ],
+      "correctAnswers": ["Des signes religieux discrets portés par les élèves"],
       "wrongAnswers": [
         "Le voile islamique",
         "La kippa",
@@ -2292,9 +1936,7 @@
     {
       "question": "Quel terme désigne précisément la haine ou les préjugés contre les Juifs ?",
       "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "L'antisémitisme"
-      ],
+      "correctAnswers": ["L'antisémitisme"],
       "wrongAnswers": [
         "Le racisme",
         "La xénophobie",
@@ -2331,9 +1973,7 @@
     {
       "question": "Quel traité concerne la construction de l'Union européenne ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Le traité de Maastricht"
-      ],
+      "correctAnswers": ["Le traité de Maastricht"],
       "wrongAnswers": [
         "Le traité de Lisbonne",
         "Le traité de Versailles",
@@ -2360,9 +2000,7 @@
     {
       "question": "Quelle aide permet aux personnes qui ont des difficultés financières d'avoir un avocat ?",
       "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "L'aide juridictionnelle"
-      ],
+      "correctAnswers": ["L'aide juridictionnelle"],
       "wrongAnswers": [
         "Le Revenu de Solidarité Active (RSA)",
         "La protection diplomatique",
@@ -2374,9 +2012,7 @@
     {
       "question": "Quelle chaîne de montagnes est située entre la France et l'Espagne ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Les Pyrénées"
-      ],
+      "correctAnswers": ["Les Pyrénées"],
       "wrongAnswers": [
         "Les Alpes",
         "Le Jura",
@@ -2387,9 +2023,7 @@
     {
       "question": "Quelle chaîne de montagnes est située entre la France et l'Italie ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Les Alpes"
-      ],
+      "correctAnswers": ["Les Alpes"],
       "wrongAnswers": [
         "Les Pyrénées",
         "Le Jura",
@@ -2400,14 +2034,8 @@
     {
       "question": "Quelle collectivité territoriale est responsable des transports régionaux ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "La région"
-      ],
-      "wrongAnswers": [
-        "La préfecture",
-        "Le département",
-        "La commune"
-      ]
+      "correctAnswers": ["La région"],
+      "wrongAnswers": ["La préfecture", "Le département", "La commune"]
     },
     {
       "question": "Quelle condition est nécessaire pour voter aux élections présidentielles ?",
@@ -2455,9 +2083,7 @@
     {
       "question": "Quelle est l'infraction la plus grave ?",
       "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "Le crime"
-      ],
+      "correctAnswers": ["Le crime"],
       "wrongAnswers": [
         "Le délit",
         "La contravention",
@@ -2498,9 +2124,7 @@
     {
       "question": "Quelle est la devise de l'Union Européenne ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Unie dans la diversité"
-      ],
+      "correctAnswers": ["Unie dans la diversité"],
       "wrongAnswers": [
         "Liberté, égalité, fraternité",
         "D'un océan à l'autre",
@@ -2512,9 +2136,7 @@
     {
       "question": "Quelle est la devise de la République française ?",
       "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "Liberté, Égalité, Fraternité"
-      ],
+      "correctAnswers": ["Liberté, Égalité, Fraternité"],
       "wrongAnswers": [
         "Liberté, Unité, Solidarité",
         "Travail, Famille, Patrie",
@@ -2524,70 +2146,37 @@
     {
       "question": "Quelle est la durée du mandat des députés ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "5 ans"
-      ],
-      "wrongAnswers": [
-        "6 ans",
-        "3 ans",
-        "4 ans"
-      ]
+      "correctAnswers": ["5 ans"],
+      "wrongAnswers": ["6 ans", "3 ans", "4 ans"]
     },
     {
       "question": "Quelle est la durée du mandat des sénateurs ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "6 ans"
-      ],
-      "wrongAnswers": [
-        "5 ans",
-        "9 ans",
-        "4 ans"
-      ]
+      "correctAnswers": ["6 ans"],
+      "wrongAnswers": ["5 ans", "9 ans", "4 ans"]
     },
     {
       "question": "Quelle est la durée du mandat du Président de la République française ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "5 ans"
-      ],
-      "wrongAnswers": [
-        "7 ans",
-        "4 ans",
-        "6 ans"
-      ]
+      "correctAnswers": ["5 ans"],
+      "wrongAnswers": ["7 ans", "4 ans", "6 ans"]
     },
     {
       "question": "Quelle est la durée légale du temps de travail par semaine ?",
       "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "35 heures"
-      ],
-      "wrongAnswers": [
-        "39 heures",
-        "40 heures",
-        "48 heures",
-        "32 heures"
-      ]
+      "correctAnswers": ["35 heures"],
+      "wrongAnswers": ["39 heures", "40 heures", "48 heures", "32 heures"]
     },
     {
       "question": "Quelle est la plus haute montagne de France ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Le Mont-Blanc"
-      ],
-      "wrongAnswers": [
-        "Le Jura",
-        "Les Pyrénées",
-        "Le Massif Central"
-      ]
+      "correctAnswers": ["Le Mont-Blanc"],
+      "wrongAnswers": ["Le Jura", "Les Pyrénées", "Le Massif Central"]
     },
     {
       "question": "Quelle est la population approximative de la France en 2025 ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "68,6 millions"
-      ],
+      "correctAnswers": ["68,6 millions"],
       "wrongAnswers": [
         "63,2 millions",
         "302 millions",
@@ -2634,12 +2223,7 @@
         "La Guadeloupe",
         "La Martinique"
       ],
-      "wrongAnswers": [
-        "Madagascar",
-        "Île Maurice",
-        "Sainte-Lucie",
-        "Guyane"
-      ]
+      "wrongAnswers": ["Madagascar", "Île Maurice", "Sainte-Lucie", "Guyane"]
     },
     {
       "question": "Quelle île est un département d'outre-mer français ?",
@@ -2661,11 +2245,7 @@
     {
       "question": "Quelle île fait partie des Antilles françaises ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "La Guadeloupe",
-        "La Martinique",
-        "Saint-Barthélemy"
-      ],
+      "correctAnswers": ["La Guadeloupe", "La Martinique", "Saint-Barthélemy"],
       "wrongAnswers": [
         "La Réunion",
         "Tahiti",
@@ -2677,10 +2257,7 @@
     {
       "question": "Quelle île française est située dans l'océan indien ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "La Réunion",
-        "Mayotte"
-      ],
+      "correctAnswers": ["La Réunion", "Mayotte"],
       "wrongAnswers": [
         "La Martinique",
         "L'Île Maurice",
@@ -2692,10 +2269,7 @@
     {
       "question": "Quelle île française se trouve au sud-est du continent africain ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "La Réunion",
-        "Mayotte"
-      ],
+      "correctAnswers": ["La Réunion", "Mayotte"],
       "wrongAnswers": [
         "La Martinique",
         "Madagascar",
@@ -2707,10 +2281,7 @@
     {
       "question": "Quelle institution française doit rester neutre en matière de religion ?",
       "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "L'école publique",
-        "L'État et ses services publics"
-      ],
+      "correctAnswers": ["L'école publique", "L'État et ses services publics"],
       "wrongAnswers": [
         "Les églises",
         "Les partis politiques",
@@ -2753,9 +2324,7 @@
     {
       "question": "Quelle mer se situe entre la France et l'Angleterre ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "La Manche"
-      ],
+      "correctAnswers": ["La Manche"],
       "wrongAnswers": [
         "La mer Noire",
         "La mer Morte",
@@ -2767,9 +2336,7 @@
     {
       "question": "Quelle organisation a été créée en 1945 après la Seconde Guerre mondiale ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "L'ONU (Organisation des Nations Unies)"
-      ],
+      "correctAnswers": ["L'ONU (Organisation des Nations Unies)"],
       "wrongAnswers": [
         "La SDN (Société des Nations)",
         "L'OTAN",
@@ -2813,19 +2380,8 @@
     {
       "question": "Quelle ville française fait partie des 10 plus grandes métropoles du pays ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Paris",
-        "Lyon",
-        "Marseilles",
-        "Toulouse"
-      ],
-      "wrongAnswers": [
-        "Brest",
-        "Rouen",
-        "Avignon",
-        "Grenoble",
-        "Nancy"
-      ]
+      "correctAnswers": ["Paris", "Lyon", "Marseilles", "Toulouse"],
+      "wrongAnswers": ["Brest", "Rouen", "Avignon", "Grenoble", "Nancy"]
     },
     {
       "question": "Quelles sont des conditions d'éligibilité pour se présenter à la présidence en France ?",
@@ -2860,14 +2416,8 @@
     {
       "question": "Quelles sont les durées du mandat du conseil municipal et du maire ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "6 ans"
-      ],
-      "wrongAnswers": [
-        "5 ans",
-        "7 ans",
-        "4 ans"
-      ]
+      "correctAnswers": ["6 ans"],
+      "wrongAnswers": ["5 ans", "7 ans", "4 ans"]
     },
     {
       "question": "Quelles sont les fonctions du maire ?",
@@ -2903,9 +2453,7 @@
     {
       "question": "Qui a aboli l'esclavage en France ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Victor Schoelcher"
-      ],
+      "correctAnswers": ["Victor Schoelcher"],
       "wrongAnswers": [
         "Napoléon Bonaparte",
         "Charles de Gaulle",
@@ -2916,14 +2464,8 @@
     {
       "question": "Qui a composé l'hymne de l'Union européenne ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Beethoven"
-      ],
-      "wrongAnswers": [
-        "Rouget de Lisle",
-        "Bach",
-        "Gilles Vigneault"
-      ]
+      "correctAnswers": ["Beethoven"],
+      "wrongAnswers": ["Rouget de Lisle", "Bach", "Gilles Vigneault"]
     },
     {
       "question": "Qui a été président de la Ve République ?",
@@ -2959,9 +2501,7 @@
     {
       "question": "Qui a peint \"La liberté guidant le peuple\" ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Eugène Delacroix"
-      ],
+      "correctAnswers": ["Eugène Delacroix"],
       "wrongAnswers": [
         "Claude Monet",
         "Théodore Géricault",
@@ -2973,21 +2513,13 @@
     {
       "question": "Qui a rendu l'école gratuite, laïque et obligatoire ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Jules Ferry"
-      ],
-      "wrongAnswers": [
-        "Napoléon",
-        "Charles de Gaulle",
-        "François Mitterand"
-      ]
+      "correctAnswers": ["Jules Ferry"],
+      "wrongAnswers": ["Napoléon", "Charles de Gaulle", "François Mitterand"]
     },
     {
       "question": "Qui assure l'intérim du président de la République en cas de décès ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Le président du Sénat"
-      ],
+      "correctAnswers": ["Le président du Sénat"],
       "wrongAnswers": [
         "Le Premier ministre",
         "Le Président de l'Assemblée nationale",
@@ -2997,9 +2529,7 @@
     {
       "question": "Qui dirige l'action du gouvernement ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Le Premier ministre"
-      ],
+      "correctAnswers": ["Le Premier ministre"],
       "wrongAnswers": [
         "Le Président de la République",
         "Le Président de l'Assemblée nationale",
@@ -3009,9 +2539,7 @@
     {
       "question": "Qui doit respecter et veiller à la neutralité religieuse dans les services publics ?",
       "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "Les agents publics"
-      ],
+      "correctAnswers": ["Les agents publics"],
       "wrongAnswers": [
         "Les usagers",
         "Seulement les professeurs et le personnel médical",
@@ -3035,9 +2563,7 @@
     {
       "question": "Qui est élu lors des élections législatives ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Les députés"
-      ],
+      "correctAnswers": ["Les députés"],
       "wrongAnswers": [
         "Les sénateurs",
         "Les maires",
@@ -3161,19 +2687,12 @@
         "Une physicienne",
         "Scientifique ayant découvert la radioactivité"
       ],
-      "wrongAnswers": [
-        "Une écrivaine",
-        "Une femme politique",
-        "Une chanteuse"
-      ]
+      "wrongAnswers": ["Une écrivaine", "Une femme politique", "Une chanteuse"]
     },
     {
       "question": "Qui était Molière ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Auteur de théâtre célèbre",
-        "Auteur de L'Avare"
-      ],
+      "correctAnswers": ["Auteur de théâtre célèbre", "Auteur de L'Avare"],
       "wrongAnswers": [
         "Un peintre impressionniste",
         "Un explorateur",
@@ -3230,9 +2749,7 @@
     {
       "question": "Qui était Simone Veil ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Figure ayant préparé la loi sur l'IVG"
-      ],
+      "correctAnswers": ["Figure ayant préparé la loi sur l'IVG"],
       "wrongAnswers": [
         "Une célèbre chanteuse",
         "Une reine de France",
@@ -3275,26 +2792,14 @@
     {
       "question": "Qui gère les collèges publics ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Le département"
-      ],
-      "wrongAnswers": [
-        "La commune",
-        "La région",
-        "L'État"
-      ]
+      "correctAnswers": ["Le département"],
+      "wrongAnswers": ["La commune", "La région", "L'État"]
     },
     {
       "question": "Qui gère les écoles primaires et maternelles publiques ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "La commune"
-      ],
-      "wrongAnswers": [
-        "Le département",
-        "La région",
-        "L'État"
-      ]
+      "correctAnswers": ["La commune"],
+      "wrongAnswers": ["Le département", "La région", "L'État"]
     },
     {
       "question": "Qui peut demander le divorce de personnes mariées ?",
@@ -3360,26 +2865,14 @@
     {
       "question": "Qui représente l'État dans un département ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Le préfet"
-      ],
-      "wrongAnswers": [
-        "Le maire",
-        "Le député",
-        "Le commissaire"
-      ]
+      "correctAnswers": ["Le préfet"],
+      "wrongAnswers": ["Le maire", "Le député", "Le commissaire"]
     },
     {
       "question": "Qui sanctionne l'auteur d'un vol ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "La justice"
-      ],
-      "wrongAnswers": [
-        "Le maire",
-        "Le préfet",
-        "La victime elle-même"
-      ]
+      "correctAnswers": ["La justice"],
+      "wrongAnswers": ["Le maire", "Le préfet", "La victime elle-même"]
     },
     {
       "question": "Qui siège au Parlement européen ?",
@@ -3430,14 +2923,8 @@
     {
       "question": "Selon la Constitution, la France est une République...",
       "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "indivisible, laïque, démocratique et sociale"
-      ],
-      "wrongAnswers": [
-        "populaire",
-        "socialiste",
-        "aristrocratique"
-      ]
+      "correctAnswers": ["indivisible, laïque, démocratique et sociale"],
+      "wrongAnswers": ["populaire", "socialiste", "aristrocratique"]
     },
     {
       "question": "Selon le principe de laïcité, que signifie la neutralité de l'État ?",
@@ -3470,9 +2957,7 @@
     {
       "question": "Sous quel président a été abolie la peine de mort en France ?",
       "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "François Mitterrand"
-      ],
+      "correctAnswers": ["François Mitterrand"],
       "wrongAnswers": [
         "Charles de Gaulle",
         "Valéry Giscard d'Estaing",
@@ -3514,9 +2999,7 @@
     {
       "question": "Tous les citoyens français ont-ils une religion ?",
       "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "Non"
-      ],
+      "correctAnswers": ["Non"],
       "wrongAnswers": [
         "Oui, le catholicisme est la religion d'État",
         "Oui, tous les Français doivent être chrétiens",
@@ -3554,9 +3037,7 @@
     {
       "question": "Une femme peut-elle créer son entreprise ?",
       "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "Oui"
-      ],
+      "correctAnswers": ["Oui"],
       "wrongAnswers": [
         "Non, elle doit avoir la signature de son conjoint",
         "Seulement si elle est célibataire",
@@ -3626,15 +3107,8 @@
     {
       "question": "Une personne, n'ayant pas d'accès à internet, veut s'inscrire sur les listes électorales pour pouvoir voter aux prochaines élections politiques. Où peut-elle s'inscrire ?",
       "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "À la mairie",
-        "Par courrier"
-      ],
-      "wrongAnswers": [
-        "Par SMS",
-        "À la préfecture",
-        "Au bureau de vote"
-      ]
+      "correctAnswers": ["À la mairie", "Par courrier"],
+      "wrongAnswers": ["Par SMS", "À la préfecture", "Au bureau de vote"]
     }
   ]
 }
