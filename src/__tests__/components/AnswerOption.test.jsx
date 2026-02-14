@@ -7,6 +7,7 @@ describe('AnswerOption', () => {
   const defaultProps = {
     id: 'answer-1',
     text: 'Test answer',
+    role: 'radio',
     onSelect: vi.fn()
   }
 
@@ -22,7 +23,6 @@ describe('AnswerOption', () => {
       
       const option = screen.getByRole('radio')
       expect(option).toHaveAttribute('aria-checked', 'false')
-      expect(option).toHaveAttribute('aria-pressed', 'false')
       expect(option).toHaveClass('border-gray-200')
     })
 
@@ -31,7 +31,6 @@ describe('AnswerOption', () => {
       
       const option = screen.getByRole('radio')
       expect(option).toHaveAttribute('aria-checked', 'true')
-      expect(option).toHaveAttribute('aria-pressed', 'true')
       expect(option).toHaveClass('border-blue-600')
       expect(option).toHaveClass('bg-blue-50')
     })
@@ -156,7 +155,7 @@ describe('AnswerOption', () => {
     it('should work without onSelect callback', async () => {
       const user = userEvent.setup()
       
-      render(<AnswerOption id="answer-1" text="Test" />)
+      render(<AnswerOption id="answer-1" text="Test" role="radio" />)
       
       const option = screen.getByRole('radio')
       
@@ -164,18 +163,22 @@ describe('AnswerOption', () => {
       await expect(user.click(option)).resolves.not.toThrow()
     })
 
-    it('should be selectable multiple times', async () => {
-      const handleSelect = vi.fn()
-      const user = userEvent.setup()
-      
-      render(<AnswerOption {...defaultProps} onSelect={handleSelect} />)
-      
-      const option = screen.getByRole('radio')
-      await user.click(option)
-      await user.click(option)
-      await user.click(option)
-      
-      expect(handleSelect).toHaveBeenCalledTimes(3)
+    const roles = ["radio", "checkbox"]
+    roles.forEach((role) => {
+
+      it(`should be selectable multiple times - ${role}`, async () => {
+        const handleSelect = vi.fn()
+        const user = userEvent.setup()
+
+        render(<AnswerOption {...defaultProps} role={role} onSelect={handleSelect} />)
+
+        const option = screen.getByRole(role)
+        await user.click(option)
+        await user.click(option)
+        await user.click(option)
+
+        expect(handleSelect).toHaveBeenCalledTimes(3)
+      })
     })
   })
 
@@ -197,18 +200,6 @@ describe('AnswerOption', () => {
       
       option = screen.getByRole('radio')
       expect(option).toHaveAttribute('aria-checked', 'true')
-    })
-
-    it('should have proper aria-pressed attribute', () => {
-      const { rerender } = render(<AnswerOption {...defaultProps} isSelected={false} />)
-      
-      let option = screen.getByRole('radio')
-      expect(option).toHaveAttribute('aria-pressed', 'false')
-      
-      rerender(<AnswerOption {...defaultProps} isSelected={true} />)
-      
-      option = screen.getByRole('radio')
-      expect(option).toHaveAttribute('aria-pressed', 'true')
     })
 
     it('should be keyboard focusable', () => {

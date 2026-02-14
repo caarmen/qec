@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import { shuffleArray, formatQuestion, processQuestions } from '../../utils/questionProcessor'
+import { shuffleArray, formatQuestion, processQuestions, TOTAL_ANSWER_COUNT } from '../../utils/questionProcessor'
+import { DIFFICULTY } from '../../hooks/useQuiz'
 
 describe('questionProcessor', () => {
   describe('shuffleArray', () => {
@@ -54,7 +55,7 @@ describe('questionProcessor', () => {
     }
 
     it('should format question with correct structure', () => {
-      const formatted = formatQuestion(mockRawQuestion, 0)
+      const formatted = formatQuestion(mockRawQuestion, 0, {multipleCorrectAnswers: false})
       
       expect(formatted).toHaveProperty('id')
       expect(formatted).toHaveProperty('question')
@@ -66,13 +67,13 @@ describe('questionProcessor', () => {
     })
 
     it('should combine correct and wrong answers', () => {
-      const formatted = formatQuestion(mockRawQuestion, 0)
+      const formatted = formatQuestion(mockRawQuestion, 0, {multipleCorrectAnswers: false})
       
       expect(formatted.answers).toHaveLength(4) // 1 correct + 3 wrong
     })
 
     it('should mark correct answers with isCorrect: true', () => {
-      const formatted = formatQuestion(mockRawQuestion, 0)
+      const formatted = formatQuestion(mockRawQuestion, 0, {multipleCorrectAnswers: false})
       
       const correctAnswers = formatted.answers.filter(a => a.isCorrect)
       expect(correctAnswers).toHaveLength(1)
@@ -80,35 +81,55 @@ describe('questionProcessor', () => {
     })
 
     it('should mark wrong answers with isCorrect: false', () => {
-      const formatted = formatQuestion(mockRawQuestion, 0)
+      const formatted = formatQuestion(mockRawQuestion, 0, {multipleCorrectAnswers: false})
       
       const wrongAnswers = formatted.answers.filter(a => !a.isCorrect)
       expect(wrongAnswers).toHaveLength(3)
     })
 
     it('should add unique IDs to each answer', () => {
-      const formatted = formatQuestion(mockRawQuestion, 0)
+      const formatted = formatQuestion(mockRawQuestion, 0, {multipleCorrectAnswers: false})
       
       const ids = formatted.answers.map(a => a.id)
       const uniqueIds = new Set(ids)
-      
+
       expect(uniqueIds.size).toBe(ids.length)
       expect(ids[0]).toMatch(/^q0-a\d+$/)
     })
 
-    it('should handle multiple correct answers', () => {
+    describe('should handle multiple correct answers', () => {
       const multiCorrectQuestion = {
         question: "Test question",
         theme: "Test",
         correctAnswers: ["Answer 1", "Answer 2"],
         wrongAnswers: ["Wrong 1", "Wrong 2", "Wrong 3"]
       }
-      
-      const formatted = formatQuestion(multiCorrectQuestion, 0)
-      const correctAnswers = formatted.answers.filter(a => a.isCorrect)
-      
-      expect(correctAnswers).toHaveLength(1)
-      expect(formatted.answers).toHaveLength(4)
+      it('Only select one correct answer', () => {
+        const formatted = formatQuestion(multiCorrectQuestion, 0, {multipleCorrectAnswers: false})
+        const correctAnswers = formatted.answers.filter(a => a.isCorrect)
+
+        expect(correctAnswers).toHaveLength(1)
+        expect(formatted.answers).toHaveLength(4)
+      })
+      it('Select multiple correct answers (probabilistic test)', () => {
+        // Since the implementation is random, we'll just try it a bunch of times
+        // and expect to have at least one case of 1 right and 3 wrong, and at least
+        // 1 case of 2 right and 2 wrong.
+
+        const observedCombinations = new Set();
+        for (let i = 0; i < 10; i++) {
+          const formatted = formatQuestion(multiCorrectQuestion, 0, {multipleCorrectAnswers: true})
+          const correctAnswerCount = formatted.answers.filter(a => a.isCorrect).length
+          const wrongAnswerCount = formatted.answers.filter(a => !a.isCorrect).length
+
+          expect(correctAnswerCount + wrongAnswerCount).toEqual(TOTAL_ANSWER_COUNT)
+          observedCombinations.add(`${correctAnswerCount}-${wrongAnswerCount}`)
+        }
+        // Only two possibilities: 1 right and 3 wrong, or 2 right and 2 wrong
+        expect(observedCombinations).toContain("1-3")
+        expect(observedCombinations).toContain("2-2")
+        expect(observedCombinations).toHaveLength(2)
+      })
     })
   })
 
@@ -135,39 +156,36 @@ describe('questionProcessor', () => {
     ]
 
     it('should return empty array for invalid input', () => {
-      expect(processQuestions(null)).toEqual([])
-      expect(processQuestions(undefined)).toEqual([])
-      expect(processQuestions("not an array")).toEqual([])
+      expect(processQuestions(null, {})).toEqual([])
+      expect(processQuestions(undefined, {})).toEqual([])
+      expect(processQuestions("not an array", {})).toEqual([])
     })
 
     it('should return empty array for empty input', () => {
-      expect(processQuestions([])).toEqual([])
+      expect(processQuestions([], {})).toEqual([])
     })
 
     it('should return requested number of questions', () => {
-      const result = processQuestions(mockQuestions, 2)
+      const result = processQuestions(mockQuestions, {
+        count: 2,
+        difficulty: DIFFICULTY.NORMAL,
+      })
       expect(result).toHaveLength(2)
     })
 
-    it('should default to 40 questions when count not specified', () => {
-      const manyQuestions = Array(45).fill(null).map((_, i) => ({
-        question: `Question ${i}`,
-        theme: "Theme",
-        correctAnswers: ["Correct"],
-        wrongAnswers: ["Wrong 1", "Wrong 2"]
-      }))
-      
-      const result = processQuestions(manyQuestions)
-      expect(result).toHaveLength(40)
-    })
-
     it('should return all questions if count exceeds available', () => {
-      const result = processQuestions(mockQuestions, 100)
+      const result = processQuestions(mockQuestions, {
+        count: 100,
+        difficulty: DIFFICULTY.NORMAL,
+      })
       expect(result).toHaveLength(3)
     })
 
     it('should format all questions correctly', () => {
-      const result = processQuestions(mockQuestions, 2)
+      const result = processQuestions(mockQuestions, {
+        count: 2,
+        difficulty: DIFFICULTY.NORMAL,
+      })
       
       result.forEach(question => {
         expect(question).toHaveProperty('id')
@@ -179,7 +197,10 @@ describe('questionProcessor', () => {
     })
 
     it('should generate unique question IDs', () => {
-      const result = processQuestions(mockQuestions, 3)
+      const result = processQuestions(mockQuestions, {
+        count: 3,
+        difficulty: DIFFICULTY.NORMAL,
+      })
       const ids = result.map(q => q.id)
       const uniqueIds = new Set(ids)
       
@@ -197,7 +218,10 @@ describe('questionProcessor', () => {
       let wasShuffled = false
       
       for (let i = 0; i < 5; i++) {
-        const result = processQuestions(orderedQuestions, 10)
+        const result = processQuestions(orderedQuestions, {
+          count: 10,
+          difficulty: DIFFICULTY.NORMAL,
+        })
         const firstQuestion = result[0].question
         
         if (firstQuestion !== "Question 0") {
@@ -207,6 +231,35 @@ describe('questionProcessor', () => {
       }
       
       expect(wasShuffled).toBe(true)
+    })
+
+    it('should choose multiple answers for some questions (probabilistic test)', () => {
+      const orderedQuestions = Array(40).fill(null).map((_, i) => ({
+        question: `Question ${i}`,
+        theme: "Theme",
+        correctAnswers: ["Correct 1", "Correct 2", "Correct 3", "Correct 4"],
+        wrongAnswers: ["Wrong 1", "Wrong 2", "Wrong 3", "Wrong 4", "Wrong 5"]
+      }))
+
+      const observedCombinations = new Set()
+
+      const result = processQuestions(orderedQuestions, {
+        count: 10,
+        difficulty: DIFFICULTY.DIFFICULT,
+      })
+
+      for (let item of result) {
+        const correctAnswerCount = item.answers.filter(a => a.isCorrect).length
+        const wrongAnswerCount = item.answers.filter(a => !a.isCorrect).length
+        expect(correctAnswerCount + wrongAnswerCount).toEqual(TOTAL_ANSWER_COUNT)
+        observedCombinations.add(`${correctAnswerCount}-${wrongAnswerCount}`)
+      }
+      // Only the following possible distributions of right and wrong answers are possible.
+      expect(observedCombinations).toContain("1-3")
+      expect(observedCombinations).toContain("2-2")
+      expect(observedCombinations).toContain("3-1")
+      expect(observedCombinations).toContain("4-0")
+      expect(observedCombinations).toHaveLength(4)
     })
   })
 })

@@ -7,15 +7,17 @@ import questionsData from './data/questions.json'
 function App() {
   const {
     quizStatus,
+    difficulty,
     currentQuestion,
     currentQuestionIndex,
-    selectedAnswer,
+    selectedAnswers,
     selectedQuestionCount,
     score,
     totalQuestions,
     hasAnswerSelected,
     startQuiz,
     selectQuestionCount,
+    selectDifficulty,
     selectAnswer,
     submitAnswer,
     goToNextQuestion,
@@ -33,6 +35,8 @@ function App() {
           totalQuestions={questionsData.questions.length}
           selectedQuestionCount={selectedQuestionCount}
           onSelectQuestionCount={selectQuestionCount}
+          selectedDifficulty={difficulty}
+          onSelectDifficulty={selectDifficulty}
           onStart={handleStartQuiz}
         />
       )}
@@ -40,10 +44,11 @@ function App() {
       {(quizStatus === QUIZ_STATUS.ANSWERING || quizStatus === QUIZ_STATUS.REVIEWING_ANSWER ) && (
         <QuizScreen
           currentQuestion={currentQuestion}
+          difficulty={difficulty}
           currentQuestionIndex={currentQuestionIndex}
           totalQuestions={totalQuestions}
           score={score}
-          selectedAnswer={selectedAnswer}
+          selectedAnswers={selectedAnswers}
           onSelectAnswer={selectAnswer}
           onSubmitAnswer={submitAnswer}
           onGoToNextQuestion={goToNextQuestion}
@@ -56,6 +61,7 @@ function App() {
         <ResultsScreen
           score={score}
           totalQuestions={totalQuestions}
+          difficulty={difficulty}
           onRestart={restartQuiz}
         />
       )}

@@ -2,6 +2,7 @@ import { describe, it, expect, vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import QuizScreen from '../../components/QuizScreen'
+import { DIFFICULTY } from '../../hooks/useQuiz'
 
 describe('QuizScreen', () => {
   const mockQuestion = {
@@ -20,7 +21,7 @@ describe('QuizScreen', () => {
     currentQuestion: mockQuestion,
     currentQuestionIndex: 0,
     totalQuestions: 10,
-    selectedAnswer: null,
+    selectedAnswers: [],
     onSelectAnswer: vi.fn(),
     onSubmitAnswer: vi.fn(),
     hasAnswerSelected: false
@@ -101,12 +102,12 @@ describe('QuizScreen', () => {
     })
 
     it('should render feedback of correct response', () => {
-      render(<QuizScreen {...defaultProps} hasAnswerSubmitted={true} selectedAnswer={'q1-a0'}/>)
+      render(<QuizScreen {...defaultProps} hasAnswerSubmitted={true} selectedAnswers={['q1-a0']}/>)
       expect(screen.getByText(/bonne réponse/i)).toBeInTheDocument()
     })
 
     it('should render feedback of incorrect response', () => {
-      render(<QuizScreen {...defaultProps} hasAnswerSubmitted={true} selectedAnswer={'q1-a1'}/>)
+      render(<QuizScreen {...defaultProps} hasAnswerSubmitted={true} selectedAnswers={['q1-a1']}/>)
       expect(screen.getByText(/mauvaise réponse/i)).toBeInTheDocument()
     })
   })
@@ -122,7 +123,7 @@ describe('QuizScreen', () => {
     })
 
     it('should highlight selected answer', () => {
-      render(<QuizScreen {...defaultProps} selectedAnswer="q1-a0" />)
+      render(<QuizScreen {...defaultProps} selectedAnswers={["q1-a0"]} />)
       
       const selectedOption = screen.getByRole('radio', { name: /liberté, égalité, fraternité/i })
       expect(selectedOption).toHaveAttribute('aria-checked', 'true')
@@ -138,10 +139,10 @@ describe('QuizScreen', () => {
       await user.click(option)
       
       expect(handleSelectAnswer).toHaveBeenCalledTimes(1)
-      expect(handleSelectAnswer).toHaveBeenCalledWith('q1-a0')
+      expect(handleSelectAnswer).toHaveBeenCalledWith(['q1-a0'])
     })
 
-    it('should allow changing selection', async () => {
+    it('should allow changing selection - normal', async () => {
       const handleSelectAnswer = vi.fn()
       const user = userEvent.setup()
       
@@ -154,8 +155,34 @@ describe('QuizScreen', () => {
       await user.click(option2)
       
       expect(handleSelectAnswer).toHaveBeenCalledTimes(2)
-      expect(handleSelectAnswer).toHaveBeenNthCalledWith(1, 'q1-a0')
-      expect(handleSelectAnswer).toHaveBeenNthCalledWith(2, 'q1-a1')
+      expect(handleSelectAnswer).toHaveBeenNthCalledWith(1, ['q1-a0'])
+      expect(handleSelectAnswer).toHaveBeenNthCalledWith(2, ['q1-a1'])
+    })
+
+    it('should allow changing selection - difficult', async () => {
+      const handleSelectAnswer = vi.fn()
+      const user = userEvent.setup()
+
+      const {rerender} = render(<QuizScreen {...defaultProps} onSelectAnswer={handleSelectAnswer} difficulty={DIFFICULTY.DIFFICULT} />)
+
+      const option1 = screen.getByRole('checkbox', { name: /liberté, égalité, fraternité/i })
+      await user.click(option1)
+      // Rerender with answer selected
+      rerender(
+        <QuizScreen
+          {...defaultProps}
+          selectedAnswers={["q1-a0"]}
+          onSelectAnswer={handleSelectAnswer}
+          difficulty={DIFFICULTY.DIFFICULT}
+        />
+      )
+
+      const option2 = screen.getByRole('checkbox', { name: /liberté, unité, solidarité/i })
+      await user.click(option2)
+
+      expect(handleSelectAnswer).toHaveBeenCalledTimes(2)
+      expect(handleSelectAnswer).toHaveBeenNthCalledWith(1, ['q1-a0'])
+      expect(handleSelectAnswer).toHaveBeenNthCalledWith(2, ['q1-a0', 'q1-a1'])
     })
   })
 
@@ -168,7 +195,7 @@ describe('QuizScreen', () => {
     })
 
     it('should be enabled when answer is selected', () => {
-      render(<QuizScreen {...defaultProps} hasAnswerSelected={true} hasAnswerSubmitted={false} selectedAnswer="q1-a0" />)
+      render(<QuizScreen {...defaultProps} hasAnswerSelected={true} hasAnswerSubmitted={false} selectedAnswers={["q1-a0"]} />)
       
       const button = screen.getByRole('button', { name: /soumettre/i })
       expect(button).not.toBeDisabled()
@@ -211,7 +238,7 @@ describe('QuizScreen', () => {
     })
 
     it('should be enabled when answer has been submitted', () => {
-      render(<QuizScreen {...defaultProps} hasAnswerSelected={true} hasAnswerSubmitted={true} selectedAnswer="q1-a0" />)
+      render(<QuizScreen {...defaultProps} hasAnswerSelected={true} hasAnswerSubmitted={true} selectedAnswers={["q1-a0"]} />)
 
       const button = screen.getByRole('button', { name: /suivant/i })
       expect(button).not.toBeDisabled()
@@ -249,7 +276,7 @@ describe('QuizScreen', () => {
       
       await user.keyboard('{Enter}')
       
-      expect(handleSelectAnswer).toHaveBeenCalledWith('q1-a0')
+      expect(handleSelectAnswer).toHaveBeenCalledWith(['q1-a0'])
     })
 
     it('should have keyboard accessible submit button', async () => {
@@ -364,13 +391,13 @@ describe('QuizScreen', () => {
       const option = screen.getByRole('radio', { name: /liberté, égalité, fraternité/i })
       await user.click(option)
       
-      expect(handleSelectAnswer).toHaveBeenCalledWith('q1-a0')
+      expect(handleSelectAnswer).toHaveBeenCalledWith(['q1-a0'])
       
       // Rerender with answer selected
       rerender(
         <QuizScreen 
           {...defaultProps}
-          selectedAnswer="q1-a0"
+          selectedAnswers={["q1-a0"]}
           hasAnswerSelected={true}
           onSelectAnswer={handleSelectAnswer}
           onSubmitAnswer={handleSubmitAnswer}
@@ -390,7 +417,7 @@ describe('QuizScreen', () => {
       rerender(
         <QuizScreen
           {...defaultProps}
-          selectedAnswer="q1-a0"
+          selectedAnswers={["q1-a0"]}
           hasAnswerSelected={true}
           hasAnswerSubmitted={true}
           onSelectAnswer={handleSelectAnswer}

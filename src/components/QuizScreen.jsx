@@ -1,23 +1,49 @@
 import QuestionCard from './ui/QuestionCard'
 import AnswerOption from './ui/AnswerOption'
 import Button from './ui/Button'
+import { isAnswerCorrect } from '../utils/quizHelpers'
 import { useEffect, useRef } from "react"
+import { DIFFICULTY } from '../hooks/useQuiz'
 
 /**
  * Return a feedback message to display for the submitted answer (right/wrong answer).
  * @param {boolean} hasAnswerSubmitted  - Whether an answer has been submitted
  * @param {Object} currentQuestion - Current question object with answers
- * @param {number} selectedAnswer - ID of currently selected answer
+ * @param {number} selectedAnswers - IDs of currently selected answer
  * @returns {string} A feedback message to display.
  */
-function getFeedbackMessage(hasAnswerSubmitted, currentQuestion, selectedAnswer) {
+function getFeedbackMessage(hasAnswerSubmitted, currentQuestion, selectedAnswers) {
   if (!hasAnswerSubmitted) return null
 
-  const isCorrect = currentQuestion.answers.some(
-    a => a.id === selectedAnswer && a.isCorrect
-  )
+  const isCorrect = isAnswerCorrect(currentQuestion, selectedAnswers)
 
   return isCorrect ? "Bonne réponse." : "Mauvaise réponse."
+}
+
+/**
+ * Return the new list of selected answer ids.
+ *
+ * @param {Array<String>} currentSelectedAnswerIds the ids of the currently selected answers
+ * @param {string} selectedAnswerId the id of the answer the user just selected/toggled
+ * @param {Object} options
+ * @param {boolean} options.multipleCorrectAnswers true if we're un multi-select mode
+ * @returns  {Array<string>} the new list of selected answer ids.
+ */
+function getSelectedAnswers(currentSelectedAnswerIds, selectedAnswerId, {
+  multipleCorrectAnswers
+}) {
+  // Case 1: Multi-select mode: multiple answers are possible
+  if (multipleCorrectAnswers) {
+    // Case 1a: The user unchecked an answer
+    if (currentSelectedAnswerIds.includes(selectedAnswerId)) {
+      return currentSelectedAnswerIds.filter(answerId => answerId !== selectedAnswerId)
+    }
+    // Case 1b: The user checked an answer
+    return [...currentSelectedAnswerIds, selectedAnswerId]
+
+  }
+  // Case 2: only one answer is possible, it's the one the user just selected.
+  return [selectedAnswerId]
 }
 
 /**
@@ -26,7 +52,7 @@ function getFeedbackMessage(hasAnswerSubmitted, currentQuestion, selectedAnswer)
  * @param {Object} props.currentQuestion - Current question object with id, question, answers
  * @param {number} props.currentQuestionIndex - Index of current question (0-based)
  * @param {number} props.totalQuestions - Total number of questions in quiz
- * @param {string|null} props.selectedAnswer - ID of currently selected answer
+ * @param {string|null} props.selectedAnswers - IDs of currently selected answer
  * @param {Function} props.onSelectAnswer - Callback when user selects an answer
  * @param {Function} props.onSubmitAnswer - Callback when user submits answer
  * @param {Function} props.onGoToNextQuestion - Callback when user wants to go to the next question
@@ -36,10 +62,11 @@ function getFeedbackMessage(hasAnswerSubmitted, currentQuestion, selectedAnswer)
  */
 function QuizScreen({
   currentQuestion,
+  difficulty,
   currentQuestionIndex,
   totalQuestions,
   score,
-  selectedAnswer,
+  selectedAnswers,
   onSelectAnswer,
   onSubmitAnswer,
   onGoToNextQuestion,
@@ -55,7 +82,7 @@ function QuizScreen({
   }, [currentQuestionIndex])
 
   /* Focus on the feedback message when it appears */
-  const feedbackMessage = getFeedbackMessage(hasAnswerSubmitted, currentQuestion, selectedAnswer)
+  const feedbackMessage = getFeedbackMessage(hasAnswerSubmitted, currentQuestion, selectedAnswers)
 
   const feedbackRef = useRef(null);
 
@@ -89,6 +116,12 @@ function QuizScreen({
           {currentQuestion.question}
         </h2>
 
+        {difficulty === DIFFICULTY.DIFFICULT && (
+          <p class="mt-3 mb-4 text-sm text-gray-600">
+            Plusieurs réponses peuvent être correctes. Sélectionnez toutes les bonnes réponses.
+          </p>
+        )}
+
         {/* Visual progress bar indicator.
         Hide it from a11y as it would be redunant with the textual indication
         of the progress already present on the screen. */}
@@ -104,7 +137,7 @@ function QuizScreen({
             if (hasAnswerSubmitted) {
               if (answer.isCorrect) {
                 feedback = "correct"
-              } else if (selectedAnswer === answer.id) {
+              } else if (selectedAnswers.includes(answer.id)) {
                 feedback = "incorrect"
               }
             }
@@ -114,8 +147,14 @@ function QuizScreen({
                   key={answer.id}
                   id={answer.id}
                   text={answer.text}
-                  isSelected={selectedAnswer === answer.id}
-                  onSelect={onSelectAnswer}
+                  role={difficulty === DIFFICULTY.DIFFICULT ? "checkbox": "radio"}
+                  isSelected={selectedAnswers.includes(answer.id)}
+                  onSelect={() => onSelectAnswer(getSelectedAnswers(
+                    selectedAnswers,
+                    answer.id, {
+                      multipleCorrectAnswers: difficulty === DIFFICULTY.DIFFICULT
+                    }
+                  ))}
                   disabled={hasAnswerSubmitted}
                   feedback={feedback}
                 />

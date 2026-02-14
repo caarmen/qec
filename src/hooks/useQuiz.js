@@ -12,10 +12,17 @@ export const QUIZ_STATUS = {
   COMPLETED: 'COMPLETED'
 }
 
+// Quiz difficulty
+export const DIFFICULTY = {
+  NORMAL: 'NORMAL',
+  DIFFICULT: 'DIFFICULT'
+}
+
 // Action types
 export const ACTIONS = {
   START_QUIZ: 'START_QUIZ',
   SELECT_QUESTION_COUNT: 'SELECT_QUESTION_COUNT',
+  SELECT_DIFFICULTY: 'SELECT_DIFFICULTY',
   SELECT_ANSWER: 'SELECT_ANSWER',
   SUBMIT_ANSWER: 'SUBMIT_ANSWER',
   GO_TO_NEXT_QUESTION: 'GO_TO_NEXT_QUESTION',
@@ -25,9 +32,10 @@ export const ACTIONS = {
 // Initial state
 const initialState = {
   quizStatus: QUIZ_STATUS.NOT_STARTED,
+  difficulty: DIFFICULTY.NORMAL,
   questions: [],
   currentQuestionIndex: 0,
-  selectedAnswer: null,
+  selectedAnswers: [],
   userAnswers: [],
   score: 0,
   selectedQuestionCount: DEFAULT_QUESTION_COUNT
@@ -37,9 +45,13 @@ const initialState = {
 function quizReducer(state, action) {
   switch (action.type) {
     case ACTIONS.START_QUIZ: {
-      const questions = processQuestions(action.payload.rawQuestions, state.selectedQuestionCount)
+      const questions = processQuestions(action.payload.rawQuestions, {
+        count: state.selectedQuestionCount,
+        difficulty: state.difficulty,
+      })
       return {
         ...initialState,
+        difficulty: state.difficulty,
         quizStatus: QUIZ_STATUS.ANSWERING,
         questions
       }
@@ -52,21 +64,28 @@ function quizReducer(state, action) {
       }
     }
 
+    case ACTIONS.SELECT_DIFFICULTY: {
+      return {
+        ...state,
+        difficulty: action.payload.difficulty
+      }
+    }
+
     case ACTIONS.SELECT_ANSWER: {
       return {
         ...state,
-        selectedAnswer: action.payload.answerId
+        selectedAnswers: action.payload.answerIds,
       }
     }
 
     case ACTIONS.SUBMIT_ANSWER: {
       const currentQuestion = state.questions[state.currentQuestionIndex]
-      const isCorrect = isAnswerCorrect(currentQuestion, state.selectedAnswer)
+      const isCorrect = isAnswerCorrect(currentQuestion, state.selectedAnswers)
       
       // Store user's answer
       const userAnswer = {
         questionId: currentQuestion.id,
-        answerId: state.selectedAnswer,
+        answerIds: state.selectedAnswers,
         isCorrect
       }
 
@@ -89,7 +108,7 @@ function quizReducer(state, action) {
       if (isLastQuestion) {
         return {
           ...state,
-          selectedAnswer: null,
+          selectedAnswers: [],
           quizStatus: QUIZ_STATUS.COMPLETED,
         }
       }
@@ -97,7 +116,7 @@ function quizReducer(state, action) {
       // Otherwise, move to next question
       return {
         ...state,
-        selectedAnswer: null,
+        selectedAnswers: [],
         currentQuestionIndex: state.currentQuestionIndex + 1,
         quizStatus: QUIZ_STATUS.ANSWERING,
       }
@@ -133,10 +152,17 @@ export function useQuiz() {
     })
   }
 
-  const selectAnswer = (answerId) => {
+  const selectDifficulty = (difficulty) => {
+    dispatch({
+      type: ACTIONS.SELECT_DIFFICULTY,
+      payload: {difficulty}
+    })
+  }
+
+  const selectAnswer = (answerIds) => {
     dispatch({
       type: ACTIONS.SELECT_ANSWER,
-      payload: { answerId }
+      payload: { answerIds }
     })
   }
 
@@ -165,17 +191,18 @@ export function useQuiz() {
   )
 
   const hasAnswerSelected = useMemo(
-    () => state.selectedAnswer !== null,
-    [state.selectedAnswer]
+    () => state.selectedAnswers.length > 0,
+    [state.selectedAnswers]
   )
 
   return {
     // State
     quizStatus: state.quizStatus,
+    difficulty: state.difficulty,
     questions: state.questions,
     currentQuestionIndex: state.currentQuestionIndex,
     currentQuestion,
-    selectedAnswer: state.selectedAnswer,
+    selectedAnswers: state.selectedAnswers,
     userAnswers: state.userAnswers,
     score: state.score,
     totalQuestions: state.questions.length,
@@ -184,6 +211,7 @@ export function useQuiz() {
     // Actions
     startQuiz,
     selectQuestionCount,
+    selectDifficulty,
     selectAnswer,
     submitAnswer,
     goToNextQuestion,

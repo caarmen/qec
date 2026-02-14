@@ -14,6 +14,7 @@ import { memo } from 'react'
 function AnswerOption({ 
   id,
   text, 
+  role,
   isSelected = false, 
   onSelect,
   disabled = false,
@@ -55,12 +56,23 @@ function AnswerOption({
         ${feedback === 'correct' ? correctStyles : ''}
         ${feedback === 'incorrect' ? incorrectStyles : ''}
       `.trim()}
-      aria-pressed={isSelected}
-      role="radio"
+      role={role}
       aria-checked={isSelected}
     >
-      <span className="flex items-center justify-between w-full">
-        <span>{text}</span>
+      <span className="flex items-center gap-3 w-full">
+
+        {role === "checkbox" && (
+          <span
+            aria-hidden
+            className={`w-4 h-4 rounded-sm flex items-center justify-center ${
+              isSelected ? "bg-blue-500 text-white" : "border-solid border-2"
+            }`}
+          >
+            {isSelected ? "✓" : ""}
+          </span>
+        )}
+
+        <span className="flex-1">{text}</span>
 
         {feedback === "correct" && (
           <span

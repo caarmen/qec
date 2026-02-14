@@ -2,6 +2,7 @@ import { describe, it, expect, vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import ResultsScreen from '../../components/ResultsScreen'
+import { DIFFICULTY } from '../../hooks/useQuiz'
 
 describe('ResultsScreen', () => {
   const defaultProps = {
@@ -205,6 +206,15 @@ describe('ResultsScreen', () => {
       expect(screen.getByText('4')).toBeInTheDocument()
       expect(screen.getByText(/score : 80%/i)).toBeInTheDocument()
     })
+
+    it('should display difficult mode', () => {
+      render(<ResultsScreen score={32} totalQuestions={40} difficulty={DIFFICULTY.DIFFICULT} onRestart={vi.fn()} />)
+      expect(screen.getByText('Mode : Difficile')).toBeInTheDocument()
+    })
+    it('should display normal mode', () => {
+      render(<ResultsScreen score={32} totalQuestions={40} difficulty={DIFFICULTY.NORMAL} onRestart={vi.fn()} />)
+      expect(screen.getByText('Mode : Normal')).toBeInTheDocument()
+    })
   })
 
   describe('visual presentation', () => {
@@ -216,6 +226,7 @@ describe('ResultsScreen', () => {
       expect(scoreCard).toBeInTheDocument()
       
       // Should contain all score information
+      expect(scoreCard).toHaveTextContent(/mode : /i)
       expect(scoreCard).toHaveTextContent(/total de questions/i)
       expect(scoreCard).toHaveTextContent(/réponses correctes/i)
       expect(scoreCard).toHaveTextContent(/score/i)

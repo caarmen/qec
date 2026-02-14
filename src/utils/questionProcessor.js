@@ -1,4 +1,6 @@
-import { DEFAULT_QUESTION_COUNT } from './constants'
+import { DIFFICULTY } from "../hooks/useQuiz";
+
+export const TOTAL_ANSWER_COUNT = 4
 
 /**
  * Shuffles an array using the Fisher-Yates algorithm
@@ -26,6 +28,8 @@ export function shuffleArray(array) {
  * @param {Array<string>} rawQuestion.correctAnswers - Array of correct answer texts
  * @param {Array<string>} rawQuestion.wrongAnswers - Array of wrong answer texts
  * @param {number} index - Question index for ID generation
+ * @param {Object} options - Options for processing questions
+ * @param {boolean} options.multipleCorrectAnswers- If true, include multiple correct answers
  * @returns {Object} - Formatted question with id, question, theme, and shuffled answers array
  * @example
  * formatQuestion({
@@ -36,14 +40,23 @@ export function shuffleArray(array) {
  * }, 0)
  * // { id: 'question-0', question: "What is 2+2?", theme: "Math", answers: [...] }
  */
-export function formatQuestion(rawQuestion, index) {
+export function formatQuestion(rawQuestion, index, {multipleCorrectAnswers}) {
   // Combine correct and wrong answers
-  // Take only one of the possible correct answers.
-  // In the future, we may choose multiple correct answers.
-  const correctAnswers = shuffleArray(rawQuestion.correctAnswers).slice(0, 1);
+  // Take one or many of the possible correct answers, depending on the options.
+  const allCorrectAnswers = shuffleArray(rawQuestion.correctAnswers);
+  let correctAnswerCount = 1;
+  if (multipleCorrectAnswers) {
+    // Use somewhere between 1 and 4 correct answers.
+    // Note that some questions may not have that many correct answers.
+    const maxCorrectAnswerCount = Math.min(TOTAL_ANSWER_COUNT, allCorrectAnswers.length)
+    correctAnswerCount = Math.floor(Math.random() * maxCorrectAnswerCount) + 1
+  }
+  const correctAnswers = allCorrectAnswers.slice(0, correctAnswerCount);
 
-  // Take only up to 3 of the possible wrong answers.
-  const wrongAnswers = shuffleArray(rawQuestion.wrongAnswers).slice(0, 3);
+  // Take multiple possible wrong answers.
+  const allWrongAnswers = shuffleArray(rawQuestion.wrongAnswers);
+  const wrongAnswerCount = TOTAL_ANSWER_COUNT - correctAnswerCount;
+  const wrongAnswers = allWrongAnswers.slice(0, wrongAnswerCount)
 
   const allAnswers = [
     ...correctAnswers.map(text => ({ text, isCorrect: true })),
@@ -69,13 +82,15 @@ export function formatQuestion(rawQuestion, index) {
  * Processes raw questions data for quiz use
  * Shuffles the question pool, selects a subset, and formats each question
  * @param {Array<Object>} rawQuestions - Questions from questions.json
- * @param {number} [count=DEFAULT_QUESTION_COUNT] - Number of questions to select
+ * @param {Object} options - Options for processing questions
+ * @param {number} options.count - Number of questions to select
+ * @param {NORMAL|DIFFICULT} options.difficulty - The difficulty mode.
  * @returns {Array<Object>} - Formatted and shuffled questions ready for quiz
  * @example
  * processQuestions(rawQuestions, 10)
  * // Returns 10 randomly selected and formatted questions
  */
-export function processQuestions(rawQuestions, count = DEFAULT_QUESTION_COUNT) {
+export function processQuestions(rawQuestions, {count, difficulty}) {
   if (!rawQuestions || !Array.isArray(rawQuestions)) {
     return []
   }
@@ -85,6 +100,8 @@ export function processQuestions(rawQuestions, count = DEFAULT_QUESTION_COUNT) {
 
   // Format each question
   return shuffledQuestions.map((question, index) => 
-    formatQuestion(question, index)
+    formatQuestion(question, index, {
+      multipleCorrectAnswers: difficulty === DIFFICULTY.DIFFICULT
+    })
   )
 }
