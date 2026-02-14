@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <clipPath id="circleClip">
+      <circle cx="32" cy="32" r="30" />
+    </clipPath>
+  </defs>
+
+  <!-- Tricolor background clipped to circle -->
+  <g clip-path="url(#circleClip)">
+    <rect x="2" y="2" width="20" height="60" fill="#0055A4"/>
+    <rect x="22" y="2" width="20" height="60" fill="#FFFFFF"/>
+    <rect x="42" y="2" width="20" height="60" fill="#EF4135"/>
+  </g>
+
+  <!-- Optional subtle outer stroke for definition -->
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#1F2937" stroke-width="2"/>
+
+  <!-- Checkmark -->
+  <path
+    d="M20 34 L28 42 L46 24"
+    fill="none"
+    stroke="#000000"
+    stroke-width="7"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
+
