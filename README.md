@@ -18,7 +18,6 @@ Une application React interactive pour tester vos connaissances civiques et éva
     - [Les sénateurs](https://www.elections.interieur.gouv.fr/comprendre-elections/pour-qui-je-vote/senateurs)
     - [Élections législatives](https://www.service-public.gouv.fr/particuliers/vosdroits/F1943)
 
-
 - **Progression claire** : Indicateur de progression (Question X sur N)
 - **Validation intelligente** : Impossible de passer à la question suivante sans sélectionner une réponse
 - **Résultats détaillés** : Score final avec pourcentage de réussite
@@ -28,12 +27,14 @@ Une application React interactive pour tester vos connaissances civiques et éva
 ## 🚀 Installation
 
 1. Clonez le repository :
+
 ```bash
 git clone <repository-url>
 cd qec
 ```
 
 2. Installez les dépendances :
+
 ```bash
 npm install
 ```
@@ -43,6 +44,7 @@ npm install
 ### Mode développement
 
 Lancez le serveur de développement :
+
 ```bash
 npm run dev
 ```
@@ -52,6 +54,7 @@ L'application sera accessible sur `http://localhost:5173`
 ### Build de production
 
 Créez une version optimisée pour la production :
+
 ```bash
 npm run build
 ```
@@ -61,6 +64,7 @@ Les fichiers de production seront dans le dossier `dist/`
 ### Prévisualisation du build
 
 Prévisualisez le build de production localement :
+
 ```bash
 npm run preview
 ```
@@ -68,6 +72,7 @@ npm run preview
 ## 🧪 Tests
 
 ### Lancer tous les tests
+
 ```bash
 npm test
 ```
@@ -77,6 +82,7 @@ npm test
 ### Ajouter des questions
 
 Modifiez le fichier `src/data/questions.json` :
+
 ```json
 {
   "questions": [
@@ -93,6 +99,7 @@ Modifiez le fichier `src/data/questions.json` :
 ### Linter
 
 Vérifiez le code avec ESLint :
+
 ```bash
 npm run lint
 ```

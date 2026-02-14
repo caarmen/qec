@@ -1,8 +1,8 @@
-import { useQuiz, QUIZ_STATUS } from './hooks/useQuiz'
-import QuizStartScreen from './components/QuizStartScreen'
-import QuizScreen from './components/QuizScreen'
-import ResultsScreen from './components/ResultsScreen'
-import questionsData from './data/questions.json'
+import { useQuiz, QUIZ_STATUS } from "./hooks/useQuiz";
+import QuizStartScreen from "./components/QuizStartScreen";
+import QuizScreen from "./components/QuizScreen";
+import ResultsScreen from "./components/ResultsScreen";
+import questionsData from "./data/questions.json";
 
 function App() {
   const {
@@ -21,16 +21,17 @@ function App() {
     selectAnswer,
     submitAnswer,
     goToNextQuestion,
-    restartQuiz
-  } = useQuiz()
+    restartQuiz,
+  } = useQuiz();
 
   const handleStartQuiz = () => {
-    startQuiz(questionsData.questions)
-  }
+    startQuiz(questionsData.questions);
+  };
 
   return (
     <>
-      {(quizStatus === QUIZ_STATUS.NOT_STARTED || quizStatus === QUIZ_STATUS.CONFIGURING) && (
+      {(quizStatus === QUIZ_STATUS.NOT_STARTED ||
+        quizStatus === QUIZ_STATUS.CONFIGURING) && (
         <QuizStartScreen
           totalQuestions={questionsData.questions.length}
           selectedQuestionCount={selectedQuestionCount}
@@ -41,7 +42,8 @@ function App() {
         />
       )}
 
-      {(quizStatus === QUIZ_STATUS.ANSWERING || quizStatus === QUIZ_STATUS.REVIEWING_ANSWER ) && (
+      {(quizStatus === QUIZ_STATUS.ANSWERING ||
+        quizStatus === QUIZ_STATUS.REVIEWING_ANSWER) && (
         <QuizScreen
           currentQuestion={currentQuestion}
           difficulty={difficulty}
@@ -66,7 +68,7 @@ function App() {
         />
       )}
     </>
-  )
+  );
 }
 
-export default App
+export default App;

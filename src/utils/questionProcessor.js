@@ -1,6 +1,6 @@
 import { DIFFICULTY } from "../hooks/useQuiz";
 
-export const TOTAL_ANSWER_COUNT = 4
+export const TOTAL_ANSWER_COUNT = 4;
 
 /**
  * Shuffles an array using the Fisher-Yates algorithm
@@ -11,12 +11,12 @@ export const TOTAL_ANSWER_COUNT = 4
  * shuffleArray([1, 2, 3, 4, 5]) // [3, 1, 5, 2, 4]
  */
 export function shuffleArray(array) {
-  const shuffled = [...array]
+  const shuffled = [...array];
   for (let i = shuffled.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
   }
-  return shuffled
+  return shuffled;
 }
 
 /**
@@ -40,7 +40,7 @@ export function shuffleArray(array) {
  * }, 0)
  * // { id: 'question-0', question: "What is 2+2?", theme: "Math", answers: [...] }
  */
-export function formatQuestion(rawQuestion, index, {multipleCorrectAnswers}) {
+export function formatQuestion(rawQuestion, index, { multipleCorrectAnswers }) {
   // Combine correct and wrong answers
   // Take one or many of the possible correct answers, depending on the options.
   const allCorrectAnswers = shuffleArray(rawQuestion.correctAnswers);
@@ -48,34 +48,37 @@ export function formatQuestion(rawQuestion, index, {multipleCorrectAnswers}) {
   if (multipleCorrectAnswers) {
     // Use somewhere between 1 and 4 correct answers.
     // Note that some questions may not have that many correct answers.
-    const maxCorrectAnswerCount = Math.min(TOTAL_ANSWER_COUNT, allCorrectAnswers.length)
-    correctAnswerCount = Math.floor(Math.random() * maxCorrectAnswerCount) + 1
+    const maxCorrectAnswerCount = Math.min(
+      TOTAL_ANSWER_COUNT,
+      allCorrectAnswers.length,
+    );
+    correctAnswerCount = Math.floor(Math.random() * maxCorrectAnswerCount) + 1;
   }
   const correctAnswers = allCorrectAnswers.slice(0, correctAnswerCount);
 
   // Take multiple possible wrong answers.
   const allWrongAnswers = shuffleArray(rawQuestion.wrongAnswers);
   const wrongAnswerCount = TOTAL_ANSWER_COUNT - correctAnswerCount;
-  const wrongAnswers = allWrongAnswers.slice(0, wrongAnswerCount)
+  const wrongAnswers = allWrongAnswers.slice(0, wrongAnswerCount);
 
   const allAnswers = [
-    ...correctAnswers.map(text => ({ text, isCorrect: true })),
-    ...wrongAnswers.map(text => ({ text, isCorrect: false }))
-  ]
+    ...correctAnswers.map((text) => ({ text, isCorrect: true })),
+    ...wrongAnswers.map((text) => ({ text, isCorrect: false })),
+  ];
 
   // Shuffle answers and add IDs
   const shuffledAnswers = shuffleArray(allAnswers).map((answer, idx) => ({
     id: `q${index}-a${idx}`,
     text: answer.text,
-    isCorrect: answer.isCorrect
-  }))
+    isCorrect: answer.isCorrect,
+  }));
 
   return {
     id: `question-${index}`,
     question: rawQuestion.question,
     theme: rawQuestion.theme,
-    answers: shuffledAnswers
-  }
+    answers: shuffledAnswers,
+  };
 }
 
 /**
@@ -90,18 +93,18 @@ export function formatQuestion(rawQuestion, index, {multipleCorrectAnswers}) {
  * processQuestions(rawQuestions, 10)
  * // Returns 10 randomly selected and formatted questions
  */
-export function processQuestions(rawQuestions, {count, difficulty}) {
+export function processQuestions(rawQuestions, { count, difficulty }) {
   if (!rawQuestions || !Array.isArray(rawQuestions)) {
-    return []
+    return [];
   }
 
   // Shuffle all questions and take the requested count
-  const shuffledQuestions = shuffleArray(rawQuestions).slice(0, count)
+  const shuffledQuestions = shuffleArray(rawQuestions).slice(0, count);
 
   // Format each question
-  return shuffledQuestions.map((question, index) => 
+  return shuffledQuestions.map((question, index) =>
     formatQuestion(question, index, {
-      multipleCorrectAnswers: difficulty === DIFFICULTY.DIFFICULT
-    })
-  )
+      multipleCorrectAnswers: difficulty === DIFFICULTY.DIFFICULT,
+    }),
+  );
 }

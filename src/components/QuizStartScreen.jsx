@@ -1,9 +1,9 @@
-import { useEffect, useMemo, useRef } from 'react'
-import Button from './ui/Button'
-import SegmentedControl from './ui/SegmentedControl'
-import { getAvailableQuestionCountOptions } from '../utils/questionCountOptions'
-import { DIFFICULTY } from '../hooks/useQuiz'
-import { useTranslation } from 'react-i18next';
+import { useEffect, useMemo, useRef } from "react";
+import Button from "./ui/Button";
+import SegmentedControl from "./ui/SegmentedControl";
+import { getAvailableQuestionCountOptions } from "../utils/questionCountOptions";
+import { DIFFICULTY } from "../hooks/useQuiz";
+import { useTranslation } from "react-i18next";
 
 /**
  * QuizStartScreen component - Landing screen with quiz configuration
@@ -20,32 +20,35 @@ function QuizStartScreen({
   selectedDifficulty,
   onSelectQuestionCount,
   onSelectDifficulty,
-  onStart
+  onStart,
 }) {
   const { t } = useTranslation();
   /* Focus on the top of the screen when entering it, for a11y */
-  const headingRef = useRef(null)
+  const headingRef = useRef(null);
 
   useEffect(() => {
-    headingRef.current?.focus()
-  }, [])
+    headingRef.current?.focus();
+  }, []);
 
-  const { options: questionCountOptions, defaultValue: defaultQuestionCount } = useMemo(
-    () => getAvailableQuestionCountOptions(totalQuestions),
-    [totalQuestions]
-  )
+  const { options: questionCountOptions, defaultValue: defaultQuestionCount } =
+    useMemo(
+      () => getAvailableQuestionCountOptions(totalQuestions),
+      [totalQuestions],
+    );
 
   const questionCountOptionItems = useMemo(
-    () => questionCountOptions.map((value) => ({ value, label: String(value) })),
-    [questionCountOptions]
-  )
+    () =>
+      questionCountOptions.map((value) => ({ value, label: String(value) })),
+    [questionCountOptions],
+  );
 
-  const questionCountEffectiveValue = selectedQuestionCount ?? defaultQuestionCount
+  const questionCountEffectiveValue =
+    selectedQuestionCount ?? defaultQuestionCount;
 
   const difficultyOptionItems = [
-    { value: DIFFICULTY.NORMAL, label: 'Normal'},
-    { value: DIFFICULTY.DIFFICULT, label: 'Difficile'},
-  ]
+    { value: DIFFICULTY.NORMAL, label: "Normal" },
+    { value: DIFFICULTY.DIFFICULT, label: "Difficile" },
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
@@ -58,9 +61,7 @@ function QuizStartScreen({
           >
             {t("startScreen.title")}
           </h1>
-          <p className="text-gray-600">
-            {t("startScreen.shortDescription")}
-          </p>
+          <p className="text-gray-600">{t("startScreen.shortDescription")}</p>
         </div>
 
         <SegmentedControl
@@ -83,7 +84,7 @@ function QuizStartScreen({
         </Button>
       </div>
     </div>
-  )
+  );
 }
 
-export default QuizStartScreen
+export default QuizStartScreen;

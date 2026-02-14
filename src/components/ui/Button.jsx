@@ -1,4 +1,4 @@
-import { memo } from 'react'
+import { memo } from "react";
 
 /**
  * Button component - Reusable button with variants and states
@@ -11,22 +11,25 @@ import { memo } from 'react'
  * @param {Object} [props...rest] - Additional button attributes
  * @returns {JSX.Element} Button component
  */
-function Button({ 
-  children, 
-  onClick, 
-  disabled = false, 
-  variant = 'primary',
-  className = '',
-  ...props 
+function Button({
+  children,
+  onClick,
+  disabled = false,
+  variant = "primary",
+  className = "",
+  ...props
 }) {
-  const baseStyles = 'w-full py-3 rounded-lg font-medium text-base transition-colors'
-  
-  const variants = {
-    primary: 'bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed',
-    secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300 disabled:bg-gray-100 disabled:cursor-not-allowed'
-  }
+  const baseStyles =
+    "w-full py-3 rounded-lg font-medium text-base transition-colors";
 
-  const variantStyles = variants[variant] || variants.primary
+  const variants = {
+    primary:
+      "bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed",
+    secondary:
+      "bg-gray-200 text-gray-900 hover:bg-gray-300 disabled:bg-gray-100 disabled:cursor-not-allowed",
+  };
+
+  const variantStyles = variants[variant] || variants.primary;
 
   return (
     <button
@@ -37,7 +40,7 @@ function Button({
     >
       {children}
     </button>
-  )
+  );
 }
 
-export default memo(Button)
+export default memo(Button);
