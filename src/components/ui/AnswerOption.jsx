@@ -1,4 +1,5 @@
 import { memo } from 'react'
+import { useTranslation } from 'react-i18next'
 
 /**
  * AnswerOption component - Individual answer choice in quiz
@@ -21,6 +22,7 @@ function AnswerOption({
   feedback = undefined
 
 }) {
+  const { t } = useTranslation()
   const baseStyles = 'w-full text-left border rounded-lg p-4 transition-colors cursor-pointer'
   const defaultStyles = 'border-gray-200 hover:bg-gray-50'
   const selectedStyles = 'border-blue-600 bg-blue-50'
@@ -77,7 +79,7 @@ function AnswerOption({
         {feedback === "correct" && (
           <span
             className="ml-2 text-green-600"
-            aria-label="Bonne réponse"
+            aria-label={t("a11yCorrectAnswer")}
           >
             ✔
           </span>
@@ -86,7 +88,7 @@ function AnswerOption({
         {feedback === "incorrect" && (
           <span
             className="ml-2 text-red-600"
-            aria-label="Mauvaise réponse"
+            aria-label={t("a11yIncorrectAnswer")}
           >
             ✖
           </span>
