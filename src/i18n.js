@@ -7,6 +7,7 @@ import stringsFR from "./locales/fr/strings.json";
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
+    showSupportNotice: false,
     resources: {
       fr: { translation: stringsFR },
     },
