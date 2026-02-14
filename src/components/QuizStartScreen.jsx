@@ -56,30 +56,30 @@ function QuizStartScreen({
             ref={headingRef}
             className="text-2xl font-semibold text-gray-900"
           >
-            {t("quizTitle")}
+            {t("startScreen.title")}
           </h1>
           <p className="text-gray-600">
-            Testez vos connaissances civiques et évaluez votre préparation pour la naturalisation française.
+            {t("startScreen.shortDescription")}
           </p>
         </div>
 
         <SegmentedControl
-          label="Nombre de questions"
-          helperText="Choisissez la durée de votre session"
+          label={t("startScreen.config.questionCount.label")}
+          helperText={t("startScreen.config.questionCount.helperText")}
           options={questionCountOptionItems}
           value={questionCountEffectiveValue}
           onChange={onSelectQuestionCount}
         />
         <SegmentedControl
-          label="Niveau"
-          helperText="Choisissez le niveau de difficulté"
+          label={t("startScreen.config.difficulty.label")}
+          helperText={t("startScreen.config.difficulty.helperText")}
           options={difficultyOptionItems}
           value={selectedDifficulty}
           onChange={onSelectDifficulty}
         />
 
         <Button onClick={onStart} disabled={!questionCountEffectiveValue}>
-          Commencer le quiz
+          {t("startScreen.buttonStart")}
         </Button>
       </div>
     </div>
