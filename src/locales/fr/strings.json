@@ -33,6 +33,10 @@
         "correctCountLabel": "Réponses correctes :",
         "buttonRestart": "Recommencer le Quiz"
     },
+    "answerOption": {
+        "a11yCorrectAnswer": "Bonne réponse",
+        "a11yIncorrectAnswer": "Mauvaise réponse"
+    },
     "common": {
         "difficultyDifficult": "Difficile",
         "difficultyNormal": "Normal"
