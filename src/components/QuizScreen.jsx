@@ -116,6 +116,12 @@ function QuizScreen({
           {currentQuestion.question}
         </h2>
 
+        {difficulty === DIFFICULTY.DIFFICULT && (
+          <p class="mt-3 mb-4 text-sm text-gray-600">
+            Plusieurs réponses peuvent être correctes. Sélectionnez toutes les bonnes réponses.
+          </p>
+        )}
+
         {/* Visual progress bar indicator.
         Hide it from a11y as it would be redunant with the textual indication
         of the progress already present on the screen. */}
