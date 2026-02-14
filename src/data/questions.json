@@ -745,7 +745,7 @@
       ],
       "wrongAnswers": [
         "Oui, s'il n'y a pas de blessures permanentes.",
-        "Non, mais les insultes, les remarques désobligeantes, les humiliations et les menaces ne sont pas punissables par la loi car elles sont trop difficiles à prouver.",
+        "Non, mais les insultes, les remarques désobligeantes, les humiliations et les menaces sont autorisés.",
         "Oui, si la punition reste proportionnée à la faute de l'enfant",
         "Oui, dans le cadre du \"droit de correction\" reconnu aux parents"
       ]
@@ -1499,7 +1499,7 @@
         "1914 - 1918"
       ],
       "wrongAnswers": [
-        "1939-1945",
+        "1939 - 1945",
         "1954 - 1962",
         "1789 - 1799",
         "1870 - 1871"
@@ -1509,7 +1509,7 @@
       "question": "Quand a eu lieu la Seconde guerre mondiale ?",
       "theme": "Histoire, géographie et culture",
       "correctAnswers": [
-        "1939-1945"
+        "1939 - 1945"
       ],
       "wrongAnswers": [
         "1914 - 1918",
@@ -2067,6 +2067,20 @@
       ]
     },
     {
+      "question": "Quel jour célèbre-t-on officiellement la laïcité en France ?",
+      "theme": "Principes et valeurs de la République",
+      "correctAnswers": [
+        "9 décembre"
+      ],
+      "wrongAnswers": [
+        "11 novembre",
+        "14 juillet",
+        "1 mai",
+        "8 mai",
+        "9 mai"
+      ]
+    },
+    {
       "question": "Quel mariage est reconnu légalement ?",
       "theme": "Vivre dans la société française",
       "correctAnswers": [
@@ -2152,7 +2166,7 @@
       "wrongAnswers": [
         "17",
         "18",
-        "17",
+        "16",
         "911",
         "196"
       ]
@@ -2198,7 +2212,7 @@
         "Auguste Renoir",
         "Paul Cézanne",
         "Vincent van Gogh",
-        "Pablo Picass"
+        "Pablo Picasso"
       ]
     },
     {
@@ -3301,7 +3315,7 @@
       "question": "Qui peut demander un congé parental d'éducation ?",
       "theme": "Vivre dans la société française",
       "correctAnswers": [
-        "Tout salarié ayant au moins 1 an d'ancienneté",
+        "Tout parent salarié ayant au moins 1 an d'ancienneté",
         "Le père ou la mère de l'enfant",
         "Les parents adoptifs"
       ],
@@ -3309,7 +3323,7 @@
         "Uniquement la mère",
         "Uniquement les fonctionnaires",
         "Toute personne, même si elle vient de commencer son contrat hier",
-        "Seulement pour le premier enfant"
+        "Les parents, mais seulement pour le premier enfant"
       ]
     },
     {
