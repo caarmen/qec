@@ -1,15 +1,17 @@
 import { forwardRef } from "react";
+
 /**
  * DropdownOption component - Single option within a Dropdown
  * @param {Object} props - Component props
  * @param {string} props.label - Visible label
  * @param {boolean} props.isSelected - Whether option is selected
  * @param {boolean} props.isFocused - Whether option is focused
+ * @param {Function} props.onKeyDown - Keydown handler for keyboard navigation
  * @param {Function} props.onSelect - Callback when option is selected
  * @returns {JSX.Element} DropdownOption component
  */
 const DropdownOption = forwardRef(function DropdownOption(
-  { label, isSelected, isFocused, onSelect },
+  { label, isSelected, isFocused, onSelect, onKeyDown },
   ref,
 ) {
   const baseClasses =
@@ -26,6 +28,7 @@ const DropdownOption = forwardRef(function DropdownOption(
       tabIndex={isSelected ? 0 : -1}
       className={`${baseClasses} ${isSelected ? selectedClasses : unselectedClasses} ${isFocused ? focusedClasses : ""}`}
       onClick={() => onSelect()}
+      onKeyDown={onKeyDown}
     >
       {label}
     </li>

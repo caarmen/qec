@@ -25,6 +25,7 @@ describe("DropdownOption", () => {
 
       const option = screen.getByRole("option");
       expect(option).toHaveAttribute("aria-selected", "true");
+      expect(option).toHaveAttribute("tabindex", "0");
       expect(option).toHaveClass("bg-blue-50");
       expect(option).toHaveClass("text-blue-700");
     });
@@ -42,6 +43,19 @@ describe("DropdownOption", () => {
 
       expect(handleSelect).toHaveBeenCalledTimes(1);
       expect(handleSelect).toHaveBeenCalledWith();
+    });
+
+    it("should forward onKeyDown handler", async () => {
+      const handleKeyDown = vi.fn();
+      const user = userEvent.setup();
+
+      render(<DropdownOption {...defaultProps} onKeyDown={handleKeyDown} />);
+
+      const option = screen.getByRole("option");
+      option.focus();
+      await user.keyboard("{ArrowRight}");
+
+      expect(handleKeyDown).toHaveBeenCalled();
     });
   });
 });

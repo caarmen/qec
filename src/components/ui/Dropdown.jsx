@@ -41,6 +41,41 @@ function Dropdown({ label, helperText, options, value, onChange }) {
     buttonRef.current?.focus();
   };
 
+  const handleKeyDown = (event) => {
+    switch (event.key) {
+      case "ArrowRight":
+      case "ArrowDown":
+        event.preventDefault();
+        setFocusedIndex((previous) => (previous + 1) % options.length);
+        break;
+      case "ArrowLeft":
+      case "ArrowUp":
+        event.preventDefault();
+        setFocusedIndex(
+          (previous) => (previous - 1 + options.length) % options.length,
+        );
+        break;
+      case "Home":
+        event.preventDefault();
+        setFocusedIndex(0);
+        break;
+      case "End":
+        event.preventDefault();
+        setFocusedIndex(options.length - 1);
+        break;
+      case "Enter":
+        event.preventDefault();
+        onItemSelected(focusedIndex);
+        break;
+      case "Escape":
+        event.preventDefault();
+        setOpen(false);
+        break;
+      default:
+        return;
+    }
+  };
+
   return (
     <section className={"relative space-y-2"}>
       <div className="space-y-1">
@@ -115,6 +150,7 @@ function Dropdown({ label, helperText, options, value, onChange }) {
               isSelected={value === option.value}
               isFocused={index === focusedIndex}
               onSelect={() => onItemSelected(index)}
+              onKeyDown={(event) => handleKeyDown(event)}
             />
           );
         })}
