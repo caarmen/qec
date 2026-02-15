@@ -326,4 +326,5 @@ describe("Quiz Flow Integration", () => {
     // Submit button should be disabled (no answer selected from previous attempt)
     expect(screen.getByRole("button", { name: /soumettre/i })).toBeDisabled();
   });
-});
+  // Set a higher timeout of 10 seconds (5 seconds in the default) for these integration tests
+}, 10000);
