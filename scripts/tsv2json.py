@@ -1,3 +1,27 @@
+"""
+Reads a tsv file `input.tsv` in the below format and outputs `output.json`
+in the format of the questions database.
+
+Each question needs at least:
+* A question text.
+* 1 to 4 correct answers.
+* 3 to 5 wrong answers.
+
+The columns in the file must be as follows:
+- Category (not used yet)
+- Question (required)
+- Correct1 (required)
+- Correct2
+- Correct3
+- Correct4
+- Wrong1 (required)
+- Wrong2 (required)
+- Wrong3 (required)
+- Wrong4
+- Wrong5
+
+Copy the `output.json` file to `src/data/questions.js` to use it in the quiz.
+"""
 import csv
 import json
 

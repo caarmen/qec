@@ -273,7 +273,7 @@ describe("questionProcessor", () => {
       const observedCombinations = new Set();
 
       const result = processQuestions(orderedQuestions, {
-        count: 10,
+        count: 100,
         difficulty: DIFFICULTY.DIFFICULT,
       });
 

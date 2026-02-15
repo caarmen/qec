@@ -1,11 +1,11 @@
-name: run tests
+name: Run checks
 on:
   push:
     branches: [main]
   pull_request:
 
 jobs:
-  tests:
+  checks:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
@@ -18,9 +18,17 @@ jobs:
         with:
           node-version: 24
 
-      - run: npm ci
+      - name: Install dependencies
+        run: npm ci
 
-      - run: npm run test:coverage
+      - name: Run ESLint
+        uses: reviewdog/action-eslint@v1.34
+
+      - name: Run knip
+        run: npm run knip -- --reporter github-actions
+
+      - name: Run tests with coverage
+        run: npm run test:coverage
 
       - name: Report coverage
         if: always()
