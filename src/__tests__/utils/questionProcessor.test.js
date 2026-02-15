@@ -261,7 +261,7 @@ describe("questionProcessor", () => {
     });
 
     it("should choose multiple answers for some questions (probabilistic test)", () => {
-      const orderedQuestions = Array(40)
+      const orderedQuestions = Array(100)
         .fill(null)
         .map((_, i) => ({
           question: `Question ${i}`,
