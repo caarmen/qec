@@ -26,7 +26,7 @@ const SegmentedControlOption = memo(
     ref,
   ) {
     const baseClasses =
-      "py-2 rounded-lg text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500";
+      "py-2 rounded-lg text-sm font-medium transition-colors focus:outline-hidden focus:ring-2 focus:ring-blue-500";
     const selectedClasses = "bg-blue-600 text-white font-semibold";
     const unselectedClasses =
       "border border-gray-300 text-gray-700 bg-white hover:bg-gray-50";

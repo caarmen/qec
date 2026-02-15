@@ -193,7 +193,7 @@ function QuizScreen({
         VoiceOver doesn't read the text in French, even if lang="fr" is added
         to the element.*/}
         <div
-          className="flex items-start gap-2 text-sm min-h-[2rem] text-gray-800"
+          className="flex items-start gap-2 text-sm min-h-8 text-gray-800"
           ref={feedbackRef}
           aria-hidden={!feedbackMessage}
           tabIndex={-1}
