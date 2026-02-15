@@ -1,6 +1,9 @@
 name: Deploy to Github Pages
 on:
-  push:
+  workflow_run:
+    workflows: ["Run checks"]
+    types:
+      - completed
     branches: [main]
 
 jobs:
