@@ -12,7 +12,8 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage",
-    "prepare": "husky"
+    "prepare": "husky",
+    "knip": "knip"
   },
   "dependencies": {
     "i18next": "^25.8.7",
@@ -25,6 +26,7 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^25.2.3",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
@@ -39,10 +41,12 @@
     "globals": "^16.5.0",
     "husky": "^9.1.7",
     "jsdom": "^27.4.0",
+    "knip": "^5.83.1",
     "lint-staged": "^16.2.7",
     "postcss": "^8.5.6",
     "prettier": "3.8.1",
     "tailwindcss": "^3.4.19",
+    "typescript": "^5.9.3",
     "vite": "^7.2.4",
     "vitest": "^4.0.18"
   },

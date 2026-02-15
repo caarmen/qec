@@ -24,6 +24,9 @@ jobs:
       - name: Run ESLint
         uses: reviewdog/action-eslint@v1.34
 
+      - name: Run knip
+        run: npm run knip -- --reporter github-actions
+
       - name: Run tests with coverage
         run: npm run test:coverage
 
