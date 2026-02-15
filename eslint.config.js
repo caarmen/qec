@@ -8,7 +8,7 @@ import i18next from "eslint-plugin-i18next";
 import eslintConfigPrettier from "eslint-config-prettier/flat";
 
 export default defineConfig([
-  globalIgnores(["dist"]),
+  globalIgnores(["dist", "coverage", "html"]),
   {
     files: ["**/*.{js,jsx}"],
     extends: [
@@ -37,4 +37,10 @@ export default defineConfig([
     },
   },
   eslintConfigPrettier,
+  {
+    files: ["vitest.config.js"],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
 ]);
