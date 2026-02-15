@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef } from "react";
 import Button from "./ui/Button";
 import SegmentedControl from "./ui/SegmentedControl";
+import Dropdown from "./ui/Dropdown";
 import { getAvailableQuestionCountOptions } from "../utils/questionCountOptions";
 import { DIFFICULTY } from "../hooks/useQuiz";
 import { useTranslation } from "react-i18next";
@@ -64,7 +65,7 @@ function QuizStartScreen({
           <p className="text-gray-600">{t("startScreen.shortDescription")}</p>
         </div>
 
-        <SegmentedControl
+        <Dropdown
           label={t("startScreen.config.questionCount.label")}
           helperText={t("startScreen.config.questionCount.helperText")}
           options={questionCountOptionItems}
