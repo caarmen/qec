@@ -2,6 +2,10 @@
 
 Une application web pour tester vos connaissances civiques et évaluer votre préparation pour la naturalisation française.
 
+<img width="320" src="doc/screenshot-question.png">
+<img width="320" src="doc/screenshot-question-multi.png">
+<img width="320" src="doc/screenshot-result.png">
+
 ## Caractéristiques
 
 - **Quiz interactif**
