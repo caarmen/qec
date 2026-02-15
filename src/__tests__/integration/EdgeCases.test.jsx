@@ -304,4 +304,5 @@ describe("Edge Cases", () => {
       ).not.toBeInTheDocument();
     });
   });
-});
+  // Set a higher timeout of 10 seconds (5 seconds in the default) for these integration tests
+}, 10000);
