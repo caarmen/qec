@@ -50,7 +50,7 @@ describe("QuestionCard", () => {
       const card = container.firstChild;
       expect(card).toHaveClass("bg-white");
       expect(card).toHaveClass("rounded-xl");
-      expect(card).toHaveClass("shadow-sm");
+      expect(card).toHaveClass("shadow-xs");
       expect(card).toHaveClass("p-6");
       expect(card).toHaveClass("space-y-6");
     });

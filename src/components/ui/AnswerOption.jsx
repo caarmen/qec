@@ -65,7 +65,7 @@ function AnswerOption({
         {role === "checkbox" && (
           <span
             aria-hidden
-            className={`w-4 h-4 rounded-sm flex items-center justify-center ${
+            className={`w-4 h-4 rounded-xs flex items-center justify-center ${
               isSelected ? "bg-blue-500 text-white" : "border-solid border-2"
             }`}
           >

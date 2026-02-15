@@ -23,7 +23,7 @@ function ResultsScreen({ score, totalQuestions, difficulty, onRestart }) {
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
-      <div className="w-full max-w-md bg-white rounded-xl shadow-sm p-6 space-y-6">
+      <div className="w-full max-w-md bg-white rounded-xl shadow-xs p-6 space-y-6">
         {/* Completion header */}
         <h2
           className="text-2xl font-semibold text-gray-900"
