@@ -53,6 +53,7 @@ describe("Dropdown", () => {
       expect(options).toHaveLength(4);
       const selectedOption = screen.getByRole("option", { name: "Chiot" });
       expect(selectedOption).toHaveAttribute("aria-selected", "true");
+      expect(selectedOption).toHaveFocus();
     });
   });
 

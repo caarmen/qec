@@ -22,6 +22,14 @@ function Dropdown({ label, helperText, options, value, onChange }) {
   const [focusedIndex, setFocusedIndex] = useState(selectedOptionIndex);
   const buttonRef = useRef(null);
 
+  // Focus on the selected item when opening the dropdown.
+  useEffect(() => {
+    if (open) {
+      const indexToFocus = selectedOptionIndex >= 0 ? selectedOptionIndex : 0;
+      optionRefs.current?.[indexToFocus].focus();
+    }
+  }, [open, selectedOptionIndex]);
+
   useEffect(() => {
     if (focusedIndex >= 0) optionRefs.current?.[focusedIndex].focus();
   }, [focusedIndex]);
