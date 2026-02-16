@@ -1,4 +1,4 @@
-import { useId, useRef, useState } from "react";
+import { useId, useRef, useState, useEffect } from "react";
 import DropdownOption from "./DropdownOption";
 
 /**
@@ -13,14 +13,22 @@ import DropdownOption from "./DropdownOption";
  */
 function Dropdown({ label, helperText, options, value, onChange }) {
   const groupId = useId();
+  const optionRefs = useRef([]);
   const labelId = `${groupId}-label`;
   const helperId = `${groupId}-helper`;
   const [open, setOpen] = useState(false);
   const selectedOption = options.find((o) => o.value === value);
+  const selectedOptionIndex = options.findIndex((o) => o.value === value);
+  const [focusedIndex, setFocusedIndex] = useState(selectedOptionIndex);
   const buttonRef = useRef(null);
+
+  useEffect(() => {
+    if (focusedIndex >= 0) optionRefs.current?.[focusedIndex].focus();
+  }, [focusedIndex]);
 
   const onItemSelected = (optionIndex) => {
     setOpen(false);
+    setFocusedIndex(optionIndex);
     onChange(options[optionIndex].value);
     buttonRef.current?.focus();
   };
@@ -91,9 +99,13 @@ function Dropdown({ label, helperText, options, value, onChange }) {
           return (
             <DropdownOption
               key={option.value}
+              ref={(node) => {
+                optionRefs.current[index] = node;
+              }}
               value={option.value}
               label={option.label}
               isSelected={value === option.value}
+              isFocused={index === focusedIndex}
               onSelect={() => onItemSelected(index)}
             />
           );
