@@ -90,19 +90,23 @@ describe("Quiz Flow Integration", () => {
       }),
     ).toBeInTheDocument();
 
-    const option10 = screen.getByRole("radio", { name: "10" });
-    const option20 = screen.getByRole("radio", { name: "20" });
-    const option40 = screen.getByRole("radio", { name: "40" });
-    const option80 = screen.getByRole("radio", { name: "80" });
+    const questionCountButton = screen.getByRole("button", { name: "40" });
+    await user.click(questionCountButton);
+
+    const option10 = screen.getByRole("option", { name: "10" });
+    const option20 = screen.getByRole("option", { name: "20" });
+    const option40 = screen.getByRole("option", { name: "40" });
+    const option80 = screen.getByRole("option", { name: "80" });
 
     expect(option10).toBeInTheDocument();
     expect(option20).toBeInTheDocument();
     expect(option40).toBeInTheDocument();
     expect(option80).toBeInTheDocument();
-    expect(option40).toHaveAttribute("aria-checked", "true");
+    expect(option40).toHaveAttribute("aria-selected", "true");
 
     await user.click(option20);
-    expect(option20).toHaveAttribute("aria-checked", "true");
+    await user.click(questionCountButton);
+    expect(option20).toHaveAttribute("aria-selected", "true");
 
     await user.click(
       screen.getByRole("button", { name: /commencer le quiz/i }),

@@ -26,23 +26,35 @@ describe("QuizStartScreen", () => {
     ).toBeInTheDocument();
   });
 
-  it("shows available question count options based on total questions", () => {
+  it("shows available question count options based on total questions", async () => {
+    const user = userEvent.setup();
     render(<QuizStartScreen {...baseProps} totalQuestions={50} />);
 
-    expect(screen.getByRole("radio", { name: "10" })).toBeInTheDocument();
-    expect(screen.getByRole("radio", { name: "20" })).toBeInTheDocument();
-    expect(screen.getByRole("radio", { name: "40" })).toBeInTheDocument();
-    expect(screen.queryByRole("radio", { name: "80" })).not.toBeInTheDocument();
+    const questionCountButton = screen.getByRole("button", { name: "40" });
+    await user.click(questionCountButton);
+
+    expect(screen.getByRole("option", { name: "10" })).toBeInTheDocument();
+    expect(screen.getByRole("option", { name: "20" })).toBeInTheDocument();
+    expect(screen.getByRole("option", { name: "40" })).toBeInTheDocument();
+    expect(
+      screen.queryByRole("option", { name: "80" }),
+    ).not.toBeInTheDocument();
   });
 
-  it("defaults to 40 when available and no selection is provided", () => {
+  it("defaults to 40 when available and no selection is provided", async () => {
+    const user = userEvent.setup();
     render(<QuizStartScreen {...baseProps} totalQuestions={50} />);
 
-    const option40 = screen.getByRole("radio", { name: "40" });
-    expect(option40).toHaveAttribute("aria-checked", "true");
+    const questionCountButton = screen.getByRole("button", { name: "40" });
+    expect(questionCountButton.textContent).toEqual("40");
+    await user.click(questionCountButton);
+
+    const option40 = screen.getByRole("option", { name: "40" });
+    expect(option40).toHaveAttribute("aria-selected", "true");
   });
 
-  it("uses provided selectedQuestionCount when set", () => {
+  it("uses provided selectedQuestionCount when set", async () => {
+    const user = userEvent.setup();
     render(
       <QuizStartScreen
         {...baseProps}
@@ -51,8 +63,12 @@ describe("QuizStartScreen", () => {
       />,
     );
 
-    const option20 = screen.getByRole("radio", { name: "20" });
-    expect(option20).toHaveAttribute("aria-checked", "true");
+    const questionCountButton = screen.getByRole("button", { name: "20" });
+    expect(questionCountButton.textContent).toEqual("20");
+    await user.click(questionCountButton);
+
+    const option20 = screen.getByRole("option", { name: "20" });
+    expect(option20).toHaveAttribute("aria-selected", "true");
   });
 
   it("calls onSelectQuestionCount when an option is selected", async () => {
@@ -66,7 +82,10 @@ describe("QuizStartScreen", () => {
       />,
     );
 
-    const option20 = screen.getByRole("radio", { name: "20" });
+    const questionCountButton = screen.getByRole("button", { name: "40" });
+    await user.click(questionCountButton);
+
+    const option20 = screen.getByRole("option", { name: "20" });
     await user.click(option20);
 
     expect(onSelectQuestionCount).toHaveBeenCalledTimes(1);
