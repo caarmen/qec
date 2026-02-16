@@ -269,7 +269,9 @@ describe("AnswerOption", () => {
       );
       let option = screen.getByRole("radio");
       expect(option).toHaveClass("bg-green-50");
-      expect(screen.getByText(/✔/)).toBeInTheDocument();
+      const checkIcon = screen.getByText(/✔/);
+      expect(checkIcon).toBeInTheDocument();
+      expect(checkIcon).toHaveAttribute("aria-label", "Bonne réponse");
 
       rerender(
         <AnswerOption
@@ -280,7 +282,9 @@ describe("AnswerOption", () => {
       );
       option = screen.getByRole("radio");
       expect(option).toHaveClass("bg-red-50");
-      expect(screen.getByText(/✖/)).toBeInTheDocument();
+      const crossIcon = screen.getByText(/✖/);
+      expect(crossIcon).toBeInTheDocument();
+      expect(crossIcon).toHaveAttribute("aria-label", "Mauvaise réponse");
     });
   });
 });
