@@ -78,7 +78,7 @@ function AnswerOption({
         {feedback === "correct" && (
           <span
             className="ml-2 text-green-600"
-            aria-label={t("a11yCorrectAnswer")}
+            aria-label={t("answerOption.a11yCorrectAnswer")}
           >
             ✔
           </span>
@@ -87,7 +87,7 @@ function AnswerOption({
         {feedback === "incorrect" && (
           <span
             className="ml-2 text-red-600"
-            aria-label={t("a11yIncorrectAnswer")}
+            aria-label={t("answerOption.a11yIncorrectAnswer")}
           >
             ✖
           </span>
