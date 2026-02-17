@@ -6,9 +6,10 @@ Une application web pour tester vos connaissances civiques et évaluer votre pr�
 <img width="320" src="doc/screenshot-question-multi.png">
 <img width="320" src="doc/screenshot-result.png">
 
+L'application est disponible sur github pages: [caarmen.github.io/qec/](https://caarmen.github.io/qec/)
+
 ## Caractéristiques
 
-- **Quiz interactif**
 - **Options**
   - Choix du nombre de questions avant de démarrer (10, 20, 40, 80)
   - Difficulté :
