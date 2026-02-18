@@ -2,11 +2,11 @@
 
 Une application web pour tester vos connaissances civiques et évaluer votre préparation pour la naturalisation française.
 
+L'application est disponible sur github pages: [caarmen.github.io/qec/](https://caarmen.github.io/qec/)
+
 <img width="320" src="doc/screenshot-question.png">
 <img width="320" src="doc/screenshot-question-multi.png">
 <img width="320" src="doc/screenshot-result.png">
-
-L'application est disponible sur github pages: [caarmen.github.io/qec/](https://caarmen.github.io/qec/)
 
 ## Caractéristiques
 
