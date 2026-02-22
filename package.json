@@ -50,6 +50,12 @@
     "vite": "^7.3.1",
     "vitest": "^4.0.18"
   },
+  "overrides": {
+    "minimatch": "^10.2.2"
+  },
+  "_notes": {
+    "minimatch": "Temporary override for ESLint vuln; remove when plugins support ESLint 10"
+  },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   }
