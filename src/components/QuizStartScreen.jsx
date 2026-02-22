@@ -25,10 +25,10 @@ function QuizStartScreen({
 }) {
   const { t } = useTranslation();
   /* Focus on the top of the screen when entering it, for a11y */
-  const headingRef = useRef(null);
+  const mainRef = useRef(null);
 
   useEffect(() => {
-    headingRef.current?.focus();
+    mainRef.current?.focus();
   }, []);
 
   const { options: questionCountOptions, defaultValue: defaultQuestionCount } =
@@ -52,14 +52,14 @@ function QuizStartScreen({
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+    <main
+      ref={mainRef}
+      tabIndex={-1}
+      className="min-h-screen bg-gray-50 flex items-center justify-center px-4"
+    >
       <div className="w-full max-w-md bg-white rounded-xl shadow-xs p-6 space-y-8">
         <div className="space-y-3">
-          <h1
-            tabIndex={-1}
-            ref={headingRef}
-            className="text-2xl font-semibold text-gray-900"
-          >
+          <h1 className="text-2xl font-semibold text-gray-900">
             {t("startScreen.title")}
           </h1>
           <p className="text-gray-600">{t("startScreen.shortDescription")}</p>
@@ -84,7 +84,7 @@ function QuizStartScreen({
           {t("startScreen.buttonStart")}
         </Button>
       </div>
-    </div>
+    </main>
   );
 }
 
