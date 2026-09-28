@@ -60,7 +60,7 @@ L'application sera accessible sur `http://localhost:5173`
 Créez une version optimisée pour la production :
 
 ```bash
-npm run build
+VITE_BASE_URL=/base/url npm run build
 ```
 
 Les fichiers de production seront dans le dossier `dist/`
