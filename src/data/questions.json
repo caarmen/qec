@@ -1,3114 +1,592 @@
 {
   "questions": [
     {
-      "question": "À l'école, la charte de la laïcité permet de :",
-      "theme": "Principes et valeurs de la République",
+      "question": "How does the System Design Primer distinguish between a performance problem and a scalability problem?",
+      "theme": "Performance & Scalability",
       "correctAnswers": [
-        "exercer de la liberté d'expression des élèves dans la limite du bon fonctionnement de l’École comme du respect des valeurs républicaines et du pluralisme des convictions.",
-        "offrir aux élèves les conditions pour forger leur personnalité, exercer leur libre arbitre et faire l'apprentissage de la citoyenneté",
-        "assurer aux élèves l’accès à une culture commune et partagée."
+        "A performance problem means the system is slow for a single user; a scalability problem means the system is fast for a single user but slow under heavy load."
       ],
       "wrongAnswers": [
-        "interdire tout débat sur les faits religieux en classe",
-        "obliger aux élèves d'abandonner leurs convictions personnelles à l'entrée de l'école",
-        "supprimer des jours fériés liés au calendrier"
+        "A performance problem relates to database storage limits, while a scalability problem relates to network cable bandwidth.",
+        "A performance problem occurs only on mobile devices, while a scalability problem occurs on desktop servers.",
+        "A performance problem means the network is disconnected; a scalability problem means the CPU is overheating."
       ]
     },
     {
-      "question": "À quel âge commence l'instruction obligatoire des enfants ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": ["3 ans"],
-      "wrongAnswers": ["5 ans", "2 ans", "4 ans", "6 ans"]
-    },
-    {
-      "question": "À quel âge est la majorité numérique en France ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": ["15 ans"],
-      "wrongAnswers": ["16 ans", "13 ans", "18 ans", "17 ans"]
-    },
-    {
-      "question": "À quel âge peut-on devenir électeur ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["18 ans"],
-      "wrongAnswers": ["16 ans", "21 ans", "19 ans"]
-    },
-    {
-      "question": "À quelle occasion a été construite la Tour Eiffel ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["L’exposition universelle de 1889"],
-      "wrongAnswers": [
-        "L’inauguration du premier métro parisien",
-        "Les premiers Jeux Olympiques modernes à Paris",
-        "La victoire de la France lors de la Première Guerre mondiale",
-        "Le centenaire de la mort de Napoléon Ier"
-      ]
-    },
-    {
-      "question": "À qui appartient la souveraineté nationale ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["Au peuple"],
-      "wrongAnswers": [
-        "Au président de la République",
-        "À l'État",
-        "Au Parlement (Députés et Sénateurs)",
-        "À la Constitution",
-        "Au premier ministre"
-      ]
-    },
-    {
-      "question": "À quoi sert la carte Vitale ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "Elle permet de vous identifier auprès de l'Assurance maladie.",
-        "Elle contient les informations nécessaires à la prise en charge de vos soins",
-        "Elle vous permet d'être remboursé plus rapidement pour les soins médicaux",
-        "Elle permet d'établir une feuille de soins électronique (qui remplace la feuille de soins papier)."
-      ],
-      "wrongAnswers": [
-        "Elle sert de moyen de paiement pour régler le médecin",
-        "Elle permet d'obtenir la gratuité totale de tous les médicaments",
-        "Elle stocke l'intégralité de vos comptes-rendus de radiologie et d'analyses",
-        "Elle est obligatoire pour voyager dans toute l'Union Européenne"
-      ]
-    },
-    {
-      "question": "À quoi sert le droit de grève ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "Le droit de défendre des revendications professionnelles",
-        "Le droit de cesser le travail pour défendre des revendications professionnelles sans sanction, ni licenciement, ni aucune autre mesure discriminatoire"
-      ],
-      "wrongAnswers": [
-        "Le droit de cesser le travail pour défendre des revendications professionnelles sans perte de salaire",
-        "Le droit de cesser le travail pour défendre des revendications professionnelle à condition d'une tentative de conciliation",
-        "Le droit de cesser le travail pour défendre des revendications professionnelle sans communiquer les motifs de l’arrêt de travail",
-        "Le droit pour un salarié seul de cesser le travail pour des revendications personnelles",
-        "Le droit de bloquer l'accès à l'entreprise pour empêcher les non-grévistes de travailler"
-      ]
-    },
-    {
-      "question": "À quoi sert une mutuelle santé ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "Compléter, en totalité ou partiellement, les remboursements de l’Assurance maladie (Sécurité sociale)",
-        "Permettre une prise en charge de tout ou partie des frais à votre charge en fonction du contrat choisi."
-      ],
-      "wrongAnswers": [
-        "Elle sert à verser des indemnités de salaire en cas de perte d'emploi.",
-        "Elle permet de ne jamais avoir à avancer d'argent à la pharmacie",
-        "Elle remplace totalement l'Assurance Maladie pour tous les citoyens",
-        "Elle garantit le remboursement intégral de tous les dépassements d'honoraires, quel que soit le contrat"
-      ]
-    },
-    {
-      "question": "A-t-on le droit de ne pas respecter une loi ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["Non"],
-      "wrongAnswers": [
-        "Oui, si l'on ignore que cette loi existe.",
-        "Oui, à condition de payer une taxe de non-respect.",
-        "Seulement si l'on n'a pas la nationalité française."
-      ]
-    },
-    {
-      "question": "Au nom de quoi l'État justifie-t-il la restriction des droits ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "Pour préserver l'ordre public et respecter les droits d'autrui."
-      ],
-      "wrongAnswers": [
-        "Le plaisir du gouvernement",
-        "La religion majoritaire",
-        "La tradition royale"
-      ]
-    },
-    {
-      "question": "Auprès de quel organisme faut-il demander le remboursement des frais de santé ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "L’Assurance Maladie",
-        "L’Assurance Maladie, qui transmet ensuite les informations à votre mutuelle"
-      ],
-      "wrongAnswers": [
-        "Uniquement à la mutuelle",
-        "Auprès de la mairie de votre domicile",
-        "Auprès du ministère de la Santé",
-        "Auprès de votre employeur."
-      ]
-    },
-    {
-      "question": "Auprès de quelle institution les parents peuvent inscrire leurs enfants à l'école publique ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "La mairie pour l'école maternelle",
-        "L'établissement scolaire directement pour le collège",
-        "Le lycée d'affectation, souvent via la plateforme en ligne Éduconnect"
-      ],
-      "wrongAnswers": [
-        "La plateforme Parcoursup",
-        "La Préfecture",
-        "La CAF (Caisse d'Allocations Familiales)",
-        "Le ministère de l'Éducation nationale à Paris"
-      ]
-    },
-    {
-      "question": "Combien d'États font partie de l'Union européenne au 1er janvier 2025 ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["27"],
-      "wrongAnswers": ["28", "15", "19"]
-    },
-    {
-      "question": "Combien y a-t-il de départements en France ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["101"],
-      "wrongAnswers": ["95", "100", "13"]
-    },
-    {
-      "question": "Combien y a-t-il de régions en France métropolitaine ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["13"],
-      "wrongAnswers": ["12", "101", "22", "18"]
-    },
-    {
-      "question": "Comment est désigné le Premier ministre ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Nommé par le président de la République",
-        "Via un décret de nomination qui est un acte de gouvernement"
-      ],
-      "wrongAnswers": [
-        "Par les autres membres du gouvernement",
-        "Par le président du conseil des ministres",
-        "Par un vote à la majorité simple à l'Assemblée nationale"
-      ]
-    },
-    {
-      "question": "Comment est organisé le découpage administratif de la France ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["En communes, départements et régions"],
-      "wrongAnswers": [
-        "En États fédérés",
-        "En districts coloniaux",
-        "En provinces autonomes"
-      ]
-    },
-    {
-      "question": "Comment s'appellent les établissements scolaires que les élèves intègrent après l'école élémentaire ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": ["Le Collège"],
-      "wrongAnswers": [
-        "Le Lycée",
-        "L'École maternelle",
-        "L'Université",
-        "Le CP (Cours Préparatoire)"
-      ]
-    },
-    {
-      "question": "Comment sont désignés les députés ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["Les députés sont élus au suffrage universel direct"],
-      "wrongAnswers": [
-        "Les députés sont nommés par le premier ministre",
-        "Les députés sont élus par les conseillers municipaux",
-        "Les députés sont élus au scrutin universel indirect par un collège électoral"
-      ]
-    },
-    {
-      "question": "Comment sont désignés les maires ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["Via l'élection du conseil municipal"],
-      "wrongAnswers": [
-        "Suffrage universel direct",
-        "Nommés par le préfet",
-        "Nommés par le Président"
-      ]
-    },
-    {
-      "question": "Complétez les paroles de la Marseillaise \"Allons enfants de la patrie...\"",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": ["Le jour de gloire est arrivé !"],
-      "wrongAnswers": [
-        "Ton front est ceint de fleurons glorieux !",
-        "Les vœux que l'on fait, les fleurs que l'on sème",
-        "Nation vaillante et immortelle",
-        "Nous sommes des soldats, au service de la France",
-        "Avec sa troupe de guerriers"
-      ]
-    },
-    {
-      "question": "Dans le cadre d'un entretien d'embauche, que peut-on demander au candidat ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "Des informations servant à évaluer sa capacité à occuper l'emploi proposé",
-        "Des informations servant à évaluer ses aptitudes professionnelles"
-      ],
-      "wrongAnswers": [
-        "Son lieu de résidence",
-        "Ses activités syndicales",
-        "Sa situation de famille",
-        "Ses opinions politiques"
-      ]
-    },
-    {
-      "question": "Dans lequel de ces endroits est-on autorisé à fumer ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "Domicile privé",
-        "Dans la rue",
-        "Sur les terrasses de café ou de restaurant totalement ouvertes"
-      ],
-      "wrongAnswers": [
-        "Parcs et jardins publics",
-        "Plages bordant des eaux de baignade",
-        "Abribus et zones couvertes d’attente des voyageurs",
-        "Espaces ouverts et abords des bibliothèques, piscines, stades et installations sportives",
-        "Dans un bureau individuel fermé"
-      ]
-    },
-    {
-      "question": "Dans quel cas faut-il déclarer son enfant au service d'état civil ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": ["La naissance"],
-      "wrongAnswers": [
-        "Lors de l'inscription à l'école maternelle",
-        "Au moment du baptême civil ou religieux",
-        "Lors du premier examen médical chez le pédiatre",
-        "Pour obtenir le premier versement des allocations familiales"
-      ]
-    },
-    {
-      "question": "Dans quel grand musée parisien est exposée la Joconde ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Musée du Louvre"],
-      "wrongAnswers": [
-        "Musée d'Orsay",
-        "Musée du quai Branly",
-        "Le palais des Offices"
-      ]
-    },
-    {
-      "question": "Dans quelle région est située une partie des plages du débarquement ayant permis d'engager la libération de la France ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Normandie"],
-      "wrongAnswers": [
-        "Bretagne",
-        "Hauts-de-France",
-        "Grand Est",
-        "Provence-Alpes-Côte d'Azur"
-      ]
-    },
-    {
-      "question": "Dans quelle ville les rois de France étaient-ils couronnés ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Reims"],
-      "wrongAnswers": ["Versailles", "Paris", "Lutèce", "Royan"]
-    },
-    {
-      "question": "De quand date l'appel à la résistance du général de Gaulle ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["18 juin 1940"],
-      "wrongAnswers": [
-        "1 septembre 1939",
-        "6 juin 1944",
-        "8 mai 1945",
-        "28 septembre 1958"
-      ]
-    },
-    {
-      "question": "De quelle ville française décolle la fusée Ariane ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Kourou"],
-      "wrongAnswers": [
-        "Cayenne",
-        "Toulouse",
-        "Bordeaux",
-        "Cap Canaveral",
-        "Maroni"
-      ]
-    },
-    {
-      "question": "De quoi est composé le drapeau européen ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["12 étoiles"],
-      "wrongAnswers": ["15 étoiles", "Un cercle bleu et blanc", "27 étoiles"]
-    },
-    {
-      "question": "Déclarer ses revenus aux services fiscaux est :",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "obligatoire si vous êtes domicilié en France et vous y habitez pendant plus de six mois par an",
-        "obligatoire si votre activité professionnelle principale est en France",
-        "obligatoire si vous avez en France le centre de vos intérêts économiques",
-        "obligatoire pour les personnes non domiciliées en France si elles disposent de revenus de source française"
-      ],
-      "wrongAnswers": [
-        "obligatoire si vous êtes domicilié en France et vous y habitez pendant plus de trois mois par an",
-        "non obligatoire si vous n'avez pas de revenus",
-        "possible par papier ou par internet pour tout le monde",
-        "à soumettre avant le 1 avril"
-      ]
-    },
-    {
-      "question": "Depuis le 1er juillet 2021, quelle est la durée du congé paternité ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": ["28 jours (incluant les 3 jours de naissance)"],
-      "wrongAnswers": [
-        "14 jours (incluant les 3 jours de naissance)",
-        "1 mois",
-        "2 mois",
-        "16 semaines"
-      ]
-    },
-    {
-      "question": "Depuis quand l'esclavage a-t-il été aboli en France ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["1848"],
-      "wrongAnswers": ["1789", "1944", "1905"]
-    },
-    {
-      "question": "Depuis quand les Français élisent-ils le président de la République au suffrage universel direct ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["1962"],
-      "wrongAnswers": ["1958", "2002", "2000", "1848"]
-    },
-    {
-      "question": "Depuis quelle année l'école publique est-elle gratuite ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "1881 pour l'enseignement primaire",
-        "1933 pour l'enseignement secondaire"
-      ],
-      "wrongAnswers": ["1905", "1802", "1968", "1958", "1882"]
-    },
-    {
-      "question": "Des parents ne respectent pas l'obligation d'instruction pour leurs enfants. Quelle sanction maximale risquent-ils ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": ["6 mois de prison et 7500 € d'amende"],
-      "wrongAnswers": [
-        "La suppression définitive des allocations familiales",
-        "Le retrait immédiat de l'autorité parentale.",
-        "1 mois de prison et 2000 € d'amende",
-        "Une amende pouvant aller jusqu'à 2500 €"
-      ]
-    },
-    {
-      "question": "En 1944, qu'est-ce qui a changé pour les femmes ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Les Françaises obtiennent le droit de vote"],
-      "wrongAnswers": [
-        "33 femmes sont élues à l’Assemblée constituante",
-        "Les citoyennes françaises votaient pour la première fois",
-        "Les femmes mariées ont obtenu le droit d’ouvrir un compte bancaire sans l’autorisation de leur mari",
-        "L'avortement est dépénalisé"
-      ]
-    },
-    {
-      "question": "En cas de divorce, qui exerce l'autorité parentale ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "Chacun des parents a les mêmes droits et les mêmes obligations à l'égard de l'enfant.",
-        "Chacun des parents doit maintenir des relations personnelles avec l'enfant et respecter les liens de celui-ci avec l'autre parent."
-      ],
-      "wrongAnswers": [
-        "Le parent chez qui l'enfant réside principalement",
-        "Uniquement la mère si l'enfant a moins de 6 ans",
-        "Le parent qui gagne le salaire le plus élevé",
-        "Le juge aux affaires familiales"
-      ]
-    },
-    {
-      "question": "En France, est-ce obligatoire de voter ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["Non"],
-      "wrongAnswers": [
-        "Oui, sous peine d'une amende de 150 €",
-        "Oui, l'inscription sur les listes électorales oblige à voter à chaque scrutin",
-        "Oui, mais seulement pour les élections municipales"
-      ]
-    },
-    {
-      "question": "En France, est-ce possible d'adhérer à un parti politique ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["Oui"],
-      "wrongAnswers": [
-        "Non, c'est interdit",
-        "Seulement pour les fonctionnaires",
-        "Uniquement après 10 ans de nationalité"
-      ]
-    },
-    {
-      "question": "En France, il est possible pour l'État de financer :",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "l'entretien des cathédrales",
-        "les salaires des ministres des cultes en Alsace et en Moselle",
-        "Des services d'aumônerie dans les hôpitaux, les prisons ou les lycées",
-        "La restauration de monuments historiques à caractère religieux"
-      ],
-      "wrongAnswers": [
-        "La construction de nouveaux lieux de culte.",
-        "les salaires de tous les prêtres, imams et rabbins de France",
-        "Les campagnes électorales des candidats se présentant au nom d'une religion",
-        "L’achat de livres de prières ou de matériel pour les cérémonies religieuses."
-      ]
-    },
-    {
-      "question": "En France, la conduite sans permis d'une moto est :",
-      "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "puni d'un an d'emprisonnement et de 15 000 euros d'amende",
-        "une infraction pouvant faire l'objet d'une Amende Forfaitaire Délictuelle (AFD)",
-        "une cause de confiscation obligatoire du véhicule"
-      ],
-      "wrongAnswers": [
-        "une simple contravention punie d'une amende de 135 €",
-        "une infraction qui n'entraîne jamais de peine de prison.",
-        "une infraction couverte par l'assurance",
-        "un acte autorisé si la moto fait moins de 125 cm³"
-      ]
-    },
-    {
-      "question": "En France, les impôts permettent de financer les dépenses publiques. Quelle proposition est correcte ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "Les familles sont moins imposées",
-        "La protection sociale est le premier poste de dépenses publiques en France",
-        "Plus le revenu d’une personne est important, plus le taux d’imposition qui s’applique est élevé",
-        "Aujourd’hui, plus de la moitié des foyers français ne paient pas d’impôt sur le revenu."
-      ],
-      "wrongAnswers": [
-        "L’impôt sur le revenu constitue le principal impôt payé par les Français",
-        "Les Français ne paient pas tous des impôts",
-        "L’État ne lutte pas assez contre la fraude fiscale et sociale",
-        "Les salariés sont les seuls à financer la Sécurité sociale"
-      ]
-    },
-    {
-      "question": "En quelle année a débuté la Révolution française ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["1789"],
-      "wrongAnswers": ["1848", "1914", "1492"]
-    },
-    {
-      "question": "En quelle année l'euro est-il devenu la monnaie officielle de la France ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "1999 - la monnaie officielle au niveau juridique et pour les transactions bancaires",
-        "2002 - la mise en circulation des pièces et des billets"
-      ],
-      "wrongAnswers": ["1992", "2000", "2005", "1958"]
-    },
-    {
-      "question": "En quelle année l'Union européenne a-t-elle été fondée?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["1992"],
-      "wrongAnswers": ["1951", "1957", "2007", "1999", "2002"]
-    },
-    {
-      "question": "En quelle année la citoyenneté européenne a-t-elle été créée ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["1992"],
-      "wrongAnswers": ["1789", "1945", "2010"]
-    },
-    {
-      "question": "En quelle année la loi de séparation des Églises et de l'État a-t-elle été votée ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": ["1905"],
-      "wrongAnswers": ["1789", "1881", "1958"]
-    },
-    {
-      "question": "En quelle année le traité de Maastricht, qui marque la fondation de l'Union européenne, a-t-il été signé ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["1992"],
-      "wrongAnswers": ["1789", "1918", "2020"]
-    },
-    {
-      "question": "En quelle année Napoléon Ier est-il devenu empereur ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["1804"],
-      "wrongAnswers": ["1769", "1821", "1815", "1814"]
-    },
-    {
-      "question": "En quoi consiste le devoir de solidarité ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "La volonté de vivre ensemble",
-        "Le paiement des impôts et des cotisations sociales"
-      ],
-      "wrongAnswers": [
-        "À voter à toutes les élections",
-        "À travailler gratuitement pour l'État",
-        "À dénoncer ses voisins"
-      ]
-    },
-    {
-      "question": "En tant que parent d'élève, il est possible de :",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "Accompagner votre enfant dans sa scolarité",
-        "Avoir un suivi de la scolarité des enfants",
-        "Voter pour des représentants des parents d’élèves"
-      ],
-      "wrongAnswers": [
-        "Choisir les manuels scolaires utilisés en class",
-        "Sanctionner les élèves qui ne respectent pas le règlement",
-        "Recruter les enseignants de l'école",
-        "Interdire l'enseignement d'une partie du programme pour des motifs religieux"
-      ]
-    },
-    {
-      "question": "Est-ce légal d'être marié à plusieurs personnes en même temps ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": ["Non"],
-      "wrongAnswers": [
-        "Oui, si vous êtes marié uniquement selon une loi étrangère",
-        "Oui, si vous êtes séparé de corps",
-        "Oui, si vous êtes en instance de divorce",
-        "Oui, si vous avez l'accord écrit de votre premier conjoint"
-      ]
-    },
-    {
-      "question": "Est-ce obligatoire de déclarer ses impôts chaque année en France ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "Oui, si vous êtes domicilié en France et vous y habitez pendant plus de six mois par an",
-        "Oui, si votre activité professionnelle principale est en France",
-        "Oui, si vous avez en France le centre de vos intérêts économiques",
-        "Oui, pour les personnes non domiciliées en France si elles disposent de revenus de source française"
-      ],
-      "wrongAnswers": [
-        "Oui, si vous êtes domicilié en France et vous y habitez pendant plus de trois mois par an",
-        "Non, si vous n'avez pas de revenus",
-        "Non, car avec le prélèvement à la source, l'impôt est déjà payé",
-        "Non, si vous votre seule source de revenu est un stage",
-        "Non, si vous êtes de nationalité étrangère"
-      ]
-    },
-    {
-      "question": "Est-ce possible de punir physiquement ses enfants ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "Non, le Code pénal réprime les violences quelle que soit leur nature"
-      ],
-      "wrongAnswers": [
-        "Oui, s'il n'y a pas de blessures permanentes.",
-        "Non, mais les insultes, les remarques désobligeantes, les humiliations et les menaces sont autorisés.",
-        "Oui, si la punition reste proportionnée à la faute de l'enfant",
-        "Oui, dans le cadre du \"droit de correction\" reconnu aux parents"
-      ]
-    },
-    {
-      "question": "Est-il obligatoire de porter secours à une personne en danger ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "Oui, sous peine de 5 ans d'emprisonnement et 75 000 € d'amende."
-      ],
-      "wrongAnswers": [
-        "Oui, même si l'assistance expose le témoin à un péril",
-        "Uniquement si le témoin est aussi en danger",
-        "Non, c'est un acte de charité facultatif qui relève de la conscience de chacun",
-        "Non, car vous risquez d'être poursuivi en justice si votre aide est inefficace",
-        "Uniquement si vous possédez un diplôme de secourisme ou une formation médicale"
-      ]
-    },
-    {
-      "question": "Est-il possible de licencier une femme enceinte ou en congé maternité, en raison de sa grossesse ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "Non pendant le congé maternité, puisque la salariée bénéficie d'une protection absolue",
-        "Non, mais si l'employeur et la salariée sont d'accord, il est possible de rompre le contrat par rupture conventionnelle.",
-        "Non, et le père est également protégé contre le licenciement pendant les 10 semaines qui suivent la naissance de son enfant."
-      ],
-      "wrongAnswers": [
-        "Oui si l'employeur justifie d'une impossibilité de maintenir le contrat de travail pour un motif lié à la maternité",
-        "Oui, si la salarié enceinte n'a pas informé son employeur de son état.",
-        "Oui, si la lettre de licenciement précise le motif du licenciement",
-        "Oui, à condition que l'employeur lui verse une indemnité compensatrice"
-      ]
-    },
-    {
-      "question": "Être juré d'assises est :",
-      "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "Un devoir citoyen obligatoire.",
-        "Une mission de justice rendue au nom du peuple français.",
-        "Une fonction indemnisée par l'État"
-      ],
-      "wrongAnswers": [
-        "Un acte volontaire réservé aux personnes inscrites sur une liste de bénévoles.",
-        "Une fonction réservée exclusivement aux personnes ayant un diplôme en droit.",
-        "Un rôle réservé aux fonctionnaires de police et de justice",
-        "Une fonction que l'on peut déléguer à une personne de son choix"
-      ]
-    },
-    {
-      "question": "Jusqu'à quel âge l'école est-elle obligatoire ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": ["16 ans"],
-      "wrongAnswers": ["18 ans", "14 ans", "21 ans"]
-    },
-    {
-      "question": "L'article 4 de la Déclaration des droits de l'homme et du citoyen affirme que \"la liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui\". Qu'est-ce que cela signifie ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "La liberté de chacun s'arrête là où commence celle des autres.",
-        "La loi peut interdire les actions nuisibles à la société.",
-        "Ma liberté n'est pas totale ; elle doit respecter les droits d'autrui."
-      ],
-      "wrongAnswers": [
-        "Chaque citoyen est libre de faire absolument tout ce qu'il veut sans aucune limite.",
-        "La liberté est un droit qui permet de ne pas respecter les lois si on les juge injustes.",
-        "Seul l'État est libre, les citoyens doivent uniquement obéir.",
-        "La liberté signifie que l'on peut nuire aux autres si cela est nécessaire pour son propre succè"
-      ]
-    },
-    {
-      "question": "L'avortement est-il possible en France ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": ["Oui, c'est un droit garanti par la loi"],
-      "wrongAnswers": [
-        "Non, sauf cas médical",
-        "Uniquement avec accord du maire",
-        "Oui, sans aucune limite de temps pendant toute la grossesse."
-      ]
-    },
-    {
-      "question": "L'inscription à l'Assurance maladie est :",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "Ouverte à toute personne qui travaille ou réside en France de manière stable et régulière",
-        "Obligatoire *"
-      ],
-      "wrongAnswers": [
-        "Réservée uniquement aux citoyens français",
-        "Payante et accessible uniquement aux personnes ayant un emploi",
-        "Obligatoire pour tous, y compris les touristes et les personnes en séjour irrégulier."
-      ]
-    },
-    {
-      "question": "L'inscription sur les listes électorales est :",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "obligatoire pour voter aux élections",
-        "ouverte aux citoyens Européens résidant en France, pour les élections municipales et européenes",
-        "ouverte aux français majeurs (ayant au moins 18 ans) au moment de l'élection"
-      ],
-      "wrongAnswers": [
-        "automatique pour chaque citoyen français",
-        "obligatoire sous peine de sanction administrative",
-        "possible uniquement à son domicile principal"
-      ]
-    },
-    {
-      "question": "L'instruction des enfants est obligatoire de :",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": ["3 ans à 16 ans"],
-      "wrongAnswers": [
-        "6 ans à 16 ans",
-        "3 ans à 14 ans",
-        "6 ans à 18 ans",
-        "Jusqu'à l'obtention du diplôme"
-      ]
-    },
-    {
-      "question": "La contraception :",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "l'ensemble des moyens visant à éviter une grossesse",
-        "s'adresse aux femmes et aux hommes",
-        "est remboursé selon le dispositif choisi",
-        "autorisée aux jeunes filles mineures, avec ordonnance selon le dispositif choisi, sans le consentement des parents ou du représentant légal"
-      ],
-      "wrongAnswers": [
-        "obligatoirement soumise à l'autorisation des parents pour les mineures",
-        "uniquement prescrite par un médecin généraliste",
-        "interdite avant l'âge de 18 ans",
-        "est remboursée uniquement pour les femmes",
-        "est toujours remboursée par l'Assurance Maladie"
-      ]
-    },
-    {
-      "question": "La liberté d'association est :",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "un droit fondamental en France",
-        "permet aux individus de se réunir et de s’organiser pour défendre des intérêts communs.",
-        "inscrit dans la Déclaration des Droits de l’Homme et du Citoyen de 1789",
-        "inscrit dans la Constitution de la Vème république"
-      ],
-      "wrongAnswers": [
-        "Un devoir civique obligatoire pour chaque citoyen majeur.",
-        "Réservée exclusivement aux personnes de nationalité française.",
-        "Soumise à l'autorisation préalable du préfet ou du Gouvernement."
-      ]
-    },
-    {
-      "question": "La liberté d'expression sur les réseaux sociaux en France est :",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "Un droit précieux dont on doit assumer les abus devant la loi",
-        "Limitée par le respect d'autrui (interdiction de la haine et de l'injure)",
-        "Régulée par un cadre européen (DSA) pour protéger les citoyens",
-        "Conditionnée par le maintien de l'ordre public"
-      ],
-      "wrongAnswers": [
-        "Un droit absolu qui permet de tout dire anonymement sans aucune conséquence légale.",
-        "Une liberté qui ne s'applique pas sur internet car les réseaux sociaux sont des espaces privés.",
-        "Un droit qui autorise la critique des religions seulement si elle ne blesse pas les croyants.",
-        "Une liberté totalement contrôlée et censurée par le Gouvernement avant chaque publication"
-      ]
-    },
-    {
-      "question": "La séparation des pouvoirs est un principe fondamental. Quels sont les trois pouvoirs concernés ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["Législatif, exécutif, judiciaire"],
-      "wrongAnswers": [
-        "National, régional, départemental",
-        "L'Assemblée nationale, le sénat, le conseil constitutionnel",
-        "Liberté, fraternité, égalité"
-      ]
-    },
-    {
-      "question": "La vente d'alcool en France est interdite aux personnes de moins de :",
-      "theme": "Droits et devoirs",
-      "correctAnswers": ["18 ans"],
-      "wrongAnswers": ["16 ans", "21 ans", "19 ans", "15 ans"]
-    },
-    {
-      "question": "Laquelle de ces citations est inscrite dans la Déclaration des Droits de l'Homme et du Citoyen de 1789 ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "Les hommes naissent et demeurent libres et égaux en droits",
-        "La Liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui",
-        "La Loi est l'expression de la volonté générale",
-        "Tout homme étant présumé innocent jusqu'à ce qu'il ait été déclaré coupable"
-      ],
-      "wrongAnswers": [
-        "La République est une et indivisible, laïque, démocratique et sociale",
-        "Le but de la société est le bonheur commun et la protection des faibles",
-        "Nul ne peut être inquiété pour sa condition sociale ou sa fortune",
-        "La fraternité est le premier devoir de chaque citoyen envers la Nation"
-      ]
-    },
-    {
-      "question": "Le 11 novembre est un jour férié. À quoi correspond cette date ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "La fin de la Première Guerre mondiale",
-        "L’Armistice signé en 1918"
-      ],
-      "wrongAnswers": [
-        "Le traité de Versailles",
-        "La fin de la Seconde Guerre mondiale en Europe",
-        "La Toussaint",
-        "La fête du Travail",
-        "Débarquement de Normandie"
-      ]
-    },
-    {
-      "question": "Le non-respect du code de la route est :",
-      "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "Un délit ou une infraction puni(e) par des amendes, des retraits de points ou des peines de prison selon la gravité",
-        "Passible de sanctions administratives et pénales, comme le retrait du permis de conduire ou une amende forfaitaire",
-        "Un comportement dangereux qui peut entraîner des accidents, des blessures ou des décès, et qui est sanctionné par la loi",
-        "Un manquement aux règles de sécurité routière, pouvant entraîner des sanctions graduelles (amende, suspension de permis, stage de sensibilisation, etc.)"
-      ],
-      "wrongAnswers": [
-        "Une faute qui ne concerne que les conducteurs professionnels",
-        "Un comportement toléré si aucun accident n’est causé",
-        "Une infraction qui ne peut jamais entraîner de peine de prison",
-        "Un manquement qui ne peut pas entraîner de retrait de points sur le permis de conduire"
-      ]
-    },
-    {
-      "question": "Le stationnement sur une place réservée aux personnes handicapées :",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "encourt une contravention de 4e catégorie dès lors que votre véhicule ne dispose par d'une des deux cartes prévue à cet effet",
-        "sans CMI S ni Carte européenne de stationnement est punie d'une amende de 135 euros",
-        "est gratuit avec la CMI stationnement en voirie"
-      ],
-      "wrongAnswers": [
-        "Est autorisé pour un arrêt de courte durée (moins de 10 minutes) si vous restez au volant",
-        "Est autorisé si le parking est complet et qu'aucune autre place n'est disponible",
-        "Est toléré le dimanche et les jours fériés pour tout le monde",
-        "Est permis si vous avez une personne âgée à bord, même sans carte",
-        "Donne lieu à une simple amende de 17 € (amende forfaitaire de base)"
-      ]
-    },
-    {
-      "question": "Lequel de ces crimes ou délits peut entrainer la privation des droits civils et politiques par un juge ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "Le détournement de fonds publics ou la corruption",
-        "Les actes de terrorisme",
-        "Les violences graves ou homicides volontaires",
-        "La fraude fiscale aggravée"
-      ],
-      "wrongAnswers": [
-        "Un simple excès de vitesse ou une infraction au Code de la route",
-        "Le non-paiement d'une amende de stationnement",
-        "Une rupture abusive de contrat de travail (licenciement illégal)",
-        "Le défaut de présentation de sa carte d'identité lors d'un contrôle"
-      ]
-    },
-    {
-      "question": "Lequel de ces pays est un pays fondateur de l'Union Européenne ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Allemagne", "France", "Italie", "Pays-Bas"],
-      "wrongAnswers": [
-        "Espagne",
-        "Portugal",
-        "Royaume-Uni",
-        "Suisse",
-        "Danemark"
-      ]
-    },
-    {
-      "question": "Lequel de ces personnages a un lien avec la République française ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Marianne",
-        "Jean Jaurès",
-        "Charles de Gaulle",
-        "L'Abbé Grégoire"
-      ],
-      "wrongAnswers": [
-        "Louis XIV",
-        "Louis XVI",
-        "Vercingétorix",
-        "Charlemagne",
-        "Clovis"
-      ]
-    },
-    {
-      "question": "Lequel de ces prénoms évoque un symbole de la République ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": ["Marianne"],
-      "wrongAnswers": ["Napoléon", "Jeanne", "Charles", "Louis"]
-    },
-    {
-      "question": "Lequel de ces symboles représente la République française ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "Le sceau",
-        "Le coq",
-        "Le faisceau du licteur",
-        "Marianne"
-      ],
-      "wrongAnswers": [
-        "La fleur de lis",
-        "La tour Eiffel",
-        "La baguette",
-        "Le croissant",
-        "La vache"
-      ]
-    },
-    {
-      "question": "Les citoyens de l'Union européenne peuvent-ils voter aux élections locales dans un autre État de l'Union ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Oui, à condition de résider dans cet État membre et de jouir de ses droits civils et politiques tant dans son pays d'origine que dans le pays d'accueil",
-        "Oui, à condition d'avoir au moins 18 ans la veille du premier tour de l'élection",
-        "Oui, à condition d'habier dans le pays des élections locales"
-      ],
-      "wrongAnswers": [
-        "Non, le droit de vote est strictement réservé aux citoyens possédant la nationalité du pays où se déroule l'élection",
-        "Oui, ils sont inscrits automatiquement sur les listes électorales dès qu'ils déclarent leur domicile en mairie",
-        "Oui, ils peuvent voter à toutes les élections nationales, y compris l'élection présidentielle et les législatives",
-        "Oui, ils peuvent voter dans deux pays différents pour la même élection européenne s'ils y possèdent une résidence",
-        "Oui, à condition de résider dans le pays depuis au moins 10 ans sans interruption"
-      ]
-    },
-    {
-      "question": "Lesquels sont des symboles officiels de la République française ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": ["Marianne", "La fête nationale", "L'hymne français"],
-      "wrongAnswers": [
-        "Le coq",
-        "La tour Eiffel",
-        "La baguette",
-        "Le croissant"
-      ]
-    },
-    {
-      "question": "Lors de la seconde guerre mondiale, à quelle date la ville de Paris a-t-elle été libérée ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["25 août 1944"],
-      "wrongAnswers": [
-        "5 juin 1944",
-        "11 novembre 1918",
-        "8 mai 1945",
-        "18 juin 1940"
-      ]
-    },
-    {
-      "question": "Où est le siège de la Banque centrale européenne ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["Francfort"],
-      "wrongAnswers": ["Strasbourg", "Bruxelles", "Paris", "Luxembourg"]
-    },
-    {
-      "question": "Où est le siège de la Commission européenne ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["Bruxelles"],
-      "wrongAnswers": ["Strasbourg", "Luxembourg", "Paris", "Francfort"]
-    },
-    {
-      "question": "Où est le siège du Parlement européen ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["Strasbourg"],
-      "wrongAnswers": ["Bruxelles", "Paris", "Berlin"]
-    },
-    {
-      "question": "Où faut-il déclarer la naissance d'un enfant ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": ["À la mairie du lieu de naissance"],
-      "wrongAnswers": [
-        "À la mairie du domicile des parents",
-        "À la préfecture du département",
-        "Au commissariat de police ou à la gendarmerie",
-        "Uniquement à la maternité (hôpital ou clinique)",
-        "À l'ambassade de votre pays d'origine"
-      ]
-    },
-    {
-      "question": "Où peut-on voir des peintures préhistoriques en France ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Les grottes de Lascaux",
-        "Les grottes de Chauvet",
-        "Les grottes de Cosquer"
-      ],
-      "wrongAnswers": [
-        "Les catacombes de Paris",
-        "Le musée du Louvre",
-        "La grotte d'Altamira",
-        "Les grottes de l'Himalaya",
-        "Le château de Versailles"
-      ]
-    },
-    {
-      "question": "Où peut-on voir la devise de la République ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "sur les bâtiments publics : mairies, écoles, tribunaux",
-        "sur certaines pièces de monnaie et timbres",
-        "sur les documents officiels",
-        "dans la Constitution française"
-      ],
-      "wrongAnswers": [
-        "Dans les églises",
-        "Dans le entreprises",
-        "Dans la signalisation routière",
-        "Dans les centres commerciaux"
-      ]
-    },
-    {
-      "question": "Parmi ces autorités, laquelle est élue ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Le président de la République",
-        "Les députés (Assemblé nationale)"
-      ],
-      "wrongAnswers": [
-        "Président du conseil constitutionnel",
-        "Le premier ministre",
-        "Le préfet"
-      ]
-    },
-    {
-      "question": "Parmi ces textes, lequel a été adopté sous Napoléon Ier ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Le Code civil des Français",
-        "Le Code de procédure civile",
-        "Le Code de commerce",
-        "Le Code pénal"
-      ],
-      "wrongAnswers": [
-        "La Déclaration des Droits de l'Homme et du Citoyen",
-        "La Constitution de la Ve République",
-        "La Loi de séparation des Églises et de l'État",
-        "La loi instaurant les congés payés",
-        "L'édit de Nantes"
-      ]
-    },
-    {
-      "question": "Pendant quelles journées peut-on visiter gratuitement des lieux culturels en France ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "L’accès aux collections de la plupart des musées nationaux est gratuit le premier dimanche de chaque mois.",
-        "Les Journées européennes du patrimoine (JEP) sont des manifestations nationales et internationales annuelles qui permettent au public la découverte de nombreux édifices et autres lieux qui ne sont souvent qu'exceptionnellement ouverts au public, ou de musées qui vont alors modifier leur offre voire leur tarification pour l'occasion.",
-        "La nuit européenne des musées",
-        "La fête de la musique"
-      ],
-      "wrongAnswers": [
-        "Le 14 juillet",
-        "Lors de la Fête des voisins",
-        "Chaque samedi de l'année",
-        "Pendant toute la durée des vacances scolaires",
-        "Pendant les \"Journées du Patrimoine mondial de l'UNESCO\""
-      ]
-    },
-    {
-      "question": "Peut-on brûler publiquement un drapeau français ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "Non, car c'est un outrage à un symbole de la République qui représente l'unité de la Nation."
-      ],
-      "wrongAnswers": [
-        "Oui, car la liberté d'expression permet de détruire n'importe quel symbole public.",
-        "Oui, mais seulement si le drapeau appartient à la personne qui le brûle.",
-        "Non, sauf si l'acte a lieu lors d'une manifestation autorisée par la préfecture."
-      ]
-    },
-    {
-      "question": "Pour obtenir une carte d'identité, il faut :",
-      "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "Se rendre (souvent avec rendez-vous) dans une mairie équipée d'une station d'enregistrement (et souvent faire une pré-demande en ligne)",
-        "1 justificatif de domicile de moins de 1 an",
-        "1 photo d'identité de moins de 6 mois et conforme aux normes"
-      ],
-      "wrongAnswers": [
-        "Se rendre directement au Commissariat de police",
-        "Demander au Président de la République par courrier",
-        "Aller à la Préfecture sans rendez-vous",
-        "Payer une taxe de 100 €"
-      ]
-    },
-    {
-      "question": "Pour quel motif peut-on limiter la liberté d'expression ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "Pour assurer la sauvegarde de l'ordre public",
-        "Pour protéger les individus contre l'injure ou la diffamation",
-        "Pour sanctionner l'incitation à la haine, à la violence ou à la discrimination",
-        "Pour garantir la neutralité du service public"
-      ],
-      "wrongAnswers": [
-        "Pour empêcher toute critique envers le Gouvernement ou le Président",
-        "Pour interdire les idées qui déplaisent à la majorité de la population",
-        "Pour censurer des informations journalistiques dérangeantes",
-        "Pour des motifs de simple convenance personnelle"
-      ]
-    },
-    {
-      "question": "Pourquoi l'année 1958 est importante pour la France ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "C'est l'année de la création de la Ve République",
-        "C'est l'année du retour au pouvoir du Général de Gaulle",
-        "C'est l'année de l'adoption par référendum de la Constitution actuelle",
-        "C'est la fin de la IVe République"
-      ],
-      "wrongAnswers": [
-        "C'est l'année de la fin de la Seconde Guerre mondiale",
-        "C'est l'année où les femmes ont obtenu le droit de vote",
-        "C'est l'année de la construction du Mur de Berlin",
-        "C'est l'année où la France a adopté l'Euro comme monnaie",
-        "C'est l'année de la signature du Traité de Rome"
-      ]
-    },
-    {
-      "question": "Qu'est-ce qu'une liberté ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "Un droit pour tous, sans faire de différence entre les pays d’origine d’une personne, ses parents ou ses ancêtres, sa religion…",
-        "Une valeur fondamentale qui est garantie par la Déclaration des droits de l’homme et du citoyen de 1789.",
-        "Pouvoir faire tout ce qui ne nuit pas à autrui"
-      ],
-      "wrongAnswers": [
-        "Un privilège réservé exclusivement aux personnes possédant la nationalité française",
-        "Un droit absolu qui ne peut jamais être limité par la loi, même en cas d'abus",
-        "Un pouvoir accordé par le Président de la République selon son choix."
-      ]
-    },
-    {
-      "question": "Qu'est-ce que l'État de droit ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "La loi est la même pour tous, y compris pour l’État",
-        "Le droit est supérieur aux pouvoirs et aux autorités politiques",
-        "L'état de droit garantit le respect des droits fondamentaux et de la démocratie."
-      ],
-      "wrongAnswers": [
-        "L'État respecte toujours la loi",
-        "Le président de la Republique n'a pas d'immunité durant son mandat",
-        "C'est un État où le Gouvernement a tous les droits pour maintenir l'ordre."
-      ]
-    },
-    {
-      "question": "Qu'est-ce que la citoyenneté numérique ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "C’est l’équilibre entre la liberté d’expression et la responsabilité de chaque utilisateur sur les plateformes numériques",
-        "C’est une composante essentielle de la vitalité de la démocratie, qui repose sur des usages citoyens et responsables en ligne",
-        "C’est une démarche qui passe par l’éducation aux médias, afin que chaque citoyen puisse agir de manière éclairée et critique"
-      ],
-      "wrongAnswers": [
-        "C’est un système où seule la régulation par les plateformes (algorithmes) suffit à protéger la démocratie",
-        "C’est le droit de s'affranchir de ses responsabilités grâce à l'utilisation d'un pseudonyme",
-        "C’est une éducation réservée uniquement aux experts en informatique et aux ingénieurs",
-        "C’est l'idée que la liberté numérique signifie l'absence totale de lois ou de règles de civilité."
-      ]
-    },
-    {
-      "question": "Qu'est-ce que la France d'outre-mer ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "L'ensemble des territoires sous souveraineté française situés hors d'Europe",
-        "Les Départements et Régions d’Outre-Mer (DROM) et les Collectivités d’Outre-Mer (COM)"
-      ],
-      "wrongAnswers": [
-        "Les pays étrangers qui parlent français (la Francophonie)",
-        "Les départements situés dans le sud de la France métropolitaine",
-        "Des colonies qui n'ont pas le droit de vote",
-        "Des pays alliés de la France mais indépendants"
-      ]
-    },
-    {
-      "question": "Qu'est-ce que la laïcité ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "Un principe juridique d'organisation des pouvoirs publics, un modèle de relations entre l'Etat et les religions",
-        "La liberté de croire, de ne pas croire, de ne plus croire, de changer de religion et de pratiquer un culte.",
-        "La séparation des institutions publiques et des organisations religieuses"
-      ],
-      "wrongAnswers": [
-        "L'interdiction de pratiquer une religion dans l'espace public",
-        "L'obligation pour l'État de financer équitablement tous les cultes",
-        "Une idéologie qui vise à supprimer les croyances religieuses.",
-        "La prédominance d'une religion historique sur les autres"
-      ]
-    },
-    {
-      "question": "Qu'est-ce que la liberté d'association ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "Le droit de chaque personne - française ou étrangère - de s’engager librement",
-        "Un droit inscrit dans la loi du 1er juillet 1901",
-        "Le droit d'adhérer à un syndicat ou à un parti politique",
-        "Le droit de travailler ou être bénévole dans une association"
-      ],
-      "wrongAnswers": [
-        "Le droit de créer ou participer à des associations uniquement sans but lucratif",
-        "Elle autorise la création des associations non-soumises au code de travail",
-        "Nécessite l'accord écrit du maire de la commune.",
-        "Est suspendue durant les périodes d'élections législatives."
-      ]
-    },
-    {
-      "question": "Qu'est-ce que la Shoah ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Le génocide des Juifs organisé par l’Allemagne nazie pendant la Seconde Guerre mondiale",
-        "L'extermination de six millions de Juifs, organisée de manière industrielle par l'État nazi entre 1941 et 1945",
-        "Le plus grand génocide de l’histoire",
-        "Un crime contre l’humanité"
-      ],
-      "wrongAnswers": [
-        "Une bataille militaire majeure",
-        "Une révolte de prisonniers de guerre",
-        "L'ensemble des victimes civiles de la Seconde Guerre mondiale",
-        "Un mouvement politique allemand"
-      ]
-    },
-    {
-      "question": "Qu'est-ce que le devoir de mémoire ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "Il consiste à préserver et à transmettre aux plus jeunes la mémoire de ceux qui ont défendu le territoire national.",
-        "Il vise à partager les valeurs républicaines portées par les femmes et les hommes s'étant battus pour les idéaux de la France.",
-        "Il permet d'honorer l'engagement des citoyens qui se sont sacrifiés pour la liberté et la défense de la patrie",
-        "Il sert à entretenir le lien entre les générations autour de l'histoire commune et des valeurs de la République."
-      ],
-      "wrongAnswers": [
-        "Il consiste à oublier les erreurs du passé pour ne célébrer que les victoires militaires",
-        "Il oblige les jeunes à s'engager dans l'armée dès la fin de leur scolarité",
-        "Il consiste à réciter par cœur la biographie de tous les présidents de la République",
-        "Il sert uniquement à décorer les monuments aux morts lors des jours fériés"
-      ]
-    },
-    {
-      "question": "Qu'est-ce que le principe de confidentialité dans le domaine de la santé ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "L'obligation pour tout professionnel de santé de ne pas divulguer les informations concernant un patient à des tiers non autorisés.",
-        "Chaque professionnel qui connaît ou suit votre état de santé doit respecter le secret médical.",
-        "Un professionnel de santé qui a des informations sur vous ne doit pas les communiquer à d'autres personnes."
-      ],
-      "wrongAnswers": [
-        "L'interdiction pour le patient de parler de sa maladie à sa famille",
-        "Le droit pour un médecin de cacher le diagnostic au patient lui-même",
-        "Une règle qui ne s'applique qu'aux médecins",
-        "Le droit pour l'employeur d'accéder au dossier médical de son salarié"
-      ]
-    },
-    {
-      "question": "Qu'est-ce que le SMIC ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "Salaire horaire minimum légal en dessous duquel le salarié ne peut pas être rémunéré.",
-        "Smic (salaire minimum interprofessionnel de croissance)",
-        "1 823,03 € brut mensuel pour les majeurs",
-        "Il est indexé sur l'inflation mesurée pour les 20 % des ménages ayant les revenus les plus faibles"
-      ],
-      "wrongAnswers": [
-        "1 443,11 € mensuel pour les majeurs",
-        "C'est le salaire moyen constaté dans le secteur privé en France",
-        "C'est une allocation de solidarité versée par la CAF aux personnes sans activité",
-        "C'est le plafond de ressources à ne pas dépasser pour payer l'impôt sur le revenu",
-        "C'est un salaire fixé librement par chaque employeur en fonction des bénéfices de l'entreprise"
-      ]
-    },
-    {
-      "question": "Qu'est-ce que le tiers payant ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "La dispense d'avance des frais de santé",
-        "Un dispositif permettant de ne payer que la part non prise en charge",
-        "Un mécanisme de paiement direct par l'Assurance Maladie au professionnel de santé",
-        "Le dispositif qui permet au patient de ne pas avancer les frais de santé qui sont pris en charge par l'Assurance Maladie et la complémentaire santé"
-      ],
-      "wrongAnswers": [
-        "Une assurance privée réservée aux personnes les plus riches",
-        "Le fait de payer ses soins en trois fois sans frais",
-        "Une taxe supplémentaire prélevée sur le salaire",
-        "L'obligation de consulter trois médecins différents avant d'être remboursé"
-      ]
-    },
-    {
-      "question": "Quand a eu lieu la Première guerre mondiale ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["1914 - 1918"],
-      "wrongAnswers": [
-        "1939 - 1945",
-        "1954 - 1962",
-        "1789 - 1799",
-        "1870 - 1871"
-      ]
-    },
-    {
-      "question": "Quand a eu lieu la Seconde guerre mondiale ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["1939 - 1945"],
-      "wrongAnswers": [
-        "1914 - 1918",
-        "1936 - 1939",
-        "1940 - 1944",
-        "1939 - 1941"
-      ]
-    },
-    {
-      "question": "Quand est célébrée la journée de l'Europe ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["Le 9 mai"],
-      "wrongAnswers": [
-        "Le 8 mai",
-        "Le 1 mai",
-        "Le 11 novembre",
-        "Le 14 juillet"
-      ]
-    },
-    {
-      "question": "Quand faut-il déclarer son enfant au service d'état civil ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "Dans les 5 jours qui suivent le jour de l'accouchement"
-      ],
-      "wrongAnswers": [
-        "Dans les 3 jours qui suivent l'accouchement",
-        "Dans le mois qui suit la sortie de la maternité",
-        "Dès que l'enfant a reçu son premier vaccin",
-        "Dans les 24 heures qui suivent la naissance"
-      ]
-    },
-    {
-      "question": "Quand la sécurité sociale a-t-elle été établie en France ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": ["1945"],
-      "wrongAnswers": ["1905", "1958", "1918", "1981"]
-    },
-    {
-      "question": "Que célèbre-t-on le 8 mai ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["La fin de la Seconde Guerre mondiale en Europe"],
-      "wrongAnswers": [
-        "L'Armistice de la Première Guerre mondiale",
-        "La Fête nationale",
-        "La Fête du Travail",
-        "La signature de la Déclaration des Droits de l'Homme",
-        "L'Appel du 18 juin"
-      ]
-    },
-    {
-      "question": "Que commémore la fête nationale ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "La prise de la Bastille (14 juillet 1789)",
-        "La première Fête de la Fédération (le 14 juillet 1790)"
-      ],
-      "wrongAnswers": [
-        "L'exposition universelle de 1889",
-        "La fin de la Première Guerre mondiale",
-        "La fin de la Guerre d’Algérie",
-        "La fin de la Seconde Guerre mondiale"
-      ]
-    },
-    {
-      "question": "Que dit l'article 1er de la Constitution française ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "La France est une République indivisible, laïque, démocratique et sociale",
-        "La loi favorise l'égal accès des femmes et des hommes aux mandats électoraux et fonctions électives, ainsi qu'aux responsabilités professionnelles et sociales",
-        "La France assure l'égalité devant la loi de tous les citoyens sans distinction d'origine, de race ou de religion",
-        "La France respecte toutes les croyances. Son organisation est décentralisée."
-      ],
-      "wrongAnswers": [
-        "La France assure l'égalité uniquement entre les citoyens nés sur le territoire national",
-        "La langue de la République est le français",
-        "La France est une République fédérale composée de régions autonomes",
-        "La souveraineté nationale appartient au peuple",
-        "Le Président de la République veille au respect de la Constitution"
-      ]
-    },
-    {
-      "question": "Que dit la loi de 1905 ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "La République assure la liberté de conscience.",
-        "La République ne reconnaît, ne salarie ni ne subventionne aucun culte."
-      ],
-      "wrongAnswers": [
-        "Les ministres des cultes (prêtres, imams, rabbins) sont des fonctionnaires rémunérés par l'État",
-        "Les croyances religieuses permettent de s'affranchir des lois communes de la République",
-        "La République reconnaît une religion officielle parmi les cultes les plus pratiqués",
-        "L'État finance la construction de nouveaux lieux de culte avec l'argent des impôts"
-      ]
-    },
-    {
-      "question": "Que doit faire un citoyen s'il est appelé à être juré dans un procès d'assises ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": ["C'est un devoir, il doit y participer"],
-      "wrongAnswers": [
-        "Il peut refuser sans motif",
-        "C'est réservé aux avocats",
-        "Il peut proposer à un membre de sa famille de le remplacer lors des audiences."
-      ]
-    },
-    {
-      "question": "Que garantit la liberté de la presse ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": ["Le droit de diffuser des informations librement"],
-      "wrongAnswers": [
-        "La censure par l'État",
-        "L'obligation de vérité absolue",
-        "La diffusion des injures ou des propos diffamatoires sans limites"
-      ]
-    },
-    {
-      "question": "Que garantit le principe de laïcité ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "la liberté de croire, de ne pas croire, de ne plus croire, de changer de religion et de pratiquer un culte.",
-        "la séparation des institutions publiques et des organisations religieuses.",
-        "Si l’Etat ne reconnaît aucune religion, il n’en méconnaît aucune et prend en compte le fait religieux, qui constitue une réalité sociale."
-      ],
-      "wrongAnswers": [
-        "L'obligation pour tous les citoyens de ne pratiquer aucune religion en privé",
-        "Le droit d'utiliser ses croyances religieuses pour ne pas respecter les lois de la République",
-        "Le financement par l'État de la construction des lieux de culte et du salaire des religieux",
-        "L'interdiction totale de parler de religion dans l'espace public"
-      ]
-    },
-    {
-      "question": "Que permet la liberté de circulation ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "Elle permet aux citoyens de circuler en France et dans l'ensemble des pays membres de l'espace Schengen",
-        "Voyager sans contrôle systématique aux frontières intérieures de l'espace Schengen (pour les États membres)"
-      ],
-      "wrongAnswers": [
-        "Entrer dans des propriétés privées sans autorisation",
-        "Circuler librement sans jamais avoir à présenter de document d'identité en cas de contrôle légal",
-        "Voter aux élections présidentielles de n'importe quel pays de l'Union européenne où l'on circule",
-        "S'installer dans n'importe quel pays du monde sans avoir besoin de visa ou de passeport"
-      ]
-    },
-    {
-      "question": "Que porte Marianne sur la tête ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": ["Le bonnet phrygien"],
-      "wrongAnswers": ["Un beret", "Une couronne", "Une tiare", "Rien"]
-    },
-    {
-      "question": "Que signifie être citoyen d'un État ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "Avoir la nationalité du pays et bénéficier de sa protection",
-        "Jouir de droits civiques et politiques",
-        "Être l'auteur indirect des lois en élisant des représentants qui les voten",
-        "Rrespecter la loi"
-      ],
-      "wrongAnswers": [
-        "Être obligé d'appartenir à un parti politique",
-        "Faire le service militaire obligatoire de 12 mois",
-        "Être obligé de voter à chaque élection",
-        "Posséder un titre de séjour permanent"
-      ]
-    },
-    {
-      "question": "Que signifie la date du 14 juillet pour les Français ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "La prise de la Bastille (1789)",
-        "La première Fête de la Fédération (1790)",
-        "La Fête nationale française"
-      ],
-      "wrongAnswers": [
-        "L'anniversaire de la naissance de la République",
-        "La fin de la Seconde Guerre mondiale",
-        "Le jour de l'armistice de la Grande Guerre",
-        "Le jour de la signature de la Constitution actuelle"
-      ]
-    },
-    {
-      "question": "Que signifie le mot \"fraternité\" dans la devise française ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "La solidarité entre les citoyens",
-        "La volonté de vivre ensemble"
-      ],
-      "wrongAnswers": [
-        "L'amitié entre les peuples",
-        "L'obéissance aux lois",
-        "L'appartenance à une religion"
-      ]
-    },
-    {
-      "question": "Que sont les droits fondamentaux ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "Les droits et les libertés élémentaires que tout le monde doit respecter pour assurer le bien-être de chacun",
-        "Les droits liés à la personne humaine",
-        "Les droits sociaux et économiques",
-        "Les droits dits \"de troisième génération\" qui sont collectifs"
-      ],
-      "wrongAnswers": [
-        "Des privilèges réservés uniquement aux citoyens français",
-        "Des règles qui changent à chaque nouvelle élection",
-        "Le droit de ne pas payer d'impôts",
-        "Le droit de faire tout ce que l'on veut sans limites"
-      ]
-    },
-    {
-      "question": "Que symbolise le 1er mai ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "La Fête du travail",
-        "La commémoration des luttes pour la journée de 8 heures"
-      ],
-      "wrongAnswers": [
-        "La fête du Printemps",
-        "L'anniversaire de la signature de l'Armistice de 1945",
-        "La célébration de la déclaration des Droits de l'Homme",
-        "Une fête religieuse en l'honneur de Saint-Joseph",
-        "Le jour où l'on célèbre la fondation de la Sécurité sociale"
-      ]
-    },
-    {
-      "question": "Quel célèbre philosophe des Lumières a dénoncé l'esclavage ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Montesquieu", "Voltaire", "Condorcet"],
-      "wrongAnswers": [
-        "Napoléon Bonaparte",
-        "René Descartes",
-        "Molière",
-        "Louis XIV",
-        "Jean de La Fontaine"
-      ]
-    },
-    {
-      "question": "Quel château célèbre se trouve près de Paris et symbolise le pouvoir royal de Louis XIV ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Le château de Versailles"],
-      "wrongAnswers": ["Le Louvre", "Amboise", "Le Mont-Saint-Michel"]
-    },
-    {
-      "question": "Quel département français a une frontière avec le Brésil ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["La Guyane"],
-      "wrongAnswers": ["La Guadeloupe", "Mayotte", "La Martinique"]
-    },
-    {
-      "question": "Quel droit protège une personne contre une arrestation arbitraire ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": ["Le droit à la sûreté"],
-      "wrongAnswers": [
-        "Le droit de propriété",
-        "Le droit de grève",
-        "Le droit au logement"
-      ]
-    },
-    {
-      "question": "Quel est l'âge de la majorité civile en France ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": ["18 ans"],
-      "wrongAnswers": ["16 ans", "15 ans", "21 ans", "23 ans"]
-    },
-    {
-      "question": "Quel est l'hymne de l'Union Européenne ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Ode à la joie",
-        "Mélodie de la Neuvième symphonie de Ludwig van Beethove"
-      ],
-      "wrongAnswers": [
-        "L'Hymne de la Victoire",
-        "Chant de la Liberté",
-        "Oui, nous aimons ces pays",
-        "Hymne aux gens de l'Europe"
-      ]
-    },
-    {
-      "question": "Quel est l'objectif des lois scolaires de la IIIe République ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Elles visent à rendre l'école primaire publique gratuite, laïque et obligatoire",
-        "Elles visent à soustraire l'enseignement à l'influence de l'Église",
-        "Elles ont pour objectif de renforcer l'unité nationale"
-      ],
-      "wrongAnswers": [
-        "Elles visent à rendre l'école payante pour financer les guerres coloniales",
-        "Elles ont pour but d'interdire aux filles d'aller à l'école",
-        "Elles visaient à rendre l'enseignement du catéchisme obligatoire à l'école",
-        "Elles avaient pour objectif de supprimer les vacances scolaires",
-        "Elles visaient à limiter l'enseignement aux seules langues régionales"
-      ]
-    },
-    {
-      "question": "Quel est l'un des devoirs principaux d'un citoyen français ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "Respecter la loi",
-        "Contribuer au financement des services publics (impôts)"
-      ],
-      "wrongAnswers": [
-        "Voter",
-        "Faire des enfants",
-        "Se présenter aux élections"
-      ]
-    },
-    {
-      "question": "Quel est le 101ème département français depuis 2011 ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Mayotte"],
-      "wrongAnswers": ["La Guadeloupe", "La Réunion", "La Guyane"]
-    },
-    {
-      "question": "Quel est le chef-lieu de la région Auvergne-Rhône-Alpes ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Lyon"],
-      "wrongAnswers": [
-        "Saint-Étienne",
-        "Clermont-Ferrand",
-        "Grenoble",
-        "Annecy",
-        "Valence"
-      ]
-    },
-    {
-      "question": "Quel est le chef-lieu de la région Bretagne ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Rennes"],
-      "wrongAnswers": ["Brest", "Lannion", "Quimper", "Finistère"]
-    },
-    {
-      "question": "Quel est le chef-lieu de la région Provence-Alpes-Côte d'Azur ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Marseilles"],
-      "wrongAnswers": ["Nice", "Aix-en-Provence", "Toulon", "Cannes", "Lyon"]
-    },
-    {
-      "question": "Quel est le dernier État à avoir intégré l'Union européenne ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["La Croatie"],
-      "wrongAnswers": [
-        "La Bulgarie",
-        "La Roumanie",
-        "Le Royaume-Uni",
-        "L'Ukraine"
-      ]
-    },
-    {
-      "question": "Quel est le dernier État à avoir intégré l'Union européenne en 2013 ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["La Croatie"],
-      "wrongAnswers": [
-        "La Bulgarie",
-        "La Roumanie",
-        "Le Royaume-Uni",
-        "L'Ukraine"
-      ]
-    },
-    {
-      "question": "Quel est le principal port maritime de France ? *",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Marseille FOS"],
-      "wrongAnswers": [
-        "Le port de Brest",
-        "Le port de Nice",
-        "Le port de La Rochelle",
-        "Le port de Saint-Malo"
-      ]
-    },
-    {
-      "question": "Quel est le rôle du Conseil constitutionnel ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Veiller au respect de la Constitution",
-        "Se prononcer sur la conformité des lois"
-      ],
-      "wrongAnswers": [
-        "Voter le budget de l'État",
-        "Diriger la police",
-        "Rédiger les lois"
-      ]
-    },
-    {
-      "question": "Quel est le rôle du Défenseur des droits ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Veille au respect des droits et libertés par les établissements publics",
-        "Veille au respect des droits et libertés par les collectivités territoriales"
-      ],
-      "wrongAnswers": [
-        "Veille à la régularité de l'élection du Président de la République",
-        "Veille à la régularité des opérations de référendum",
-        "Garant de l'indépendance de l'autorité judiciaire",
-        "Conduit la politique de la nation"
-      ]
-    },
-    {
-      "question": "Quel est le rôle du Premier ministre ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Il dirige l'action du Gouvernement",
-        "Il détermine et conduit la politique de la Nation"
-      ],
-      "wrongAnswers": [
-        "Chef des armées",
-        "Élire les députés",
-        "Modifier la Constitution seul"
-      ]
-    },
-    {
-      "question": "Quel est le rôle du Président de la République ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Chef des armées",
-        "Veille au respect de la Constitution.",
-        "Le garant de l'indépendance nationale, de l'intégrité du territoire et du respect des traités",
-        "Assure, par son arbitrage, le fonctionnement régulier des pouvoirs publics ainsi que la continuité de l'État"
-      ],
-      "wrongAnswers": [
-        "Statue, en cas de contestation, sur la régularité de l'élection des députés et des sénateurs.",
-        "Contrôle l'action du Gouvernement",
-        "Assure l'exécution des lois",
-        "Veille à la régularité des opérations de référendum"
-      ]
-    },
-    {
-      "question": "Quel est le texte fondateur établissant les droits et les devoirs de chaque citoyen ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "La Déclaration des Droits de l'Homme et du Citoyen",
-        "La Déclaration de 1789"
-      ],
-      "wrongAnswers": [
-        "Le Code Civil",
-        "Le Code Pénal",
-        "La Charte de l'Environnement",
-        "Le Traité de Rome",
-        "La Déclaration Universelle des Droits de l'Homme (1948)"
-      ]
-    },
-    {
-      "question": "Quel était le principal port français impliqué dans la traite négrière au XVIIIe siècle ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Nantes"],
-      "wrongAnswers": [
-        "Le Havre",
-        "Bordeaux",
-        "La Rochelle",
-        "Brest",
-        "Cherbourg"
-      ]
-    },
-    {
-      "question": "Quel État a quitté l'Union Européenne en 2020 ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["Le Royaume-Uni"],
-      "wrongAnswers": ["La France", "L'Italie", "L'Espagne"]
-    },
-    {
-      "question": "Quel fleuve traverse Paris ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["La Seine"],
-      "wrongAnswers": ["La Loire", "Le Rhône", "La Garonne"]
-    },
-    {
-      "question": "Quel jour célèbre-t-on officiellement la laïcité en France ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": ["9 décembre"],
-      "wrongAnswers": ["11 novembre", "14 juillet", "1 mai", "8 mai", "9 mai"]
-    },
-    {
-      "question": "Quel mariage est reconnu légalement ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "Le mariage civil est le seul mariage reconnu en France"
-      ],
-      "wrongAnswers": [
-        "Le mariage religieux seul",
-        "Le mariage célébré par un notaire",
-        "Le mariage célébré à l'étranger sans transcription",
-        "Le mariage coutumier sans passage à la mairie"
-      ]
-    },
-    {
-      "question": "Quel monument historique se trouve sur une île en Normandie ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Le Mont-Saint-Michel",
-        "L'Abbaye du Mont-Saint-Michel",
-        "Le village médiéval et l'abbaye du Mont-Saint-Michel"
-      ],
-      "wrongAnswers": [
-        "Le Château d'If",
-        "La Cité de Carcassonne",
-        "La Statue de la Liberté",
-        "Les Falaises d'Étretat",
-        "Le Fort Boyard"
-      ]
-    },
-    {
-      "question": "Quel motif d'absence est accepté par l'école ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "Maladie de l'enfant (ou d'un de ses proches s'il est contagieux)",
-        "Réunion solennelle de famille (mariage, enterrement, etc.)",
-        "Empêchement causé par un problème accidentel dans les transports",
-        "Enfant qui suit ses représentants légaux (déplacement en dehors des vacances scolaires)"
-      ],
-      "wrongAnswers": [
-        "Partir en vacances un jour plus tôt",
-        "L'anniversaire de l'enfant",
-        "Le manque de sommeil",
-        "Garder un petit frère ou une petite sœur",
-        "Un rendez-vous chez le coiffeur"
-      ]
-    },
-    {
-      "question": "Quel musée est situé à Paris ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Le Musée du Louvre",
-        "Le Musée d'Orsay",
-        "Le Centre Pompidou",
-        "Le Musée du Quai Branly - Jacques Chirac"
-      ],
-      "wrongAnswers": [
-        "Le Musée des Confluences",
-        "Le Mucem",
-        "Le Musée Guggenheim",
-        "Le Palais des Papes",
-        "Le Centre Pompidou-Metz"
-      ]
-    },
-    {
-      "question": "Quel numéro d'urgence permet d'appeler la police ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": ["17"],
-      "wrongAnswers": ["18", "15", "115", "911", "119"]
-    },
-    {
-      "question": "Quel numéro d'urgence permet d'appeler le SAMU ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": ["15"],
-      "wrongAnswers": ["17", "18", "16", "911", "196"]
-    },
-    {
-      "question": "Quel œuvre a été écrite par Victor Hugo ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Les Misérables", "Notre-Dame de Paris"],
-      "wrongAnswers": ["L'Avare", "Alcools", "La Vie devant soi"]
-    },
-    {
-      "question": "Quel pays a été une colonie française ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Sénégal", "Algérie", "Cambodge", "Tunisie"],
-      "wrongAnswers": ["L'Inde", "Bresil", "Groenland", "Jamaïque", "Angola"]
-    },
-    {
-      "question": "Quel peintre célèbre a peint les Nymphéas ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Monet"],
-      "wrongAnswers": [
-        "Manet",
-        "Auguste Renoir",
-        "Paul Cézanne",
-        "Vincent van Gogh",
-        "Pablo Picasso"
-      ]
-    },
-    {
-      "question": "Quel peintre est français ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Claude Monet",
-        "Eugène Delacroix",
-        "Auguste Renoir",
-        "Paul Cézanne"
-      ],
-      "wrongAnswers": [
-        "Vincent van Gogh",
-        "Pablo Picasso",
-        "Leonardo da Vinci",
-        "Salvador Dalí",
-        "Rembrandt"
-      ]
-    },
-    {
-      "question": "Quel plat est une spécialité de la cuisine française ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Le Pot-au-feu",
-        "Le Bœuf Bourguignon",
-        "La Quiche Lorraine",
-        "Le Cassoulet"
-      ],
-      "wrongAnswers": [
-        "Le Couscous",
-        "La Pizza",
-        "La Paëlla",
-        "La Poutine",
-        "Le Hamburger"
-      ]
-    },
-    {
-      "question": "Quel roi de France a été guillotiné pendant la Révolution française ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Louis XVI"],
-      "wrongAnswers": [
-        "Louis XIV",
-        "Napoléon Bonaparte",
-        "Henri IV",
-        "Louis-Philippe Ier",
-        "Robespierre"
-      ]
-    },
-    {
-      "question": "Quel symbole de la République peut-on voir sur les maillots de l'équipe de France de football ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": ["Le coq"],
-      "wrongAnswers": [
-        "Marianne",
-        "La tour Eiffel",
-        "La bastille",
-        "La devise \"Liberté, Égalité, Fraternité\""
-      ]
-    },
-    {
-      "question": "Quel symbole religieux peut être porté dans une école publique dans le respect de la laïcité ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": ["Des signes religieux discrets portés par les élèves"],
-      "wrongAnswers": [
-        "Le voile islamique",
-        "La kippa",
-        "Une croix de dimension manifestement excessive",
-        "Des signes religieux discrets portés par des enseignants"
-      ]
-    },
-    {
-      "question": "Quel terme désigne précisément la haine ou les préjugés contre les Juifs ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": ["L'antisémitisme"],
-      "wrongAnswers": [
-        "Le racisme",
-        "La xénophobie",
-        "L'anticléricalisme",
-        "Le laïcisme"
-      ]
-    },
-    {
-      "question": "Quel texte affirme que tous les hommes naissent libres et égaux en droits ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "La Déclaration des Droits de l’Homme et du Citoyen de 1789"
-      ],
-      "wrongAnswers": [
-        "La Constitution de 1958",
-        "Le Code Civil",
-        "Le traité de Maastricht"
-      ]
-    },
-    {
-      "question": "Quel texte est considéré comme le texte fondateur de la laïcité ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": [
-        "La loi de 1905",
-        "La loi de séparation des Églises et de l'État"
-      ],
-      "wrongAnswers": [
-        "La Déclaration des Droits de l'Homme et du Citoyen de 1789",
-        "La Constitution de 1958",
-        "Le Code civil de Napoléon",
-        "Le traité de Maastricht"
-      ]
-    },
-    {
-      "question": "Quel traité concerne la construction de l'Union européenne ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["Le traité de Maastricht"],
-      "wrongAnswers": [
-        "Le traité de Lisbonne",
-        "Le traité de Versailles",
-        "Le traité de Verdun",
-        "Le traité de Paris"
-      ]
-    },
-    {
-      "question": "Quelle action peut réaliser le locataire d'un logement sans l'autorisation du propriétaire ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "Héberger gratuitement des proches",
-        "Aménager et d'utiliser les lieux librement",
-        "Rafraîchissement des peintures murales",
-        "Changement de moquette"
-      ],
-      "wrongAnswers": [
-        "De gros travaux de transformation du local",
-        "Des travaux de transformations qui mettent en péril le bon fonctionnement des équipements ou la sécurité du local",
-        "Sous-louer le logement",
-        "Repeindre les murs avec des couleurs \"extravagantes\""
-      ]
-    },
-    {
-      "question": "Quelle aide permet aux personnes qui ont des difficultés financières d'avoir un avocat ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": ["L'aide juridictionnelle"],
-      "wrongAnswers": [
-        "Le Revenu de Solidarité Active (RSA)",
-        "La protection diplomatique",
-        "Le médiateur de la République",
-        "Le crédit d'impôt pour frais de notaire",
-        "Le Défenseur des droits"
-      ]
-    },
-    {
-      "question": "Quelle chaîne de montagnes est située entre la France et l'Espagne ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Les Pyrénées"],
-      "wrongAnswers": [
-        "Les Alpes",
-        "Le Jura",
-        "Les Vosges",
-        "Le Massif central"
-      ]
-    },
-    {
-      "question": "Quelle chaîne de montagnes est située entre la France et l'Italie ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Les Alpes"],
-      "wrongAnswers": [
-        "Les Pyrénées",
-        "Le Jura",
-        "Les Vosges",
-        "Le Massif central"
-      ]
-    },
-    {
-      "question": "Quelle collectivité territoriale est responsable des transports régionaux ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["La région"],
-      "wrongAnswers": ["La préfecture", "Le département", "La commune"]
-    },
-    {
-      "question": "Quelle condition est nécessaire pour voter aux élections présidentielles ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Fournir un papier d'identité dans les communes de plus de 1000 habitants",
-        "Être inscrit sur la liste électorale",
-        "Avoir la nationalité française"
-      ],
-      "wrongAnswers": [
-        "Payer ses impôts en France",
-        "Résider dans sa commune depuis plus de 5 ans",
-        "Être âgé d'au moins 21 ans"
-      ]
-    },
-    {
-      "question": "Quelle condition est obligatoire pour se présenter à l'élection présidentielle ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Avoir la nationalité française",
-        "Avoir au minimum 18 ans",
-        "Avoir satisfait aux obligations imposées par le code du service national"
-      ],
-      "wrongAnswers": [
-        "Recueillir 250 « parrainages » de parlementaires ou d'élus locaux",
-        "Avoir déjà exercé un mandat d'élu (maire, député, etc.)",
-        "Être né.e sur le territoire français (droit du sol)",
-        "Être citoyen.ne de l'Union européenne résidant en France"
-      ]
-    },
-    {
-      "question": "Quelle condition faut-il remplir pour être candidat aux élections municipales ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Avoir au minimum 18 ans",
-        "Avoir la nationalité française, ou être citoyen de l'Union Européen résidant en France depuis six mois au moins"
-      ],
-      "wrongAnswers": [
-        "Avoir résidé dans la commune pendant au moins 5 ans sans interruption.",
-        "Avoir au minimum 25 ans",
-        "Avoir la nationalité française",
-        "Être citoyen de n'importe quel pays du monde résidant en France"
-      ]
-    },
-    {
-      "question": "Quelle est l'infraction la plus grave ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": ["Le crime"],
-      "wrongAnswers": [
-        "Le délit",
-        "La contravention",
-        "L'incivilité",
-        "Le blâme"
-      ]
-    },
-    {
-      "question": "Quelle est l'une des voies possibles pour modifier la Constitution ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Le référendum (consultation directe du peuple).",
-        "Un projet de révision voté par le Parlement réuni en Congrès"
-      ],
-      "wrongAnswers": [
-        "Une simple décision ou un décret du Premier ministre.",
-        "Un vote unique à la majorité simple de l'Assemblée nationale.",
-        "Une décision souveraine du Conseil constitutionnel.",
-        "L'utilisation de l'article 49.3 par le Gouvernement."
-      ]
-    },
-    {
-      "question": "Quelle est la définition de l'autorité parentale ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "L'ensemble des droits et des devoirs que les parents ont vis-à-vis de leur enfant mineur.",
-        "Les parents doivent protéger l'enfant dans sa sécurité, sa santé, sa vie privée et sa moralité",
-        "Les parents ont un devoir de commandement et de surveillance sur l'enfant et ses biens."
-      ],
-      "wrongAnswers": [
-        "Le pouvoir de vie ou de mort des parents sur leurs enfants",
-        "Le droit pour les parents d'utiliser leurs enfants comme main-d'œuvre gratuite",
-        "Une aide financière versée par l'État aux familles nombreuses",
-        "Le droit de choisir la religion de ses enfants sans leur demander leur avis une fois adultes",
-        "Le droit de punir physiquement ses enfants de manière violente"
-      ]
-    },
-    {
-      "question": "Quelle est la devise de l'Union Européenne ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["Unie dans la diversité"],
-      "wrongAnswers": [
-        "Liberté, égalité, fraternité",
-        "D'un océan à l'autre",
-        "Profiter largement à l'humanité",
-        "La force est dans l'unité",
-        "La réussite par l'effort commun"
-      ]
-    },
-    {
-      "question": "Quelle est la devise de la République française ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": ["Liberté, Égalité, Fraternité"],
-      "wrongAnswers": [
-        "Liberté, Unité, Solidarité",
-        "Travail, Famille, Patrie",
-        "Paix et Justice"
-      ]
-    },
-    {
-      "question": "Quelle est la durée du mandat des députés ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["5 ans"],
-      "wrongAnswers": ["6 ans", "3 ans", "4 ans"]
-    },
-    {
-      "question": "Quelle est la durée du mandat des sénateurs ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["6 ans"],
-      "wrongAnswers": ["5 ans", "9 ans", "4 ans"]
-    },
-    {
-      "question": "Quelle est la durée du mandat du Président de la République française ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["5 ans"],
-      "wrongAnswers": ["7 ans", "4 ans", "6 ans"]
-    },
-    {
-      "question": "Quelle est la durée légale du temps de travail par semaine ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": ["35 heures"],
-      "wrongAnswers": ["39 heures", "40 heures", "48 heures", "32 heures"]
-    },
-    {
-      "question": "Quelle est la plus haute montagne de France ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Le Mont-Blanc"],
-      "wrongAnswers": ["Le Jura", "Les Pyrénées", "Le Massif Central"]
-    },
-    {
-      "question": "Quelle est la population approximative de la France en 2025 ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["68,6 millions"],
-      "wrongAnswers": [
-        "63,2 millions",
-        "302 millions",
-        "450 millions",
-        "81,2 millions"
-      ]
-    },
-    {
-      "question": "Quelle est la première démarche à réaliser pour chercher un emploi ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": [
-        "S'inscrire à France Travail (anciennement Pôle emploi)"
-      ],
-      "wrongAnswers": [
-        "S'inscrire à la mairie de son domicile",
-        "Envoyer une lettre au Président de la République",
-        "S'inscrire obligatoirement dans une agence d'intérim",
-        "Attendre de recevoir une convocation de la Préfecture",
-        "S'inscrire à la Sécurité sociale"
-      ]
-    },
-    {
-      "question": "Quelle est la première étape de la construction européenne en 1951 ?",
-      "theme": "Histoire, géographie et culture",
+      "question": "What is the key difference between latency and throughput?",
+      "theme": "Performance & Scalability",
       "correctAnswers": [
-        "La fondation de la Communauté européenne du charbon et de l'acier (CECA)",
-        "La signature du traité de Paris",
-        "La mise en commun de la production de charbon et d'acier entre six pays européens"
+        "Latency is the time required to perform an action or produce a result, while throughput is the number of actions or results per unit of time."
       ],
       "wrongAnswers": [
-        "La création de l'Union européenne",
-        "L'adoption de l'Euro comme monnaie unique",
-        "La signature du traité de Rome",
-        "La chute du Mur de Berlin",
-        "La création de l'OTAN"
+        "Latency measures total disk storage capacity, while throughput measures RAM memory usage.",
+        "Latency is the number of users logged in simultaneously, while throughput is the ping time to the router.",
+        "Latency refers to write operations only, while throughput refers to read operations only."
       ]
-    },
-    {
-      "question": "Quelle île est française ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "La Corse",
-        "La Réunion",
-        "La Guadeloupe",
-        "La Martinique"
-      ],
-      "wrongAnswers": ["Madagascar", "Île Maurice", "Sainte-Lucie", "Guyane"]
     },
     {
-      "question": "Quelle île est un département d'outre-mer français ?",
-      "theme": "Histoire, géographie et culture",
+      "question": "Which of the following statements correctly describe vertical scaling versus horizontal scaling?",
+      "theme": "Performance & Scalability",
       "correctAnswers": [
-        "La Réunion",
-        "La Guadeloupe",
-        "La Martinique",
-        "Mayotte"
+        "Vertical scaling (scaling up) adds more resources (CPU, RAM) to a single server.",
+        "Horizontal scaling (scaling out) adds more commodity machines to the resource pool.",
+        "Horizontal scaling generally results in higher availability and cost efficiency than vertical scaling on enterprise hardware."
       ],
-      "wrongAnswers": [
-        "La Guyane",
-        "Tahiti",
-        "Nouvelle-Calédonie",
-        "Saint-Barthélemy",
-        "La Corse"
-      ]
-    },
-    {
-      "question": "Quelle île fait partie des Antilles françaises ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["La Guadeloupe", "La Martinique", "Saint-Barthélemy"],
-      "wrongAnswers": [
-        "La Réunion",
-        "Tahiti",
-        "La Corse",
-        "Haïti",
-        "La Dominique"
-      ]
-    },
-    {
-      "question": "Quelle île française est située dans l'océan indien ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["La Réunion", "Mayotte"],
-      "wrongAnswers": [
-        "La Martinique",
-        "L'Île Maurice",
-        "Madagascar",
-        "Tahiti",
-        "La Guadeloupe"
-      ]
-    },
-    {
-      "question": "Quelle île française se trouve au sud-est du continent africain ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["La Réunion", "Mayotte"],
-      "wrongAnswers": [
-        "La Martinique",
-        "Madagascar",
-        "L'île Maurice",
-        "Tahiti",
-        "La Corse"
-      ]
-    },
-    {
-      "question": "Quelle institution française doit rester neutre en matière de religion ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": ["L'école publique", "L'État et ses services publics"],
       "wrongAnswers": [
-        "Les églises",
-        "Les partis politiques",
-        "Les entreprises privées"
+        "Vertical scaling requires dividing data across multiple geographic datacenters.",
+        "Horizontal scaling simplifies application architecture by eliminating the need for stateless servers.",
+        "Vertical scaling is cheaper and easier to auto-scale dynamically than horizontal commodity scaling."
       ]
     },
     {
-      "question": "Quelle instruction est prévue pour les enfants qui ne parlent pas français ?",
-      "theme": "Vivre dans la société française",
+      "question": "What architectural requirement is necessary for web servers when scaling horizontally behind a load balancer?",
+      "theme": "Performance & Scalability",
       "correctAnswers": [
-        "UPE2A",
-        "Unité pédagogique pour élèves allophones arrivants",
-        "Un enseignement du Français Langue de Scolarisation (FLS)",
-        "L'orientation par le CASNAV"
+        "Web servers should be stateless, storing user session data in a centralized store or persistent cache."
       ],
       "wrongAnswers": [
-        "L'obligation d'attendre de parler couramment français",
-        "Le placement dans une école spécialisée réservée aux étrangers",
-        "L'obligation pour les parents de payer des cours privés de français",
-        "L'envoi automatique en classe de SEGPA"
+        "Web servers must store all user session files locally on their local hard drives.",
+        "Each web server must maintain a direct hardware cable connection to every other web server.",
+        "Web servers must operate without any database connection."
       ]
     },
     {
-      "question": "Quelle mer ou océan borde la France métropolitaine ?",
-      "theme": "Histoire, géographie et culture",
+      "question": "According to the CAP theorem, which guarantees are traded off against each other in a distributed system during a network partition?",
+      "theme": "Availability & Consistency",
       "correctAnswers": [
-        "L'océan Atlantique",
-        "La mer Méditerranée",
-        "La Manche",
-        "La mer du Nord"
+        "Consistency (CP system: every read receives the most recent write or an error)",
+        "Availability (AP system: every request receives a response without guarantee of latest version)"
       ],
-      "wrongAnswers": [
-        "La mer Rouge",
-        "L'océan Indien",
-        "La mer Morte",
-        "La mer Baltique",
-        "L'océan Pacifique"
-      ]
-    },
-    {
-      "question": "Quelle mer se situe entre la France et l'Angleterre ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["La Manche"],
-      "wrongAnswers": [
-        "La mer Noire",
-        "La mer Morte",
-        "L'océan Atlantique",
-        "La mer Méditerranée",
-        "La mer Morte"
-      ]
-    },
-    {
-      "question": "Quelle organisation a été créée en 1945 après la Seconde Guerre mondiale ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["L'ONU (Organisation des Nations Unies)"],
       "wrongAnswers": [
-        "La SDN (Société des Nations)",
-        "L'OTAN",
-        "L'Union Européenne"
+        "Throughput vs Storage capacity",
+        "Latency vs Bandwidth frequency",
+        "Encryption strength vs Compression ratio"
       ]
     },
     {
-      "question": "Quelle région française est réputée pour ses stations de ski ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": [
-        "Auvergne-Rhône-Alpes",
-        "Occitanie",
-        "Provence-Alpes-Côte d'Azur",
-        "Grand Est"
-      ],
+      "question": "Which consistency pattern guarantees that after a write, all subsequent reads will immediately see the updated data?",
+      "theme": "Availability & Consistency",
+      "correctAnswers": ["Strong consistency"],
       "wrongAnswers": [
-        "L'Île-de-France",
-        "La Bretagne",
-        "Les Pays de la Loire",
-        "La Normandie",
-        "Les Hauts-de-France"
+        "Weak consistency",
+        "Eventual consistency",
+        "Soft-state consistency"
       ]
     },
     {
-      "question": "Quelle situation est une atteinte à la dignité humaine ?",
-      "theme": "Droits et devoirs",
+      "question": "In which scenarios is weak consistency acceptable according to system design guidelines?",
+      "theme": "Availability & Consistency",
       "correctAnswers": [
-        "La discrimination",
-        "Le travail forcé ou l'esclavage",
-        "Les violences physiques ou psychologiques",
-        "Les conditions de logement insalubres ou indignes"
+        "Real-time VoIP calls",
+        "Video chat applications",
+        "Real-time multiplayer games"
       ],
       "wrongAnswers": [
-        "Le fait de devoir payer des impôts",
-        "Le fait d'être condamné à une peine de prison par un tribunal",
-        "Le fait de ne pas obtenir un rendez-vous immédiat à la mairie",
-        "Le licenciement pour faute réelle et sérieuse",
-        "Le licenciement pour faute simple"
+        "Financial banking transaction ledgers",
+        "E-commerce order payment processing",
+        "Relational database ACID transaction logs"
       ]
-    },
-    {
-      "question": "Quelle ville française fait partie des 10 plus grandes métropoles du pays ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Paris", "Lyon", "Marseilles", "Toulouse"],
-      "wrongAnswers": ["Brest", "Rouen", "Avignon", "Grenoble", "Nancy"]
     },
     {
-      "question": "Quelles sont des conditions d'éligibilité pour se présenter à la présidence en France ?",
-      "theme": "Système institutionnel et politique",
+      "question": "What is the difference between active-passive and active-active fail-over patterns?",
+      "theme": "Availability & Consistency",
       "correctAnswers": [
-        "Avoir la nationalité française",
-        "Avoir au minimum 18 ans",
-        "Avoir satisfait aux obligations imposées par le code du service national"
+        "In active-passive, heartbeats are sent between servers and only the active server handles traffic until failure.",
+        "In active-active, both servers actively manage traffic and spread the load between them."
       ],
       "wrongAnswers": [
-        "Recueillir 250 « parrainages » de parlementaires ou d'élus locaux",
-        "Avoir déjà exercé un mandat d'élu (maire, député, etc.)",
-        "Être né.e sur le territoire français (droit du sol)",
-        "Être citoyen.ne de l'Union européenne résidant en France",
-        "Avoir au minimum 35 ans"
+        "Active-passive servers both process writes simultaneously without heartbeats.",
+        "Active-active configuration is used exclusively for offline data backups.",
+        "Active-passive failover requires no passive standby hardware."
       ]
     },
     {
-      "question": "Quelles sont les affaires traitées par le conseil de prud'hommes ?",
-      "theme": "Vivre dans la société française",
+      "question": "How is total system availability calculated when two independent components with availability < 100% are placed in sequence versus in parallel?",
+      "theme": "Availability & Consistency",
       "correctAnswers": [
-        "Les litiges individuels entre un employeur et un salarié survenus à l'occasion de tout contrat de travail"
+        "In sequence, overall availability decreases: Total = Availability(A) * Availability(B).",
+        "In parallel, overall availability increases: Total = 1 - (1 - Availability(A)) * (1 - Availability(B))."
       ],
       "wrongAnswers": [
-        "Les conflits entre deux entreprises",
-        "Les infractions au Code de la route commises pendant le travail",
-        "Les litiges entre l'État et ses fonctionnaires",
-        "Les divorces et les problèmes de garde d'enfants",
-        "Les vols commis dans l'entreprise"
+        "In sequence, availability increases by taking the simple arithmetic sum.",
+        "In parallel, availability decreases to the availability of the weakest node squared.",
+        "Sequence and parallel arrangements yield identical mathematical availability."
       ]
-    },
-    {
-      "question": "Quelles sont les durées du mandat du conseil municipal et du maire ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["6 ans"],
-      "wrongAnswers": ["5 ans", "7 ans", "4 ans"]
     },
     {
-      "question": "Quelles sont les fonctions du maire ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Préparer et exécuter le budget",
-        "Agir en tant que agent de l'État",
-        "Chargé de l'organisation des élections dans la commune"
-      ],
+      "question": "What is the acceptable downtime per year for a system advertised as having 99.99% availability ('four 9s')?",
+      "theme": "Availability & Consistency",
+      "correctAnswers": ["Approximately 52.6 minutes per year"],
       "wrongAnswers": [
-        "Voter les lois au Parlement",
-        "Décider des peines de prison pour les délinquants.",
-        "Délivrer un mandat de perquisition",
-        "Responsable de la gendarmerie"
+        "Approximately 8.7 hours per year",
+        "Approximately 3 days per year",
+        "0 seconds per year"
       ]
     },
     {
-      "question": "Quels sont les textes qui définissent les règles au travail ?",
-      "theme": "Vivre dans la société française",
+      "question": "Which DNS record types correctly match their definitions?",
+      "theme": "DNS & Content Delivery Networks",
       "correctAnswers": [
-        "Le code du travail",
-        "La convention collective",
-        "Le contrat du travail",
-        "Le règlement intérieur"
+        "A record: Points a domain name to an IPv4 address.",
+        "CNAME: Points a domain name to another canonical name or A record.",
+        "NS record: Specifies the authoritative name servers for a domain.",
+        "MX record: Specifies the mail exchange servers for accepting email."
       ],
-      "wrongAnswers": [
-        "Le Code civil",
-        "Le carnet de liaison",
-        "Le journal de bord de l'employeur",
-        "La Constitution européenne"
-      ]
-    },
-    {
-      "question": "Qui a aboli l'esclavage en France ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Victor Schoelcher"],
       "wrongAnswers": [
-        "Napoléon Bonaparte",
-        "Charles de Gaulle",
-        "Jules Ferry",
-        "Louis XIV"
+        "TTL record: Encrypts incoming DNS queries.",
+        "B-tree record: Stores relational database indexes.",
+        "HTTP record: Directs web browsers to execute JavaScript."
       ]
-    },
-    {
-      "question": "Qui a composé l'hymne de l'Union européenne ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["Beethoven"],
-      "wrongAnswers": ["Rouget de Lisle", "Bach", "Gilles Vigneault"]
     },
     {
-      "question": "Qui a été président de la Ve République ?",
-      "theme": "Histoire, géographie et culture",
+      "question": "How do Push CDNs and Pull CDNs differ in content management and site traffic suitability?",
+      "theme": "DNS & Content Delivery Networks",
       "correctAnswers": [
-        "Charles de Gaulle",
-        "Georges Pompidou",
-        "Valéry Giscard d’Estaing",
-        "François Mitterrand"
+        "Push CDNs receive content directly uploaded when changes occur on the server; suitable for small traffic or rarely updated sites.",
+        "Pull CDNs grab content from the origin server when the first user requests it; suitable for heavy traffic sites with frequently requested content."
       ],
       "wrongAnswers": [
-        "Napoléon Bonaparte",
-        "François Fillon",
-        "Dominique de Villepin",
-        "Lionel Jospin",
-        "Alain Juppé"
+        "Pull CDNs store all historical database records permanently, while Push CDNs clear cache every second.",
+        "Push CDNs are strictly for mobile devices, while Pull CDNs are for desktop web browsers.",
+        "Pull CDNs push content automatically before any user visits the site."
       ]
     },
     {
-      "question": "Qui a le droit de se syndiquer ?",
-      "theme": "Vivre dans la société française",
+      "question": "What are primary advantages of serving static content (images, JS, CSS, video) from a Content Delivery Network (CDN)?",
+      "theme": "DNS & Content Delivery Networks",
       "correctAnswers": [
-        "Tout salarié",
-        "Les personnes qui ont cessé d'exercer leur activité professionnelle peuvent adhérer ou continuer à adhérer à un syndicat professionnel de leur choix"
+        "Users receive content from edge data centers geographically closer to them, reducing latency.",
+        "Origin servers are relieved from fulfilling requests served directly by the CDN."
       ],
-      "wrongAnswers": [
-        "Uniquement les salariés en CDI",
-        "Uniquement les citoyens français",
-        "Seulement les cadres et les chefs d'équipe",
-        "Les militaires en activité"
-      ]
-    },
-    {
-      "question": "Qui a peint \"La liberté guidant le peuple\" ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Eugène Delacroix"],
-      "wrongAnswers": [
-        "Claude Monet",
-        "Théodore Géricault",
-        "Jacques-Louis David",
-        "Pablo Picasso",
-        "Leonardo da Vinci"
-      ]
-    },
-    {
-      "question": "Qui a rendu l'école gratuite, laïque et obligatoire ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Jules Ferry"],
-      "wrongAnswers": ["Napoléon", "Charles de Gaulle", "François Mitterand"]
-    },
-    {
-      "question": "Qui assure l'intérim du président de la République en cas de décès ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["Le président du Sénat"],
-      "wrongAnswers": [
-        "Le Premier ministre",
-        "Le Président de l'Assemblée nationale",
-        "Le Ministre de l'Intérieur"
-      ]
-    },
-    {
-      "question": "Qui dirige l'action du gouvernement ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["Le Premier ministre"],
-      "wrongAnswers": [
-        "Le Président de la République",
-        "Le Président de l'Assemblée nationale",
-        "Le Ministre de l'Intérieur"
-      ]
-    },
-    {
-      "question": "Qui doit respecter et veiller à la neutralité religieuse dans les services publics ?",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": ["Les agents publics"],
       "wrongAnswers": [
-        "Les usagers",
-        "Seulement les professeurs et le personnel médical",
-        "Uniquement les élus de la République",
-        "Uniquement les agents de nationalité française"
+        "CDNs automatically rewrite SQL database queries for faster execution.",
+        "CDNs remove the need for web application code.",
+        "CDNs convert all relational databases into NoSQL document stores."
       ]
     },
     {
-      "question": "Qui élit les députés européens ?",
-      "theme": "Système institutionnel et politique",
+      "question": "What are the primary differences between Layer 4 and Layer 7 load balancing?",
+      "theme": "Load Balancing & Reverse Proxies",
       "correctAnswers": [
-        "Les citoyens au suffrage universel direct",
-        "Scrutin proportionnel de liste à un tour"
+        "Layer 4 load balancing inspects transport-layer headers (IP addresses and ports) without reading packet payload contents.",
+        "Layer 7 load balancing inspects application-layer data (HTTP headers, cookies, message content) to make routing decisions.",
+        "Layer 7 load balancing allows routing based on content type (e.g., directing video requests to video-optimized server clusters).",
+        "Layer 4 load balancing consumes fewer CPU and memory resources than Layer 7 load balancing."
       ],
-      "wrongAnswers": [
-        "Les députés nationaux",
-        "Les gouvernements",
-        "Le président de la République"
-      ]
-    },
-    {
-      "question": "Qui est élu lors des élections législatives ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["Les députés"],
       "wrongAnswers": [
-        "Les sénateurs",
-        "Les maires",
-        "Les conseillers régionaux"
+        "Layer 4 load balancing operates strictly inside database storage engines.",
+        "Layer 7 load balancing cannot perform SSL termination or cookie routing.",
+        "Layer 4 load balancing terminates HTTP client connections and reads HTTP cookies."
       ]
     },
     {
-      "question": "Qui est élu lors des élections municipales ?",
-      "theme": "Système institutionnel et politique",
+      "question": "What benefits does SSL Termination provide when configured on a load balancer or reverse proxy?",
+      "theme": "Load Balancing & Reverse Proxies",
       "correctAnswers": [
-        "Les conseillers d'arrondissement dans certaines grandes villes",
-        "Les conseillers municipaux de la commune",
-        "Les conseillers communautaires"
+        "It decrypts incoming client requests and encrypts server responses at the proxy level.",
+        "It relieves backend application servers from performing computationally expensive SSL/TLS encryption operations.",
+        "It eliminates the need to install X.509 certificates on every backend server."
       ],
       "wrongAnswers": [
-        "Le maire, au suffrage universel direct",
-        "Les conseillers départementaux",
-        "Les conseillers régionaux"
+        "It eliminates the need for user passwords across all web applications.",
+        "It automatically fixes SQL injection vulnerabilities in application code.",
+        "It converts incoming HTTP traffic into UDP datagrams."
       ]
     },
     {
-      "question": "Qui était Albert Camus ?",
-      "theme": "Histoire, géographie et culture",
+      "question": "In what ways does a Reverse Proxy differ from a standard Load Balancer?",
+      "theme": "Load Balancing & Reverse Proxies",
       "correctAnswers": [
-        "L'auteur de L'Etranger",
-        "Le lauréat du prix Nobel de littérature (1957)",
-        "Un philosophe, écrivain et journaliste militant",
-        "Né en Algérie et mort dans un accident de voiture"
+        "A reverse proxy is useful even with a single web server to provide security, response compression, SSL termination, and static content caching.",
+        "A load balancer is primarily deployed across multiple servers serving the same function to distribute incoming traffic."
       ],
       "wrongAnswers": [
-        "Un ancien Président de la République",
-        "L'inventeur du vaccin contre la rage",
-        "Un peintre impressionniste",
-        "Un collaborateur pendant la guerre"
+        "Reverse proxies can only handle database queries, whereas load balancers handle web traffic.",
+        "Load balancers hide backend server IP addresses, while reverse proxies expose all backend IP addresses to clients.",
+        "Reverse proxies operate exclusively on hardware appliances, while load balancers are software-only."
       ]
     },
     {
-      "question": "Qui était Auguste Renoir ?",
-      "theme": "Histoire, géographie et culture",
+      "question": "Which of the following routing algorithms can be used by load balancers to distribute traffic?",
+      "theme": "Load Balancing & Reverse Proxies",
       "correctAnswers": [
-        "Un célèbre peintre impressionniste.",
-        "L'auteur du tableau Le Bal du moulin de la Galette",
-        "Un artiste connu pour ses scènes de la vie quotidienne parisienne et ses portraits",
-        "L'un des fondateurs du groupe des Impressionnistes"
+        "Random",
+        "Least loaded",
+        "Session / Cookie persistence",
+        "Round robin or weighted round robin"
       ],
       "wrongAnswers": [
-        "Un sculpteur qui a fait Le Penseur",
-        "Le chef de la Résistance à Lyon",
-        "Un réalisateur de cinéma de la Nouvelle Vague",
-        "Un écrivain auteur de Germinal"
+        "Hard drive serial number hashing",
+        "Operating system version matching",
+        "Client screen resolution sorting"
       ]
     },
     {
-      "question": "Qui était Auguste Rodin ?",
-      "theme": "Histoire, géographie et culture",
+      "question": "What properties define ACID transactions in relational databases (RDBMS)?",
+      "theme": "Database Architecture & Scaling",
       "correctAnswers": [
-        "Un sculpteur français majeur.",
-        "L'auteur de la célèbre statue Le Penseur",
-        "Le créateur des Bourgeois de Calais",
-        "Considéré comme le père de la sculpture moderne"
+        "Atomicity: Each transaction is all or nothing.",
+        "Consistency: Any transaction brings the database from one valid state to another.",
+        "Isolation: Executing transactions concurrently yields the same result as serial execution.",
+        "Durability: Once committed, transaction data remains committed."
       ],
       "wrongAnswers": [
-        "Un peintre impressionniste",
-        "L'inventeur de la photographie",
-        "L'architecte de la Tour Eiffel",
-        "Un célèbre compositeur de musique"
+        "Availability: Every read request returns a result within 1 ms.",
+        "Soft state: The database state changes dynamically without input.",
+        "Eventual consistency: Data updates propagate asynchronously after several minutes."
       ]
     },
     {
-      "question": "Qui était Charles Baudelaire ?",
-      "theme": "Histoire, géographie et culture",
+      "question": "What are valid strategies for scaling a Relational Database Management System (RDBMS)?",
+      "theme": "Database Architecture & Scaling",
       "correctAnswers": [
-        "Un poète français du XIXe siècle",
-        "L'auteur du recueil de poèmes Les Fleurs du Mal",
-        "Le traducteur en français des œuvres d'Edgar Allan Poe",
-        "A une influence considérable sur la poésie française à partir de la fin du XIXe siècle"
+        "Master-slave and master-master replication",
+        "Database federation (functional partitioning)",
+        "Database sharding (horizontal partitioning)",
+        "Denormalization and SQL tuning/indexing"
       ],
       "wrongAnswers": [
-        "Un homme politique sous la Ve République.",
-        "Le sculpteur du Penseur",
-        "L'auteur de la pièce de théâtre Le Cid",
-        "Un célèbre général de l'armée de Napoléon"
+        "Switching all queries from TCP to UDP",
+        "Replacing SQL tables with plain text file logs without indexes",
+        "Executing all database writes over DNS TXT records"
       ]
     },
     {
-      "question": "Qui était George Sand ?",
-      "theme": "Histoire, géographie et culture",
+      "question": "What are the trade-offs of Master-Slave database replication?",
+      "theme": "Database Architecture & Scaling",
       "correctAnswers": [
-        "Une écrivaine célèbre pour ses \"romans champêtres\" (comme La Mare au Diable)",
-        "Une figure de l'émancipation des femmes",
-        "De son vrai nom Amantine Aurore Lucile Dupin",
-        "Compte parmi les écrivains les plus prolifiques"
+        "Master handles reads and writes; slaves handle read-only traffic.",
+        "If master fails, system operates read-only until a slave is promoted to master.",
+        "Replication lag can occur if heavy write loads bog down read slaves replaying writes."
       ],
       "wrongAnswers": [
-        "La première femme Présidente de la République",
-        "L'épouse de Napoléon Bonaparte",
-        "Une célèbre cantatrice d'opéra",
-        "L'auteur de Harry Potter"
+        "Slaves process write transactions faster than masters by using multi-threaded writes.",
+        "Master-slave replication guarantees zero replication lag under all network conditions.",
+        "Slaves automatically handle master election without any additional logic or failover mechanism."
       ]
     },
     {
-      "question": "Qui était Marguerite Yourcenar ?",
-      "theme": "Histoire, géographie et culture",
+      "question": "What is database federation (functional partitioning)?",
+      "theme": "Database Architecture & Scaling",
       "correctAnswers": [
-        "Une écrivaine et académicienne française.",
-        "La première femme élue à l'Académie française (1980)",
-        "L'auteure du célèbre roman historique Mémoires d'Hadrien",
-        "Une grande voyageuse"
+        "Splitting up databases by function (e.g., separate databases for users, products, and forums)."
       ],
       "wrongAnswers": [
-        "La créatrice de la maison de couture Chanel",
-        "Une résistante fusillée pendant la guerre",
-        "L'épouse de Victor Hugo",
-        "Une scientifique ayant découvert le radium"
+        "Splitting a single table row across multiple geographical datacenters based on hash values.",
+        "Converting relational SQL tables into graph database nodes.",
+        "Combining all application databases into a single monolithic schema."
       ]
     },
     {
-      "question": "Qui était Marie Curie ?",
-      "theme": "Histoire, géographie et culture",
+      "question": "What disadvantages or challenges are associated with database sharding?",
+      "theme": "Database Architecture & Scaling",
       "correctAnswers": [
-        "Une physicienne",
-        "Scientifique ayant découvert la radioactivité"
+        "Application logic must be updated to route queries to appropriate shards.",
+        "Data distribution can become lopsided if power users end up on a single shard.",
+        "Joining data across multiple shards is significantly more complex.",
+        "Rebalancing shards adds architectural and operational complexity."
       ],
-      "wrongAnswers": ["Une écrivaine", "Une femme politique", "Une chanteuse"]
-    },
-    {
-      "question": "Qui était Molière ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Auteur de théâtre célèbre", "Auteur de L'Avare"],
       "wrongAnswers": [
-        "Un peintre impressionniste",
-        "Un explorateur",
-        "Un scientifique"
+        "Sharding prevents the use of database primary keys.",
+        "Sharding forces all data to reside exclusively in RAM without disk backup.",
+        "Sharding disables parallel write capabilities across the database cluster."
       ]
     },
     {
-      "question": "Qui était Monsieur Rouget de Lisle ?",
-      "theme": "Histoire, géographie et culture",
+      "question": "What is the primary purpose of database denormalization?",
+      "theme": "Database Architecture & Scaling",
       "correctAnswers": [
-        "L'auteur et le compositeur de La Marseillaise",
-        "Un officier français",
-        "Celui qui a écrit le \"Chant de guerre pour l'armée du Rhin\""
+        "Improving read performance by writing redundant copies of data into tables to avoid expensive database JOINs."
       ],
       "wrongAnswers": [
-        "Le premier Président de la République",
-        "Le couturier qui a inventé la robe de mariée",
-        "Le général qui a gagné la bataille de Verdun",
-        "L'architecte qui a construit l'Arc de Triomphe"
+        "Reducing disk space usage by eliminating all duplicate data fields.",
+        "Ensuring strict 3rd Normal Form compliance across all tables.",
+        "Preventing SQL injection attacks on user login forms."
       ]
     },
     {
-      "question": "Qui était Paul Cézanne ?",
-      "theme": "Histoire, géographie et culture",
+      "question": "Which of the following schema optimization guidelines are recommended for SQL tuning?",
+      "theme": "Database Architecture & Scaling",
       "correctAnswers": [
-        "Un célèbre peintre français post-impressionniste",
-        "L'auteur de nombreuses peintures de la montagne Sainte-Victoire",
-        "Un artiste originaire d'Aix-en-Provence",
-        "Il est considéré comme le « père de l'art moderne »"
+        "Use CHAR instead of VARCHAR for fixed-length fields to allow fast random access.",
+        "Use DECIMAL for currency fields to avoid floating point representation errors.",
+        "Set NOT NULL constraints where applicable to improve search performance.",
+        "Avoid storing large BLOBs directly in tables; store location paths/pointers instead."
       ],
       "wrongAnswers": [
-        "Un sculpteur qui a fait des statues de cire",
-        "L'inventeur de la photographie couleur.",
-        "Un écrivain de la même époque que Baudelaire",
-        "Le premier ministre de Napoléon III"
+        "Use VARCHAR for all fixed-length single-character flags.",
+        "Use FLOAT or DOUBLE for exact financial currency transactions.",
+        "Remove all primary key constraints to speed up full table scans."
       ]
     },
     {
-      "question": "Qui était Simone de Beauvoir ?",
-      "theme": "Histoire, géographie et culture",
+      "question": "Which of the following are categorized as NoSQL databases?",
+      "theme": "Database Architecture & Scaling",
       "correctAnswers": [
-        "Une grande écrivaine et philosophe existentialiste",
-        "L'auteure de l'essai féministe mondialement connu Le Deuxième Sexe",
-        "La compagne de vie du philosophe Jean-Paul Sartre",
-        "Une militante engagée pour les droits des femmes"
+        "Key-value stores (e.g., Redis, Memcached)",
+        "Document stores (e.g., MongoDB, CouchDB)",
+        "Wide column stores (e.g., Bigtable, HBase, Cassandra)",
+        "Graph databases (e.g., Neo4j, FlockDB)"
       ],
-      "wrongAnswers": [
-        "La première femme à avoir été élue à l'Académie française",
-        "Une ministre de la Santé qui a fait voter la loi sur l'IVG",
-        "L'épouse de Charles de Gaulle",
-        "Une scientifique ayant découvert la radioactivité"
-      ]
-    },
-    {
-      "question": "Qui était Simone Veil ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["Figure ayant préparé la loi sur l'IVG"],
       "wrongAnswers": [
-        "Une célèbre chanteuse",
-        "Une reine de France",
-        "Une scientifique célèbre pour sa découverte de la radioactivité"
+        "Relational B-tree engines (e.g., PostgreSQL, MySQL)",
+        "Flat CSV spreadsheet files",
+        "In-memory CPU registers"
       ]
     },
     {
-      "question": "Qui était un célèbre compositeur français ?",
-      "theme": "Histoire, géographie et culture",
+      "question": "What properties define the BASE model commonly associated with NoSQL databases?",
+      "theme": "Database Architecture & Scaling",
       "correctAnswers": [
-        "Claude Debussy",
-        "Maurice Ravel",
-        "Camille Saint-Saëns",
-        "Gabriel Fauré"
+        "Basically Available: The system guarantees availability.",
+        "Soft state: System state may change over time without explicit input.",
+        "Eventual consistency: System will become consistent over time if given no new input."
       ],
       "wrongAnswers": [
-        "Frédéric Chopin",
-        "Wolfgang Amadeus Mozart",
-        "Ludwig van Beethoven",
-        "Antonio Vivaldi",
-        "Johann Sebastian Bach"
+        "B-tree Indexed: All records are indexed in balanced trees.",
+        "Atomic Transactions: Every multi-document transaction is atomic.",
+        "Strict Isolation: Concurrent transactions yield identical serial execution."
       ]
     },
     {
-      "question": "Qui était une figure de la Résistance française pendant la Seconde Guerre mondiale ?",
-      "theme": "Histoire, géographie et culture",
+      "question": "Which of the following are valid cache update strategies described in the System Design Primer?",
+      "theme": "Caching Strategies",
       "correctAnswers": [
-        "Jean Moulin",
-        "Charles de Gaulle",
-        "Lucie Aubrac",
-        "Guy Môquet"
+        "Cache-aside (lazy loading)",
+        "Write-through",
+        "Write-behind (write-back)",
+        "Refresh-ahead"
       ],
       "wrongAnswers": [
-        "Philippe Pétain",
-        "Victor Hugo",
-        "Léon Blum",
-        "Jean Jaurès"
+        "Read-around bypass",
+        "Cache-invalidation-first",
+        "Double-checked locking cache"
       ]
-    },
-    {
-      "question": "Qui gère les collèges publics ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["Le département"],
-      "wrongAnswers": ["La commune", "La région", "L'État"]
-    },
-    {
-      "question": "Qui gère les écoles primaires et maternelles publiques ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["La commune"],
-      "wrongAnswers": ["Le département", "La région", "L'État"]
     },
     {
-      "question": "Qui peut demander le divorce de personnes mariées ?",
-      "theme": "Vivre dans la société française",
+      "question": "How does the Cache-aside (lazy loading) pattern operate during a read request?",
+      "theme": "Caching Strategies",
       "correctAnswers": [
-        "L'un ou l'autre des époux",
-        "Les deux époux d'un commun accord"
+        "The application looks for entry in cache; on a cache miss, it reads from DB, writes to cache, and returns entry."
       ],
       "wrongAnswers": [
-        "Uniquement le mari",
-        "Le maire",
-        "Les enfants du couple",
-        "Les parents des mariés",
-        "Uniquement l'époux qui n'a pas commis de faute"
+        "The cache automatically intercepts DB queries and updates storage asynchronously before returning.",
+        "The DB pushes updates directly to client browsers without application involvement.",
+        "The cache clears all existing keys whenever a read miss occurs."
       ]
     },
     {
-      "question": "Qui peut demander un congé parental d'éducation ?",
-      "theme": "Vivre dans la société française",
+      "question": "What is a main disadvantage of the Write-through caching strategy?",
+      "theme": "Caching Strategies",
       "correctAnswers": [
-        "Tout parent salarié ayant au moins 1 an d'ancienneté",
-        "Le père ou la mère de l'enfant",
-        "Les parents adoptifs"
+        "Overall write operations are slower because data is written synchronously to both cache and underlying data store."
       ],
       "wrongAnswers": [
-        "Uniquement la mère",
-        "Uniquement les fonctionnaires",
-        "Toute personne, même si elle vient de commencer son contrat hier",
-        "Les parents, mais seulement pour le premier enfant"
+        "Subsequent read operations of newly written data suffer high latency.",
+        "Cache entries are always stale and out of sync with the database.",
+        "Data in the cache is deleted immediately after being written."
       ]
     },
     {
-      "question": "Qui peut être appelé à faire partie d'un jury d'assises en France ?",
-      "theme": "Droits et devoirs",
+      "question": "What risk is associated with the Write-behind (write-back) caching strategy?",
+      "theme": "Caching Strategies",
       "correctAnswers": [
-        "Tout citoyen français âgé d'au moins 23 ans",
-        "Tout citoyen inscrit sur les listes électorales",
-        "Tout citoyen sachant lire et écrire en français",
-        "Tout citoyen jouissant de ses droits civils, politiques et de famille"
+        "Risk of data loss if the cache node crashes before queued write entries are persisted to the database."
       ],
       "wrongAnswers": [
-        "Les membres du Gouvernement, les députés et les sénateurs",
-        "Les magistrats et les agents de la police ou de la gendarmeri",
-        "Les personnes condamnées pour un crime ou un délit grave",
-        "Les proches (parents, conjoints) de l'accusé ou de la victime"
+        "High read latency on every request.",
+        "Database locks up on every write operation.",
+        "Cache capacity is limited to 10 keys."
       ]
     },
     {
-      "question": "Qui peut se présenter aux élections présidentielles ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": [
-        "Avoir la nationalité française",
-        "Avoir au minimum 18 ans",
-        "Recueillir 500 « parrainages » de parlementaires ou d'élus locaux"
-      ],
+      "question": "Which memory eviction algorithm is commonly used in in-memory caches like Redis or Memcached to maintain hot data in memory?",
+      "theme": "Caching Strategies",
+      "correctAnswers": ["Least Recently Used (LRU)"],
       "wrongAnswers": [
-        "Avoir déjà exercé un mandat d'élu (maire, député, etc.)",
-        "Être né.e sur le territoire français (droit du sol)",
-        "Être citoyen.ne de l'Union européenne résidant en France",
-        "Avoir au minimum 35 ans"
+        "First In First Out (FIFO) only",
+        "Random Key Deletion",
+        "Shortest Job First (SJF)"
       ]
-    },
-    {
-      "question": "Qui représente l'État dans un département ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["Le préfet"],
-      "wrongAnswers": ["Le maire", "Le député", "Le commissaire"]
-    },
-    {
-      "question": "Qui sanctionne l'auteur d'un vol ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["La justice"],
-      "wrongAnswers": ["Le maire", "Le préfet", "La victime elle-même"]
     },
     {
-      "question": "Qui siège au Parlement européen ?",
-      "theme": "Système institutionnel et politique",
+      "question": "At which levels of a web application architecture can caching be implemented?",
+      "theme": "Caching Strategies",
       "correctAnswers": [
-        "720 membres élus dans les 27 États membres",
-        "Des députés élus au suffrage universel direct",
-        "Des députés qui supervisent le travail de la Commission et des autres institutions de l'UE",
-        "Des députés qui décident du budget annuel avec le Conseil et contrôlent l'utilisation des fonds de l'UE"
+        "Client / Browser side",
+        "CDN level",
+        "Web server / Reverse proxy level",
+        "Database level",
+        "Application / In-memory level (e.g. Redis, Memcached)"
       ],
       "wrongAnswers": [
-        "520 membres élus dans les 27 États membres",
-        "Le même nombre de députés pour chaque État membre",
-        "Les députés qui définissent les orientations et les priorités politiques générales de l'UE",
-        "Les députés dont le role est d'assurer que le droit communautaire est appliqué de la même façon dans tous les États"
+        "Hardware CPU clock generator level only",
+        "Ethernet physical copper cable level only",
+        "Power supply unit level only"
       ]
     },
     {
-      "question": "Qui vote les lois ?",
-      "theme": "Système institutionnel et politique",
+      "question": "How do message queues enable asynchronous processing in web applications?",
+      "theme": "Asynchronism & Communication",
       "correctAnswers": [
-        "Les parlémentaires (l'Assemblée nationale et le sénat) votent la loi",
-        "En cas de désaccord entre le sénat et l'Assemblée nationale, c'est l'assemblée nationale qui a le dernier mot"
+        "Applications publish job messages to a queue and immediately acknowledge the request to the user.",
+        "Background worker processes pick up jobs from the queue, process them asynchronously, and signal task completion."
       ],
       "wrongAnswers": [
-        "Les lois sont votées au suffrage universel direct",
-        "Le Premier ministre et son Gouvernement",
-        "Les maires et les préfets réunis en conseil."
+        "Message queues convert all asynchronous tasks into synchronous HTTP GET calls.",
+        "Message queues force clients to block and wait until background jobs finish.",
+        "Message queues bypass application servers and write directly to disk drives."
       ]
     },
     {
-      "question": "S'agissant de l'accueil des enfants en situation de handicap à l'école, laquelle des propositions est vraie ?",
-      "theme": "Vivre dans la société française",
+      "question": "What is back pressure and how does it protect message queues under extreme traffic spikes?",
+      "theme": "Asynchronism & Communication",
       "correctAnswers": [
-        "Vivre avec et comme les autres, les enfants en situation de handicap peuvent bénéficier d'un emploi du temps aménagé.",
-        "La scolarisation de l'enfant peut se dérouler à temps plein ou à temps partiel, en internat, semi-internat ou externat.",
-        "Le parcours scolaire de l'enfant fait l'objet d'un projet personnalisé de scolarisation (PPS)",
-        "Si les difficultés de l'enfant sont importantes, il peut bénéficier d'une aide individuelle assurée notamment par un accompagnant d’élèves en situation de handicap (AESH)"
+        "Back pressure limits queue size to prevent queues from exceeding memory capacity.",
+        "When queue limits are reached, the system returns HTTP 503 (Server Busy), prompting clients to retry later with exponential backoff."
       ],
       "wrongAnswers": [
-        "Les enfants en situation de handicap ne peuvent être scolarisés qu’en établissement spécialisé.",
-        "L’accueil des enfants en situation de handicap à l’école dépend de la bonne volonté des enseignants",
-        "Les enfants en situation de handicap doivent passer un test pour être admis à l’école",
-        "Seuls les enfants dont le handicap est léger peuvent être scolarisés en milieu ordinaire",
-        "Les écoles privées ne sont pas concernées par l’obligation d’accueil des enfants en situation de handicap"
+        "Back pressure automatically deletes all database tables to free up RAM.",
+        "Back pressure increases CPU clock speed to process infinite messages in zero time.",
+        "Back pressure forces all network packets to travel backwards."
       ]
-    },
-    {
-      "question": "Selon la Constitution, la France est une République...",
-      "theme": "Principes et valeurs de la République",
-      "correctAnswers": ["indivisible, laïque, démocratique et sociale"],
-      "wrongAnswers": ["populaire", "socialiste", "aristrocratique"]
     },
     {
-      "question": "Selon le principe de laïcité, que signifie la neutralité de l'État ?",
-      "theme": "Principes et valeurs de la République",
+      "question": "What guarantees does Transmission Control Protocol (TCP) provide over User Datagram Protocol (UDP)?",
+      "theme": "Asynchronism & Communication",
       "correctAnswers": [
-        "Les agents publics, stagiaires ou élèves, ne doivent pas manifester leurs convictions religieuses, philosophiques ou politiques ni faire prévaloir leur préférence pour une religion",
-        "La neutralité de la puissance publique protège les agents et les usagers du service public par le traitement égalitaire de toutes les personnes."
+        "Connection-oriented connection established via handshake.",
+        "Guaranteed delivery of packets in original order without corruption (sequence numbers & checksums).",
+        "Automatic packet retransmission upon timeout and flow/congestion control."
       ],
       "wrongAnswers": [
-        "Les agents publics doivent obligatoirement être athées",
-        "La neutralité permet à l'État d'interdire la pratique religieuse à l'intérieur des domiciles privés.",
-        "Les usagers (citoyens) doivent obligatoirement cacher leur religion pour avoir le droit d'entrer dans une mairie ou un service public"
+        "Zero packet overhead and lower latency than UDP.",
+        "Ability to broadcast packets to all devices on a subnet without IP addresses.",
+        "Unordered datagram delivery without handshakes."
       ]
     },
     {
-      "question": "Si une machine à laver est cassée, il est possible de :",
-      "theme": "Vivre dans la société française",
+      "question": "In which scenarios is UDP preferred over TCP?",
+      "theme": "Asynchronism & Communication",
       "correctAnswers": [
-        "Faire jouer la garantie légale de conformité si l'appareil a été acheté il y a moins de 2 ans",
-        "Demander la réparation ou le remplacement gratuit, si l'appareil a été acheté il y a moins de 2 ans",
-        "Faire jouer la garantie commerciale, si la garantie légale est expirée"
+        "Real-time VoIP calls and video streaming where lowest latency is critical.",
+        "Real-time multiplayer games where late data is worse than lost data.",
+        "Broadcasting messages (e.g. DHCP IP requests)."
       ],
-      "wrongAnswers": [
-        "Exiger le remboursement immédiat en espèces sans diagnostic",
-        "Rapporter la machine à la mairie",
-        "Demander à sa banque d'annuler le paiement",
-        "Jeter votre appareil avec vos ordures ménagères"
-      ]
-    },
-    {
-      "question": "Sous quel président a été abolie la peine de mort en France ?",
-      "theme": "Histoire, géographie et culture",
-      "correctAnswers": ["François Mitterrand"],
       "wrongAnswers": [
-        "Charles de Gaulle",
-        "Valéry Giscard d'Estaing",
-        "Jacques Chirac"
+        "Financial banking transactions requiring exact data integrity.",
+        "SSH remote terminal sessions.",
+        "Database file sync backups."
       ]
     },
     {
-      "question": "Suite à une interpellation par la police, il est possible de :",
-      "theme": "Droits et devoirs",
-      "correctAnswers": [
-        "se taire",
-        "faire l'objet d'une vérification d'identité",
-        "être soumis à une palpation de sécurité par un agent de même sexe pour s'assurer de l'absence d'objets dangereux",
-        "être placé en garde à vue"
-      ],
-      "wrongAnswers": [
-        "refuser de montrer ses papiers d’identité",
-        "s’enfuir ou résister physiquement si on estime que l'interpellation est injuste",
-        "être maintenu en cellule de dégrisement pendant 72 heures sans voir un avocat",
-        "être contraint de signer un procès-verbal",
-        "contacter un avocat immédiatement dans la rue"
-      ]
+      "question": "Which HTTP methods are considered idempotent according to HTTP specifications?",
+      "theme": "Asynchronism & Communication",
+      "correctAnswers": ["GET", "PUT", "DELETE"],
+      "wrongAnswers": ["POST", "PATCH"]
     },
     {
-      "question": "Sur quel document peut-on voir Marianne ?",
-      "theme": "Principes et valeurs de la République",
+      "question": "What are key differences between Remote Procedure Call (RPC) and Representational State Transfer (REST)?",
+      "theme": "Asynchronism & Communication",
       "correctAnswers": [
-        "la carte d’identité",
-        "les documents administratifs",
-        "des timbres",
-        "les pièces de monnaie"
+        "RPC focuses on exposing behaviors/actions; REST focuses on exposing resources/data.",
+        "RPC is often used for high-performance internal microservice communication.",
+        "REST enforces a stateless client/server model using uniform HTTP verbs (GET, POST, PUT, DELETE) and URIs."
       ],
-      "wrongAnswers": [
-        "le bulletin de salaire",
-        "les ordonnances médicales",
-        "le contrat de travail"
-      ]
-    },
-    {
-      "question": "Tous les citoyens français ont-ils une religion ?",
-      "theme": "Droits et devoirs",
-      "correctAnswers": ["Non"],
       "wrongAnswers": [
-        "Oui, le catholicisme est la religion d'État",
-        "Oui, tous les Français doivent être chrétiens",
-        "Non, les religions sont interdites en France",
-        "Tout citoyen français est considéré comme catholique par défaut, sauf s'il fait une démarche officielle pour s'y opposer"
+        "REST requires binary stubs generated by Protobuf compiler, while RPC uses browser HTML.",
+        "RPC is restricted strictly to public HTTP APIs, while REST is for internal sockets.",
+        "REST requires permanent TCP socket connections, while RPC operates on DNS."
       ]
     },
     {
-      "question": "Travailler sans être déclaré est :",
-      "theme": "Vivre dans la société française",
+      "question": "What are the four suggested steps for approaching a system design interview question?",
+      "theme": "System Design Interview & Methodology",
       "correctAnswers": [
-        "un délit",
-        "passible de lourdes sanctions pénales",
-        "considéré comme du travail dissimulé"
+        "Step 1: Outline use cases, constraints, and assumptions (scope requirements).",
+        "Step 2: Create a high-level design (sketch main components and connections).",
+        "Step 3: Design core components (dive into details, data schemas, algorithms).",
+        "Step 4: Scale the design (identify bottlenecks, trade-offs, caching, sharding)."
       ],
       "wrongAnswers": [
-        "une pratique autorisée si le salarié est d'accord",
-        "une simple contravention",
-        "un avantage pour le salarié qui gagne plus d'argent",
-        "légal si la durée du travail est inférieure à 10 heures par semaine"
+        "Step 1: Write raw assembly code for the operating system kernel.",
+        "Step 2: Install hardware servers physically in a rack.",
+        "Step 3: Memorize company financial statements."
       ]
     },
     {
-      "question": "Une des valeurs de la devise républicaine est l'Égalité. Qu'est-ce que cela signifie ?",
-      "theme": "Principes et valeurs de la République",
+      "question": "In back-of-the-envelope estimations, which powers of two approximations are commonly used?",
+      "theme": "System Design Interview & Methodology",
       "correctAnswers": [
-        "Tous les citoyens ont les mêmes droits et les mêmes devoirs quel que soit leur sexe, leur origine, leur religion, leurs opinions ou leur orientation sexuelle."
+        "2^10 = 1,024 ≈ 1 Thousand (1 KB)",
+        "2^20 = 1,048,576 ≈ 1 Million (1 MB)",
+        "2^30 = 1,073,741,824 ≈ 1 Billion (1 GB)",
+        "2^40 = 1,099,511,627,776 ≈ 1 Trillion (1 TB)"
       ],
-      "wrongAnswers": [
-        "Les libertés fondamentales sont garanties : liberté de pensée, liberté de croyance, liberté de s’exprimer, liberté de se réunir...",
-        "La volonté de vivre ensemble des citoyens français se traduit par la solidarité entre les citoyens",
-        "Chaque citoyen est soumis au même taux d'imposition"
-      ]
-    },
-    {
-      "question": "Une femme peut-elle créer son entreprise ?",
-      "theme": "Vivre dans la société française",
-      "correctAnswers": ["Oui"],
       "wrongAnswers": [
-        "Non, elle doit avoir la signature de son conjoint",
-        "Seulement si elle est célibataire",
-        "Oui, mais uniquement dans les secteurs de la mode ou de l'esthétique",
-        "Elle a besoin d'un tuteur masculin pour obtenir un prêt"
+        "2^10 = 1 Million",
+        "2^20 = 1 Billion",
+        "2^30 = 1 Trillion"
       ]
     },
     {
-      "question": "Une personne déclare ne croire en aucun dieu. On peut dire :",
-      "theme": "Principes et valeurs de la République",
+      "question": "According to 'Latency numbers every programmer should know', what are approximate time orders for system operations?",
+      "theme": "System Design Interview & Methodology",
       "correctAnswers": [
-        "qu'elle est athée",
-        "qu'elle exerce sa liberté de conscience",
-        "qu'elle est libre de ne pas avoir de religion"
+        "L1 cache reference: ~0.5 ns",
+        "Main memory reference: ~100 ns",
+        "Read 1 MB sequentially from memory: ~250 us",
+        "Read 1 MB sequentially from SSD: ~1,000 us (1 ms)",
+        "Read 1 MB sequentially from HDD: ~30,000 us (30 ms)"
       ],
       "wrongAnswers": [
-        "qu'elle est laïque",
-        "qu'elle est obligée de se convertir",
-        "qu'elle n'a pas le droit de voter",
-        "qu'elle commet un délit"
+        "Main memory reference: 5 seconds",
+        "L1 cache reference: 10 milliseconds",
+        "SSD sequential read: 30 minutes"
       ]
     },
     {
-      "question": "Une personne est privée de ses droits civils et politiques pendant 5 ans suite à une condamnation. Parmi ces propositions laquelle est correcte ? Pendant 5 ans,...",
-      "theme": "Droits et devoirs",
+      "question": "Which of the following are common Object-Oriented Design (OOD) interview questions included in the System Design Primer?",
+      "theme": "Object-Oriented Design & Principles",
       "correctAnswers": [
-        "Elle ne peut pas voter",
-        "Elle ne peut pas être élue",
-        "Elle ne peut pas exercer une fonction publique",
-        "Elle ne peut pas être désignée comme juré d'assises"
+        "Design a hash map",
+        "Design a least recently used (LRU) cache",
+        "Design a call center",
+        "Design a deck of cards",
+        "Design a parking lot",
+        "Design a chat server"
       ],
       "wrongAnswers": [
-        "Elle ne peut plus travailler dans le secteur privé",
-        "Elle perd sa nationalité française",
-        "Elle n'a plus le droit d'utiliser sa carte vitale",
-        "Elle est obligée de quitter le territoire français"
+        "Design a x86 CPU microprocessor silicon die",
+        "Design a quantum computer operating system",
+        "Design a compiler for Rust"
       ]
     },
     {
-      "question": "Une personne étrangère, en situation régulière, peut créer son entreprise :",
-      "theme": "Vivre dans la société française",
+      "question": "What design considerations arise when implementing an LRU (Least Recently Used) cache data structure?",
+      "theme": "Object-Oriented Design & Principles",
       "correctAnswers": [
-        "Oui, à condition de posséder un titre de séjour qui autorise l'exercice d'une activité professionnelle",
-        "Oui, en respectant les formalités de création (immatriculation, déclaration)"
+        "Combining a Doubly Linked List with a Hash Map to achieve O(1) lookups, insertions, and deletions."
       ],
       "wrongAnswers": [
-        "Uniquement si elle crée une association à but non lucratif",
-        "Seulement si elle est mariée avec un Français",
-        "Non, car elle ne possède pas le droit de vote",
-        "Non, car il faut obligatoirement avoir la nationalité français"
+        "Using a single unsorted array requiring O(N) linear scans on every lookup.",
+        "Storing all cached items in a SQL relational database table on disk.",
+        "Using a binary tree requiring O(N log N) sorting on every write."
       ]
     },
     {
-      "question": "Une personne peut-elle changer librement de religion en France ?",
-      "theme": "Principes et valeurs de la République",
+      "question": "What foundational security practices should be applied to modern web systems?",
+      "theme": "Security & Best Practices",
       "correctAnswers": [
-        "Oui, chacun est libre de croire, de ne pas croire ou d'adopter la religion qu'il souhaite",
-        "Oui, c'est un droit garanti par la liberté de croyance et la laïcité"
+        "Encrypt data both in transit (TLS/SSL) and at rest.",
+        "Sanitize user inputs and use parameterized queries to prevent SQL injection and Cross-Site Scripting (XSS).",
+        "Enforce the Principle of Least Privilege across service accounts and permissions."
       ],
       "wrongAnswers": [
-        "Oui, mais seulement avec l'autorisation écrite du maire de la commune",
-        "Non, il faut conserver la religion de ses parents ou de ses ancêtres",
-        "Non, car la France impose une religion d'État officielle",
-        "Oui, mais il faut payer une taxe de changement de culte à l'administration"
+        "Store user passwords in plain text in cache for fast comparison.",
+        "Disable all firewall rules on public load balancers.",
+        "Expose internal database admin ports directly to the internet."
       ]
-    },
-    {
-      "question": "Une personne, n'ayant pas d'accès à internet, veut s'inscrire sur les listes électorales pour pouvoir voter aux prochaines élections politiques. Où peut-elle s'inscrire ?",
-      "theme": "Système institutionnel et politique",
-      "correctAnswers": ["À la mairie", "Par courrier"],
-      "wrongAnswers": ["Par SMS", "À la préfecture", "Au bureau de vote"]
     }
   ]
 }
