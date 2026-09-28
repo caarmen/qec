@@ -1,8 +1,8 @@
 {
   "lang": "fr",
-  "name": "Quiz de Naturalisation Française",
-  "short_name": "Quiz",
-  "description": "Testez vos connaissances civiques et évaluez votre préparation pour la naturalisation française.",
-  "theme_color": "#2563eb",
+  "name": "System design quiz",
+  "short_name": "System design",
+  "description": "Test your knowledge of system design",
+  "theme_color": "#0d9488",
   "background_color": "#ffffff"
 }

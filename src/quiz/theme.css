@@ -7,13 +7,13 @@
   in contrast with primary-500/600.
 */
 @theme {
-  --color-primary-50: var(--color-blue-50);
-  --color-primary-100: var(--color-blue-100);
-  --color-primary-300: var(--color-blue-300);
-  --color-primary-400: var(--color-blue-400);
-  --color-primary-500: var(--color-blue-500);
-  --color-primary-600: var(--color-blue-600);
-  --color-primary-700: var(--color-blue-700);
-  --color-primary-900: var(--color-blue-900);
+  --color-primary-50: var(--color-teal-50);
+  --color-primary-100: var(--color-teal-100);
+  --color-primary-300: var(--color-teal-300);
+  --color-primary-400: var(--color-teal-400);
+  --color-primary-500: var(--color-teal-500);
+  --color-primary-600: var(--color-teal-600);
+  --color-primary-700: var(--color-teal-700);
+  --color-primary-900: var(--color-teal-900);
   --color-on-primary: var(--color-white);
 }
