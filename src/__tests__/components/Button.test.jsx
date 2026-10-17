@@ -31,8 +31,8 @@ describe("Button", () => {
       render(<Button>Click me</Button>);
 
       const button = screen.getByRole("button");
-      expect(button).toHaveClass("bg-blue-600");
-      expect(button).toHaveClass("text-white");
+      expect(button).toHaveClass("bg-primary-600");
+      expect(button).toHaveClass("text-on-primary");
     });
 
     it("should apply secondary variant styles when specified", () => {
@@ -58,7 +58,7 @@ describe("Button", () => {
 
       const button = screen.getByRole("button");
       expect(button).toHaveClass("custom-class");
-      expect(button).toHaveClass("bg-blue-600"); // Still has base styles
+      expect(button).toHaveClass("bg-primary-600"); // Still has base styles
     });
 
     it("should forward additional props", () => {
@@ -171,7 +171,7 @@ describe("Button", () => {
       render(<Button variant="invalid">Click me</Button>);
 
       const button = screen.getByRole("button");
-      expect(button).toHaveClass("bg-blue-600");
+      expect(button).toHaveClass("bg-primary-600");
     });
   });
 });

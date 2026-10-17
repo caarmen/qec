@@ -111,7 +111,7 @@ function Dropdown({ label, helperText, options, value, onChange }) {
           rounded-lg
           border border-gray-300 dark:border-gray-600
           bg-white dark:bg-gray-800
-          focus:outline-none focus:ring-2 focus:ring-blue-500
+          focus:outline-none focus:ring-2 focus:ring-primary-500
         "
       >
         {selectedOption?.label ?? ""}

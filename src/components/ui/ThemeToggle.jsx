@@ -23,7 +23,7 @@ function ThemeToggle({ className = "" }) {
         w-10 h-10 rounded-full flex items-center justify-center
         border border-gray-300 bg-white text-gray-700
         hover:bg-gray-50 transition-colors
-        focus:outline-none focus:ring-2 focus:ring-blue-500
+        focus:outline-none focus:ring-2 focus:ring-primary-500
         dark:border-gray-600 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700
         ${className}
       `.trim()}

@@ -33,8 +33,8 @@ describe("AnswerOption", () => {
 
       const option = screen.getByRole("radio");
       expect(option).toHaveAttribute("aria-checked", "true");
-      expect(option).toHaveClass("border-blue-600");
-      expect(option).toHaveClass("bg-blue-50");
+      expect(option).toHaveClass("border-primary-600");
+      expect(option).toHaveClass("bg-primary-50");
     });
 
     it("should apply base styles", () => {
@@ -241,21 +241,21 @@ describe("AnswerOption", () => {
 
       let option = screen.getByRole("radio");
       expect(option).toHaveClass("border-gray-200");
-      expect(option).not.toHaveClass("bg-blue-50");
+      expect(option).not.toHaveClass("bg-primary-50");
 
       rerender(<AnswerOption {...defaultProps} isSelected={true} />);
 
       option = screen.getByRole("radio");
-      expect(option).toHaveClass("border-blue-600");
-      expect(option).toHaveClass("bg-blue-50");
+      expect(option).toHaveClass("border-primary-600");
+      expect(option).toHaveClass("bg-primary-50");
     });
 
     it("should maintain selected styles when disabled", () => {
       render(<AnswerOption {...defaultProps} isSelected disabled />);
 
       const option = screen.getByRole("radio");
-      expect(option).toHaveClass("border-blue-600");
-      expect(option).toHaveClass("bg-blue-50");
+      expect(option).toHaveClass("border-primary-600");
+      expect(option).toHaveClass("bg-primary-50");
       expect(option).toHaveClass("opacity-50");
     });
 

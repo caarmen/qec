@@ -150,7 +150,7 @@ function QuizScreen({
           aria-hidden="true"
         >
           <div
-            className="h-1 bg-blue-600 rounded-full"
+            className="h-1 bg-primary-600 rounded-full"
             style={{ width: `${progressPercent}%` }}
           ></div>
         </div>
