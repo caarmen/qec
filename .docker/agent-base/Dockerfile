@@ -3,51 +3,49 @@ FROM ubuntu:24.04
 # Avoid prompts from apt during installation.
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Common tooling for Android app development and test automation.
+# Common tooling for React / web app development.
+# build-essential and python3 are needed to compile native npm modules (node-gyp).
 RUN apt-get update && apt-get install -y --no-install-recommends \
     bash \
+    build-essential \
     ca-certificates \
     curl \
     git \
-    openjdk-21-jdk \
     python3 \
-    python3-pip \
-    python3-venv \
-    unzip \
-    wget \
     && rm -rf /var/lib/apt/lists/*
 
-ENV JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
-ENV PATH="${JAVA_HOME}/bin:${PATH}"
+ENV NVM_DIR=/home/vibeuser/.nvm
+ARG NVM_VERSION=v0.40.3
 
-RUN mkdir -p /opt/android-sdk/platform-tools && \
-    wget -q https://dl.google.com/android/repository/platform-tools-latest-linux.zip -O /tmp/platform-tools.zip && \
-    unzip -q /tmp/platform-tools.zip -d /opt/android-sdk && \
-    rm /tmp/platform-tools.zip && \
-    wget -q https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip -O /tmp/cmdline-tools.zip && \
-    mkdir -p /opt/android-sdk/cmdline-tools/latest && \
-    unzip -q /tmp/cmdline-tools.zip -d /tmp/cmdline-tools-temp && \
-    mv /tmp/cmdline-tools-temp/cmdline-tools/* /opt/android-sdk/cmdline-tools/latest/ && \
-    rm -rf /tmp/cmdline-tools.zip /tmp/cmdline-tools-temp
-
-ENV ANDROID_SDK_ROOT=/opt/android-sdk
-ENV ANDROID_HOME=/opt/android-sdk
-ENV PATH="${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin:${ANDROID_SDK_ROOT}/platform-tools:${PATH}"
-
-RUN yes | sdkmanager --licenses
-RUN sdkmanager "build-tools;36.0.0" "platforms;android-37.1" "platform-tools"
-
+# Non-root user for day-to-day work.
 RUN useradd -ms /bin/bash vibeuser
+# Pre-create the node_modules mountpoint as vibeuser.
+# runmistral.sh mounts an anonymous volume over it to shadow the host's
+# node_modules; Docker initializes a fresh volume with the content and
+# ownership of the image path, so this makes the volume writable by vibeuser.
+RUN mkdir -p /opt/myproj/node_modules && \
+    chown -R vibeuser:vibeuser /opt/myproj
+
 USER vibeuser
 WORKDIR /home/vibeuser
 
-RUN python3 -m venv /home/vibeuser/venv && \
-    /home/vibeuser/venv/bin/pip install --no-cache-dir --upgrade pip && \
-    /home/vibeuser/venv/bin/pip install --no-cache-dir gmsaas
+RUN curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/${NVM_VERSION}/install.sh | bash
 
-ENV PATH="/home/vibeuser/venv/bin:/home/vibeuser/.local/bin:${PATH}"
+# Node version pinned by the project (passed in by the build script).
+ARG NODE_VERSION
+ARG NPM_VERSION
+RUN test -n "$NODE_VERSION" || (echo "NODE_VERSION build arg is required" && exit 1)
+RUN test -n "$NPM_VERSION" || (echo "NPM_VERSION build arg is required" && exit 1)
 
-RUN gmsaas config set android-sdk-path /opt/android-sdk
+RUN . "$NVM_DIR/nvm.sh" && \
+    nvm install "$NODE_VERSION" && nvm alias default "$NODE_VERSION" && \
+    ln -sfn "$(dirname "$(nvm which default)")" /home/vibeuser/.node-bin
+
+RUN . "$NVM_DIR/nvm.sh" && npm install -g "npm@${NPM_VERSION}"
+
+ENV PATH="/home/vibeuser/.node-bin:${PATH}"
 
 # Verify installations.
-RUN adb --version && gmsaas --version
+RUN node --version && npm --version && git --version
+
+CMD ["bash"]

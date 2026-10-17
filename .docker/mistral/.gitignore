@@ -1,7 +1,5 @@
-.env
-cache.toml
-connector_bootstrap_cache.json
-logs/
-plans/
-trusted_folders.toml
-vibehistory
+.vibe/*
+!.vibe/agents/
+!.vibe/agents/**
+!.vibe/prompts/
+!.vibe/prompts/**

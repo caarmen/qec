@@ -27,7 +27,7 @@ dist-ssr
 coverage
 html
 
-.vibe/
+.vibe/*
 !.vibe/agents/
 !.vibe/agents/**
 !.vibe/prompts/
