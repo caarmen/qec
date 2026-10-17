@@ -1,0 +1,5 @@
+.vibe/*
+!.vibe/agents/
+!.vibe/agents/**
+!.vibe/prompts/
+!.vibe/prompts/**

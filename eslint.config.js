@@ -38,7 +38,7 @@ export default defineConfig([
   },
   eslintConfigPrettier,
   {
-    files: ["vitest.config.js"],
+    files: ["vite.config.js", "vitest.config.js"],
     languageOptions: {
       globals: globals.node,
     },
