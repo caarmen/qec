@@ -22,11 +22,11 @@ function ResultsScreen({ score, totalQuestions, difficulty, onRestart }) {
   const percentage = Math.round((score / totalQuestions) * 100);
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
-      <div className="w-full max-w-md bg-white rounded-xl shadow-xs p-6 space-y-6">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center px-4">
+      <div className="w-full max-w-md bg-white dark:bg-gray-800 rounded-xl shadow-xs p-6 space-y-6">
         {/* Completion header */}
         <h2
-          className="text-2xl font-semibold text-gray-900"
+          className="text-2xl font-semibold text-gray-900 dark:text-gray-100"
           ref={headingRef}
           tabIndex={-1}
         >
@@ -34,8 +34,8 @@ function ResultsScreen({ score, totalQuestions, difficulty, onRestart }) {
         </h2>
 
         {/* Score summary */}
-        <div className="bg-gray-50 rounded-lg p-4 space-y-2">
-          <p className="text-sm text-gray-600 font-medium">
+        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 space-y-2">
+          <p className="text-sm text-gray-600 dark:text-gray-300 font-medium">
             {t("resultsScreen.difficulty", {
               difficulty: t(
                 difficulty === DIFFICULTY.DIFFICULT
@@ -44,19 +44,19 @@ function ResultsScreen({ score, totalQuestions, difficulty, onRestart }) {
               ),
             })}
           </p>
-          <p className="text-gray-900">
+          <p className="text-gray-900 dark:text-gray-100">
             <span className="font-medium">
               {t("resultsScreen.totalCountLabel")}
             </span>{" "}
             {totalQuestions}
           </p>
-          <p className="text-gray-900">
+          <p className="text-gray-900 dark:text-gray-100">
             <span className="font-medium">
               {t("resultsScreen.correctCountLabel")}
             </span>{" "}
             {score}
           </p>
-          <p className="text-green-600 font-medium text-lg">
+          <p className="text-green-600 dark:text-green-400 font-medium text-lg">
             {`Score : ${percentage}%`}
           </p>
         </div>

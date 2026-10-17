@@ -2,6 +2,7 @@ import { useQuiz, QUIZ_STATUS } from "./hooks/useQuiz";
 import QuizStartScreen from "./components/QuizStartScreen";
 import QuizScreen from "./components/QuizScreen";
 import ResultsScreen from "./components/ResultsScreen";
+import ThemeToggle from "./components/ui/ThemeToggle";
 import questionsData from "./data/questions.json";
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <>
+      <ThemeToggle className="fixed top-4 right-4 z-20" />
       {(quizStatus === QUIZ_STATUS.NOT_STARTED ||
         quizStatus === QUIZ_STATUS.CONFIGURING) && (
         <QuizStartScreen

@@ -24,9 +24,9 @@ function Button({
 
   const variants = {
     primary:
-      "bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed",
+      "bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed dark:bg-blue-500 dark:hover:bg-blue-400 dark:disabled:bg-gray-600",
     secondary:
-      "bg-gray-200 text-gray-900 hover:bg-gray-300 disabled:bg-gray-100 disabled:cursor-not-allowed",
+      "bg-gray-200 text-gray-900 hover:bg-gray-300 disabled:bg-gray-100 disabled:cursor-not-allowed dark:bg-gray-600 dark:text-gray-100 dark:hover:bg-gray-500 dark:disabled:bg-gray-700",
   };
 
   const variantStyles = variants[variant] || variants.primary;

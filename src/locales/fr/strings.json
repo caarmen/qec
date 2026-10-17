@@ -37,6 +37,10 @@
     "a11yCorrectAnswer": "Bonne réponse",
     "a11yIncorrectAnswer": "Mauvaise réponse"
   },
+  "theme": {
+    "a11yToggleDark": "Activer le mode sombre",
+    "a11yToggleLight": "Activer le mode clair"
+  },
   "common": {
     "difficultyDifficult": "Difficile",
     "difficultyNormal": "Normal"
