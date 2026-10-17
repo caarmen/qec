@@ -118,10 +118,10 @@ function QuizScreen({
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center px-4">
       <QuestionCard className="w-full max-w-md">
         {/* Progress indicator */}
-        <div className="flex justify-between items-center text-sm text-gray-600">
+        <div className="flex justify-between items-center text-sm text-gray-600 dark:text-gray-400">
           <p tabIndex={-1} ref={progressRef}>
             {t("quizScreen.progress", {
               current: currentQuestionIndex + 1,
@@ -132,12 +132,12 @@ function QuizScreen({
         </div>
 
         {/* Question text */}
-        <h2 className="text-xl font-medium text-gray-900">
+        <h2 className="text-xl font-medium text-gray-900 dark:text-gray-100">
           {currentQuestion.question}
         </h2>
 
         {difficulty === DIFFICULTY.DIFFICULT && (
-          <p className="mt-3 mb-4 text-sm text-gray-600">
+          <p className="mt-3 mb-4 text-sm text-gray-600 dark:text-gray-400">
             {t("quizScreen.multiChoiceInstruction")}
           </p>
         )}
@@ -145,7 +145,10 @@ function QuizScreen({
         {/* Visual progress bar indicator.
         Hide it from a11y as it would be redunant with the textual indication
         of the progress already present on the screen. */}
-        <div className="w-full h-1 bg-gray-200 rounded-full" aria-hidden="true">
+        <div
+          className="w-full h-1 bg-gray-200 dark:bg-gray-700 rounded-full"
+          aria-hidden="true"
+        >
           <div
             className="h-1 bg-blue-600 rounded-full"
             style={{ width: `${progressPercent}%` }}
@@ -193,7 +196,7 @@ function QuizScreen({
         VoiceOver doesn't read the text in French, even if lang="fr" is added
         to the element.*/}
         <div
-          className="flex items-start gap-2 text-sm min-h-8 text-gray-800"
+          className="flex items-start gap-2 text-sm min-h-8 text-gray-800 dark:text-gray-200"
           ref={feedbackRef}
           aria-hidden={!feedbackMessage}
           tabIndex={-1}

@@ -79,11 +79,14 @@ function Dropdown({ label, helperText, options, value, onChange }) {
   return (
     <section className={"relative space-y-2"}>
       <div className="space-y-1">
-        <label id={labelId} className="block text-sm font-medium text-gray-700">
+        <label
+          id={labelId}
+          className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+        >
           {label}
         </label>
         {helperText && (
-          <p id={helperId} className="text-xs text-gray-500">
+          <p id={helperId} className="text-xs text-gray-500 dark:text-gray-400">
             {helperText}
           </p>
         )}
@@ -106,14 +109,14 @@ function Dropdown({ label, helperText, options, value, onChange }) {
         className="
           flex w-full px-4 py-3 items-center justify-between text-left
           rounded-lg
-          border border-gray-300
-          bg-white
+          border border-gray-300 dark:border-gray-600
+          bg-white dark:bg-gray-800
           focus:outline-none focus:ring-2 focus:ring-blue-500
         "
       >
         {selectedOption?.label ?? ""}
         <svg
-          className="w-4 h-4 text-gray-400"
+          className="w-4 h-4 text-gray-400 dark:text-gray-500"
           fill="none"
           stroke="currentColor"
           strokeWidth="2"
@@ -134,8 +137,8 @@ function Dropdown({ label, helperText, options, value, onChange }) {
         className="
             absolute overflow-hidden mt-2 w-full z-10
             rounded-lg
-            border border-gray-200
-            bg-white shadow-lg
+            border border-gray-200 dark:border-gray-600
+            bg-white dark:bg-gray-800 shadow-lg
           "
       >
         {options.map((option, index) => {

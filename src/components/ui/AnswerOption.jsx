@@ -24,10 +24,14 @@ function AnswerOption({
   const { t } = useTranslation();
   const baseStyles =
     "w-full text-left border rounded-lg p-4 transition-colors cursor-pointer";
-  const defaultStyles = "border-gray-200 hover:bg-gray-50";
-  const selectedStyles = "border-blue-600 bg-blue-50";
-  const correctStyles = "border-green-600 bg-green-50";
-  const incorrectStyles = "border-red-600 bg-red-50";
+  const defaultStyles =
+    "border-gray-200 hover:bg-gray-50 dark:border-gray-600 dark:hover:bg-gray-700";
+  const selectedStyles =
+    "border-blue-600 bg-blue-50 dark:border-blue-500 dark:bg-blue-900";
+  const correctStyles =
+    "border-green-600 bg-green-50 dark:border-green-500 dark:bg-green-900";
+  const incorrectStyles =
+    "border-red-600 bg-red-50 dark:border-red-500 dark:bg-red-900";
   const disabledStyles = "opacity-50 cursor-not-allowed";
 
   const handleClick = () => {
@@ -77,7 +81,7 @@ function AnswerOption({
 
         {feedback === "correct" && (
           <span
-            className="ml-2 text-green-600"
+            className="ml-2 text-green-600 dark:text-green-400"
             aria-label={t("answerOption.a11yCorrectAnswer")}
           >
             ✔
@@ -86,7 +90,7 @@ function AnswerOption({
 
         {feedback === "incorrect" && (
           <span
-            className="ml-2 text-red-600"
+            className="ml-2 text-red-600 dark:text-red-400"
             aria-label={t("answerOption.a11yIncorrectAnswer")}
           >
             ✖

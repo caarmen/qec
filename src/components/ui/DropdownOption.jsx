@@ -16,9 +16,10 @@ const DropdownOption = forwardRef(function DropdownOption(
 ) {
   const baseClasses =
     "py-2 px-2 cursor-pointer text-sm font-medium transition-colors focus:outline-hidden focus:ring-2 focus:ring-blue-500";
-  const selectedClasses = "bg-blue-50 text-blue-700 font-medium";
-  const unselectedClasses = "hover:bg-gray-100";
-  const focusedClasses = "bg-blue-100";
+  const selectedClasses =
+    "bg-blue-50 text-blue-700 font-medium dark:bg-blue-900 dark:text-blue-300";
+  const unselectedClasses = "hover:bg-gray-100 dark:hover:bg-gray-700";
+  const focusedClasses = "bg-blue-100 dark:bg-blue-900";
 
   return (
     <li

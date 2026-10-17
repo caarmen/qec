@@ -12,6 +12,20 @@
       rel="stylesheet"
     />
     <title>Quiz de Naturalisation Française</title>
+    <script>
+      /* Apply the persisted theme before first paint to avoid a flash
+         of the wrong theme. Manual toggle only: no system preference lookup. */
+      (function () {
+        try {
+          if (localStorage.getItem("qec-theme") === "dark") {
+            document.documentElement.classList.add("dark");
+            document.documentElement.style.colorScheme = "dark";
+          }
+        } catch (e) {
+          /* localStorage unavailable: keep the default light theme */
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

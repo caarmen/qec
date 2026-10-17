@@ -75,11 +75,14 @@ function SegmentedControl({
   return (
     <section className={`space-y-2 ${className}`}>
       <div className="space-y-1">
-        <label id={labelId} className="block text-sm font-medium text-gray-700">
+        <label
+          id={labelId}
+          className="block text-sm font-medium text-gray-700 dark:text-gray-300"
+        >
           {label}
         </label>
         {helperText && (
-          <p id={helperId} className="text-xs text-gray-500">
+          <p id={helperId} className="text-xs text-gray-500 dark:text-gray-400">
             {helperText}
           </p>
         )}

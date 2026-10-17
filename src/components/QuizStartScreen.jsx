@@ -55,14 +55,16 @@ function QuizStartScreen({
     <main
       ref={mainRef}
       tabIndex={-1}
-      className="min-h-screen bg-gray-50 flex items-center justify-center px-4"
+      className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center px-4"
     >
-      <div className="w-full max-w-md bg-white rounded-xl shadow-xs p-6 space-y-8">
+      <div className="w-full max-w-md bg-white dark:bg-gray-800 rounded-xl shadow-xs p-6 space-y-8">
         <div className="space-y-3">
-          <h1 className="text-2xl font-semibold text-gray-900">
+          <h1 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">
             {t("startScreen.title")}
           </h1>
-          <p className="text-gray-600">{t("startScreen.shortDescription")}</p>
+          <p className="text-gray-600 dark:text-gray-400">
+            {t("startScreen.shortDescription")}
+          </p>
         </div>
 
         <Dropdown

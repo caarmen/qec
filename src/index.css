@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Dark mode is driven by a `dark` class on <html> (manual toggle). */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: Inter, system-ui, sans-serif;
 
@@ -24,5 +27,17 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
+  }
+
+  html.dark {
+    color: var(--color-gray-100);
+  }
+
+  html.dark *,
+  html.dark ::after,
+  html.dark ::before,
+  html.dark ::backdrop,
+  html.dark ::file-selector-button {
+    border-color: var(--color-gray-600, currentcolor);
   }
 }
