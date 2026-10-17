@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { useTranslation } from "react-i18next";
+import RichText from "./RichText";
 
 /**
  * AnswerOption component - Individual answer choice in quiz
@@ -79,7 +80,9 @@ function AnswerOption({
           </span>
         )}
 
-        <span className="flex-1">{text}</span>
+        <span className="flex-1">
+          <RichText text={text} />
+        </span>
 
         {feedback === "correct" && (
           <span

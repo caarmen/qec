@@ -8,7 +8,7 @@ import i18next from "eslint-plugin-i18next";
 import eslintConfigPrettier from "eslint-config-prettier/flat";
 
 export default defineConfig([
-  globalIgnores(["dist", "coverage", "html"]),
+  globalIgnores(["dist", "coverage", "html", ".vitest"]),
   {
     files: ["**/*.{js,jsx}"],
     extends: [
