@@ -33,8 +33,8 @@ describe("SegmentedControlOption", () => {
       const option = screen.getByRole("radio");
       expect(option).toHaveAttribute("aria-checked", "true");
       expect(option).toHaveAttribute("tabindex", "0");
-      expect(option).toHaveClass("bg-blue-600");
-      expect(option).toHaveClass("text-white");
+      expect(option).toHaveClass("bg-primary-600");
+      expect(option).toHaveClass("text-on-primary");
     });
 
     it("should render as disabled when disabled prop is true", () => {

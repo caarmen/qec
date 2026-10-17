@@ -26,8 +26,8 @@ describe("DropdownOption", () => {
       const option = screen.getByRole("option");
       expect(option).toHaveAttribute("aria-selected", "true");
       expect(option).toHaveAttribute("tabindex", "0");
-      expect(option).toHaveClass("bg-blue-50");
-      expect(option).toHaveClass("text-blue-700");
+      expect(option).toHaveClass("bg-primary-50");
+      expect(option).toHaveClass("text-primary-700");
     });
   });
 

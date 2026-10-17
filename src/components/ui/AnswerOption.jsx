@@ -27,7 +27,7 @@ function AnswerOption({
   const defaultStyles =
     "border-gray-200 hover:bg-gray-50 dark:border-gray-600 dark:hover:bg-gray-700";
   const selectedStyles =
-    "border-blue-600 bg-blue-50 dark:border-blue-500 dark:bg-blue-900";
+    "border-primary-600 bg-primary-50 dark:border-primary-500 dark:bg-primary-900";
   const correctStyles =
     "border-green-600 bg-green-50 dark:border-green-500 dark:bg-green-900";
   const incorrectStyles =
@@ -70,7 +70,9 @@ function AnswerOption({
           <span
             aria-hidden
             className={`w-4 h-4 rounded-xs flex items-center justify-center ${
-              isSelected ? "bg-blue-500 text-white" : "border-solid border-2"
+              isSelected
+                ? "bg-primary-500 text-on-primary"
+                : "border-solid border-2"
             }`}
           >
             {isSelected ? "✓" : ""}
