@@ -26,3 +26,11 @@ dist-ssr
 # artifacts
 coverage
 html
+
+.vibe/
+!.vibe/agents/
+!.vibe/agents/**
+!.vibe/prompts/
+!.vibe/prompts/**
+plans/
+.env
