@@ -1,6 +1,7 @@
 import QuestionCard from "./ui/QuestionCard";
 import AnswerOption from "./ui/AnswerOption";
 import Button from "./ui/Button";
+import RichText from "./ui/RichText";
 import { isAnswerCorrect } from "../utils/quizHelpers";
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
@@ -133,7 +134,7 @@ function QuizScreen({
 
         {/* Question text */}
         <h2 className="text-xl font-medium text-gray-900 dark:text-gray-100">
-          {currentQuestion.question}
+          <RichText text={currentQuestion.question} />
         </h2>
 
         {difficulty === DIFFICULTY.DIFFICULT && (
