@@ -83,9 +83,11 @@ npm test
 
 ## Développement
 
-### Ajouter des questions
+### Customiser le quiz
 
-Modifiez le fichier `src/data/questions.json` :
+Toute la customisation de l'application se fait dans le répertoire `src/quiz`.
+
+Définir les questions du quiz dans le fichier `src/quiz/questions.json` :
 
 ```json
 {
@@ -99,6 +101,16 @@ Modifiez le fichier `src/data/questions.json` :
   ]
 }
 ```
+
+Définir le titre et description du quiz dans `src/quiz/strings.json`.
+
+Définir le thème dans `src/quiz/theme.css`.
+
+Configurer les informations de l'application dans `src/quiz/manifest.json`.
+
+Customiser l'icône dans `src/quiz/favicon.svg`.
+
+Lancer `npm run icons` pour générer les icônes dans `public`. Cette tâche génère les icônes à partir de `src/quiz/favicon.svg`.
 
 ### Linter
 
