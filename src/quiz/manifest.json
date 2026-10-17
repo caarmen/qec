@@ -1,8 +1,8 @@
 {
   "lang": "fr",
-  "name": "Quiz de Naturalisation Française",
-  "short_name": "Quiz",
-  "description": "Testez vos connaissances civiques et évaluez votre préparation pour la naturalisation française.",
-  "theme_color": "#2563eb",
+  "name": "Quiz Koin",
+  "short_name": "Quiz Koin",
+  "description": "Testez vos connaissances de Koin.",
+  "theme_color": "#1F2937",
   "background_color": "#ffffff"
 }
