@@ -38,7 +38,7 @@ function SegmentedControl({
 
   const handleKeyDown = (event, optionIndex) => {
     const lastIndex = options.length - 1;
-    let nextIndex = optionIndex;
+    let nextIndex;
 
     switch (event.key) {
       case "ArrowRight":
