@@ -1,28 +1,12 @@
 @import "tailwindcss";
+/* Quiz identity: palette, questions, and strings live in src/quiz/. */
+@import "./quiz/theme.css";
 
 /* Dark mode is driven by a `dark` class on <html> (manual toggle). */
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --font-sans: Inter, system-ui, sans-serif;
-
-  /*
-    Primary palette: the accent color of the app.
-    To re-theme for a different quiz, change these values (for example to
-    var(--color-yellow-600)); components use primary-* utilities and never
-    reference a concrete Tailwind color. The list is the set of shades the
-    app actually uses. --color-on-primary is the text color placed on
-    primary backgrounds: keep it in contrast with primary-500/600.
-  */
-  --color-primary-50: var(--color-blue-50);
-  --color-primary-100: var(--color-blue-100);
-  --color-primary-300: var(--color-blue-300);
-  --color-primary-400: var(--color-blue-400);
-  --color-primary-500: var(--color-blue-500);
-  --color-primary-600: var(--color-blue-600);
-  --color-primary-700: var(--color-blue-700);
-  --color-primary-900: var(--color-blue-900);
-  --color-on-primary: var(--color-white);
 }
 
 /*

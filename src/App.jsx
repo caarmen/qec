@@ -3,7 +3,7 @@ import QuizStartScreen from "./components/QuizStartScreen";
 import QuizScreen from "./components/QuizScreen";
 import ResultsScreen from "./components/ResultsScreen";
 import ThemeToggle from "./components/ui/ThemeToggle";
-import questionsData from "./data/questions.json";
+import questionsData from "./quiz/questions.json";
 
 function App() {
   const {

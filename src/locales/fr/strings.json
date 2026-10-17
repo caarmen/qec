@@ -1,7 +1,5 @@
 {
   "startScreen": {
-    "title": "Quiz de Naturalisation Française",
-    "shortDescription": "Testez vos connaissances civiques et évaluez votre préparation pour la naturalisation française.",
     "buttonStart": "Commencer le quiz",
     "config": {
       "questionCount": {
