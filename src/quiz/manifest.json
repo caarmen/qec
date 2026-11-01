@@ -1,8 +1,8 @@
 {
-  "lang": "fr",
-  "name": "Quiz de Naturalisation Française",
-  "short_name": "Quiz",
-  "description": "Testez vos connaissances civiques et évaluez votre préparation pour la naturalisation française.",
-  "theme_color": "#2563eb",
+  "lang": "es",
+  "name": "Quiz de Tutorial de Django Girls",
+  "short_name": "Quiz Django Girls",
+  "description": "Quiz de Tutorial de Django Girls en español",
+  "theme_color": "#f7921d",
   "background_color": "#ffffff"
 }
