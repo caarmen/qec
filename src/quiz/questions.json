@@ -76,45 +76,49 @@
     {
       "question": "¿Qué comando se utiliza para listar archivos de una carpeta en macOS y Linux?",
       "theme": "Línea de Comandos",
-      "correctAnswers": ["ls"],
-      "wrongAnswers": ["dir", "pwd", "cd", "mkdir"]
+      "correctAnswers": ["`ls`"],
+      "wrongAnswers": ["`dir`", "`pwd`", "`cd`", "`mkdir`"]
     },
     {
       "question": "¿Qué comando se utiliza en la consola de Windows para listar archivos?",
       "theme": "Línea de Comandos",
-      "correctAnswers": ["dir"],
-      "wrongAnswers": ["ls", "show", "list", "pwd"]
+      "correctAnswers": ["`dir`"],
+      "wrongAnswers": ["`ls`", "`show`", "`list`", "`pwd`"]
     },
     {
       "question": "¿Qué comando muestra la ruta del directorio actual en la terminal?",
       "theme": "Línea de Comandos",
-      "correctAnswers": ["pwd"],
-      "wrongAnswers": ["cd", "path", "dir", "whereami"]
+      "correctAnswers": ["`pwd`"],
+      "wrongAnswers": ["`cd`", "`path`", "`dir`", "`whereami`"]
     },
     {
       "question": "¿Qué comando crea una nueva carpeta desde la consola?",
       "theme": "Línea de Comandos",
-      "correctAnswers": ["mkdir nombre_carpeta"],
+      "correctAnswers": ["`mkdir nombre_carpeta`"],
       "wrongAnswers": [
-        "newdir nombre_carpeta",
-        "create folder nombre_carpeta",
-        "touch nombre_carpeta"
+        "`newdir nombre_carpeta`",
+        "`create folder nombre_carpeta`",
+        "`touch nombre_carpeta`"
       ]
     },
     {
-      "question": "¿Cómo te desplazas a una carpeta específica llamada 'proyectos' desde la terminal?",
+      "question": "¿Cómo te desplazas a una carpeta específica llamada `proyectos` desde la terminal?",
       "theme": "Línea de Comandos",
-      "correctAnswers": ["cd proyectos"],
-      "wrongAnswers": ["open proyectos", "goto proyectos", "dir proyectos"]
+      "correctAnswers": ["`cd proyectos`"],
+      "wrongAnswers": [
+        "`open proyectos`",
+        "`goto proyectos`",
+        "`dir proyectos`"
+      ]
     },
     {
       "question": "¿Cómo se regresa a la carpeta del nivel superior en la terminal?",
       "theme": "Línea de Comandos",
-      "correctAnswers": ["cd .."],
-      "wrongAnswers": ["cd /", "cd back", "up .."]
+      "correctAnswers": ["`cd ..`"],
+      "wrongAnswers": ["`cd /`", "`cd back`", "`up ..`"]
     },
     {
-      "question": "¿Para qué sirve presionar la tecla Tabulación (Tab) al escribir en la terminal?",
+      "question": "¿Para qué sirve presionar la tecla Tabulación (`Tab`) al escribir en la terminal?",
       "theme": "Línea de Comandos",
       "correctAnswers": [
         "Autocompleta el nombre de archivos o carpetas sugeridos según lo escrito."
@@ -128,8 +132,8 @@
     {
       "question": "¿Qué combinación de teclas permite detener la ejecución de un proceso en la terminal?",
       "theme": "Línea de Comandos",
-      "correctAnswers": ["Ctrl + C"],
-      "wrongAnswers": ["Ctrl + Z", "Alt + F4", "Tab + Esc"]
+      "correctAnswers": ["`Ctrl + C`"],
+      "wrongAnswers": ["`Ctrl + Z`", "`Alt + F4`", "`Tab + Esc`"]
     },
     {
       "question": "¿Qué diferencia existe entre una ruta relativa y una ruta absoluta?",
@@ -138,13 +142,13 @@
         "La ruta absoluta especifica la ubicación desde la raíz del sistema; la relativa parte desde la carpeta actual de trabajo."
       ],
       "wrongAnswers": [
-        "La ruta relativa empieza por http:// y la absoluta por ftp://.",
+        "La ruta relativa empieza por `http://` y la absoluta por `ftp://`.",
         "La ruta absoluta solo funciona en Windows.",
         "Son exactamente idénticas."
       ]
     },
     {
-      "question": "¿Por qué es recomendable utilizar un entorno virtual ('virtualenv') en proyectos de Python?",
+      "question": "¿Por qué es recomendable utilizar un entorno virtual (`virtualenv`) en proyectos de Python?",
       "theme": "Instalación y Entorno",
       "correctAnswers": [
         "Mantiene aisladas las dependencias del proyecto evitando conflictos de versiones entre librerías."
@@ -156,40 +160,40 @@
       ]
     },
     {
-      "question": "¿Cómo se crea un entorno virtual llamado 'myvenv' en Python 3?",
+      "question": "¿Cómo se crea un entorno virtual llamado `myvenv` en Python 3?",
       "theme": "Instalación y Entorno",
-      "correctAnswers": ["python3 -m venv myvenv", "python -m venv myvenv"],
+      "correctAnswers": ["`python3 -m venv myvenv`", "`python -m venv myvenv`"],
       "wrongAnswers": [
-        "pip install myvenv",
-        "virtualenv create myvenv",
-        "django startvenv myvenv"
+        "`pip install myvenv`",
+        "`virtualenv create myvenv`",
+        "`django startvenv myvenv`"
       ]
     },
     {
-      "question": "¿Qué comando activa el entorno virtual 'myvenv' en macOS / Linux?",
+      "question": "¿Qué comando activa el entorno virtual `myvenv` en macOS / Linux?",
       "theme": "Instalación y Entorno",
-      "correctAnswers": ["source myvenv/bin/activate"],
+      "correctAnswers": ["`source myvenv/bin/activate`"],
       "wrongAnswers": [
-        "myvenv\\Scripts\\activate",
-        "python activate myvenv",
-        "start myvenv"
+        "`myvenv\\Scripts\\activate`",
+        "`python activate myvenv`",
+        "`start myvenv`"
       ]
     },
     {
-      "question": "¿Qué comando activa el entorno virtual 'myvenv' en la consola cmd.exe de Windows?",
+      "question": "¿Qué comando activa el entorno virtual `myvenv` en la consola cmd.exe de Windows?",
       "theme": "Instalación y Entorno",
-      "correctAnswers": ["myvenv\\Scripts\\activate"],
+      "correctAnswers": ["`myvenv\\Scripts\\activate`"],
       "wrongAnswers": [
-        "source myvenv/bin/activate",
-        "python myvenv activate",
-        "run myvenv"
+        "`source myvenv/bin/activate`",
+        "`python myvenv activate`",
+        "`run myvenv`"
       ]
     },
     {
       "question": "¿Cómo reconoces que tu entorno virtual de Python está activo en la terminal?",
       "theme": "Instalación y Entorno",
       "correctAnswers": [
-        "Aparece el nombre del entorno virtual entre paréntesis al inicio de la línea de comandos, por ejemplo (myvenv)."
+        "Aparece el nombre del entorno virtual entre paréntesis al inicio de la línea de comandos, por ejemplo `(myvenv)`."
       ],
       "wrongAnswers": [
         "El texto de la consola cambia a color verde.",
@@ -200,11 +204,16 @@
     {
       "question": "¿Qué comando desactiva un entorno virtual en ejecución?",
       "theme": "Instalación y Entorno",
-      "correctAnswers": ["deactivate"],
-      "wrongAnswers": ["stop venv", "exit venv", "close", "pip uninstall venv"]
+      "correctAnswers": ["`deactivate`"],
+      "wrongAnswers": [
+        "`stop venv`",
+        "`exit venv`",
+        "`close`",
+        "`pip uninstall venv`"
+      ]
     },
     {
-      "question": "¿Qué es 'pip' en Python?",
+      "question": "¿Qué es `pip` en Python?",
       "theme": "Instalación y Entorno",
       "correctAnswers": [
         "El administrador de paquetes estándar para instalar y gestionar librerías externas de Python."
@@ -216,17 +225,17 @@
       ]
     },
     {
-      "question": "¿Cómo se instala la librería Django dentro del entorno activo usando pip?",
+      "question": "¿Cómo se instala la librería Django dentro del entorno activo usando `pip`?",
       "theme": "Instalación y Entorno",
-      "correctAnswers": ["pip install django"],
+      "correctAnswers": ["`pip install django`"],
       "wrongAnswers": [
-        "python install django",
-        "get django",
-        "install-package django"
+        "`python install django`",
+        "`get django`",
+        "`install-package django`"
       ]
     },
     {
-      "question": "¿Para qué sirve el archivo 'requirements.txt' en un proyecto Python?",
+      "question": "¿Para qué sirve el archivo `requirements.txt` en un proyecto Python?",
       "theme": "Instalación y Entorno",
       "correctAnswers": [
         "Lista las dependencias y versiones de paquetes necesarias para ejecutar el proyecto."
@@ -240,74 +249,86 @@
     {
       "question": "¿Cuáles son los tipos de datos numéricos básicos en Python?",
       "theme": "Introducción a Python",
-      "correctAnswers": ["Enteros (int) y números de punto flotante (float)"],
+      "correctAnswers": [
+        "Enteros (`int`) y números de punto flotante (`float`)"
+      ],
       "wrongAnswers": [
-        "Cadenas (str) y booleanos (bool)",
-        "Listas (list) y diccionarios (dict)",
+        "Cadenas (`str`) y booleanos (`bool`)",
+        "Listas (`list`) y diccionarios (`dict`)",
         "Arrays y Matrices"
       ]
     },
     {
       "question": "¿Cómo se define una variable que almacene un texto en Python?",
       "theme": "Introducción a Python",
-      "correctAnswers": ["nombre = \"Ola\"", "nombre = 'Ola'"],
+      "correctAnswers": ["`nombre = \"Ola\"`", "`nombre = 'Ola'`"],
       "wrongAnswers": [
-        "nombre := [Ola]",
-        "string nombre = Ola",
-        "var nombre = <Ola>"
+        "`nombre := [Ola]`",
+        "`string nombre = Ola`",
+        "`var nombre = <Ola>`"
       ]
     },
     {
       "question": "¿Qué función de Python devuelve la cantidad de elementos en una lista o la longitud de un texto?",
       "theme": "Introducción a Python",
-      "correctAnswers": ["len()"],
-      "wrongAnswers": ["count()", "size()", "length()", "total()"]
+      "correctAnswers": ["`len()`"],
+      "wrongAnswers": ["`count()`", "`size()`", "`length()`", "`total()`"]
     },
     {
       "question": "¿Qué método convierte una cadena de texto a mayúsculas en Python?",
       "theme": "Introducción a Python",
-      "correctAnswers": ["texto.upper()"],
-      "wrongAnswers": ["texto.toUpper()", "upper(texto)", "texto.max()"]
+      "correctAnswers": ["`texto.upper()`"],
+      "wrongAnswers": ["`texto.toUpper()`", "`upper(texto)`", "`texto.max()`"]
     },
     {
       "question": "¿Cómo se representa el tipo de dato booleano en Python?",
       "theme": "Introducción a Python",
-      "correctAnswers": ["True y False (con la primera letra en mayúscula)"],
-      "wrongAnswers": ["true y false", "1 y 0 solamente", "YES y NO"]
+      "correctAnswers": [
+        "`True` y `False` (con la primera letra en mayúscula)"
+      ],
+      "wrongAnswers": [
+        "`true` y `false`",
+        "`1` y `0` solamente",
+        "`YES` y `NO`"
+      ]
     },
     {
       "question": "¿Cómo se crea una lista vacía en Python?",
       "theme": "Introducción a Python",
-      "correctAnswers": ["mi_lista = []", "mi_lista = list()"],
-      "wrongAnswers": ["mi_lista = {}", "mi_lista = ()", "mi_lista = null"]
+      "correctAnswers": ["`mi_lista = []`", "`mi_lista = list()`"],
+      "wrongAnswers": [
+        "`mi_lista = {}`",
+        "`mi_lista = ()`",
+        "`mi_lista = null`"
+      ]
     },
     {
       "question": "¿Cuál es el índice del primer elemento de una lista en Python?",
       "theme": "Introducción a Python",
-      "correctAnswers": ["0"],
-      "wrongAnswers": ["1", "-1", "first"]
+      "correctAnswers": ["`0`"],
+      "wrongAnswers": ["`1`", "`-1`", "`first`"]
     },
     {
       "question": "¿Qué método añade un elemento al final de una lista en Python?",
       "theme": "Introducción a Python",
-      "correctAnswers": ["lista.append(elemento)"],
+      "correctAnswers": ["`lista.append(elemento)`"],
       "wrongAnswers": [
-        "lista.add(elemento)",
-        "lista.push(elemento)",
-        "lista.insert_end(elemento)"
+        "`lista.add(elemento)`",
+        "`lista.push(elemento)`",
+        "`lista.insert_end(elemento)`"
       ]
     },
     {
       "question": "¿Qué método ordena los elementos de una lista en Python?",
       "theme": "Introducción a Python",
-      "correctAnswers": ["lista.sort()"],
-      "wrongAnswers": ["lista.order()", "sort(lista)", "lista.arrange()"]
+      "correctAnswers": ["`lista.sort()`"],
+      "wrongAnswers": ["`lista.order()`", "`sort(lista)`", "`lista.arrange()`"]
     },
     {
       "question": "¿Cómo se estructura un diccionario en Python?",
       "theme": "Introducción a Python",
       "correctAnswers": [
-        "Mediante llaves conteniendo pares clave-valor, por ejemplo: {'clave': 'valor'}"
+        "Mediante llaves conteniendo pares clave-valor, por ejemplo: `{'clave': 'valor'}`"
       ],
       "wrongAnswers": [
         "Mediante corchetes separados por guiones.",
@@ -316,51 +337,59 @@
       ]
     },
     {
-      "question": "Dado 'persona = {\"nombre\": \"Ana\", \"edad\": 25}', ¿cómo accedes al valor de 'nombre'?",
+      "question": "Dado `persona = {\"nombre\": \"Ana\", \"edad\": 25}`, ¿cómo accedes al valor de `nombre`?",
       "theme": "Introducción a Python",
-      "correctAnswers": ["persona['nombre']", "persona.get('nombre')"],
-      "wrongAnswers": ["persona[0]", "persona.nombre()", "persona->nombre"]
+      "correctAnswers": ["`persona['nombre']`", "`persona.get('nombre')`"],
+      "wrongAnswers": [
+        "`persona[0]`",
+        "`persona.nombre()`",
+        "`persona->nombre`"
+      ]
     },
     {
-      "question": "¿Cómo se añade una nueva clave y valor a un diccionario existente 'datos'?",
+      "question": "¿Cómo se añade una nueva clave y valor a un diccionario existente `datos`?",
       "theme": "Introducción a Python",
-      "correctAnswers": ["datos['ciudad'] = 'Madrid'"],
+      "correctAnswers": ["`datos['ciudad'] = 'Madrid'`"],
       "wrongAnswers": [
-        "datos.add('ciudad', 'Madrid')",
-        "datos.append('ciudad': 'Madrid')",
-        "insert datos('ciudad', 'Madrid')"
+        "`datos.add('ciudad', 'Madrid')`",
+        "`datos.append('ciudad': 'Madrid')`",
+        "`insert datos('ciudad', 'Madrid')`"
       ]
     },
     {
       "question": "¿Cuáles son los operadores lógicos en Python para evaluar condiciones compuestas?",
       "theme": "Introducción a Python",
-      "correctAnswers": ["and, or, not"],
-      "wrongAnswers": ["&&, ||, !", "AND_ALSO, OR_ELSE", "bit_and, bit_or"]
+      "correctAnswers": ["`and, or, not`"],
+      "wrongAnswers": [
+        "`&&, ||, !`",
+        "`AND_ALSO, OR_ELSE`",
+        "`bit_and, bit_or`"
+      ]
     },
     {
       "question": "¿Qué palabra clave inicia una estructura condicional alternativa en Python?",
       "theme": "Introducción a Python",
-      "correctAnswers": ["elif"],
-      "wrongAnswers": ["else if", "elseif", "case", "switch"]
+      "correctAnswers": ["`elif`"],
+      "wrongAnswers": ["`else if`", "`elseif`", "`case`", "`switch`"]
     },
     {
       "question": "¿Qué función permite imprimir información en la consola de Python?",
       "theme": "Introducción a Python",
-      "correctAnswers": ["print()"],
-      "wrongAnswers": ["echo()", "console.log()", "write()", "output()"]
+      "correctAnswers": ["`print()`"],
+      "wrongAnswers": ["`echo()`", "`console.log()`", "`write()`", "`output()`"]
     },
     {
       "question": "¿Cómo se declara una función propia en Python?",
       "theme": "Introducción a Python",
-      "correctAnswers": ["def mi_funcion():"],
+      "correctAnswers": ["`def mi_funcion():`"],
       "wrongAnswers": [
-        "function mi_funcion() {",
-        "func mi_funcion():",
-        "define mi_funcion()"
+        "`function mi_funcion() {`",
+        "`func mi_funcion():`",
+        "`define mi_funcion()`"
       ]
     },
     {
-      "question": "¿Para qué sirve la instrucción 'return' en una función de Python?",
+      "question": "¿Para qué sirve la instrucción `return` en una función de Python?",
       "theme": "Introducción a Python",
       "correctAnswers": [
         "Devuelve un resultado al código que llamó a la función y finaliza su ejecución."
@@ -372,15 +401,15 @@
       ]
     },
     {
-      "question": "¿Cuál es la sintaxis correcta de un bucle for en Python para iterar sobre una lista de participantes?",
+      "question": "¿Cuál es la sintaxis correcta de un bucle `for` en Python para iterar sobre una lista de participantes?",
       "theme": "Introducción a Python",
       "correctAnswers": [
-        "for participante in participantes:\n    print(participante)"
+        "```python\nfor participante in participantes:\n    print(participante)\n```"
       ],
       "wrongAnswers": [
-        "for (p in participantes) print(p)",
-        "foreach ($participantes as $p) { echo $p; }",
-        "loop p over participantes: print p"
+        "`for (p in participantes) print(p)`",
+        "`foreach ($participantes as $p) { echo $p; }`",
+        "`loop p over participantes: print p`"
       ]
     },
     {
@@ -396,17 +425,17 @@
       ]
     },
     {
-      "question": "¿Qué comando crea un nuevo proyecto de Django llamado 'mysite'?",
+      "question": "¿Qué comando crea un nuevo proyecto de Django llamado `mysite`?",
       "theme": "Proyecto Django",
-      "correctAnswers": ["django-admin startproject mysite ."],
+      "correctAnswers": ["`django-admin startproject mysite .`"],
       "wrongAnswers": [
-        "python manage.py startproject mysite",
-        "django create mysite",
-        "pip start mysite"
+        "`python manage.py startproject mysite`",
+        "`django create mysite`",
+        "`pip start mysite`"
       ]
     },
     {
-      "question": "¿Cuál es la función del archivo 'manage.py' generado por Django?",
+      "question": "¿Cuál es la función del archivo `manage.py` generado por Django?",
       "theme": "Proyecto Django",
       "correctAnswers": [
         "Es un script de utilidad que permite ejecutar comandos administrativos de Django."
@@ -420,55 +449,60 @@
     {
       "question": "¿En qué archivo se encuentra la configuración global del proyecto?",
       "theme": "Proyecto Django",
-      "correctAnswers": ["mysite/settings.py"],
-      "wrongAnswers": ["mysite/urls.py", "blog/models.py", "manage.py"]
+      "correctAnswers": ["`mysite/settings.py`"],
+      "wrongAnswers": ["`mysite/urls.py`", "`blog/models.py`", "`manage.py`"]
     },
     {
       "question": "¿Qué comando inicia el servidor de desarrollo local de Django?",
       "theme": "Proyecto Django",
-      "correctAnswers": ["python manage.py runserver"],
+      "correctAnswers": ["`python manage.py runserver`"],
       "wrongAnswers": [
-        "python manage.py startserver",
-        "django run",
-        "python mysite.py"
+        "`python manage.py startserver`",
+        "`django run`",
+        "`python mysite.py`"
       ]
     },
     {
       "question": "¿En qué dirección por defecto se abre el servidor local de Django?",
       "theme": "Proyecto Django",
-      "correctAnswers": ["/ (en el puerto 8000 local)"],
-      "wrongAnswers": ["puerto 80", "puerto 3000", "puerto 5000"]
+      "correctAnswers": ["`/` (en el puerto `8000` local)"],
+      "wrongAnswers": ["puerto `80`", "puerto `3000`", "puerto `5000`"]
     },
     {
-      "question": "¿Qué comando crea una aplicación individual llamada 'blog' dentro del proyecto?",
+      "question": "¿Qué comando crea una aplicación individual llamada `blog` dentro del proyecto?",
       "theme": "Proyecto Django",
-      "correctAnswers": ["python manage.py startapp blog"],
+      "correctAnswers": ["`python manage.py startapp blog`"],
       "wrongAnswers": [
-        "django-admin createapp blog",
-        "python manage.py newapp blog",
-        "pip install blog"
+        "`django-admin createapp blog`",
+        "`python manage.py newapp blog`",
+        "`pip install blog`"
       ]
     },
     {
-      "question": "Después de crear la app 'blog', ¿dónde debes registrar su nombre dentro de settings.py?",
+      "question": "Después de crear la app `blog`, ¿dónde debes registrar su nombre dentro de `settings.py`?",
       "theme": "Proyecto Django",
-      "correctAnswers": ["En la lista INSTALLED_APPS"],
+      "correctAnswers": ["En la lista `INSTALLED_APPS`"],
       "wrongAnswers": [
-        "En la lista ALLOWED_HOSTS",
-        "En MIDDLEWARE",
-        "En DATABASES"
+        "En la lista `ALLOWED_HOSTS`",
+        "En `MIDDLEWARE`",
+        "En `DATABASES`"
       ]
     },
     {
-      "question": "¿Qué variable en settings.py ajusta el idioma predeterminado de la interfaz de Django?",
+      "question": "¿Qué variable en `settings.py` ajusta el idioma predeterminado de la interfaz de Django?",
       "theme": "Proyecto Django",
-      "correctAnswers": ["LANGUAGE_CODE"],
-      "wrongAnswers": ["TIME_ZONE", "DEFAULT_LANG", "LOCALE", "SITE_LANGUAGE"]
+      "correctAnswers": ["`LANGUAGE_CODE`"],
+      "wrongAnswers": [
+        "`TIME_ZONE`",
+        "`DEFAULT_LANG`",
+        "`LOCALE`",
+        "`SITE_LANGUAGE`"
+      ]
     },
     {
       "question": "¿Qué base de datos viene configurada por defecto al crear un nuevo proyecto en Django?",
       "theme": "Proyecto Django",
-      "correctAnswers": ["SQLite (db.sqlite3)"],
+      "correctAnswers": ["SQLite (`db.sqlite3`)"],
       "wrongAnswers": ["PostgreSQL", "MySQL", "MongoDB", "Oracle"]
     },
     {
@@ -486,48 +520,52 @@
     {
       "question": "¿De qué clase de Django deben heredar todos los modelos?",
       "theme": "Modelos y Base de Datos",
-      "correctAnswers": ["models.Model"],
+      "correctAnswers": ["`models.Model`"],
       "wrongAnswers": [
-        "models.Schema",
-        "models.Database",
-        "object",
-        "models.Table"
+        "`models.Schema`",
+        "`models.Database`",
+        "`object`",
+        "`models.Table`"
       ]
     },
     {
       "question": "¿Qué tipo de campo de modelo almacena textos cortos con un tamaño máximo definido?",
       "theme": "Modelos y Base de Datos",
-      "correctAnswers": ["models.CharField"],
+      "correctAnswers": ["`models.CharField`"],
       "wrongAnswers": [
-        "models.TextField",
-        "models.StringField",
-        "models.ShortText"
+        "`models.TextField`",
+        "`models.StringField`",
+        "`models.ShortText`"
       ]
     },
     {
-      "question": "¿Qué argumento obligatorio requiere 'models.CharField'?",
+      "question": "¿Qué argumento obligatorio requiere `models.CharField`?",
       "theme": "Modelos y Base de Datos",
-      "correctAnswers": ["max_length"],
-      "wrongAnswers": ["min_length", "limit", "size", "default_size"]
+      "correctAnswers": ["`max_length`"],
+      "wrongAnswers": ["`min_length`", "`limit`", "`size`", "`default_size`"]
     },
     {
       "question": "¿Qué tipo de campo se utiliza para textos largos como el cuerpo de un post?",
       "theme": "Modelos y Base de Datos",
-      "correctAnswers": ["models.TextField"],
-      "wrongAnswers": ["models.CharField", "models.LongField", "models.BigText"]
+      "correctAnswers": ["`models.TextField`"],
+      "wrongAnswers": [
+        "`models.CharField`",
+        "`models.LongField`",
+        "`models.BigText`"
+      ]
     },
     {
       "question": "¿Qué tipo de campo se utiliza para vincular una entrada con un usuario (relación uno a muchos)?",
       "theme": "Modelos y Base de Datos",
-      "correctAnswers": ["models.ForeignKey"],
+      "correctAnswers": ["`models.ForeignKey`"],
       "wrongAnswers": [
-        "models.OneToOneField",
-        "models.ManyToManyField",
-        "models.LinkField"
+        "`models.OneToOneField`",
+        "`models.ManyToManyField`",
+        "`models.LinkField`"
       ]
     },
     {
-      "question": "¿Para qué sirve implementar el método __str__(self) en un modelo?",
+      "question": "¿Para qué sirve implementar el método `__str__(self)` en un modelo?",
       "theme": "Modelos y Base de Datos",
       "correctAnswers": [
         "Devuelve una representación en texto legible del objeto para el panel de administración u otros usos."
@@ -539,68 +577,74 @@
       ]
     },
     {
-      "question": "¿Qué comando analiza los cambios en 'models.py' y genera archivos de migración?",
+      "question": "¿Qué comando analiza los cambios en `models.py` y genera archivos de migración?",
       "theme": "Modelos y Base de Datos",
-      "correctAnswers": ["python manage.py makemigrations"],
+      "correctAnswers": ["`python manage.py makemigrations`"],
       "wrongAnswers": [
-        "python manage.py migrate",
-        "python manage.py buildmodels",
-        "django-admin update"
+        "`python manage.py migrate`",
+        "`python manage.py buildmodels`",
+        "`django-admin update`"
       ]
     },
     {
       "question": "¿Qué comando aplica las migraciones pendientes a la base de datos?",
       "theme": "Modelos y Base de Datos",
-      "correctAnswers": ["python manage.py migrate"],
+      "correctAnswers": ["`python manage.py migrate`"],
       "wrongAnswers": [
-        "python manage.py makemigrations",
-        "python manage.py apply",
-        "django-admin sync"
+        "`python manage.py makemigrations`",
+        "`python manage.py apply`",
+        "`django-admin sync`"
       ]
     },
     {
-      "question": "¿Dónde se guardan los archivos creados por 'makemigrations'?",
+      "question": "¿Dónde se guardan los archivos creados por `makemigrations`?",
       "theme": "Modelos y Base de Datos",
       "correctAnswers": [
-        "En la carpeta 'migrations' dentro de la aplicación correspondiente."
+        "En la carpeta `migrations` dentro de la aplicación correspondiente."
       ],
       "wrongAnswers": [
-        "En la carpeta mysite/",
+        "En la carpeta `mysite/`",
         "En el directorio raíz del proyecto.",
-        "Dentro del archivo db.sqlite3."
+        "Dentro del archivo `db.sqlite3`."
       ]
     },
     {
       "question": "¿Qué comando se utiliza para crear una cuenta de superusuario administrador en Django?",
       "theme": "Administrador de Django",
-      "correctAnswers": ["python manage.py createsuperuser"],
+      "correctAnswers": ["`python manage.py createsuperuser`"],
       "wrongAnswers": [
-        "python manage.py addadmin",
-        "django-admin superuser",
-        "python manage.py newuser"
+        "`python manage.py addadmin`",
+        "`django-admin superuser`",
+        "`python manage.py newuser`"
       ]
     },
     {
-      "question": "¿En qué archivo de la app 'blog' debes registrar tu modelo Post para administrarlo visualmente?",
+      "question": "¿En qué archivo de la app `blog` debes registrar tu modelo `Post` para administrarlo visualmente?",
       "theme": "Administrador de Django",
-      "correctAnswers": ["blog/admin.py"],
-      "wrongAnswers": ["blog/models.py", "blog/views.py", "mysite/settings.py"]
+      "correctAnswers": ["`blog/admin.py`"],
+      "wrongAnswers": [
+        "`blog/models.py`",
+        "`blog/views.py`",
+        "`mysite/settings.py`"
+      ]
     },
     {
-      "question": "¿Cuál es el código para registrar el modelo Post en admin.py?",
+      "question": "¿Cuál es el código para registrar el modelo `Post` en `admin.py`?",
       "theme": "Administrador de Django",
-      "correctAnswers": ["from .models import Post\nadmin.site.register(Post)"],
+      "correctAnswers": [
+        "```python\nfrom .models import Post\nadmin.site.register(Post)\n```"
+      ],
       "wrongAnswers": [
-        "admin.add(Post)",
-        "register(Post)",
-        "models.Post.register()"
+        "`admin.add(Post)`",
+        "`register(Post)`",
+        "`models.Post.register()`"
       ]
     },
     {
       "question": "¿A qué ruta URL se accede habitualmente para entrar al panel de administración de Django?",
       "theme": "Administrador de Django",
-      "correctAnswers": ["/admin/"],
-      "wrongAnswers": ["/dashboard/", "/login_panel/", "/manager/"]
+      "correctAnswers": ["`/admin/`"],
+      "wrongAnswers": ["`/dashboard/`", "`/login_panel/`", "`/manager/`"]
     },
     {
       "question": "¿Qué es Git?",
@@ -617,11 +661,11 @@
     {
       "question": "¿Qué comando inicializa un repositorio de Git en la carpeta actual?",
       "theme": "Git y GitHub",
-      "correctAnswers": ["git init"],
-      "wrongAnswers": ["git start", "git create", "git new"]
+      "correctAnswers": ["`git init`"],
+      "wrongAnswers": ["`git start`", "`git create`", "`git new`"]
     },
     {
-      "question": "¿Qué función cumple el archivo '.gitignore'?",
+      "question": "¿Qué función cumple el archivo `.gitignore`?",
       "theme": "Git y GitHub",
       "correctAnswers": [
         "Le indica a Git qué archivos o carpetas no deben ser rastreados ni subidos al repositorio."
@@ -635,33 +679,33 @@
     {
       "question": "¿Qué comando muestra el estado de los archivos en tu repositorio local?",
       "theme": "Git y GitHub",
-      "correctAnswers": ["git status"],
-      "wrongAnswers": ["git check", "git info", "git list"]
+      "correctAnswers": ["`git status`"],
+      "wrongAnswers": ["`git check`", "`git info`", "`git list`"]
     },
     {
       "question": "¿Qué comando prepara todos los archivos modificados para el siguiente commit?",
       "theme": "Git y GitHub",
-      "correctAnswers": ["git add --all .", "git add ."],
-      "wrongAnswers": ["git save --all", "git stage all", "git push ."]
+      "correctAnswers": ["`git add --all .`", "`git add .`"],
+      "wrongAnswers": ["`git save --all`", "`git stage all`", "`git push .`"]
     },
     {
       "question": "¿Qué comando guarda los cambios preparados en el historial del repositorio local con un mensaje?",
       "theme": "Git y GitHub",
-      "correctAnswers": ["git commit -m \"Mensaje explicativo\""],
+      "correctAnswers": ["`git commit -m \"Mensaje explicativo\"`"],
       "wrongAnswers": [
-        "git save \"Mensaje\"",
-        "git push \"Mensaje\"",
-        "git log \"Mensaje\""
+        "`git save \"Mensaje\"`",
+        "`git push \"Mensaje\"`",
+        "`git log \"Mensaje\"`"
       ]
     },
     {
       "question": "¿Qué comando sube los commits del repositorio local al repositorio remoto en GitHub?",
       "theme": "Git y GitHub",
-      "correctAnswers": ["git push"],
-      "wrongAnswers": ["git upload", "git send", "git sync"]
+      "correctAnswers": ["`git push`"],
+      "wrongAnswers": ["`git upload`", "`git send`", "`git sync`"]
     },
     {
-      "question": "¿Cuál es el propósito del archivo 'urls.py' en Django?",
+      "question": "¿Cuál es el propósito del archivo `urls.py` en Django?",
       "theme": "URLs y Vistas",
       "correctAnswers": [
         "Mapear patrones de URL recibidos a las funciones de vista correspondientes que responderán al usuario."
@@ -673,23 +717,23 @@
       ]
     },
     {
-      "question": "¿Cómo se delegan las URLs de la aplicación 'blog' en el archivo 'mysite/urls.py'?",
+      "question": "¿Cómo se delegan las URLs de la aplicación `blog` en el archivo `mysite/urls.py`?",
       "theme": "URLs y Vistas",
-      "correctAnswers": ["path('', include('blog.urls'))"],
+      "correctAnswers": ["`path('', include('blog.urls'))`"],
       "wrongAnswers": [
-        "path.import('blog.urls')",
-        "route('blog', views.all)",
-        "include_urls('blog')"
+        "`path.import('blog.urls')`",
+        "`route('blog', views.all)`",
+        "`include_urls('blog')`"
       ]
     },
     {
-      "question": "En 'blog/urls.py', ¿cómo se asigna la ruta raíz a la vista 'post_list'?",
+      "question": "En `blog/urls.py`, ¿cómo se asigna la ruta raíz a la vista `post_list`?",
       "theme": "URLs y Vistas",
-      "correctAnswers": ["path('', views.post_list, name='post_list')"],
+      "correctAnswers": ["`path('', views.post_list, name='post_list')`"],
       "wrongAnswers": [
-        "route('/', views.post_list)",
-        "path('root', views.post_list)",
-        "get('/', views.post_list)"
+        "`route('/', views.post_list)`",
+        "`path('root', views.post_list)`",
+        "`get('/', views.post_list)`"
       ]
     },
     {
@@ -707,11 +751,11 @@
     {
       "question": "¿Qué función helper renderiza una plantilla HTML combinada con un contexto de datos en las vistas?",
       "theme": "URLs y Vistas",
-      "correctAnswers": ["render(request, 'blog/post_list.html', context)"],
-      "wrongAnswers": ["show_template()", "display_page()", "make_html()"]
+      "correctAnswers": ["`render(request, 'blog/post_list.html', context)`"],
+      "wrongAnswers": ["`show_template()`", "`display_page()`", "`make_html()`"]
     },
     {
-      "question": "¿Qué representa la variable 'pk' en el patrón de URL 'post/<int:pk>/'?",
+      "question": "¿Qué representa la variable `pk` en el patrón de URL `post/<int:pk>/`?",
       "theme": "URLs y Vistas",
       "correctAnswers": [
         "Primary Key (Clave Primaria), el identificador único del registro en la base de datos."
@@ -719,33 +763,33 @@
       "wrongAnswers": ["Public Key.", "Package Key.", "Path Keeper."]
     },
     {
-      "question": "¿Qué función de ayuda recupera un objeto por su 'pk' o muestra un error 404 si no existe?",
+      "question": "¿Qué función de ayuda recupera un objeto por su `pk` o muestra un error 404 si no existe?",
       "theme": "URLs y Vistas",
-      "correctAnswers": ["get_object_or_404(Post, pk=pk)"],
+      "correctAnswers": ["get_object_or_404(`Post`, pk=pk)"],
       "wrongAnswers": [
-        "find_or_404(Post, pk)",
-        "get_or_error(Post, pk)",
-        "fetch_exact(Post, pk)"
+        "`find_or_404(Post, pk)`",
+        "`get_or_error(Post, pk)`",
+        "`fetch_exact(Post, pk)`"
       ]
     },
     {
       "question": "¿Qué función se utiliza en las vistas para redirigir al navegador a otra página o URL nombrada?",
       "theme": "URLs y Vistas",
-      "correctAnswers": ["redirect('post_detail', pk=post.pk)"],
+      "correctAnswers": ["`redirect('post_detail', pk=post.pk)`"],
       "wrongAnswers": [
-        "forward('post_detail')",
-        "goto('post_detail')",
-        "render_redirect('post_detail')"
+        "`forward('post_detail')`",
+        "`goto('post_detail')`",
+        "`render_redirect('post_detail')`"
       ]
     },
     {
       "question": "¿Qué comando abre la consola interactiva de Django para probar modelos y consultas ORM?",
       "theme": "ORM y QuerySets",
-      "correctAnswers": ["python manage.py shell"],
+      "correctAnswers": ["`python manage.py shell`"],
       "wrongAnswers": [
-        "python manage.py console",
-        "django shell",
-        "python console.py"
+        "`python manage.py console`",
+        "`django shell`",
+        "`python console.py`"
       ]
     },
     {
@@ -761,86 +805,94 @@
       ]
     },
     {
-      "question": "¿Cómo se obtienen todos los registros del modelo Post?",
+      "question": "¿Cómo se obtienen todos los registros del modelo `Post`?",
       "theme": "ORM y QuerySets",
-      "correctAnswers": ["Post.objects.all()"],
-      "wrongAnswers": ["Post.get_all()", "Post.select('*')", "Post.fetch_all()"]
+      "correctAnswers": ["`Post.objects.all()`"],
+      "wrongAnswers": [
+        "`Post.get_all()`",
+        "`Post.select('*')`",
+        "`Post.fetch_all()`"
+      ]
     },
     {
       "question": "¿Cómo se filtran las entradas publicadas utilizando la ORM de Django?",
       "theme": "ORM y QuerySets",
       "correctAnswers": [
-        "Post.objects.filter(published_date__lte=timezone.now())"
+        "`Post.objects.filter(published_date__lte=timezone.now())`"
       ],
       "wrongAnswers": [
-        "Post.objects.where('published_date <= now')",
-        "Post.filter_by_date()",
-        "Post.search(published=True)"
+        "`Post.objects.where('published_date <= now')`",
+        "`Post.filter_by_date()`",
+        "`Post.search(published=True)`"
       ]
     },
     {
       "question": "¿Qué método ordena los resultados de un QuerySet por fecha de publicación descendente?",
       "theme": "ORM y QuerySets",
-      "correctAnswers": ["Post.objects.order_by('-published_date')"],
+      "correctAnswers": ["`Post.objects.order_by('-published_date')`"],
       "wrongAnswers": [
-        "Post.objects.sort('-published_date')",
-        "Post.objects.arrange('published_date DESC')",
-        "Post.objects.reverse()"
+        "`Post.objects.sort('-published_date')`",
+        "`Post.objects.arrange('published_date DESC')`",
+        "`Post.objects.reverse()`"
       ]
     },
     {
-      "question": "¿Cómo se crea un nuevo objeto Post y se guarda en la base de datos en un solo paso desde la shell?",
+      "question": "¿Cómo se crea un nuevo objeto `Post` y se guarda en la base de datos en un solo paso desde la shell?",
       "theme": "ORM y QuerySets",
       "correctAnswers": [
-        "Post.objects.create(author=user, title='Título', text='Contenido')"
+        "`Post.objects.create(author=user, title='Título', text='Contenido')`"
       ],
       "wrongAnswers": [
-        "Post.insert(author=user, title='Título')",
-        "Post.add_new(author=user)",
-        "Post.make(title='Título')"
+        "`Post.insert(author=user, title='Título')`",
+        "`Post.add_new(author=user)`",
+        "`Post.make(title='Título')`"
       ]
     },
     {
       "question": "¿Qué método elimina de la base de datos una instancia del modelo recuperada previamente?",
       "theme": "ORM y QuerySets",
-      "correctAnswers": ["post.delete()"],
+      "correctAnswers": ["`post.delete()`"],
       "wrongAnswers": [
-        "post.remove()",
-        "post.drop()",
-        "Post.objects.delete(post)"
+        "`post.remove()`",
+        "`post.drop()`",
+        "`Post.objects.delete(post)`"
       ]
     },
     {
-      "question": "¿En qué ubicación busca Django las plantillas de la aplicación 'blog' por convención?",
+      "question": "¿En qué ubicación busca Django las plantillas de la aplicación `blog` por convención?",
       "theme": "Plantillas de Django",
-      "correctAnswers": ["blog/templates/blog/"],
+      "correctAnswers": ["`blog/templates/blog/`"],
       "wrongAnswers": [
-        "blog/views/templates/",
-        "blog/static/html/",
-        "mysite/templates/"
+        "`blog/views/templates/`",
+        "`blog/static/html/`",
+        "`mysite/templates/`"
       ]
     },
     {
       "question": "¿Cómo se imprime el valor de una variable en las plantillas HTML de Django?",
       "theme": "Plantillas de Django",
-      "correctAnswers": ["{{ variable }}"],
-      "wrongAnswers": ["{% variable %}", "[[ variable ]]", "<%= variable %>"]
+      "correctAnswers": ["`{{ variable }}`"],
+      "wrongAnswers": [
+        "`{% variable %}`",
+        "`[[ variable ]]`",
+        "`<%= variable %>`"
+      ]
     },
     {
       "question": "¿Cómo se ejecutan bucles for o condicionales en las plantillas de Django?",
       "theme": "Plantillas de Django",
       "correctAnswers": [
-        "{% for item in lista %} ... {% endfor %}",
-        "{% if condicion %} ... {% endif %}"
+        "`{% for item in lista %} ... {% endfor %}`",
+        "`{% if condicion %} ... {% endif %}`"
       ],
       "wrongAnswers": [
-        "{{ for item in lista }}",
-        "<python> for item in lista </python>",
-        "[[ if condicion ]]"
+        "`{{ for item in lista }}`",
+        "`<python> for item in lista </python>`",
+        "`[[ if condicion ]]`"
       ]
     },
     {
-      "question": "¿Para qué sirve la etiqueta '{% extends \"blog/base.html\" %}' en una plantilla?",
+      "question": "¿Para qué sirve la etiqueta `{% extends \"blog/base.html\" %}` en una plantilla?",
       "theme": "Plantillas de Django",
       "correctAnswers": [
         "Hereda la estructura y marcado HTML común de la plantilla base."
@@ -852,42 +904,55 @@
       ]
     },
     {
-      "question": "¿Dónde deben guardarse los archivos CSS de la app 'blog' según la estructura estándar?",
+      "question": "¿Dónde deben guardarse los archivos CSS de la app `blog` según la estructura estándar?",
       "theme": "HTML y CSS",
-      "correctAnswers": ["blog/static/css/"],
-      "wrongAnswers": ["blog/templates/css/", "mysite/css/", "blog/styles/"]
+      "correctAnswers": ["`blog/static/css/`"],
+      "wrongAnswers": [
+        "`blog/templates/css/`",
+        "`mysite/css/`",
+        "`blog/styles/`"
+      ]
     },
     {
       "question": "¿Qué etiqueta debe incluirse en la plantilla para cargar archivos estáticos como CSS e imágenes?",
       "theme": "HTML y CSS",
-      "correctAnswers": ["{% load static %}"],
+      "correctAnswers": ["`{% load static %}`"],
       "wrongAnswers": [
-        "{% use static %}",
-        "{% import static %}",
-        "{% load staticfiles %}"
+        "`{% use static %}`",
+        "`{% import static %}`",
+        "`{% load staticfiles %}`"
       ]
     },
     {
-      "question": "¿De qué clase debe heredar un formulario en 'blog/forms.py' vinculado a un modelo?",
+      "question": "¿De qué clase debe heredar un formulario en `blog/forms.py` vinculado a un modelo?",
       "theme": "Formularios de Django",
-      "correctAnswers": ["forms.ModelForm"],
-      "wrongAnswers": ["forms.Form", "models.Form", "object", "forms.Schema"]
+      "correctAnswers": ["`forms.ModelForm`"],
+      "wrongAnswers": [
+        "`forms.Form`",
+        "`models.Form`",
+        "`object`",
+        "`forms.Schema`"
+      ]
     },
     {
       "question": "¿Qué etiqueta de plantilla se incluye en formularios POST para la validación de la solicitud?",
       "theme": "Formularios de Django",
-      "correctAnswers": ["{% csrf_token %}"],
+      "correctAnswers": ["`{% csrf_token %}`"],
       "wrongAnswers": [
-        "{% token %}",
-        "{% form_token %}",
-        "{% post_protection %}"
+        "`{% token %}`",
+        "`{% form_token %}`",
+        "`{% post_protection %}`"
       ]
     },
     {
       "question": "¿Qué método comprueba si los datos enviados por un formulario son válidos?",
       "theme": "Formularios de Django",
-      "correctAnswers": ["form.is_valid()"],
-      "wrongAnswers": ["form.check()", "form.validate()", "form.correct()"]
+      "correctAnswers": ["`form.is_valid()`"],
+      "wrongAnswers": [
+        "`form.check()`",
+        "`form.validate()`",
+        "`form.correct()`"
+      ]
     },
     {
       "question": "¿Qué plataforma de alojamiento en la nube se utiliza en el tutorial de Django Girls para publicar el blog gratis?",
@@ -899,11 +964,11 @@
       "question": "En PythonAnywhere, ¿qué acción debes realizar en el panel Web después de actualizar tu código fuente con Git?",
       "theme": "Despliegue y PythonAnywhere",
       "correctAnswers": [
-        "Hacer clic en el botón verde 'Reload' para reiniciar la aplicación web."
+        "Hacer clic en el botón verde `Reload` para reiniciar la aplicación web."
       ],
       "wrongAnswers": [
         "Eliminar el entorno virtual.",
-        "Ejecutar el comando startproject.",
+        "Ejecutar el comando `startproject`.",
         "Reiniciar tu computadora personal."
       ]
     },
